@@ -13,7 +13,7 @@ const externals = {
 };
 
 const webpackConfig = {
-	context: __dirname + '/src',
+	context: path.resolve( __dirname, 'src' ),
 	entry: './index.js',
 	output: {
 		path: path.resolve( __dirname, 'build' ),
