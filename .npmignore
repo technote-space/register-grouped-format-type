@@ -1,0 +1,6 @@
+.*
+**/webpack.config.js
+src/
+test/
+node_modules/
+marker-animation.gif
