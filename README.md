@@ -16,6 +16,7 @@ which will be gathered by DropDown.
 npm install --save @technote-space/register-grouped-format-type
 ```
 
+`register.js`
 ```
 require( '@technote-space/register-grouped-format-type' );
 
@@ -43,6 +44,12 @@ registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
 
+```
+
+Compile and enqueue script.
+
+```
+<script type="text/javascript" src="/assets/register.js"></script>
 ```
 
 ### Use from download
