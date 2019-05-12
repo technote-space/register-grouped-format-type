@@ -22,9 +22,7 @@ export const registerFormatTypeGroup = ( name, setting = {} ) => {
  * @param {string} name group name
  * @returns {{icon: string, className: (string|*), position: string, label: never, menuLabel: never}} setting
  */
-function getGroupSetting( name ) {
-	return name in groupSettings ? groupSettings[ name ] : getDefaultSetting( name );
-}
+const getGroupSetting = name => name in groupSettings ? groupSettings[ name ] : getDefaultSetting( name );
 
 /**
  * @param {string} name group name
