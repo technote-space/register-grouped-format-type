@@ -11,7 +11,7 @@ const ToolbarDropdown = ( Slot, setting ) => <BlockFormatControls>
 	<div className="editor-format-toolbar block-editor-format-toolbar">
 		<Toolbar>
 			<Slot>
-				{ fills => fills.length && <DropdownMenu
+				{ fills => <DropdownMenu
 					{ ...setting }
 					controls={ fills.map( ( [ { props } ] ) => props ) }
 				/> }

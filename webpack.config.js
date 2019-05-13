@@ -9,7 +9,6 @@ const externals = {
 	'@wordpress/hooks': { this: [ 'wp', 'hooks' ] },
 	'@wordpress/components': { this: [ 'wp', 'components' ] },
 	'@wordpress/rich-text': { this: [ 'wp', 'richText' ] },
-	lodash: 'lodash',
 };
 
 const webpackConfig = {
