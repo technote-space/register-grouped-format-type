@@ -3,7 +3,7 @@
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
 [![WordPress: >=5.1](https://img.shields.io/badge/WordPress-%3E%3D5.1-brightgreen.svg)](https://wordpress.org/)
 
-This script provides method to register grouped RichText format types,   
+This is a gutenberg's library to provides method to register grouped RichText format types,   
 which will be gathered by DropDown.
 
 ![動作](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/master/screenshot1.png)
@@ -99,34 +99,8 @@ Download [Release version](https://raw.githubusercontent.com/technote-space/regi
 
 
 ## Details
-### `registerFormatTypeGroup`
-Register group settings of format type.
-#### definition
-```
-/**
- * @param {string} name group name
- * @param {object} setting setting
- * @returns {object} registered setting
- */
-registerFormatTypeGroup( name, setting = {} )
-```  
-#### arguments
-- name (required)
-  - group name
-- setting
-  - group setting  
-  
-`default setting`
-```
-{
-	icon: 'admin-customizer',
-	position: 'bottom left',
-	label: name,
-	menuLabel: name,
-	className: undefined,
-}
-```
 ### `registerGroupedFormatType`
+Register grouped format type.
 #### definition
 ```
 /**
@@ -163,6 +137,34 @@ registerGroupedFormatType( {
   - function which returns the component like `ToolbarButton`
 - group (required)
   - group name
+
+### `registerFormatTypeGroup`
+Register group settings of format type.  
+#### definition
+```
+/**
+ * @param {string} name group name
+ * @param {object} setting setting
+ * @returns {object} registered setting
+ */
+registerFormatTypeGroup( name, setting = {} )
+```  
+#### arguments
+- name (required)
+  - group name
+- setting
+  - group setting  
+  
+`default setting`
+```
+{
+	icon: 'admin-customizer',
+	position: 'bottom left',
+	label: name,
+	menuLabel: name,
+	className: undefined,
+}
+```
 
 ## Author
 [GitHub (Technote)](https://github.com/technote-space)  
