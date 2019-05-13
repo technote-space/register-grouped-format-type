@@ -27,7 +27,7 @@ const getProps = ( group, name ) => {
 	return {
 		name,
 		group,
-		create: ( { args, name, formatName } ) => <ToolbarButton
+		create: ( { args, formatName } ) => <ToolbarButton
 			icon='admin-customizer'
 			title={ <div className={ name }>{ name }</div> }
 			onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
