@@ -166,6 +166,13 @@ registerFormatTypeGroup( name, setting = {} )
 }
 ```
 
+## dependencies
+- wp-components
+- wp-editor
+- wp-element
+- wp-rich-text
+- wp-hooks
+
 ## Author
 [GitHub (Technote)](https://github.com/technote-space)  
 [Blog](https://technote.space)
