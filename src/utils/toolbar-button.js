@@ -14,7 +14,7 @@ const groupSettings = {};
  * @returns {object} registered setting
  */
 export const registerFormatTypeGroup = ( name, setting = {} ) => {
-	groupSettings[ name ] = Object.assign( getGroupSetting( name ), setting );
+	groupSettings[ name ] = Object.assign( {}, getGroupSetting( name ), setting );
 	return groupSettings[ name ];
 };
 
