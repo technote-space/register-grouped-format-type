@@ -2,7 +2,6 @@ global.test = {
 	utils: {
 		hooks: {
 			formatType: [],
-			filters: [],
 		},
 	},
 };
@@ -29,10 +28,5 @@ global.wp.components = {
 };
 global.wp.editor = {
 	BlockFormatControls: () => {
-	},
-};
-global.wp.hooks = {
-	addFilter: ( hook, hookName, render ) => {
-		global.test.utils.hooks.filters.push( { hook, hookName, render } );
 	},
 };

@@ -1,9 +1,8 @@
 const { registerFormatType } = wp.richText;
-const addFilter = wp.hooks.addFilter;
+const { Fragment } = wp.element;
 
 import { PLUGIN_NAME } from '../constant';
 import { GroupedControls, ToolbarDropdown } from '../components';
-import { getHookName, getBlockEditRender } from './hooks';
 
 const groups = {};
 const groupSettings = {};
@@ -58,6 +57,7 @@ export const registerGroupedFormatType = ( {
 	}
 
 	const formatName = PLUGIN_NAME + '/' + name;
+	const isFirst = ! Object.keys( groups ).length;
 	if ( ! ( group in groups ) ) {
 		groups[ group ] = GroupedControls( group );
 	}
@@ -67,9 +67,12 @@ export const registerGroupedFormatType = ( {
 		title,
 		tagName,
 		className,
-		edit: args => <Fill>
-			{ create( { args, name, formatName } ) }
-		</Fill>,
+		edit: args => <Fragment>
+			<Fill>
+				{ create( { args, name, formatName } ) }
+			</Fill>
+			{ isFirst && Object.keys( groups ).map( key => ToolbarDropdown( groups[ key ].Slot, getGroupSetting( key ) ) ) }
+		</Fragment>,
 	} );
 	return true;
 };
@@ -83,11 +86,5 @@ export const setup = () => {
 	}
 	wp.richText.registerGroupedFormatType = registerGroupedFormatType;
 	wp.richText.registerFormatTypeGroup = registerFormatTypeGroup;
-
-	addFilter(
-		'editor.BlockEdit',
-		getHookName( 'render-dropdown' ),
-		getBlockEditRender( () => Object.keys( groups ).map( key => ToolbarDropdown( groups[ key ].Slot, getGroupSetting( key ) ) ) ),
-	);
 	return true;
 };

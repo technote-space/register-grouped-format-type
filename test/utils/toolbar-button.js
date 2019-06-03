@@ -98,11 +98,4 @@ describe( 'setup test', () => {
 		wp.richText.registerGroupedFormatType.should.type( 'function' );
 		wp.richText.registerFormatTypeGroup.should.type( 'function' );
 	} );
-	it( 'should registered filter', () => {
-		const filters = test.utils.hooks.filters.filter( filter => filter.hook === 'editor.BlockEdit' );
-		filters.should.have.length( 1 ); // eslint-disable-line no-magic-numbers
-		const filter = filters[ 0 ];
-		filter.hookName.should.endWith( 'render-dropdown' );
-		filter.render.should.type( 'function' );
-	} );
 } );
