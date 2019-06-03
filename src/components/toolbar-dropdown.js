@@ -11,10 +11,10 @@ const ToolbarDropdown = ( Slot, setting ) => <BlockFormatControls>
 	<div className="editor-format-toolbar block-editor-format-toolbar">
 		<Toolbar>
 			<Slot>
-				{ fills => <DropdownMenu
+				{ fills => fills.length > 1 ? <DropdownMenu /* eslint-disable-line no-magic-numbers */
 					{ ...setting }
 					controls={ fills.map( ( [ { props } ] ) => props ) }
-				/> }
+				/> : fills[0] }
 			</Slot>
 		</Toolbar>
 	</div>
