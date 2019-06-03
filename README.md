@@ -32,11 +32,17 @@ const getProps = ( group, name ) => ( {
 		title={ <div className={ name }>{ name }</div> }
 		onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
 		isActive={ args.isActive }
+		extraProps={ {
+			label: name,
+			tooltip: <div className='dropdown-tooltip'>
+				<div className={ name }>{ name }</div>
+			</div>,
+		} }
 	/>,
 } );
 
 // register format type group setting
-registerFormatTypeGroup( 'test1', {
+registerFormatTypeGroup( 'test2', {
 	icon: 'admin-network',
 } );
 
@@ -71,13 +77,17 @@ Compile and enqueue script.
 						args.args.onChange( toggleFormat( args.args.value, { type: args.formatName } ) );
 					},
 					isActive: args.args.isActive,
+					extraProps: {
+						label: name,
+						tooltip: el( 'div', { className: 'dropdown-tooltip' }, el( 'div', { className: name }, name ) ),
+					},
 				} );
 			},
 		};
 	}
 
 	// register format type group setting
-	registerFormatTypeGroup( 'test1', {
+	registerFormatTypeGroup( 'test2', {
 		icon: 'admin-network',
 	} );
 
