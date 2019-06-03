@@ -28,15 +28,13 @@ const getGroupSetting = name => name in groupSettings ? groupSettings[ name ] : 
  * @param {string} name group name
  * @returns {{icon: string, className: undefined, position: string, label: *, menuLabel: *}} setting
  */
-const getDefaultSetting = name => {
-	return {
+const getDefaultSetting = name => ( {
 		icon: 'admin-customizer',
 		position: 'bottom left',
 		label: name,
 		menuLabel: name,
 		className: undefined,
-	};
-};
+} );
 
 /**
  * @param {string} name name
@@ -45,6 +43,7 @@ const getDefaultSetting = name => {
  * @param {string} className class name
  * @param {function} create create component function
  * @param {string} group group
+ * @return {boolean} result
  */
 export const registerGroupedFormatType = ( {
 	name,
@@ -55,7 +54,7 @@ export const registerGroupedFormatType = ( {
 	group,
 } ) => {
 	if ( undefined === name || undefined === group || typeof create !== 'function' ) {
-		return;
+		return false;
 	}
 
 	const formatName = PLUGIN_NAME + '/' + name;
@@ -72,6 +71,7 @@ export const registerGroupedFormatType = ( {
 			{ create( { args, name, formatName } ) }
 		</Fill>,
 	} );
+	return true;
 };
 
 /**

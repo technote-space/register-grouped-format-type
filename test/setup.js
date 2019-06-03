@@ -11,9 +11,9 @@ global.wp.richText = {
 	registerFormatType: ( name, setting ) => {
 		global.test.utils.hooks.formatType.push( { name, setting } );
 	},
-	toggleFormat: ( value, attributes ) => {
-		return { value, attributes };
-	},
+	toggleFormat: ( value, attributes ) => ( {
+		value, attributes,
+	} ),
 };
 global.wp.element = {
 	createElement: () => {
@@ -22,12 +22,10 @@ global.wp.element = {
 	},
 };
 global.wp.components = {
-	createSlotFill: () => {
-		return {
-			Fill: {},
-			Slot: {},
-		};
-	},
+	createSlotFill: () => ( {
+		Fill: {},
+		Slot: {},
+	} ),
 };
 global.wp.editor = {
 	BlockFormatControls: () => {
