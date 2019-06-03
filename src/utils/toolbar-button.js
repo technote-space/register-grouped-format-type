@@ -1,9 +1,8 @@
 const { registerFormatType } = wp.richText;
-const addFilter = wp.hooks.addFilter;
+const { Fragment } = wp.element;
 
 import { PLUGIN_NAME } from '../constant';
 import { GroupedControls, ToolbarDropdown } from '../components';
-import { getHookName, getBlockEditRender } from './hooks';
 
 const groups = {};
 const groupSettings = {};
@@ -14,7 +13,7 @@ const groupSettings = {};
  * @returns {object} registered setting
  */
 export const registerFormatTypeGroup = ( name, setting = {} ) => {
-	groupSettings[ name ] = Object.assign( getGroupSetting( name ), setting );
+	groupSettings[ name ] = Object.assign( {}, getGroupSetting( name ), setting );
 	return groupSettings[ name ];
 };
 
@@ -28,15 +27,13 @@ const getGroupSetting = name => name in groupSettings ? groupSettings[ name ] : 
  * @param {string} name group name
  * @returns {{icon: string, className: undefined, position: string, label: *, menuLabel: *}} setting
  */
-const getDefaultSetting = name => {
-	return {
-		icon: 'admin-customizer',
-		position: 'bottom left',
-		label: name,
-		menuLabel: name,
-		className: undefined,
-	};
-};
+const getDefaultSetting = name => ( {
+	icon: 'admin-customizer',
+	position: 'top right',
+	label: name,
+	menuLabel: name,
+	className: undefined,
+} );
 
 /**
  * @param {string} name name
@@ -45,6 +42,7 @@ const getDefaultSetting = name => {
  * @param {string} className class name
  * @param {function} create create component function
  * @param {string} group group
+ * @return {boolean} result
  */
 export const registerGroupedFormatType = ( {
 	name,
@@ -55,10 +53,11 @@ export const registerGroupedFormatType = ( {
 	group,
 } ) => {
 	if ( undefined === name || undefined === group || typeof create !== 'function' ) {
-		return;
+		return false;
 	}
 
 	const formatName = PLUGIN_NAME + '/' + name;
+	const isFirst = ! Object.keys( groups ).length;
 	if ( ! ( group in groups ) ) {
 		groups[ group ] = GroupedControls( group );
 	}
@@ -68,10 +67,19 @@ export const registerGroupedFormatType = ( {
 		title,
 		tagName,
 		className,
-		edit: args => <Fill>
-			{ create( { args, name, formatName } ) }
-		</Fill>,
+		edit: args => {
+			args.isDisabled = ! args.isActive && args.value.start === args.value.end;
+			const component = create( { args, name, formatName } );
+			component.props.isDisabled = args.isDisabled;
+			return <Fragment>
+				<Fill>
+					{ component }
+				</Fill>
+				{ isFirst && Object.keys( groups ).map( key => ToolbarDropdown( groups[ key ].Slot, getGroupSetting( key ) ) ) }
+			</Fragment>;
+		},
 	} );
+	return true;
 };
 
 /**
@@ -83,11 +91,5 @@ export const setup = () => {
 	}
 	wp.richText.registerGroupedFormatType = registerGroupedFormatType;
 	wp.richText.registerFormatTypeGroup = registerFormatTypeGroup;
-
-	addFilter(
-		'editor.BlockEdit',
-		getHookName( 'render-dropdown' ),
-		getBlockEditRender( () => Object.keys( groups ).map( key => ToolbarDropdown( groups[ key ].Slot, getGroupSetting( key ) ) ) ),
-	);
 	return true;
 };

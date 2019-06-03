@@ -29,6 +29,7 @@ describe( 'registerGroupedFormatType test', () => {
 				name.should.equal( 'test2-test1' );
 				args.should.ownProperty( 'test3' );
 				args.test3.should.equal( true );
+				return { props: {} };
 			}, group: 'test2',
 		} );
 
@@ -45,7 +46,7 @@ describe( 'registerGroupedFormatType test', () => {
 		test.utils.hooks.formatType[ 1 ].setting.tagName.should.equal( 'test1-test2-tag' );
 
 		test.utils.hooks.formatType[ 2 ].name.should.endWith( 'test2-test1' );
-		test.utils.hooks.formatType[ 2 ].setting.edit( { test3: true } );
+		test.utils.hooks.formatType[ 2 ].setting.edit( { test3: true, value: {} } );
 	} );
 } );
 
@@ -58,7 +59,7 @@ describe( 'registerFormatTypeGroup test', () => {
 		group1.should.ownProperty( 'menuLabel' );
 		group1.should.ownProperty( 'className' );
 		group1.icon.should.equal( 'admin-customizer' );
-		group1.position.should.equal( 'bottom left' );
+		group1.position.should.equal( 'top right' );
 		group1.label.should.equal( 'group1' );
 		group1.menuLabel.should.equal( 'group1' );
 		should( group1.className ).undefined();
@@ -97,12 +98,5 @@ describe( 'setup test', () => {
 	it( 'should registered function', () => {
 		wp.richText.registerGroupedFormatType.should.type( 'function' );
 		wp.richText.registerFormatTypeGroup.should.type( 'function' );
-	} );
-	it( 'should registered filter', () => {
-		const filters = test.utils.hooks.filters.filter( filter => filter.hook === 'editor.BlockEdit' );
-		filters.should.have.length( 1 ); // eslint-disable-line no-magic-numbers
-		const filter = filters[ 0 ];
-		filter.hookName.should.endWith( 'render-dropdown' );
-		filter.render.should.type( 'function' );
 	} );
 } );

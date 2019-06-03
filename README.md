@@ -1,7 +1,7 @@
 # Register Grouped Format Type
 
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
-[![WordPress: >=5.1](https://img.shields.io/badge/WordPress-%3E%3D5.1-brightgreen.svg)](https://wordpress.org/)
+[![WordPress: >=5.0](https://img.shields.io/badge/WordPress-%3E%3D5.0-brightgreen.svg)](https://wordpress.org/)
 
 This is a gutenberg's library to provides method to register grouped RichText format types,   
 which will be gathered by DropDown.
@@ -23,23 +23,30 @@ require( '@technote-space/register-grouped-format-type' );
 const { ToolbarButton } = wp.components;
 const { toggleFormat, registerFormatTypeGroup, registerGroupedFormatType } = wp.richText;
 
-const getProps = ( group, name ) => {
-	return {
-		name,
-		group,
-		create: ( { args, name, formatName } ) => <ToolbarButton
-			icon='admin-customizer'
-			title={ <div className={ name }>{ name }</div> }
-			onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
-			isActive={ args.isActive }
-		/>,
-	};
-};
+// prepare utility function to create args
+const getProps = ( group, name ) => ( {
+	name,
+	group,
+	create: ( { args, formatName } ) => <ToolbarButton
+		icon='admin-customizer'
+		title={ <div className={ name }>{ name }</div> }
+		onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
+		isActive={ args.isActive }
+		extraProps={ {
+			label: name,
+			tooltip: <div className='dropdown-tooltip'>
+				<div className={ name }>{ name }</div>
+			</div>,
+		} }
+	/>,
+} );
 
-registerFormatTypeGroup( 'test1', {
+// register format type group setting
+registerFormatTypeGroup( 'test2', {
 	icon: 'admin-network',
 } );
 
+// register grouped format types
 registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
@@ -57,6 +64,7 @@ Compile and enqueue script.
 `register.js`
 ```
 ( function( toggleFormat, registerFormatTypeGroup, registerGroupedFormatType, el, ToolbarButton ) {
+	// prepare utility function to create args
 	function getProps( group, name ) {
 		return {
 			name: name,
@@ -69,15 +77,21 @@ Compile and enqueue script.
 						args.args.onChange( toggleFormat( args.args.value, { type: args.formatName } ) );
 					},
 					isActive: args.args.isActive,
+					extraProps: {
+						label: name,
+						tooltip: el( 'div', { className: 'dropdown-tooltip' }, el( 'div', { className: name }, name ) ),
+					},
 				} );
 			},
 		};
 	}
 
-	registerFormatTypeGroup( 'test1', {
+	// register format type group setting
+	registerFormatTypeGroup( 'test2', {
 		icon: 'admin-network',
 	} );
 
+	// register grouped format types
 	registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );

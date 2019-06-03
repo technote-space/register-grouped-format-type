@@ -1,5 +1,25 @@
+import classnames from 'classnames';
+
 const { BlockFormatControls } = wp.editor;
-const { Toolbar, DropdownMenu } = wp.components;
+const { Toolbar, DropdownMenu, IconButton } = wp.components;
+
+const createDropdown = ( fills, setting ) => {
+	const controls = fills.map( ( [ { props } ] ) => props );
+	const isDisabled = ! controls.filter( control => ! control.isDisabled ).length;
+	return isDisabled ? <div className="components-dropdown-menu">
+		<IconButton
+			{ ...setting }
+			className={ classnames( setting.className, 'components-dropdown-menu__toggle' ) }
+			disabled={ true }
+		>
+			<span className="components-dropdown-menu__indicator"/>
+		</IconButton>
+	</div> : <DropdownMenu
+		{ ...setting }
+		controls={ controls }
+	/>;
+};
+const createComponent = ( fills, setting ) => fills.length > 1 ? createDropdown( fills, setting ) : fills[ 0 ]; /* eslint-disable-line no-magic-numbers */
 
 /**
  * @param {*} Slot Slot
@@ -11,10 +31,7 @@ const ToolbarDropdown = ( Slot, setting ) => <BlockFormatControls>
 	<div className="editor-format-toolbar block-editor-format-toolbar">
 		<Toolbar>
 			<Slot>
-				{ fills => <DropdownMenu
-					{ ...setting }
-					controls={ fills.map( ( [ { props } ] ) => props ) }
-				/> }
+				{ fills => createComponent( fills, setting ) }
 			</Slot>
 		</Toolbar>
 	</div>
