@@ -23,23 +23,30 @@ require( '@technote-space/register-grouped-format-type' );
 const { ToolbarButton } = wp.components;
 const { toggleFormat, registerFormatTypeGroup, registerGroupedFormatType } = wp.richText;
 
-const getProps = ( group, name ) => {
-	return {
-		name,
-		group,
-		create: ( { args, formatName } ) => <ToolbarButton
-			icon='admin-customizer'
-			title={ <div className={ name }>{ name }</div> }
-			onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
-			isActive={ args.isActive }
-		/>,
-	};
-};
+// prepare utility function to create args
+const getProps = ( group, name ) => ( {
+	name,
+	group,
+	create: ( { args, formatName } ) => <ToolbarButton
+		icon='admin-customizer'
+		title={ <div className={ name }>{ name }</div> }
+		onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
+		isActive={ args.isActive }
+		extraProps={ {
+			label: name,
+			tooltip: <div className='dropdown-tooltip'>
+				<div className={ name }>{ name }</div>
+			</div>,
+		} }
+	/>,
+} );
 
-registerFormatTypeGroup( 'test1', {
+// register format type group setting
+registerFormatTypeGroup( 'test2', {
 	icon: 'admin-network',
 } );
 
+// register grouped format types
 registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
@@ -57,6 +64,7 @@ Compile and enqueue script.
 `register.js`
 ```
 ( function( toggleFormat, registerFormatTypeGroup, registerGroupedFormatType, el, ToolbarButton ) {
+	// prepare utility function to create args
 	function getProps( group, name ) {
 		return {
 			name: name,
@@ -69,15 +77,21 @@ Compile and enqueue script.
 						args.args.onChange( toggleFormat( args.args.value, { type: args.formatName } ) );
 					},
 					isActive: args.args.isActive,
+					extraProps: {
+						label: name,
+						tooltip: el( 'div', { className: 'dropdown-tooltip' }, el( 'div', { className: name }, name ) ),
+					},
 				} );
 			},
 		};
 	}
 
-	registerFormatTypeGroup( 'test1', {
+	// register format type group setting
+	registerFormatTypeGroup( 'test2', {
 		icon: 'admin-network',
 	} );
 
+	// register grouped format types
 	registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
