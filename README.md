@@ -23,23 +23,24 @@ require( '@technote-space/register-grouped-format-type' );
 const { ToolbarButton } = wp.components;
 const { toggleFormat, registerFormatTypeGroup, registerGroupedFormatType } = wp.richText;
 
-const getProps = ( group, name ) => {
-	return {
-		name,
-		group,
-		create: ( { args, formatName } ) => <ToolbarButton
-			icon='admin-customizer'
-			title={ <div className={ name }>{ name }</div> }
-			onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
-			isActive={ args.isActive }
-		/>,
-	};
-};
+// prepare utility function to create args
+const getProps = ( group, name ) => ( {
+	name,
+	group,
+	create: ( { args, formatName } ) => <ToolbarButton
+		icon='admin-customizer'
+		title={ <div className={ name }>{ name }</div> }
+		onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
+		isActive={ args.isActive }
+	/>,
+} );
 
+// register format type group setting
 registerFormatTypeGroup( 'test1', {
 	icon: 'admin-network',
 } );
 
+// register grouped format types
 registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
@@ -57,6 +58,7 @@ Compile and enqueue script.
 `register.js`
 ```
 ( function( toggleFormat, registerFormatTypeGroup, registerGroupedFormatType, el, ToolbarButton ) {
+	// prepare utility function to create args
 	function getProps( group, name ) {
 		return {
 			name: name,
@@ -74,10 +76,12 @@ Compile and enqueue script.
 		};
 	}
 
+	// register format type group setting
 	registerFormatTypeGroup( 'test1', {
 		icon: 'admin-network',
 	} );
 
+	// register grouped format types
 	registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
