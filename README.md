@@ -1,7 +1,7 @@
 # Register Grouped Format Type
 
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
-[![WordPress: >=5.1](https://img.shields.io/badge/WordPress-%3E%3D5.1-brightgreen.svg)](https://wordpress.org/)
+[![WordPress: >=5.0](https://img.shields.io/badge/WordPress-%3E%3D5.0-brightgreen.svg)](https://wordpress.org/)
 
 This is a gutenberg's library to provides method to register grouped RichText format types,   
 which will be gathered by DropDown.
