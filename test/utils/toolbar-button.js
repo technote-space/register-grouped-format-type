@@ -58,7 +58,7 @@ describe( 'registerFormatTypeGroup test', () => {
 		group1.should.ownProperty( 'menuLabel' );
 		group1.should.ownProperty( 'className' );
 		group1.icon.should.equal( 'admin-customizer' );
-		group1.position.should.equal( 'bottom left' );
+		group1.position.should.equal( 'top right' );
 		group1.label.should.equal( 'group1' );
 		group1.menuLabel.should.equal( 'group1' );
 		should( group1.className ).undefined();

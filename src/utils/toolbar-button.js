@@ -29,11 +29,11 @@ const getGroupSetting = name => name in groupSettings ? groupSettings[ name ] : 
  * @returns {{icon: string, className: undefined, position: string, label: *, menuLabel: *}} setting
  */
 const getDefaultSetting = name => ( {
-		icon: 'admin-customizer',
-		position: 'bottom left',
-		label: name,
-		menuLabel: name,
-		className: undefined,
+	icon: 'admin-customizer',
+	position: 'top right',
+	label: name,
+	menuLabel: name,
+	className: undefined,
 } );
 
 /**
