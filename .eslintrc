@@ -145,7 +145,6 @@
     "ecmaVersion": 2018
   },
   "globals": {
-    "hbtParams": true,
     "wp": true
   }
 }
