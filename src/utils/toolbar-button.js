@@ -67,12 +67,17 @@ export const registerGroupedFormatType = ( {
 		title,
 		tagName,
 		className,
-		edit: args => <Fragment>
-			<Fill>
-				{ create( { args, name, formatName } ) }
-			</Fill>
-			{ isFirst && Object.keys( groups ).map( key => ToolbarDropdown( groups[ key ].Slot, getGroupSetting( key ) ) ) }
-		</Fragment>,
+		edit: args => {
+			args.isDisabled = ! args.isActive && args.value.start === args.value.end;
+			const component = create( { args, name, formatName } );
+			component.props.isDisabled = args.isDisabled;
+			return <Fragment>
+				<Fill>
+					{ component }
+				</Fill>
+				{ isFirst && Object.keys( groups ).map( key => ToolbarDropdown( groups[ key ].Slot, getGroupSetting( key ) ) ) }
+			</Fragment>;
+		},
 	} );
 	return true;
 };

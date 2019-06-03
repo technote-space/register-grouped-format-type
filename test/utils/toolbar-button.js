@@ -29,6 +29,7 @@ describe( 'registerGroupedFormatType test', () => {
 				name.should.equal( 'test2-test1' );
 				args.should.ownProperty( 'test3' );
 				args.test3.should.equal( true );
+				return { props: {} };
 			}, group: 'test2',
 		} );
 
@@ -45,7 +46,7 @@ describe( 'registerGroupedFormatType test', () => {
 		test.utils.hooks.formatType[ 1 ].setting.tagName.should.equal( 'test1-test2-tag' );
 
 		test.utils.hooks.formatType[ 2 ].name.should.endWith( 'test2-test1' );
-		test.utils.hooks.formatType[ 2 ].setting.edit( { test3: true } );
+		test.utils.hooks.formatType[ 2 ].setting.edit( { test3: true, value: {} } );
 	} );
 } );
 
