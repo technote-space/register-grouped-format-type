@@ -1,8 +1,8 @@
-const { registerFormatType } = wp.richText;
 const { Fragment } = wp.element;
 
 import { PLUGIN_NAME } from '../constant';
 import { GroupedControls, ToolbarDropdown } from '../components';
+import { registerMultipleClassFormatType } from './index';
 
 const groups = {};
 const groupSettings = {};
@@ -63,7 +63,7 @@ export const registerGroupedFormatType = ( {
 	}
 
 	const { Fill } = groups[ group ];
-	registerFormatType( formatName, {
+	registerMultipleClassFormatType( formatName, {
 		title,
 		tagName,
 		className,
