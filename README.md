@@ -4,7 +4,7 @@
 [![WordPress: >=5.0](https://img.shields.io/badge/WordPress-%3E%3D5.0-brightgreen.svg)](https://wordpress.org/)
 
 This is a gutenberg's library to provides method to register grouped RichText format types,   
-which will be gathered by DropDown.
+which will be gathered by DropDown.  
 The controls are active only when it is able to toggle format.
 
 ![動作](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/master/screenshot1.png)
