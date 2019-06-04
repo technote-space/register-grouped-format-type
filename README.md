@@ -4,7 +4,8 @@
 [![WordPress: >=5.0](https://img.shields.io/badge/WordPress-%3E%3D5.0-brightgreen.svg)](https://wordpress.org/)
 
 This is a gutenberg's library to provides method to register grouped RichText format types,   
-which will be gathered by DropDown.
+which will be gathered by DropDown.  
+The controls are active only when it is able to toggle format.
 
 ![動作](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/master/screenshot1.png)
 
@@ -147,10 +148,12 @@ registerGroupedFormatType( {
 - className
   - class name
   - [detail](https://github.com/WordPress/gutenberg/blob/release/5.6/packages/rich-text/src/register-format-type.js#L20)
+  - You can use multiple classes (space separated).
 - create (required)
   - function which returns the component like `ToolbarButton`
 - group (required)
   - group name
+  - When the number of items in the same group is more than 1, they will be gathered by DropDown.
 
 ### `registerFormatTypeGroup`
 Register group settings of format type.  

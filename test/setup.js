@@ -1,32 +1,23 @@
-global.test = {
-	utils: {
-		hooks: {
-			formatType: [],
-		},
+const Mousetrap = require( 'mousetrap' );
+global.Mousetrap = Mousetrap;
+global.window.matchMedia = () => ( {
+	matches: true, addListener: () => {
 	},
+} );
+global.window.console.error = () => {
 };
-global.wp = {};
-global.wp.richText = {
-	registerFormatType: ( name, setting ) => {
-		global.test.utils.hooks.formatType.push( { name, setting } );
-	},
-	toggleFormat: ( value, attributes ) => ( {
-		value, attributes,
-	} ),
+
+const richText = require( '@wordpress/rich-text' );
+const element = require( '@wordpress/element' );
+const components = require( '@wordpress/components' );
+const editor = require( '@wordpress/editor' );
+const data = require( '@wordpress/data' );
+
+global.wp = {
+	richText,
+	element,
+	components,
+	editor,
+	data,
 };
-global.wp.element = {
-	createElement: () => {
-	},
-	Fragment: () => {
-	},
-};
-global.wp.components = {
-	createSlotFill: () => ( {
-		Fill: {},
-		Slot: {},
-	} ),
-};
-global.wp.editor = {
-	BlockFormatControls: () => {
-	},
-};
+

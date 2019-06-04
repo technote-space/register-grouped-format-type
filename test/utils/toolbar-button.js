@@ -1,29 +1,31 @@
 const should = require( 'should' );
+const { select } = wp.data;
+import { PLUGIN_NAME } from '../../src/constant';
 
 import { registerGroupedFormatType, registerFormatTypeGroup, setup } from '../../src/utils';
 
 describe( 'registerGroupedFormatType test', () => {
 	it( 'should not registered format type', () => {
-		registerGroupedFormatType( { name: 'test1-test1', create: null, group: 'test1' } );
+		registerGroupedFormatType( { name: 'test1-test1', create: null, group: 'test1' } ).should.false();
 		registerGroupedFormatType( {
 			create: () => {
 			}, group: 'test2',
-		} );
+		} ).should.false();
 		registerGroupedFormatType( {
 			name: 'test2-test1', create: () => {
 			},
-		} );
-		test.utils.hooks.formatType.should.have.length( 0 ); // eslint-disable-line no-magic-numbers
+		} ).should.false();
 	} );
 	it( 'should registered format type', () => {
 		registerGroupedFormatType( {
 			name: 'test1-test1', create: () => {
+				return { props: {} };
 			}, group: 'test1',
-		} );
+		} ).should.true();
 		registerGroupedFormatType( {
 			name: 'test1-test2', create: () => {
 			}, group: 'test1', title: 'test1-test2-title', tagName: 'test1-test2-tag', className: 'test1-test2-class',
-		} );
+		} ).should.true();
 		registerGroupedFormatType( {
 			name: 'test2-test1', create: ( { args, name } ) => {
 				name.should.equal( 'test2-test1' );
@@ -31,22 +33,26 @@ describe( 'registerGroupedFormatType test', () => {
 				args.test3.should.equal( true );
 				return { props: {} };
 			}, group: 'test2',
-		} );
+		} ).should.true();
 
-		test.utils.hooks.formatType.should.have.length( 3 ); // eslint-disable-line no-magic-numbers
-		test.utils.hooks.formatType[ 0 ].name.should.endWith( 'test1-test1' );
-		test.utils.hooks.formatType[ 0 ].setting.title.should.equal( 'test1-test1' );
-		test.utils.hooks.formatType[ 0 ].setting.className.should.equal( 'test1-test1' );
-		test.utils.hooks.formatType[ 0 ].setting.tagName.should.equal( 'span' );
-		test.utils.hooks.formatType[ 0 ].setting.edit.should.type( 'function' );
+		const test1 = select( 'core/rich-text' ).getFormatType( PLUGIN_NAME + '/test1-test1' );
+		const test2 = select( 'core/rich-text' ).getFormatType( PLUGIN_NAME + '/test1-test2' );
+		const test3 = select( 'core/rich-text' ).getFormatType( PLUGIN_NAME + '/test2-test1' );
 
-		test.utils.hooks.formatType[ 1 ].name.should.endWith( 'test1-test2' );
-		test.utils.hooks.formatType[ 1 ].setting.title.should.equal( 'test1-test2-title' );
-		test.utils.hooks.formatType[ 1 ].setting.className.should.equal( 'test1-test2-class' );
-		test.utils.hooks.formatType[ 1 ].setting.tagName.should.equal( 'test1-test2-tag' );
+		test1.name.should.endWith( 'test1-test1' );
+		test1.title.should.equal( 'test1-test1' );
+		test1.className.should.equal( 'test1-test1' );
+		test1.tagName.should.equal( 'span' );
+		test1.edit.should.type( 'function' );
+		test1.edit( { test1: true, value: {} } );
 
-		test.utils.hooks.formatType[ 2 ].name.should.endWith( 'test2-test1' );
-		test.utils.hooks.formatType[ 2 ].setting.edit( { test3: true, value: {} } );
+		test2.name.should.endWith( 'test1-test2' );
+		test2.title.should.equal( 'test1-test2-title' );
+		test2.className.should.equal( 'test1-test2-class' );
+		test2.tagName.should.equal( 'test1-test2-tag' );
+
+		test3.name.should.endWith( 'test2-test1' );
+		test3.edit( { test3: true, value: {} } );
 	} );
 } );
 
