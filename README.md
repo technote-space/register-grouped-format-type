@@ -188,7 +188,7 @@ registerFormatTypeGroup( name, setting = {} )
 - wp-editor
 - wp-element
 - wp-rich-text
-- wp-hooks
+- wp-data
 
 ## Author
 [GitHub (Technote)](https://github.com/technote-space)  
