@@ -125,7 +125,11 @@ Register grouped format type.
  * @param {string} tagName tag name
  * @param {string} className class name
  * @param {function} create create component function
+ * @param {function} createInspector create inspector component function
  * @param {string} group group
+ * @param {string} inspectorGroup inspector group
+ * @param {{}} settings settings
+ * @return {{}|null} registered settings
  */
 registerGroupedFormatType( {
 	name,
@@ -133,7 +137,10 @@ registerGroupedFormatType( {
 	tagName = 'span',
 	className = name,
 	create,
-	group,
+	createInspector,
+	group = name,
+	inspectorGroup = name,
+	...settings
 } )
 ```
 #### arguments
