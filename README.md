@@ -129,7 +129,7 @@ Register grouped format type.
  * @param {string} group group
  * @param {string} inspectorGroup inspector group
  * @param {{}} settings settings
- * @return {{}|null} registered settings
+ * @return {{}} registered settings
  */
 registerGroupedFormatType( {
 	name,
