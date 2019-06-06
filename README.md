@@ -22,7 +22,8 @@ npm install --save @technote-space/register-grouped-format-type
 require( '@technote-space/register-grouped-format-type' );
 
 const { ToolbarButton } = wp.components;
-const { toggleFormat, registerFormatTypeGroup, registerGroupedFormatType } = wp.richText;
+const { toggleFormat } = wp.richText;
+const { registerFormatTypeGroup, registerGroupedFormatType } = wp.richText.extension;
 
 // prepare utility function to create args
 const getProps = ( group, name ) => ( {
@@ -98,8 +99,8 @@ Compile and enqueue script.
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
 }(
 	wp.richText.toggleFormat,
-	wp.richText.registerFormatTypeGroup,
-	wp.richText.registerGroupedFormatType,
+	wp.richText.extension.registerFormatTypeGroup,
+	wp.richText.extension.registerGroupedFormatType,
 	wp.element.createElement,
 	wp.components.ToolbarButton,
 ) );
@@ -124,7 +125,11 @@ Register grouped format type.
  * @param {string} tagName tag name
  * @param {string} className class name
  * @param {function} create create component function
+ * @param {function} createInspector create inspector component function
  * @param {string} group group
+ * @param {string} inspectorGroup inspector group
+ * @param {{}} settings settings
+ * @return {{}|null} registered settings
  */
 registerGroupedFormatType( {
 	name,
@@ -132,7 +137,10 @@ registerGroupedFormatType( {
 	tagName = 'span',
 	className = name,
 	create,
-	group,
+	createInspector,
+	group = name,
+	inspectorGroup = name,
+	...settings
 } )
 ```
 #### arguments
@@ -180,6 +188,8 @@ registerFormatTypeGroup( name, setting = {} )
 	label: name,
 	menuLabel: name,
 	className: undefined,
+	menuClassName: undefined,
+	inspectorSettings: {},
 }
 ```
 

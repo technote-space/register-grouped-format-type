@@ -1,8 +1,10 @@
+import { PLUGIN_NAME } from '../constant';
+
 const { dispatch, select } = wp.data;
 /**
  * @param {string} name name
  * @param {object} settings strings
- * @returns {{title}|null} settings
+ * @returns {{}|null} registered settings
  * @private
  */
 export const registerMultipleClassFormatType = ( name, settings ) => {
@@ -106,3 +108,9 @@ export const registerMultipleClassFormatType = ( name, settings ) => {
 
 	return settings;
 };
+
+/**
+ * @param {string} name name
+ * @returns {string} format name
+ */
+export const getFormatName = name => `${ PLUGIN_NAME }/${ name }`;

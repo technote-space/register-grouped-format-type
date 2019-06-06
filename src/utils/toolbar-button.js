@@ -1,10 +1,10 @@
 const { Fragment } = wp.element;
 
-import { PLUGIN_NAME } from '../constant';
-import { GroupedControls, ToolbarDropdown } from '../components';
-import { registerMultipleClassFormatType } from './index';
+import { GroupedControls, GroupedInspectors, ToolbarDropdown } from '../components';
+import { registerMultipleClassFormatType, getFormatName } from './index';
 
 const groups = {};
+const inspectorGroups = {};
 const groupSettings = {};
 
 /**
@@ -33,6 +33,8 @@ const getDefaultSetting = name => ( {
 	label: name,
 	menuLabel: name,
 	className: undefined,
+	menuClassName: undefined,
+	inspectorSettings: {},
 } );
 
 /**
@@ -41,8 +43,11 @@ const getDefaultSetting = name => ( {
  * @param {string} tagName tag name
  * @param {string} className class name
  * @param {function} create create component function
+ * @param {function} createInspector create inspector component function
  * @param {string} group group
- * @return {boolean} result
+ * @param {string} inspectorGroup inspector group
+ * @param {{}} settings settings
+ * @return {{}|null} registered settings
  */
 export const registerGroupedFormatType = ( {
 	name,
@@ -50,46 +55,56 @@ export const registerGroupedFormatType = ( {
 	tagName = 'span',
 	className = name,
 	create,
-	group,
+	createInspector,
+	group = name,
+	inspectorGroup = name,
+	...settings
 } ) => {
-	if ( undefined === name || undefined === group || typeof create !== 'function' ) {
-		return false;
+	if ( undefined === name || undefined === group || undefined === inspectorGroup || typeof create !== 'function' ) {
+		return null;
 	}
 
-	const formatName = PLUGIN_NAME + '/' + name;
+	const formatName = getFormatName( name );
 	const isFirst = ! Object.keys( groups ).length;
 	if ( ! ( group in groups ) ) {
 		groups[ group ] = GroupedControls( group );
 	}
+	if ( ! ( inspectorGroup in inspectorGroups ) ) {
+		inspectorGroups[ inspectorGroup ] = GroupedInspectors( inspectorGroup );
+	}
 
-	const { Fill } = groups[ group ];
-	registerMultipleClassFormatType( formatName, {
+	const ComponentsFill = groups[ group ].Fill;
+	const InspectorsFill = inspectorGroups[ inspectorGroup ].Fill;
+	return registerMultipleClassFormatType( formatName, {
 		title,
 		tagName,
 		className,
 		edit: args => {
 			args.isDisabled = ! args.isActive && args.value.start === args.value.end;
+			args.isDropdownDisabled = args.isDisabled && args.value.start !== undefined;
+
 			const component = create( { args, name, formatName } );
+			component.props.isActive = args.isActive;
 			component.props.isDisabled = args.isDisabled;
+			component.props.isDropdownDisabled = args.isDropdownDisabled;
+
+			const inspector = typeof createInspector === 'function' ? createInspector( { args, name, formatName } ) : null;
+			if ( inspector ) {
+				inspector.props.isActive = args.isActive;
+				inspector.props.isDisabled = args.isDisabled;
+			}
+
 			return <Fragment>
-				<Fill>
+				<ComponentsFill>
 					{ component }
-				</Fill>
+				</ComponentsFill>
+				{ inspector && <InspectorsFill>
+					{ inspector }
+				</InspectorsFill> }
 				{ isFirst && Object.keys( groups ).map( key => ToolbarDropdown( groups[ key ].Slot, getGroupSetting( key ) ) ) }
+				{ isFirst && Object.keys( inspectorGroups ).map( key => ToolbarDropdown( inspectorGroups[ key ].Slot, getGroupSetting( key ), true ) ) }
 			</Fragment>;
 		},
+		...settings,
 	} );
-	return true;
-};
-
-/**
- * @returns {boolean} success
- */
-export const setup = () => {
-	if ( wp.richText.registerGroupedFormatType ) {
-		return false;
-	}
-	wp.richText.registerGroupedFormatType = registerGroupedFormatType;
-	wp.richText.registerFormatTypeGroup = registerFormatTypeGroup;
-	return true;
 };

@@ -1,2 +1,2 @@
-export { registerGroupedFormatType, registerFormatTypeGroup, setup } from './toolbar-button';
-export { registerMultipleClassFormatType } from './rich-text';
+export { registerGroupedFormatType, registerFormatTypeGroup } from './toolbar-button';
+export { registerMultipleClassFormatType, getFormatName } from './rich-text';
