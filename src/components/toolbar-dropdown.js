@@ -45,6 +45,21 @@ const createDropdown = ( fills, setting ) => {
 
 const createComponent = ( fills, setting ) => ! fills.length ? null : ( fills.length > 1 ? createDropdown( fills, setting ) : fills[ 0 ] ); /* eslint-disable-line no-magic-numbers */
 
+const createInspectorComponent = ( fills, setting ) => {
+	const activeFills = fills.filter( ( [ { props } ] ) => ! props.isDisabled );
+	if ( ! activeFills.length ) {
+		return null;
+	}
+
+	return <InspectorControls>
+		<PanelBody
+			{ ...setting.inspectorSettings }
+		>
+			{ activeFills }
+		</PanelBody>
+	</InspectorControls>;
+};
+
 /**
  * @param {{}} Slot Slot
  * @param {object} setting setting
@@ -64,13 +79,7 @@ const ToolbarDropdown = ( Slot, setting, isInspector = false ) => {
 			</div> }
 		</BlockFormatControls>
 		{ isInspector && <Slot>
-			{ fills => !! fills.length && <InspectorControls>
-				<PanelBody
-					{ ...setting.inspectorSettings }
-				>
-					{ fills }
-				</PanelBody>
-			</InspectorControls> }
+			{ fills => createInspectorComponent( fills, setting ) }
 		</Slot> }
 	</Fragment>;
 };
