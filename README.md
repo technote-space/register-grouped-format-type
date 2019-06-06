@@ -128,8 +128,8 @@ Register grouped format type.
  * @param {function} createInspector create inspector component function
  * @param {string} group group
  * @param {string} inspectorGroup inspector group
- * @param {{}} settings settings
- * @return {{}} registered settings
+ * @param {object} settings settings
+ * @return {object|null} registered settings
  */
 registerGroupedFormatType( {
 	name,

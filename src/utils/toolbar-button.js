@@ -46,8 +46,8 @@ const getDefaultSetting = name => ( {
  * @param {function} createInspector create inspector component function
  * @param {string} group group
  * @param {string} inspectorGroup inspector group
- * @param {{}} settings settings
- * @return {{}} registered settings
+ * @param {object} settings settings
+ * @return {object|null} registered settings
  */
 export const registerGroupedFormatType = ( {
 	name,
