@@ -2,38 +2,63 @@ const should = require( 'should' );
 const { select } = wp.data;
 import { PLUGIN_NAME } from '../../src/constant';
 
-import { registerGroupedFormatType, registerFormatTypeGroup, setup } from '../../src/utils';
+import { registerGroupedFormatType, registerFormatTypeGroup } from '../../src/utils';
 
 describe( 'registerGroupedFormatType test', () => {
 	it( 'should not registered format type', () => {
-		registerGroupedFormatType( { name: 'test1-test1', create: null, group: 'test1' } ).should.false();
-		registerGroupedFormatType( {
+		should( registerGroupedFormatType( { name: 'test1-test1', create: null, group: 'test1' } ) ).null();
+		should( registerGroupedFormatType( {
 			create: () => {
-			}, group: 'test2',
-		} ).should.false();
-		registerGroupedFormatType( {
-			name: 'test2-test1', create: () => {
 			},
-		} ).should.false();
+			group: 'test2',
+		} ) ).null();
 	} );
 	it( 'should registered format type', () => {
 		registerGroupedFormatType( {
-			name: 'test1-test1', create: () => {
+			name: 'test1-test1',
+			group: 'test1',
+			create: () => {
 				return { props: {} };
-			}, group: 'test1',
-		} ).should.true();
+			},
+		} ).should.type( 'object' );
 		registerGroupedFormatType( {
-			name: 'test1-test2', create: () => {
-			}, group: 'test1', title: 'test1-test2-title', tagName: 'test1-test2-tag', className: 'test1-test2-class',
-		} ).should.true();
+			name: 'test1-test2',
+			create: () => {
+			},
+			group: 'test1',
+			title: 'test1-test2-title',
+			tagName: 'test1-test2-tag',
+			className: 'test1-test2-class',
+		} ).should.type( 'object' );
 		registerGroupedFormatType( {
-			name: 'test2-test1', create: ( { args, name } ) => {
+			name: 'test2-test1',
+			create: ( { args, name } ) => {
 				name.should.equal( 'test2-test1' );
 				args.should.ownProperty( 'test3' );
 				args.test3.should.equal( true );
 				return { props: {} };
-			}, group: 'test2',
-		} ).should.true();
+			},
+			createInspector: ( { args, name } ) => {
+				name.should.equal( 'test2-test1' );
+				args.should.ownProperty( 'test3' );
+				args.test3.should.equal( true );
+				return { props: {} };
+			},
+			group: 'test2',
+			inspectorGroup: 'test2-inspector',
+			attributes: {
+				style: 'color: red',
+			},
+		} ).should.type( 'object' );
+		registerGroupedFormatType( {
+			name: 'test3-test2',
+			create: () => {
+			},
+			title: 'test3-title',
+			tagName: 'test3-tag',
+			className: 'test3-class',
+			inspectorGroup: 'test2-inspector',
+		} ).should.type( 'object' );
 
 		const test1 = select( 'core/rich-text' ).getFormatType( PLUGIN_NAME + '/test1-test1' );
 		const test2 = select( 'core/rich-text' ).getFormatType( PLUGIN_NAME + '/test1-test2' );
@@ -53,6 +78,8 @@ describe( 'registerGroupedFormatType test', () => {
 
 		test3.name.should.endWith( 'test2-test1' );
 		test3.edit( { test3: true, value: {} } );
+		test3.attributes.should.ownProperty( 'style' );
+		test3.attributes.style.should.equal( 'color: red' );
 	} );
 } );
 
@@ -89,20 +116,5 @@ describe( 'registerFormatTypeGroup test', () => {
 			icon: 'a',
 		} );
 		group1.icon.should.equal( 'a' );
-	} );
-} );
-
-describe( 'setup test', () => {
-	it( 'should not registered function', () => {
-		should( wp.richText.registerGroupedFormatType ).undefined();
-		should( wp.richText.registerFormatTypeGroup ).undefined();
-	} );
-	it( 'should setup once', () => {
-		setup().should.equal( true );
-		setup().should.equal( false );
-	} );
-	it( 'should registered function', () => {
-		wp.richText.registerGroupedFormatType.should.type( 'function' );
-		wp.richText.registerFormatTypeGroup.should.type( 'function' );
 	} );
 } );

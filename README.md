@@ -22,7 +22,8 @@ npm install --save @technote-space/register-grouped-format-type
 require( '@technote-space/register-grouped-format-type' );
 
 const { ToolbarButton } = wp.components;
-const { toggleFormat, registerFormatTypeGroup, registerGroupedFormatType } = wp.richText;
+const { toggleFormat } = wp.richText;
+const { registerFormatTypeGroup, registerGroupedFormatType } = wp.richText.extension;
 
 // prepare utility function to create args
 const getProps = ( group, name ) => ( {
@@ -98,8 +99,8 @@ Compile and enqueue script.
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
 }(
 	wp.richText.toggleFormat,
-	wp.richText.registerFormatTypeGroup,
-	wp.richText.registerGroupedFormatType,
+	wp.richText.extension.registerFormatTypeGroup,
+	wp.richText.extension.registerGroupedFormatType,
 	wp.element.createElement,
 	wp.components.ToolbarButton,
 ) );
@@ -180,6 +181,8 @@ registerFormatTypeGroup( name, setting = {} )
 	label: name,
 	menuLabel: name,
 	className: undefined,
+	menuClassName: undefined,
+	inspectorSettings: {},
 }
 ```
 

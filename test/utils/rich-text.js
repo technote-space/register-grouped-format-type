@@ -1,6 +1,7 @@
 const should = require( 'should' );
 
-import { registerMultipleClassFormatType } from '../../src/utils';
+import { PLUGIN_NAME } from '../../src/constant';
+import { registerMultipleClassFormatType, getFormatName } from '../../src/utils';
 
 describe( 'registerMultipleClassFormatType test', () => {
 	it( 'should not null if succeeded registration', () => {
@@ -90,4 +91,14 @@ describe( 'registerMultipleClassFormatType test', () => {
 		} ) ).null();
 	} );
 
+} );
+
+describe( 'getFormatName test', () => {
+	it( 'should start plugin name', () => {
+		getFormatName( 'test1' ).should.startWith( PLUGIN_NAME );
+	} );
+
+	it( 'should end name', () => {
+		getFormatName( 'test2' ).should.endWith( 'test2' );
+	} );
 } );
