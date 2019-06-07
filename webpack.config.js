@@ -16,7 +16,7 @@ const webpackConfig = {
 	output: {
 		path: path.resolve( __dirname, 'build' ),
 		filename: 'index.js',
-		library: [ 'Technote', 'Gutenberg', 'RichText' ],
+		library: [ 'Technote', 'Gutenberg' ],
 		libraryTarget: 'umd',
 	},
 	module: {
