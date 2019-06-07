@@ -2,7 +2,7 @@ const should = require( 'should' );
 const { select } = wp.data;
 import { PLUGIN_NAME } from '../../src/constant';
 
-import { registerGroupedFormatType, registerFormatTypeGroup } from '../../src/utils';
+import { registerGroupedFormatType, registerFormatTypeGroup } from '../../src/helpers';
 
 describe( 'registerGroupedFormatType test', () => {
 	it( 'should not registered format type', () => {

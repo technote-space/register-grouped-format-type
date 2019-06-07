@@ -1,10 +1,9 @@
-require( '@technote-space/gutenberg-utils' );
 import classnames from 'classnames';
+import { Components } from '@technote-space/gutenberg-utils';
 
 const { BlockFormatControls, InspectorControls } = wp.editor;
 const { Toolbar, IconButton, NavigableMenu, PanelBody } = wp.components;
 const { Fragment } = wp.element;
-const { DropdownButton } = wp.components.extension;
 
 const createDropdown = ( fills, setting ) => {
 	const controls = fills.map( ( [ { props } ] ) => props );
@@ -18,7 +17,7 @@ const createDropdown = ( fills, setting ) => {
 		}
 	};
 	const { label, menuLabel, menuClassName } = setting;
-	return <DropdownButton
+	return <Components.DropdownButton
 		{ ...setting }
 		isActive={ isActive }
 		isDisabled={ isDisabled }

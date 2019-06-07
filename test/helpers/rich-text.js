@@ -1,7 +1,7 @@
 const should = require( 'should' );
 
 import { PLUGIN_NAME } from '../../src/constant';
-import { registerMultipleClassFormatType, getFormatName } from '../../src/utils';
+import { registerMultipleClassFormatType, getFormatName } from '../../src/helpers';
 
 describe( 'registerMultipleClassFormatType test', () => {
 	it( 'should not null if succeeded registration', () => {
