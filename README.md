@@ -19,11 +19,11 @@ npm install --save @technote-space/register-grouped-format-type
 
 `register.js`
 ```
-require( '@technote-space/register-grouped-format-type' );
+import { RichText } from '@technote-space/register-grouped-format-type';
 
 const { ToolbarButton } = wp.components;
 const { toggleFormat } = wp.richText;
-const { registerFormatTypeGroup, registerGroupedFormatType } = wp.richText.extension;
+const { registerFormatTypeGroup, registerGroupedFormatType } = RichText;
 
 // prepare utility function to create args
 const getProps = ( group, name ) => ( {
@@ -52,7 +52,6 @@ registerFormatTypeGroup( 'test2', {
 registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
 registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
-
 ```
 
 Compile and enqueue script.
@@ -65,7 +64,7 @@ Compile and enqueue script.
 
 `register.js`
 ```
-( function( toggleFormat, registerFormatTypeGroup, registerGroupedFormatType, el, ToolbarButton ) {
+( function( toggleFormat, el, ToolbarButton, registerFormatTypeGroup, registerGroupedFormatType ) {
 	// prepare utility function to create args
 	function getProps( group, name ) {
 		return {
@@ -99,12 +98,11 @@ Compile and enqueue script.
 	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
 }(
 	wp.richText.toggleFormat,
-	wp.richText.extension.registerFormatTypeGroup,
-	wp.richText.extension.registerGroupedFormatType,
 	wp.element.createElement,
 	wp.components.ToolbarButton,
+	Technote.Gutenberg.RichText.registerFormatTypeGroup,
+	Technote.Gutenberg.RichText.registerGroupedFormatType,
 ) );
-
 ```
 
 Download [Release version](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/master/build/index.js) and enqueue scripts.
@@ -195,10 +193,15 @@ registerFormatTypeGroup( name, setting = {} )
 
 ## dependencies
 - wp-components
+- wp-data
 - wp-editor
 - wp-element
 - wp-rich-text
-- wp-data
+- wp-url
+- lodash
+
+## @see
+[Gutenberg Utils](https://github.com/technote-space/gutenberg-utils)
 
 ## Author
 [GitHub (Technote)](https://github.com/technote-space)  
