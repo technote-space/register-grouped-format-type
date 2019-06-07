@@ -4,11 +4,10 @@ const path = require( 'path' );
 
 const banner = `${ pkg.name } ${ pkg.version }\nCopyright (c) ${ new Date().getFullYear() } ${ pkg.author }\nLicense: ${ pkg.license }`;
 const externals = {
+	'@wordpress/components': { this: [ 'wp', 'components' ] },
+	'@wordpress/data': { this: [ 'wp', 'data' ] },
 	'@wordpress/editor': { this: [ 'wp', 'editor' ] },
 	'@wordpress/element': { this: [ 'wp', 'element' ] },
-	'@wordpress/data': { this: [ 'wp', 'data' ] },
-	'@wordpress/components': { this: [ 'wp', 'components' ] },
-	'@wordpress/rich-text': { this: [ 'wp', 'richText' ] },
 };
 
 const webpackConfig = {
@@ -17,6 +16,7 @@ const webpackConfig = {
 	output: {
 		path: path.resolve( __dirname, 'build' ),
 		filename: 'index.js',
+		library: [ 'Technote', 'Gutenberg', 'RichText' ],
 		libraryTarget: 'umd',
 	},
 	module: {
