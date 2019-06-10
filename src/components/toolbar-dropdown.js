@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import { Components } from '@technote-space/gutenberg-utils';
 
-const { BlockFormatControls, InspectorControls } = wp.editor;
+const { BlockFormatControls, InspectorControls } = wp.blockEditor;
 const { Toolbar, IconButton, NavigableMenu, PanelBody } = wp.components;
 const { Fragment } = wp.element;
 
@@ -42,7 +42,7 @@ const createDropdown = ( fills, setting ) => {
 	/>;
 };
 
-const createComponent = ( fills, setting ) => ! fills.length ? null : ( fills.length > 1 ? createDropdown( fills, setting ) : fills[ 0 ] ); /* eslint-disable-line no-magic-numbers */
+const createComponent = ( fills, setting ) => fills.length > 1 ? createDropdown( fills, setting ) : fills[ 0 ]; /* eslint-disable-line no-magic-numbers */
 
 const createInspectorComponent = ( fills, setting ) => {
 	const activeFills = fills.filter( ( [ { props } ] ) => ! props.isDisabled );
@@ -68,18 +68,19 @@ const createInspectorComponent = ( fills, setting ) => {
  */
 const ToolbarDropdown = ( Slot, setting, isInspector = false ) => {
 	return <Fragment>
-		<BlockFormatControls>
-			{ ! isInspector && <div className="editor-format-toolbar block-editor-format-toolbar">
-				<Toolbar>
-					<Slot>
-						{ fills => createComponent( fills, setting ) }
-					</Slot>
-				</Toolbar>
-			</div> }
-		</BlockFormatControls>
-		{ isInspector && <Slot>
-			{ fills => createInspectorComponent( fills, setting ) }
-		</Slot> }
+		<Slot>
+			{ fills => ! fills.length ? null : (
+				isInspector ?
+					createInspectorComponent( fills, setting ) :
+					<BlockFormatControls>
+						<div className="editor-format-toolbar block-editor-format-toolbar">
+							<Toolbar>
+								{ createComponent( fills, setting ) }
+							</Toolbar>
+						</div>
+					</BlockFormatControls>
+			) }
+		</Slot>
 	</Fragment>;
 };
 
