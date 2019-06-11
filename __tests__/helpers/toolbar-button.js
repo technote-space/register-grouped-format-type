@@ -55,26 +55,6 @@ describe( 'registerGroupedFormatType test', () => {
 			className: 'test3-class',
 			inspectorGroup: 'test2-inspector',
 		} ) ).toBe( 'object' );
-		expect( typeof registerGroupedFormatType( {
-			name: 'test2-test1',
-			create: ( { args, name } ) => {
-				expect( name ).toBe( 'test2-test1' );
-				expect( args ).toHaveProperty( 'test3' );
-				expect( args.test3 ).toBe( true );
-				return { props: {} };
-			},
-			createInspector: ( { args, name } ) => {
-				expect( name ).toBe( 'test2-test1' );
-				expect( args ).toHaveProperty( 'test3' );
-				expect( args.test3 ).toBe( true );
-				return { props: {} };
-			},
-			group: 'test2',
-			inspectorGroup: 'test2-inspector',
-			attributes: {
-				style: 'color: red',
-			},
-		} ) ).toBe( 'object' );
 
 		const test1 = select( 'core/rich-text' ).getFormatType( PLUGIN_NAME + '/test1-test1' );
 		const test2 = select( 'core/rich-text' ).getFormatType( PLUGIN_NAME + '/test1-test2' );
