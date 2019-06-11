@@ -9,6 +9,11 @@ sudo: false
 
 cache: npm
 
+branches:
+  only:
+    - master
+    - develop
+
 jobs:
   include:
     - stage: lint
