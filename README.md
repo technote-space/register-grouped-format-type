@@ -1,7 +1,7 @@
 # Register Grouped Format Type
 
 [![npm version](https://badge.fury.io/js/%40technote-space%2Fregister-grouped-format-type.svg)](https://badge.fury.io/js/%40technote-space%2Fregister-grouped-format-type)
-[![Build Status](https://travis-ci.org/technote-space/register-grouped-format-type.svg?branch=master)](https://travis-ci.org/technote-space/register-grouped-format-type)
+[![Build Status](https://travis-ci.com/technote-space/register-grouped-format-type.svg?branch=master)](https://travis-ci.com/technote-space/register-grouped-format-type)
 [![Coverage Status](https://coveralls.io/repos/github/technote-space/register-grouped-format-type/badge.svg?branch=master)](https://coveralls.io/github/technote-space/register-grouped-format-type?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/616394da0ba143d7b3aee4f79d318cdf)](https://www.codacy.com/app/technote-space/register-grouped-format-type?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=technote-space/register-grouped-format-type&amp;utm_campaign=Badge_Grade)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
