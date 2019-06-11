@@ -28,7 +28,7 @@
   "homepage": "https://github.com/technote-space/register-grouped-format-type#readme",
   "license": "GPL-3.0",
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^1.0.3",
+    "@technote-space/gutenberg-utils": "^1.0.4",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
@@ -59,6 +59,6 @@
     "lodash": "^4.17.11",
     "mousetrap": "^1.6.3",
     "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.3"
+    "webpack-cli": "^3.3.4"
   }
 }
