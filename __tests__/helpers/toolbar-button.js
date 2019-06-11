@@ -5,7 +5,7 @@ import { registerGroupedFormatType, registerFormatTypeGroup } from '../../src/he
 
 describe( 'registerGroupedFormatType test', () => {
 	it( 'should not registered format type', () => {
-		expect( registerGroupedFormatType( { name: 'test1-test1', create: null, group: 'test1' } ) ).toBeNull();
+		//noinspection JSCheckFunctionSignatures
 		expect( registerGroupedFormatType( {
 			create: () => {
 			},
@@ -16,9 +16,6 @@ describe( 'registerGroupedFormatType test', () => {
 		expect( typeof registerGroupedFormatType( {
 			name: 'test1-test1',
 			group: 'test1',
-			create: () => {
-				return { props: {} };
-			},
 		} ) ).toBe( 'object' );
 		expect( typeof registerGroupedFormatType( {
 			name: 'test1-test2',
@@ -57,6 +54,26 @@ describe( 'registerGroupedFormatType test', () => {
 			tagName: 'test3-tag',
 			className: 'test3-class',
 			inspectorGroup: 'test2-inspector',
+		} ) ).toBe( 'object' );
+		expect( typeof registerGroupedFormatType( {
+			name: 'test2-test1',
+			create: ( { args, name } ) => {
+				expect( name ).toBe( 'test2-test1' );
+				expect( args ).toHaveProperty( 'test3' );
+				expect( args.test3 ).toBe( true );
+				return { props: {} };
+			},
+			createInspector: ( { args, name } ) => {
+				expect( name ).toBe( 'test2-test1' );
+				expect( args ).toHaveProperty( 'test3' );
+				expect( args.test3 ).toBe( true );
+				return { props: {} };
+			},
+			group: 'test2',
+			inspectorGroup: 'test2-inspector',
+			attributes: {
+				style: 'color: red',
+			},
 		} ) ).toBe( 'object' );
 
 		const test1 = select( 'core/rich-text' ).getFormatType( PLUGIN_NAME + '/test1-test1' );
