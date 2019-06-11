@@ -5,7 +5,7 @@ import { registerGroupedFormatType, registerFormatTypeGroup } from '../../src/he
 
 describe( 'registerGroupedFormatType test', () => {
 	it( 'should not registered format type', () => {
-		expect( registerGroupedFormatType( { name: 'test1-test1', create: null, group: 'test1' } ) ).toBeNull();
+		//noinspection JSCheckFunctionSignatures
 		expect( registerGroupedFormatType( {
 			create: () => {
 			},
@@ -16,9 +16,6 @@ describe( 'registerGroupedFormatType test', () => {
 		expect( typeof registerGroupedFormatType( {
 			name: 'test1-test1',
 			group: 'test1',
-			create: () => {
-				return { props: {} };
-			},
 		} ) ).toBe( 'object' );
 		expect( typeof registerGroupedFormatType( {
 			name: 'test1-test2',

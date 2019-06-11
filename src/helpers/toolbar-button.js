@@ -42,8 +42,8 @@ const getDefaultSetting = name => ( {
  * @param {string} title title
  * @param {string} tagName tag name
  * @param {string} className class name
- * @param {function} create create component function
- * @param {function} createInspector create inspector component function
+ * @param {function|undefined} create create component function
+ * @param {function|undefined} createInspector create inspector component function
  * @param {string} group group
  * @param {string} inspectorGroup inspector group
  * @param {object} settings settings
@@ -60,7 +60,7 @@ export const registerGroupedFormatType = ( {
 	inspectorGroup = name,
 	...settings
 } ) => {
-	if ( undefined === name || undefined === group || undefined === inspectorGroup || typeof create !== 'function' ) {
+	if ( undefined === name || undefined === group || undefined === inspectorGroup ) {
 		return null;
 	}
 
@@ -83,10 +83,12 @@ export const registerGroupedFormatType = ( {
 			args.isDisabled = ! args.isActive && args.value.start === args.value.end;
 			args.isDropdownDisabled = args.isDisabled && args.value.start !== undefined;
 
-			const component = create( { args, name, formatName } );
-			component.props.isActive = args.isActive;
-			component.props.isDisabled = args.isDisabled;
-			component.props.isDropdownDisabled = args.isDropdownDisabled;
+			const component = typeof create === 'function' ? create( { args, name, formatName } ) : null;
+			if ( component ) {
+				component.props.isActive = args.isActive;
+				component.props.isDisabled = args.isDisabled;
+				component.props.isDropdownDisabled = args.isDropdownDisabled;
+			}
 
 			const inspector = typeof createInspector === 'function' ? createInspector( { args, name, formatName } ) : null;
 			if ( inspector ) {
@@ -95,9 +97,9 @@ export const registerGroupedFormatType = ( {
 			}
 
 			return <Fragment>
-				<ComponentsFill>
+				{ component && <ComponentsFill>
 					{ component }
-				</ComponentsFill>
+				</ComponentsFill> }
 				{ inspector && <InspectorsFill>
 					{ inspector }
 				</InspectorsFill> }
