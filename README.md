@@ -23,39 +23,33 @@ npm install --save @technote-space/register-grouped-format-type
 
 `register.js`
 ```
-import { RichText } from '@technote-space/register-grouped-format-type';
+import { Common, RichText } from '@technote-space/register-grouped-format-type';
 
-const { ToolbarButton } = wp.components;
-const { toggleFormat } = wp.richText;
 const { registerFormatTypeGroup, registerGroupedFormatType } = RichText;
-
-// prepare utility function to create args
-const getProps = ( group, name ) => ( {
-	name,
-	group,
-	create: ( { args, formatName } ) => <ToolbarButton
-		icon='admin-customizer'
-		title={ <div className={ name }>{ name }</div> }
-		onClick={ () => args.onChange( toggleFormat( args.value, { type: formatName } ) ) }
-		isActive={ args.isActive }
-		extraProps={ {
-			label: name,
-			tooltip: <div className='dropdown-tooltip'>
-				<div className={ name }>{ name }</div>
-			</div>,
-		} }
-	/>,
-} );
+const { getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
 
 // register format type group setting
 registerFormatTypeGroup( 'test2', {
 	icon: 'admin-network',
 } );
 
+// register format group for inspector
+registerFormatTypeGroup( 'inspector', {
+	inspectorSettings: {
+		title: 'test inspector',
+		initialOpen: true,
+	},
+} );
+
 // register grouped format types
-registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
-registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
-registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
+registerGroupedFormatType( getToolbarButtonProps( 'test1', 'dropdown2-test1', 'admin-customizer' ) );
+registerGroupedFormatType( getToolbarButtonProps( 'test2', 'dropdown2-test2', 'admin-customizer' ) );
+registerGroupedFormatType( getToolbarButtonProps( 'test2', 'dropdown2-test3', 'admin-customizer' ) );
+
+// register format type
+registerGroupedFormatType( getColorButtonProps( 'inspector', 'font-color', 'Font Color', 'admin-site', 'color' ) );
+registerGroupedFormatType( getColorButtonProps( 'inspector', 'background-color', 'Background Color', 'editor-textcolor', 'background-color' ) );
+registerGroupedFormatType( getFontSizesButtonProps( 'inspector', 'font-size', 'Font Size', 'edit' ) );
 ```
 
 Compile and enqueue script.
@@ -68,44 +62,38 @@ Compile and enqueue script.
 
 `register.js`
 ```
-( function( toggleFormat, el, ToolbarButton, registerFormatTypeGroup, registerGroupedFormatType ) {
-	// prepare utility function to create args
-	function getProps( group, name ) {
-		return {
-			name: name,
-			group: group,
-			create: function( args ) {
-				return el( ToolbarButton, {
-					icon: 'admin-customizer',
-					title: el( 'div', { className: name }, name ),
-					onClick: function() {
-						args.args.onChange( toggleFormat( args.args.value, { type: args.formatName } ) );
-					},
-					isActive: args.args.isActive,
-					extraProps: {
-						label: name,
-						tooltip: el( 'div', { className: 'dropdown-tooltip' }, el( 'div', { className: name }, name ) ),
-					},
-				} );
-			},
-		};
-	}
+( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps ) {
 
 	// register format type group setting
 	registerFormatTypeGroup( 'test2', {
 		icon: 'admin-network',
 	} );
 
+	// register format group for inspector
+	registerFormatTypeGroup( 'inspector', {
+		inspectorSettings: {
+			title: 'test inspector',
+			initialOpen: true,
+		},
+	} );
+
 	// register grouped format types
-	registerGroupedFormatType( getProps( 'test1', 'dropdown2-test1' ) );
-	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test2' ) );
-	registerGroupedFormatType( getProps( 'test2', 'dropdown2-test3' ) );
+	registerGroupedFormatType( getToolbarButtonProps( 'test1', 'dropdown2-test1', 'admin-customizer' ) );
+	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'dropdown2-test2', 'admin-customizer' ) );
+	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'dropdown2-test3', 'admin-customizer' ) );
+
+	// register format type
+	registerGroupedFormatType( getColorButtonProps( 'inspector', 'font-color', 'Font Color', 'admin-site', 'color' ) );
+	registerGroupedFormatType( getColorButtonProps( 'inspector', 'background-color', 'Background Color', 'editor-textcolor', 'background-color' ) );
+	registerGroupedFormatType( getFontSizesButtonProps( 'inspector', 'font-size', 'Font Size', 'edit' ) );
+
 }(
-	wp.richText.toggleFormat,
 	wp.element.createElement,
-	wp.components.ToolbarButton,
 	Technote.Gutenberg.RichText.registerFormatTypeGroup,
 	Technote.Gutenberg.RichText.registerGroupedFormatType,
+	Technote.Gutenberg.Common.Helpers.getToolbarButtonProps,
+	Technote.Gutenberg.Common.Helpers.getColorButtonProps,
+	Technote.Gutenberg.Common.Helpers.getFontSizesButtonProps,
 ) );
 ```
 
