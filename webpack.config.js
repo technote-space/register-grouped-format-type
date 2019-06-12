@@ -10,6 +10,10 @@ const externals = {
 	'@wordpress/data': { this: [ 'wp', 'data' ] },
 	'@wordpress/editor': { this: [ 'wp', 'editor' ] },
 	'@wordpress/element': { this: [ 'wp', 'element' ] },
+	'@wordpress/i18n': { this: [ 'wp', 'i18n' ] },
+	'@wordpress/rich-text': { this: [ 'wp', 'richText' ] },
+	'@wordpress/url': { this: [ 'wp', 'url' ] },
+	lodash: 'lodash',
 };
 
 const webpackConfig = {

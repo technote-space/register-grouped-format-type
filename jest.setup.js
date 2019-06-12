@@ -24,6 +24,7 @@ const data = require( '@wordpress/data' );
 const editor = require( '@wordpress/editor' );
 const element = require( '@wordpress/element' );
 const hooks = require( '@wordpress/hooks' );
+const i18n = require( '@wordpress/i18n' );
 const richText = require( '@wordpress/rich-text' );
 const url = require( '@wordpress/url' );
 
@@ -35,6 +36,7 @@ global.wp = {
 	editor,
 	element,
 	hooks,
+	i18n,
 	richText,
 	url,
 };

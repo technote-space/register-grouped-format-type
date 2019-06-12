@@ -188,6 +188,7 @@ registerFormatTypeGroup( name, setting = {} )
 - wp-data
 - wp-editor
 - wp-element
+- wp-i18n
 - wp-rich-text
 - wp-url
 - lodash

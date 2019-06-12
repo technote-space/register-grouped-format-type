@@ -28,7 +28,7 @@
   "homepage": "https://github.com/technote-space/register-grouped-format-type#readme",
   "license": "GPL-3.0",
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^1.0.4",
+    "@technote-space/gutenberg-utils": "^1.0.5",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
@@ -46,8 +46,10 @@
     "@wordpress/data": "^4.5.0",
     "@wordpress/editor": "^9.2.6",
     "@wordpress/element": "^2.4.0",
+    "@wordpress/i18n": "^3.4.0",
     "@wordpress/hooks": "^2.3.0",
     "@wordpress/rich-text": "^3.3.0",
+    "@wordpress/url": "^2.6.0",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "enzyme": "^3.10.0",
