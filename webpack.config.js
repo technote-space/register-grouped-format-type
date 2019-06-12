@@ -1,3 +1,5 @@
+const SpeedMeasurePlugin = require( 'speed-measure-webpack-plugin' );
+const smp = new SpeedMeasurePlugin();
 const webpack = require( 'webpack' );
 const pkg = require( './package' );
 const path = require( 'path' );
@@ -34,4 +36,4 @@ const webpackConfig = {
 	],
 };
 
-module.exports = webpackConfig;
+module.exports = smp.wrap( webpackConfig );
