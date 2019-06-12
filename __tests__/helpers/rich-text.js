@@ -91,7 +91,7 @@ describe( 'registerMultipleClassFormatType', () => {
 
 } );
 
-describe( 'getFormatName test', () => {
+describe( 'getFormatName', () => {
 	it( 'should start plugin name', () => {
 		expect( getFormatName( 'test1' ) ).toContain( PLUGIN_NAME );
 	} );

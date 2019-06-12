@@ -9,7 +9,7 @@ const { Fragment } = wp.element;
 const { addFilter } = wp.hooks;
 const { create } = wp.richText;
 
-describe( 'ToolbarDropdown test', () => {
+describe( 'ToolbarDropdown', () => {
 	const getSnapshotName = ( name, index ) => `${ name }--${ index }`;
 	const setting = index => ( {
 		icon: 'admin-customizer',

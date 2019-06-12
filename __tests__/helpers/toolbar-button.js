@@ -3,7 +3,7 @@ import { PLUGIN_NAME } from '../../src/constant';
 
 import { registerGroupedFormatType, registerFormatTypeGroup } from '../../src/helpers';
 
-describe( 'registerGroupedFormatType test', () => {
+describe( 'registerGroupedFormatType', () => {
 	it( 'should not registered format type', () => {
 		//noinspection JSCheckFunctionSignatures
 		expect( registerGroupedFormatType( {
@@ -79,7 +79,7 @@ describe( 'registerGroupedFormatType test', () => {
 	} );
 } );
 
-describe( 'registerFormatTypeGroup test', () => {
+describe( 'registerFormatTypeGroup', () => {
 	it( 'should registered default setting', () => {
 		const group1 = registerFormatTypeGroup( 'group1' );
 		expect( group1 ).toHaveProperty( 'icon' );
