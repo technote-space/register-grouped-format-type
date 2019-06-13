@@ -1,0 +1,666 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InspectorComponent should render InspectorComponent 0: test--0 1`] = `
+Array [
+  Array [
+    <ForwardRef(PanelBody)
+      className="blocks-font-size"
+      key="2---0/.0"
+      title="Text Settings"
+    >
+      <div
+        className="components-panel__body blocks-font-size is-opened"
+      >
+        <h2
+          className="components-panel__body-title"
+        >
+          <ForwardRef(Button)
+            aria-expanded={true}
+            className="components-panel__body-toggle"
+            onClick={[Function]}
+          >
+            <button
+              aria-expanded={true}
+              className="components-button components-panel__body-toggle"
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="components-panel__arrow"
+                  focusable="false"
+                  height="24px"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M0,0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M12,8l-6,6l1.41,1.41L12,10.83l4.59,4.58L18,14L12,8z"
+                    />
+                  </g>
+                </svg>
+              </span>
+              Text Settings
+            </button>
+          </ForwardRef(Button)>
+        </h2>
+        <div
+          className="components-base-control"
+        >
+          <div
+            className="components-base-control__field"
+          >
+            <span
+              className="components-base-control__label"
+            >
+              Font Size
+            </span>
+            <div
+              className="components-font-size-picker__buttons"
+            >
+              <div
+                className="components-font-size-picker__dropdown"
+              >
+                <ForwardRef(Button)
+                  aria-expanded={false}
+                  aria-label="Font size: Normal"
+                  className="components-font-size-picker__selector"
+                  isLarge={true}
+                  onClick={[Function]}
+                >
+                  <button
+                    aria-expanded={false}
+                    aria-label="Font size: Normal"
+                    className="components-button components-font-size-picker__selector is-button is-default is-large"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Normal
+                  </button>
+                </ForwardRef(Button)>
+              </div>
+              <input
+                aria-label="Custom font size"
+                className="components-range-control__number"
+                onChange={[Function]}
+                type="number"
+                value=""
+              />
+              <ForwardRef(Button)
+                className="components-color-palette__clear"
+                disabled={true}
+                isDefault={true}
+                isSmall={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <button
+                  className="components-button components-color-palette__clear is-button is-default is-small"
+                  disabled={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Reset
+                </button>
+              </ForwardRef(Button)>
+            </div>
+          </div>
+        </div>
+        <div
+          className="components-base-control components-toggle-control"
+        >
+          <div
+            className="components-base-control__field"
+          >
+            <span
+              className="components-form-toggle"
+            >
+              <input
+                aria-describedby="inspector-toggle-control-0__help"
+                checked={false}
+                className="components-form-toggle__input"
+                id="inspector-toggle-control-0"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <span
+                className="components-form-toggle__track"
+              />
+              <span
+                className="components-form-toggle__thumb"
+              />
+              <svg
+                aria-hidden="true"
+                className="components-form-toggle__off"
+                focusable="false"
+                height="6"
+                role="img"
+                viewBox="0 0 6 6"
+                width="6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 1.5c.8 0 1.5.7 1.5 1.5S3.8 4.5 3 4.5 1.5 3.8 1.5 3 2.2 1.5 3 1.5M3 0C1.3 0 0 1.3 0 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"
+                />
+              </svg>
+            </span>
+            <label
+              className="components-toggle-control__label"
+              htmlFor="inspector-toggle-control-0"
+            >
+              Drop Cap
+            </label>
+          </div>
+          <p
+            className="components-base-control__help"
+            id="inspector-toggle-control-0__help"
+          >
+            Toggle to show a large initial letter.
+          </p>
+        </div>
+      </div>
+    </ForwardRef(PanelBody)>,
+    <ForwardRef(PanelBody)
+      className="editor-panel-color-settings block-editor-panel-color-settings"
+      hasColorsToChoose={true}
+      initialOpen={false}
+      title={
+        <span
+          className="editor-panel-color-settings__panel-title block-editor-panel-color-settings__panel-title"
+        >
+          Color Settings
+        </span>
+      }
+    >
+      <div
+        className="components-panel__body editor-panel-color-settings block-editor-panel-color-settings"
+      >
+        <h2
+          className="components-panel__body-title"
+        >
+          <ForwardRef(Button)
+            aria-expanded={false}
+            className="components-panel__body-toggle"
+            onClick={[Function]}
+          >
+            <button
+              aria-expanded={false}
+              className="components-button components-panel__body-toggle"
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="components-panel__arrow"
+                  focusable="false"
+                  height="24px"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M0,0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"
+                    />
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="editor-panel-color-settings__panel-title block-editor-panel-color-settings__panel-title"
+              >
+                Color Settings
+              </span>
+            </button>
+          </ForwardRef(Button)>
+        </h2>
+      </div>
+    </ForwardRef(PanelBody)>,
+    <ForwardRef(PanelBody)
+      key="5---0/.0"
+    >
+      <div
+        className="components-panel__body is-opened"
+      >
+        <a
+          href="http://example.com/test1"
+          key="3---0/.0"
+        >
+          test1
+        </a>
+        <a
+          href="http://example.com/test2"
+          key="4---0/.0"
+        >
+          test2
+        </a>
+      </div>
+    </ForwardRef(PanelBody)>,
+  ],
+  Array [
+    <div>
+       
+      Array [
+        "",
+        "",
+        <div
+          className="editor-rich-text block-editor-rich-text"
+        >
+          <div
+            onFocus={[Function]}
+          >
+            <div
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="components-autocomplete"
+                onClick={[Function]}
+              >
+                <p
+                  aria-activedescendant={null}
+                  aria-autocomplete="list"
+                  aria-label="Paragraph block"
+                  aria-multiline={true}
+                  aria-owns={null}
+                  className="block-editor-rich-text__editable editor-rich-text__editable wp-block-paragraph test-block-edit"
+                  contentEditable={true}
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<br data-rich-text-padding=\\"true\\">",
+                    }
+                  }
+                  data-is-placeholder-visible={true}
+                  onBlur={[Function]}
+                  onCompositionEnd={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onPaste={[Function]}
+                  onTouchStart={[Function]}
+                  role="textbox"
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "color": undefined,
+                      "direction": undefined,
+                      "fontSize": undefined,
+                      "textAlign": undefined,
+                    }
+                  }
+                  suppressContentEditableWarning={true}
+                />
+                <p
+                  className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "color": undefined,
+                      "direction": undefined,
+                      "fontSize": undefined,
+                      "textAlign": undefined,
+                    }
+                  }
+                >
+                  Start writing or type / to choose a block
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>,
+      ]
+       
+    </div>,
+    "",
+    "",
+    "",
+  ],
+]
+`;
+
+exports[`InspectorComponent should render InspectorComponent 1: test--1 1`] = `
+Array [
+  Array [
+    <ForwardRef(PanelBody)
+      className="blocks-font-size"
+      key="7---0/.0"
+      title="Text Settings"
+    >
+      <div
+        className="components-panel__body blocks-font-size is-opened"
+      >
+        <h2
+          className="components-panel__body-title"
+        >
+          <ForwardRef(Button)
+            aria-expanded={true}
+            className="components-panel__body-toggle"
+            onClick={[Function]}
+          >
+            <button
+              aria-expanded={true}
+              className="components-button components-panel__body-toggle"
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="components-panel__arrow"
+                  focusable="false"
+                  height="24px"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M0,0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M12,8l-6,6l1.41,1.41L12,10.83l4.59,4.58L18,14L12,8z"
+                    />
+                  </g>
+                </svg>
+              </span>
+              Text Settings
+            </button>
+          </ForwardRef(Button)>
+        </h2>
+        <div
+          className="components-base-control"
+        >
+          <div
+            className="components-base-control__field"
+          >
+            <span
+              className="components-base-control__label"
+            >
+              Font Size
+            </span>
+            <div
+              className="components-font-size-picker__buttons"
+            >
+              <div
+                className="components-font-size-picker__dropdown"
+              >
+                <ForwardRef(Button)
+                  aria-expanded={false}
+                  aria-label="Font size: Normal"
+                  className="components-font-size-picker__selector"
+                  isLarge={true}
+                  onClick={[Function]}
+                >
+                  <button
+                    aria-expanded={false}
+                    aria-label="Font size: Normal"
+                    className="components-button components-font-size-picker__selector is-button is-default is-large"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Normal
+                  </button>
+                </ForwardRef(Button)>
+              </div>
+              <input
+                aria-label="Custom font size"
+                className="components-range-control__number"
+                onChange={[Function]}
+                type="number"
+                value=""
+              />
+              <ForwardRef(Button)
+                className="components-color-palette__clear"
+                disabled={true}
+                isDefault={true}
+                isSmall={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <button
+                  className="components-button components-color-palette__clear is-button is-default is-small"
+                  disabled={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Reset
+                </button>
+              </ForwardRef(Button)>
+            </div>
+          </div>
+        </div>
+        <div
+          className="components-base-control components-toggle-control"
+        >
+          <div
+            className="components-base-control__field"
+          >
+            <span
+              className="components-form-toggle"
+            >
+              <input
+                aria-describedby="inspector-toggle-control-1__help"
+                checked={false}
+                className="components-form-toggle__input"
+                id="inspector-toggle-control-1"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <span
+                className="components-form-toggle__track"
+              />
+              <span
+                className="components-form-toggle__thumb"
+              />
+              <svg
+                aria-hidden="true"
+                className="components-form-toggle__off"
+                focusable="false"
+                height="6"
+                role="img"
+                viewBox="0 0 6 6"
+                width="6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 1.5c.8 0 1.5.7 1.5 1.5S3.8 4.5 3 4.5 1.5 3.8 1.5 3 2.2 1.5 3 1.5M3 0C1.3 0 0 1.3 0 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"
+                />
+              </svg>
+            </span>
+            <label
+              className="components-toggle-control__label"
+              htmlFor="inspector-toggle-control-1"
+            >
+              Drop Cap
+            </label>
+          </div>
+          <p
+            className="components-base-control__help"
+            id="inspector-toggle-control-1__help"
+          >
+            Toggle to show a large initial letter.
+          </p>
+        </div>
+      </div>
+    </ForwardRef(PanelBody)>,
+    <ForwardRef(PanelBody)
+      className="editor-panel-color-settings block-editor-panel-color-settings"
+      hasColorsToChoose={true}
+      initialOpen={false}
+      title={
+        <span
+          className="editor-panel-color-settings__panel-title block-editor-panel-color-settings__panel-title"
+        >
+          Color Settings
+        </span>
+      }
+    >
+      <div
+        className="components-panel__body editor-panel-color-settings block-editor-panel-color-settings"
+      >
+        <h2
+          className="components-panel__body-title"
+        >
+          <ForwardRef(Button)
+            aria-expanded={false}
+            className="components-panel__body-toggle"
+            onClick={[Function]}
+          >
+            <button
+              aria-expanded={false}
+              className="components-button components-panel__body-toggle"
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="components-panel__arrow"
+                  focusable="false"
+                  height="24px"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M0,0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"
+                    />
+                  </g>
+                </svg>
+              </span>
+              <span
+                className="editor-panel-color-settings__panel-title block-editor-panel-color-settings__panel-title"
+              >
+                Color Settings
+              </span>
+            </button>
+          </ForwardRef(Button)>
+        </h2>
+      </div>
+    </ForwardRef(PanelBody)>,
+  ],
+  Array [
+    <div>
+       
+      Array [
+        "",
+        "",
+        <div
+          className="editor-rich-text block-editor-rich-text"
+        >
+          <div
+            onFocus={[Function]}
+          >
+            <div
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="components-autocomplete"
+                onClick={[Function]}
+              >
+                <p
+                  aria-activedescendant={null}
+                  aria-autocomplete="list"
+                  aria-label="Paragraph block"
+                  aria-multiline={true}
+                  aria-owns={null}
+                  className="block-editor-rich-text__editable editor-rich-text__editable wp-block-paragraph test-block-edit"
+                  contentEditable={true}
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<br data-rich-text-padding=\\"true\\">",
+                    }
+                  }
+                  data-is-placeholder-visible={true}
+                  onBlur={[Function]}
+                  onCompositionEnd={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  onPaste={[Function]}
+                  onTouchStart={[Function]}
+                  role="textbox"
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "color": undefined,
+                      "direction": undefined,
+                      "fontSize": undefined,
+                      "textAlign": undefined,
+                    }
+                  }
+                  suppressContentEditableWarning={true}
+                />
+                <p
+                  className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+                  style={
+                    Object {
+                      "backgroundColor": undefined,
+                      "color": undefined,
+                      "direction": undefined,
+                      "fontSize": undefined,
+                      "textAlign": undefined,
+                    }
+                  }
+                >
+                  Start writing or type / to choose a block
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>,
+      ]
+       
+    </div>,
+    "",
+    "",
+  ],
+]
+`;

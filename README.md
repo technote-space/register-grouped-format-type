@@ -180,6 +180,7 @@ registerFormatTypeGroup( name, setting = {} )
 	className: undefined,
 	menuClassName: undefined,
 	inspectorSettings: {},
+	toolbarGroup: undefined,
 }
 ```
 

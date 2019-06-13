@@ -42,3 +42,5 @@ global.wp = {
 };
 
 blockLibrary.registerCoreBlocks();
+
+hooks.removeAllFilters( 'editor.BlockEdit' );

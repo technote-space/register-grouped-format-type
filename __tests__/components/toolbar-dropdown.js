@@ -3,11 +3,20 @@ import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { ToolbarDropdown, GroupedControls } from '../../src/components';
 
-const { BlockEdit, BlockFormatControls, InspectorControls } = wp.blockEditor;
+const { BlockEdit, BlockFormatControls } = wp.blockEditor;
 const { SlotFillProvider, Popover, ToolbarButton } = wp.components;
 const { Fragment } = wp.element;
-const { addFilter } = wp.hooks;
+const { addFilter, removeFilter } = wp.hooks;
 const { create } = wp.richText;
+
+let filter;
+beforeAll( () => {
+	addFilter( 'editor.BlockEdit', 'components-test/toolbar-dropdown', BlockEdit => props => filter( BlockEdit, props ) );
+} );
+
+afterAll( () => {
+	removeFilter( 'editor.BlockEdit', 'components-test/toolbar-dropdown' );
+} );
 
 describe( 'ToolbarDropdown', () => {
 	const getSnapshotName = ( name, index ) => `${ name }--${ index }`;
@@ -21,6 +30,7 @@ describe( 'ToolbarDropdown', () => {
 		inspectorSettings: {},
 	} );
 	const { Fill, Slot } = GroupedControls( 'components-test' );
+	const getGroupedSlots = setting  => ( [ [ { Slot, setting } ] ] );
 
 	const createFilter = ( index, createToolbarDropdown, createComponents ) => ( BlockEdit, props ) => {
 		if ( ! props.isSelected ) {
@@ -28,16 +38,14 @@ describe( 'ToolbarDropdown', () => {
 		}
 		return <Fragment>
 			<BlockEdit { ...props }/>
-			{ createToolbarDropdown( Slot, setting( index ), index ) }
-			{ createComponents( Fill, index ) }
+			{ createToolbarDropdown( setting( index ), index ) }
+			{ createComponents( index ) }
 		</Fragment>;
 	};
-	let filter;
-	addFilter( 'editor.BlockEdit', 'components-test/toolbar-dropdown', BlockEdit => props => filter( BlockEdit, props ) );
 
 	[
 		{
-			createComponents: Fill => <Fragment>
+			createComponents: () => <Fragment>
 				<Fill>
 					<ToolbarButton
 						title={ 'ToolbarButton1' }
@@ -53,7 +61,7 @@ describe( 'ToolbarDropdown', () => {
 					/>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => ToolbarDropdown( Slot, Object.assign( {}, setting, { menuClassName: 'test-menu-class' } ), false ),
+			createToolbarDropdown: setting => ToolbarDropdown( getGroupedSlots( Object.assign( {}, setting, { menuClassName: 'test-menu-class' } ) ) ),
 			callback: ( wrapper, index ) => {
 				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 0 );
 				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 1 );
@@ -74,7 +82,7 @@ describe( 'ToolbarDropdown', () => {
 			},
 		},
 		{
-			createComponents: Fill => <Fragment>
+			createComponents: () => <Fragment>
 				<Fill>
 					<ToolbarButton
 						title={ 'ToolbarButton3' }
@@ -89,7 +97,7 @@ describe( 'ToolbarDropdown', () => {
 					/>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => ToolbarDropdown( Slot, Object.assign( {}, setting, { className: 'test-class', menuLabel: undefined } ), false ),
+			createToolbarDropdown: setting => ToolbarDropdown( getGroupedSlots( Object.assign( {}, setting, { className: 'test-class', menuLabel: undefined } ) ) ),
 			callback: ( wrapper, index ) => {
 				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 0 );
 				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 1 );
@@ -110,7 +118,7 @@ describe( 'ToolbarDropdown', () => {
 			},
 		},
 		{
-			createComponents: Fill => <Fragment>
+			createComponents: () => <Fragment>
 				<Fill>
 					<ToolbarButton
 						title={ 'ToolbarButton5' }
@@ -126,7 +134,7 @@ describe( 'ToolbarDropdown', () => {
 					/>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => ToolbarDropdown( Slot, setting, false ),
+			createToolbarDropdown: setting => ToolbarDropdown( getGroupedSlots( setting ) ),
 			callback: ( wrapper ) => {
 				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 0 );
 				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 1 );
@@ -137,12 +145,12 @@ describe( 'ToolbarDropdown', () => {
 			},
 		},
 		{
-			createComponents: Fill => <Fragment>
+			createComponents: () => <Fragment>
 				<Fill>
 					<a href='http://example.com/test7'>test7</a>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => ToolbarDropdown( Slot, setting, false ),
+			createToolbarDropdown: setting => ToolbarDropdown( getGroupedSlots( setting ) ),
 			callback: ( wrapper ) => {
 				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 1 );
 				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 1 );
@@ -154,42 +162,13 @@ describe( 'ToolbarDropdown', () => {
 		{
 			createComponents: () => <Fragment>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => ToolbarDropdown( Slot, setting, false ),
+			createToolbarDropdown: setting => ToolbarDropdown( getGroupedSlots( setting ) ),
 			callback: ( wrapper ) => {
 				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 0 );
-				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 0 );
-			},
-		},
-		{
-			createComponents: Fill => <Fragment>
-				<Fill>
-					<a href='http://example.com/test8'>test8</a>
-				</Fill>
-				<Fill>
-					<a href='http://example.com/test9'>test9</a>
-				</Fill>
-			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => ToolbarDropdown( Slot, setting, true ),
-			callback: ( wrapper ) => {
-				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 2 );
-				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 0 );
-			},
-		},
-		{
-			createComponents: Fill => <Fragment>
-				<Fill>
-					<ToolbarButton
-						title={ 'ToolbarButton10' }
-						className={ 'test10' }
-						isDisabled={ true }
-					/>
-				</Fill>
-			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => ToolbarDropdown( Slot, setting, true ),
-			callback: ( wrapper ) => {
-				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 0 );
-				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 0 );
-				expect( wrapper.find( '.test10' ).hostNodes() ).toHaveLength( 0 );
+				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 1 );
+				expect( wrapper.find( '.components-dropdown-button' ).hostNodes() ).toHaveLength( 0 );
+				expect( wrapper.find( '.components-dropdown-button__toggle' ).hostNodes() ).toHaveLength( 0 );
+				expect( wrapper.find( '.components-dropdown-menu__menu-item' ).hostNodes() ).toHaveLength( 0 );
 			},
 		},
 	].forEach( ( { createComponents, createToolbarDropdown, callback }, index ) => {
@@ -199,7 +178,6 @@ describe( 'ToolbarDropdown', () => {
 				<SlotFillProvider>
 					<Popover.Slot/>
 					<BlockFormatControls.Slot/>
-					<InspectorControls.Slot/>
 
 					<BlockEdit
 						name="core/paragraph"
