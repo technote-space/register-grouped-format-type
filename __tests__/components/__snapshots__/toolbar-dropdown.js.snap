@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 0: opened-dropdown--0 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 0: opened-dropdown--0 1`] = `
 Array [
   <div />,
   <div
@@ -545,7 +545,7 @@ Array [
 ]
 `;
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 0: test--0 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 0: test--0 1`] = `
 Array [
   <div />,
   <div
@@ -944,7 +944,7 @@ Array [
 ]
 `;
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 1: opened-dropdown--1 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 1: opened-dropdown--1 1`] = `
 Array [
   <div />,
   <div
@@ -1493,7 +1493,7 @@ Array [
 ]
 `;
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 1: test--1 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 1: test--1 1`] = `
 Array [
   <div />,
   <div
@@ -1892,7 +1892,7 @@ Array [
 ]
 `;
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 2: test--2 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 2: test--2 1`] = `
 Array [
   <div />,
   <div
@@ -2282,7 +2282,7 @@ Array [
 ]
 `;
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 3: test--3 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 3: test--3 1`] = `
 Array [
   <div />,
   <div
@@ -2623,7 +2623,7 @@ Array [
 ]
 `;
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 4: test--4 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 4: test--4 1`] = `
 Array [
   <div />,
   "",
@@ -2950,7 +2950,7 @@ Array [
 ]
 `;
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 5: test--5 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 5: test--5 1`] = `
 Array [
   <div />,
   "",
@@ -3298,7 +3298,7 @@ Array [
 ]
 `;
 
-exports[`ToolbarDropdown test should render ToolbarDropdown 6: test--6 1`] = `
+exports[`ToolbarDropdown should render ToolbarDropdown 6: test--6 1`] = `
 Array [
   <div />,
   "",
