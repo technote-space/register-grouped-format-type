@@ -4,7 +4,7 @@ const { dispatch, select } = wp.data;
 /**
  * @param {string} name name
  * @param {object} settings strings
- * @returns {{}|null} registered settings
+ * @returns {object|null} registered settings
  * @private
  */
 export const registerMultipleClassFormatType = ( name, settings ) => {

@@ -1,10 +1,14 @@
 import classnames from 'classnames';
 import { Components } from '@technote-space/gutenberg-utils';
 
-const { BlockFormatControls, InspectorControls } = wp.blockEditor;
-const { Toolbar, IconButton, NavigableMenu, PanelBody } = wp.components;
-const { Fragment } = wp.element;
+const { BlockFormatControls } = wp.blockEditor;
+const { Toolbar, IconButton, NavigableMenu } = wp.components;
 
+/**
+ * @param {Array} fills fills
+ * @param {object} setting setting
+ * @returns {*} dropdown
+ */
 const createDropdown = ( fills, setting ) => {
 	const controls = fills.map( ( [ { props } ] ) => props );
 	const isActive = !! controls.filter( control => control.isActive ).length;
@@ -42,46 +46,28 @@ const createDropdown = ( fills, setting ) => {
 	/>;
 };
 
+/**
+ * @param {Array} fills fills
+ * @param {object} setting setting
+ * @returns {*} component
+ */
 const createComponent = ( fills, setting ) => fills.length > 1 ? createDropdown( fills, setting ) : fills[ 0 ]; /* eslint-disable-line no-magic-numbers */
 
-const createInspectorComponent = ( fills, setting ) => {
-	const activeFills = fills.filter( ( [ { props } ] ) => ! props.isDisabled );
-	if ( ! activeFills.length ) {
-		return null;
-	}
-
-	return <InspectorControls>
-		<PanelBody
-			{ ...setting.inspectorSettings }
-		>
-			{ activeFills }
-		</PanelBody>
-	</InspectorControls>;
-};
-
 /**
- * @param {{}} Slot Slot
- * @param {object} setting setting
- * @param {boolean} isInspector is inspector?
+ * @param {Array.<Array.<object>>} groupedSlots grouped slots
  * @returns {*} dropdown
  * @constructor
  */
-const ToolbarDropdown = ( Slot, setting, isInspector = false ) => {
-	return <Fragment>
-		<Slot>
-			{ fills => ! fills.length ? null : (
-				isInspector ?
-					createInspectorComponent( fills, setting ) :
-					<BlockFormatControls>
-						<div className="editor-format-toolbar block-editor-format-toolbar">
-							<Toolbar>
-								{ createComponent( fills, setting ) }
-							</Toolbar>
-						</div>
-					</BlockFormatControls>
-			) }
-		</Slot>
-	</Fragment>;
+const ToolbarDropdown = groupedSlots => {
+	return <BlockFormatControls>
+		{ groupedSlots.map( ( slots, groupIndex ) => <div key={ groupIndex } className="editor-format-toolbar block-editor-format-toolbar">
+			<Toolbar>
+				{ slots.map( ( { Slot, setting }, index ) => <Slot key={ `${ groupIndex }-${ index }` }>
+					{ fills => ! fills.length ? null : createComponent( fills, setting ) }
+				</Slot> ) }
+			</Toolbar>
+		</div> ) }
+	</BlockFormatControls>;
 };
 
 export default ToolbarDropdown;
