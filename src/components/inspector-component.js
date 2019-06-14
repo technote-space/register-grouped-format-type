@@ -1,6 +1,7 @@
 import { Helpers } from '../utils';
 
-const { InspectorControls } = wp.blockEditor;
+const { getEditor } = Helpers;
+const { InspectorControls } = getEditor();
 const { PanelBody } = wp.components;
 const { getContrastChecker } = Helpers;
 

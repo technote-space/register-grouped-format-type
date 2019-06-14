@@ -1,7 +1,8 @@
 import classnames from 'classnames';
 import { Components, Helpers } from '../utils';
 
-const { BlockFormatControls } = wp.blockEditor;
+const { getEditor } = Helpers;
+const { BlockFormatControls } = getEditor();
 const { Toolbar, IconButton, NavigableMenu } = wp.components;
 
 /**
