@@ -1,7 +1,7 @@
 const { Fragment } = wp.element;
 
 import { GroupedControls, GroupedInspectors, ToolbarDropdown, InspectorComponent } from '../components';
-import { registerMultipleClassFormatType, getFormatName } from './index';
+import { registerMultipleClassFormatType, getFormatName } from './rich-text';
 
 const formatNames = {};
 const groups = {};
@@ -190,6 +190,6 @@ const createInspectorFill = ( inspectorGroup, component ) => createFill( inspect
  * @returns {null|*} slot
  */
 const createSlot = ( isFirst, args ) => isFirst ? <Fragment>
-		{ ToolbarDropdown( getToolbarGroupedSlots() ) }
+	{ ToolbarDropdown( getToolbarGroupedSlots() ) }
 	{ Object.keys( inspectorGroups ).map( key => InspectorComponent( inspectorGroups[ key ].Slot, getGroupSetting( key ), args ) ) }
 </Fragment> : null;
