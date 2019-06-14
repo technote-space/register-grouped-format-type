@@ -101,7 +101,7 @@ export const registerGroupedFormatType = ( {
 		title,
 		tagName,
 		className,
-		edit: onEdit( name, formatName, group, inspectorGroup, create, createInspector, isFirst ),
+		edit: onEdit( name, formatName, group, inspectorGroup, create, createInspector, isFirst, settings ),
 		...settings,
 	} );
 };
@@ -114,14 +114,15 @@ export const registerGroupedFormatType = ( {
  * @param {function|undefined} create create component function
  * @param {function|undefined} createInspector create inspector component function
  * @param {boolean} isFirst is first?
+ * @param {object} settings settings
  * @returns {function(*=): *} component
  */
-const onEdit = ( name, formatName, group, inspectorGroup, create, createInspector, isFirst ) => args => {
+const onEdit = ( name, formatName, group, inspectorGroup, create, createInspector, isFirst, settings ) => args => {
 	args.isDisabled = ! args.isActive && args.value.start === args.value.end;
 	args.isDropdownDisabled = args.isDisabled && args.value.start !== undefined;
 
-	const component = createComponent( create, group, args, name, formatName );
-	const inspector = createComponent( createInspector, inspectorGroup, args, name, formatName );
+	const component = createComponent( create, group, args, name, formatName, settings );
+	const inspector = createComponent( createInspector, inspectorGroup, args, name, formatName, settings );
 
 	return <Fragment>
 		{ createComponentFill( group, component ) }
@@ -136,15 +137,17 @@ const onEdit = ( name, formatName, group, inspectorGroup, create, createInspecto
  * @param {object} args args
  * @param {string} name name
  * @param {string} formatName format name
+ * @param {object} settings settings
  * @returns {null|*} component
  */
-const createComponent = ( createFunction, group, args, name, formatName ) => {
+const createComponent = ( createFunction, group, args, name, formatName, settings ) => {
 	const component = !! group && typeof createFunction === 'function' ? createFunction( { args, name, formatName } ) : null;
 	if ( component ) {
 		component.props.isActive = args.isActive;
 		component.props.isDisabled = args.isDisabled;
 		component.props.isDropdownDisabled = args.isDropdownDisabled;
 		component.props.formatName = formatName;
+		component.props.propertyName = settings.propertyName;
 	}
 	return component;
 };
