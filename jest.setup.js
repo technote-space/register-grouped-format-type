@@ -20,6 +20,7 @@ global.window.console.error = () => {
 const blockLibrary = require( '@wordpress/block-library' );
 const blockEditor = require( '@wordpress/block-editor' );
 const components = require( '@wordpress/components' );
+const coreData = require( '@wordpress/core-data' );
 const data = require( '@wordpress/data' );
 const editor = require( '@wordpress/editor' );
 const element = require( '@wordpress/element' );
@@ -32,6 +33,7 @@ global.wp = {
 	blockLibrary,
 	blockEditor,
 	components,
+	coreData,
 	data,
 	editor,
 	element,

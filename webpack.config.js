@@ -6,7 +6,9 @@ const path = require( 'path' );
 
 const banner = `${ pkg.name } ${ pkg.version }\nCopyright (c) ${ new Date().getFullYear() } ${ pkg.author }\nLicense: ${ pkg.license }`;
 const externals = {
+	'@wordpress/block-editor': { this: [ 'wp', 'blockEditor' ] },
 	'@wordpress/components': { this: [ 'wp', 'components' ] },
+	'@wordpress/core-data': { this: [ 'wp', 'coreData' ] },
 	'@wordpress/data': { this: [ 'wp', 'data' ] },
 	'@wordpress/editor': { this: [ 'wp', 'editor' ] },
 	'@wordpress/element': { this: [ 'wp', 'element' ] },

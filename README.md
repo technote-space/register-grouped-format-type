@@ -182,11 +182,14 @@ registerFormatTypeGroup( name, setting = {} )
 	inspectorSettings: {},
 	toolbarGroup: undefined,
 	useContrastChecker: false,
+	additionalInspectors: [],
 }
 ```
 
 ## dependencies
+- wp-block-editor
 - wp-components
+- wp-core-data
 - wp-data
 - wp-editor
 - wp-element
