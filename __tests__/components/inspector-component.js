@@ -28,6 +28,8 @@ describe( 'InspectorComponent', () => {
 		className: undefined,
 		menuClassName: undefined,
 		inspectorSettings: {},
+		toolbarGroup: undefined,
+		useContrastChecker: false,
 	} );
 	const { Fill, Slot } = GroupedControls( 'components-test' );
 
@@ -53,7 +55,7 @@ describe( 'InspectorComponent', () => {
 					<a href='http://example.com/test2'>test2</a>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, setting ),
+			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, Object.assign( {}, setting, { useContrastChecker: true } ), {} ),
 			callback: ( wrapper ) => {
 				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 2 );
 				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 0 );
@@ -69,7 +71,7 @@ describe( 'InspectorComponent', () => {
 					/>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, setting ),
+			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, setting, {} ),
 			callback: ( wrapper ) => {
 				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 0 );
 				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 0 );
