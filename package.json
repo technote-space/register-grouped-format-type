@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "gutenberg's helper to register format type",
   "main": "build/index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   "homepage": "https://github.com/technote-space/register-grouped-format-type#readme",
   "license": "GPL-3.0",
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^1.0.8",
+    "@technote-space/gutenberg-utils": "^1.0.9",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
