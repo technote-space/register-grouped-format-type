@@ -58,16 +58,14 @@ const createComponent = ( fills, setting ) => fills.length > 1 ? createDropdown(
  * @returns {*} dropdown
  * @constructor
  */
-const ToolbarDropdown = groupedSlots => {
-	return <BlockFormatControls>
-		{ groupedSlots.map( ( slots, groupIndex ) => <div key={ groupIndex } className="editor-format-toolbar block-editor-format-toolbar">
-			<Toolbar>
-				{ slots.map( ( { Slot, setting }, index ) => <Slot key={ `${ groupIndex }-${ index }` }>
-					{ fills => ! fills.length ? null : createComponent( fills, setting ) }
-				</Slot> ) }
-			</Toolbar>
-		</div> ) }
-	</BlockFormatControls>;
-};
+const ToolbarDropdown = groupedSlots => <BlockFormatControls>
+	{ groupedSlots.map( ( slots, groupIndex ) => <div key={ groupIndex } className="editor-format-toolbar block-editor-format-toolbar">
+		<Toolbar>
+			{ slots.map( ( { Slot, setting }, index ) => <Slot key={ `${ groupIndex }-${ index }` }>
+				{ fills => ! fills.length ? null : createComponent( fills, setting ) }
+			</Slot> ) }
+		</Toolbar>
+	</div> ) }
+</BlockFormatControls>;
 
 export default ToolbarDropdown;
