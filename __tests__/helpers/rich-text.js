@@ -1,5 +1,5 @@
 import { PLUGIN_NAME } from '../../src/constant';
-import { registerMultipleClassFormatType, getFormatName } from '../../src/helpers';
+import { registerMultipleClassFormatType, getFormatName, getRemoveFormatButton } from '../../src/helpers';
 
 describe( 'registerMultipleClassFormatType', () => {
 	it( 'should not null if succeeded registration', () => {
@@ -91,12 +91,28 @@ describe( 'registerMultipleClassFormatType', () => {
 
 } );
 
-describe( 'getFormatName test', () => {
+describe( 'getFormatName', () => {
 	it( 'should start plugin name', () => {
 		expect( getFormatName( 'test1' ) ).toContain( PLUGIN_NAME );
 	} );
 
 	it( 'should end name', () => {
 		expect( getFormatName( 'test2' ) ).toContain( 'test2' );
+	} );
+} );
+
+describe( 'getRemoveFormatButton', () => {
+	it( 'should get remove format button generator', () => {
+		expect( typeof getRemoveFormatButton( 'test-label1' ) ).toBe( 'function' );
+		expect( typeof getRemoveFormatButton( 'test-label2', {} ) ).toBe( 'function' );
+	} );
+
+	it( 'should get remove format button', () => {
+		const generator = getRemoveFormatButton( 'test-label1' );
+		const button = generator( {} );
+		expect( typeof button ).toBe( 'object' );
+		expect( button ).hasOwnProperty( 'props' );
+		expect( button.props ).hasOwnProperty( 'onClick' );
+		expect( button.props.children ).toBe( 'test-label1' );
 	} );
 } );

@@ -1,10 +1,14 @@
+import { Helpers } from '../utils';
 import { PLUGIN_NAME } from '../constant';
 
 const { dispatch, select } = wp.data;
+const { Button } = wp.components;
+const { getRemoveFormatFunction } = Helpers;
+
 /**
  * @param {string} name name
  * @param {object} settings strings
- * @returns {{}|null} registered settings
+ * @returns {object|null} registered settings
  * @private
  */
 export const registerMultipleClassFormatType = ( name, settings ) => {
@@ -114,3 +118,15 @@ export const registerMultipleClassFormatType = ( name, settings ) => {
  * @returns {string} format name
  */
 export const getFormatName = name => `${ PLUGIN_NAME }/${ name }`;
+
+/**
+ * @param {string} label label
+ * @param {object} settings settings
+ * @returns {function} remove format button
+ */
+export const getRemoveFormatButton = ( label, settings = { isDefault: true } ) => args => <Button
+	{ ...settings }
+	onClick={ getRemoveFormatFunction( args ) }
+>
+	{ label }
+</Button>;
