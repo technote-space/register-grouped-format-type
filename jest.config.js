@@ -6,4 +6,5 @@ module.exports = {
 	moduleFileExtensions: [ 'js' ],
 	setupFiles: [ '<rootDir>/jest.setup.js' ],
 	coverageDirectory: 'coverage',
+	testPathIgnorePatterns: [ '/node_modules/', '/__tests__/components/common.js' ],
 };

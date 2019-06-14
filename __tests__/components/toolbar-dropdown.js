@@ -1,52 +1,18 @@
 /* eslint-disable no-magic-numbers */
-import { mount } from 'enzyme';
+import createTest from './common';
 import toJson from 'enzyme-to-json';
-import { ToolbarDropdown, GroupedControls } from '../../src/components';
+import { ToolbarDropdown } from '../../src/components';
 
-const { BlockEdit, BlockFormatControls } = wp.blockEditor;
-const { SlotFillProvider, Popover, ToolbarButton } = wp.components;
+const { BlockFormatControls } = wp.blockEditor;
+const { Popover, ToolbarButton } = wp.components;
 const { Fragment } = wp.element;
-const { addFilter, removeFilter } = wp.hooks;
-const { create } = wp.richText;
 
-let filter;
-beforeAll( () => {
-	addFilter( 'editor.BlockEdit', 'components-test/toolbar-dropdown', BlockEdit => props => filter( BlockEdit, props ) );
-} );
-
-afterAll( () => {
-	removeFilter( 'editor.BlockEdit', 'components-test/toolbar-dropdown' );
-} );
-
-describe( 'ToolbarDropdown', () => {
-	const getSnapshotName = ( name, index ) => `${ name }--${ index }`;
-	const setting = index => ( {
-		icon: 'admin-customizer',
-		position: 'top right',
-		label: `test label ${ index }`,
-		menuLabel: `test menu label ${ index }`,
-		className: undefined,
-		menuClassName: undefined,
-		inspectorSettings: {},
-		toolbarGroup: undefined,
-		useContrastChecker: false,
-		additionalInspectors: [],
-	} );
-	const { Fill, Slot } = GroupedControls( 'components-test' );
-	const getGroupedSlots = setting  => ( [ [ { Slot, setting } ] ] );
-
-	const createFilter = ( index, createToolbarDropdown, createComponents ) => ( BlockEdit, props ) => {
-		if ( ! props.isSelected ) {
-			return <BlockEdit { ...props }/>;
-		}
-		return <Fragment>
-			<BlockEdit { ...props }/>
-			{ createToolbarDropdown( setting( index ), index ) }
-			{ createComponents( index ) }
-		</Fragment>;
-	};
-
-	[
+createTest( 'ToolbarDropdown', () => <Fragment>
+	<Popover.Slot/>
+	<BlockFormatControls.Slot/>
+</Fragment>, ( Fill, Slot, getSnapshotName ) => {
+	const getGroupedSlots = setting => ( [ [ { Slot, setting } ] ] );
+	return [
 		{
 			createComponents: () => <Fragment>
 				<Fill>
@@ -174,33 +140,5 @@ describe( 'ToolbarDropdown', () => {
 				expect( wrapper.find( '.components-dropdown-menu__menu-item' ).hostNodes() ).toHaveLength( 0 );
 			},
 		},
-	].forEach( ( { createComponents, createToolbarDropdown, callback }, index ) => {
-		it( `should render ToolbarDropdown ${ index }`, () => {
-			filter = createFilter( index, createToolbarDropdown, createComponents );
-			const wrapper = mount(
-				<SlotFillProvider>
-					<Popover.Slot/>
-					<BlockFormatControls.Slot/>
-
-					<BlockEdit
-						name="core/paragraph"
-						isSelected={ true }
-						attributes={ ( {
-							className: 'test-block-edit',
-							content: create( {
-								text: 'test',
-								start: 0,
-								end: 1,
-								formats: [ [], [], [], [] ],
-							} ),
-						} ) }
-					/>
-				</SlotFillProvider>,
-			);
-
-			expect( toJson( wrapper, { mode: 'deep' } ) ).toMatchSnapshot( getSnapshotName( 'test', index ) );
-
-			callback( wrapper, index );
-		} );
-	} );
+	];
 } );

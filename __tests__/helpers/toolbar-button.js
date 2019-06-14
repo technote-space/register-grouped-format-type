@@ -29,18 +29,14 @@ describe( 'registerGroupedFormatType', () => {
 			className: 'test1-test2-class',
 		} ) ).toBe( 'object' );
 
-		const createMock = jest.fn( ( { args, name } ) => {
+		const commonFunc = ( { args, name } ) => {
 			expect( name ).toBe( 'test2-test1' );
 			expect( args ).toHaveProperty( 'test3' );
 			expect( args.test3 ).toBe( true );
 			return { props: {} };
-		} );
-		const createInspectorMock = jest.fn( ( { args, name } ) => {
-			expect( name ).toBe( 'test2-test1' );
-			expect( args ).toHaveProperty( 'test3' );
-			expect( args.test3 ).toBe( true );
-			return { props: {} };
-		} );
+		};
+		const createMock = jest.fn( commonFunc );
+		const createInspectorMock = jest.fn( commonFunc );
 		expect( typeof registerGroupedFormatType( {
 			name: 'test2-test1',
 			create: createMock,
