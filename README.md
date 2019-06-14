@@ -25,7 +25,7 @@ npm install --save @technote-space/register-grouped-format-type
 ```
 import { Common, RichText } from '@technote-space/register-grouped-format-type';
 
-const { registerFormatTypeGroup, registerGroupedFormatType } = RichText;
+const { registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton } = RichText;
 const { getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
 
 // register format type group setting
@@ -39,6 +39,10 @@ registerFormatTypeGroup( 'inspector', {
 		title: 'test inspector',
 		initialOpen: true,
 	},
+	// set useContrastChecker = true to show ContrastChecker
+	useContrastChecker: true,
+	// set additional inspector (function: args => component)
+	additionalInspectors: [ getRemoveFormatButton( 'remove all formats' ) ],
 } );
 
 // register grouped format types
@@ -62,7 +66,7 @@ Compile and enqueue script.
 
 `register.js`
 ```
-( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps ) {
+( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton, getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps ) {
 
 	// register format type group setting
 	registerFormatTypeGroup( 'test2', {
@@ -75,6 +79,10 @@ Compile and enqueue script.
 			title: 'test inspector',
 			initialOpen: true,
 		},
+		// set useContrastChecker = true to show ContrastChecker
+		useContrastChecker: true,
+		// set additional inspector (function: args => component)
+		additionalInspectors: [ getRemoveFormatButton( 'remove all formats' ) ],
 	} );
 
 	// register grouped format types
@@ -91,6 +99,7 @@ Compile and enqueue script.
 	wp.element.createElement,
 	Technote.Gutenberg.RichText.registerFormatTypeGroup,
 	Technote.Gutenberg.RichText.registerGroupedFormatType,
+	Technote.Gutenberg.RichText.getRemoveFormatButton,
 	Technote.Gutenberg.Common.Helpers.getToolbarButtonProps,
 	Technote.Gutenberg.Common.Helpers.getColorButtonProps,
 	Technote.Gutenberg.Common.Helpers.getFontSizesButtonProps,
@@ -114,10 +123,10 @@ Register grouped format type.
  * @param {string} title title
  * @param {string} tagName tag name
  * @param {string} className class name
- * @param {function} create create component function
- * @param {function} createInspector create inspector component function
- * @param {string} group group
- * @param {string} inspectorGroup inspector group
+ * @param {function?} create create component function
+ * @param {function?} createInspector create inspector component function
+ * @param {string?} group group
+ * @param {string?} inspectorGroup inspector group
  * @param {object} settings settings
  * @return {object|null} registered settings
  */
@@ -129,7 +138,7 @@ registerGroupedFormatType( {
 	create,
 	createInspector,
 	group = name,
-	inspectorGroup = name,
+	inspectorGroup,
 	...settings
 } )
 ```
