@@ -181,6 +181,7 @@ registerFormatTypeGroup( name, setting = {} )
 	menuClassName: undefined,
 	inspectorSettings: {},
 	toolbarGroup: undefined,
+	useContrastChecker: false,
 }
 ```
 
