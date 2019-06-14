@@ -39,6 +39,7 @@ const getDefaultSetting = name => ( {
 	inspectorSettings: {},
 	toolbarGroup: undefined,
 	useContrastChecker: false,
+	additionalInspectors: [],
 } );
 
 /**

@@ -30,6 +30,7 @@ describe( 'ToolbarDropdown', () => {
 		inspectorSettings: {},
 		toolbarGroup: undefined,
 		useContrastChecker: false,
+		additionalInspectors: [],
 	} );
 	const { Fill, Slot } = GroupedControls( 'components-test' );
 	const getGroupedSlots = setting  => ( [ [ { Slot, setting } ] ] );

@@ -12,7 +12,8 @@ const { getContrastChecker } = Helpers;
  */
 const createInspectorComponent = ( fills, setting, args ) => {
 	const activeFills = fills.filter( ( [ { props } ] ) => ! props.isDisabled );
-	if ( ! activeFills.length ) {
+	const additionalInspectors = setting.additionalInspectors;
+	if ( ! activeFills.length && ! additionalInspectors.length ) {
 		return null;
 	}
 
@@ -22,6 +23,7 @@ const createInspectorComponent = ( fills, setting, args ) => {
 		>
 			{ activeFills }
 			{ setting.useContrastChecker && getContrastChecker( activeFills, args ) }
+			{ additionalInspectors.map( component => component( args, setting ) ) }
 		</PanelBody>
 	</InspectorControls>;
 };

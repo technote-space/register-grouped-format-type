@@ -30,6 +30,7 @@ describe( 'InspectorComponent', () => {
 		inspectorSettings: {},
 		toolbarGroup: undefined,
 		useContrastChecker: false,
+		additionalInspectors: [],
 	} );
 	const { Fill, Slot } = GroupedControls( 'components-test' );
 
@@ -55,10 +56,39 @@ describe( 'InspectorComponent', () => {
 					<a href='http://example.com/test2'>test2</a>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, Object.assign( {}, setting, { useContrastChecker: true } ), {} ),
+			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, Object.assign( {}, setting, {
+				inspectorSettings: { className: 'inspector-test' },
+				useContrastChecker: true,
+				additionalInspectors: [
+					() => <div className='additional-inspector-test1'>test1</div>,
+					() => <div className='additional-inspector-test2'>test2</div>,
+				],
+			} ), {} ),
 			callback: ( wrapper ) => {
+				expect( wrapper.find( '.components-panel__body.inspector-test' ).hostNodes() ).toHaveLength( 1 );
+				expect( wrapper.find( '.components-panel__body.inspector-test.is-opened' ).hostNodes() ).toHaveLength( 1 );
 				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 2 );
-				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 0 );
+				expect( wrapper.find( '.additional-inspector-test1' ).hostNodes() ).toHaveLength( 1 );
+				expect( wrapper.find( '.additional-inspector-test2' ).hostNodes() ).toHaveLength( 1 );
+			},
+		},
+		{
+			createComponents: Fill => <Fragment>
+				<Fill>
+					<a href='http://example.com/test3'>test3</a>
+				</Fill>
+				<Fill>
+					<a href='http://example.com/test4'>test4</a>
+				</Fill>
+			</Fragment>,
+			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, Object.assign( {}, setting, {
+				className: 'inspector-test',
+				inspectorSettings: { className: 'inspector-test', initialOpen: false },
+			} ), {} ),
+			callback: ( wrapper ) => {
+				expect( wrapper.find( '.components-panel__body.inspector-test' ).hostNodes() ).toHaveLength( 1 );
+				expect( wrapper.find( '.components-panel__body.inspector-test.is-opened' ).hostNodes() ).toHaveLength( 0 );
+				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 0 );
 			},
 		},
 		{
@@ -71,10 +101,11 @@ describe( 'InspectorComponent', () => {
 					/>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, setting, {} ),
+			createToolbarDropdown: ( Slot, setting ) => InspectorComponent( Slot, Object.assign( {}, setting, {
+				inspectorSettings: { className: 'inspector-test' },
+			} ), {} ),
 			callback: ( wrapper ) => {
-				expect( wrapper.find( 'a' ).hostNodes() ).toHaveLength( 0 );
-				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 0 );
+				expect( wrapper.find( '.components-panel__body.inspector-test' ).hostNodes() ).toHaveLength( 0 );
 				expect( wrapper.find( '.test1' ).hostNodes() ).toHaveLength( 0 );
 			},
 		},
