@@ -38,6 +38,7 @@ const getDefaultSetting = name => ( {
 	menuClassName: undefined,
 	inspectorSettings: {},
 	toolbarGroup: undefined,
+	useContrastChecker: false,
 } );
 
 /**
@@ -124,7 +125,7 @@ const onEdit = ( name, formatName, group, inspectorGroup, create, createInspecto
 	return <Fragment>
 		{ createComponentFill( group, component ) }
 		{ createInspectorFill( inspectorGroup, inspector ) }
-		{ createSlot( isFirst ) }
+		{ createSlot( isFirst, args ) }
 	</Fragment>;
 };
 
@@ -184,15 +185,10 @@ const createInspectorFill = ( inspectorGroup, component ) => createFill( inspect
 
 /**
  * @param {boolean} isFirst is first?
+ * @param {object} args args
  * @returns {null|*} slot
  */
-const createSlot = isFirst => {
-	if ( ! isFirst ) {
-		return null;
-	}
-
-	return <Fragment>
+const createSlot = ( isFirst, args ) => isFirst ? <Fragment>
 		{ ToolbarDropdown( getToolbarGroupedSlots() ) }
-		{ Object.keys( inspectorGroups ).map( key => InspectorComponent( inspectorGroups[ key ].Slot, getGroupSetting( key ) ) ) }
-	</Fragment>;
-};
+	{ Object.keys( inspectorGroups ).map( key => InspectorComponent( inspectorGroups[ key ].Slot, getGroupSetting( key ), args ) ) }
+</Fragment> : null;

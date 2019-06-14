@@ -28,6 +28,8 @@ describe( 'ToolbarDropdown', () => {
 		className: undefined,
 		menuClassName: undefined,
 		inspectorSettings: {},
+		toolbarGroup: undefined,
+		useContrastChecker: false,
 	} );
 	const { Fill, Slot } = GroupedControls( 'components-test' );
 	const getGroupedSlots = setting  => ( [ [ { Slot, setting } ] ] );

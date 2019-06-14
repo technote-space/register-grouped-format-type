@@ -1,13 +1,16 @@
-const { Fragment } = wp.element;
+import { Helpers } from '@technote-space/gutenberg-utils';
+
 const { InspectorControls } = wp.blockEditor;
 const { PanelBody } = wp.components;
+const { getContrastChecker } = Helpers;
 
 /**
  * @param {Array} fills fills
  * @param {object} setting setting
+ * @param {object} args args
  * @returns {null|*} inspector
  */
-const createInspectorComponent = ( fills, setting ) => {
+const createInspectorComponent = ( fills, setting, args ) => {
 	const activeFills = fills.filter( ( [ { props } ] ) => ! props.isDisabled );
 	if ( ! activeFills.length ) {
 		return null;
@@ -18,6 +21,7 @@ const createInspectorComponent = ( fills, setting ) => {
 			{ ...setting.inspectorSettings }
 		>
 			{ activeFills }
+			{ setting.useContrastChecker && getContrastChecker( activeFills, args ) }
 		</PanelBody>
 	</InspectorControls>;
 };
@@ -25,15 +29,12 @@ const createInspectorComponent = ( fills, setting ) => {
 /**
  * @param {object} Slot Slot
  * @param {object} setting setting
+ * @param {object} args args
  * @returns {*} inspector
  * @constructor
  */
-const InspectorComponent = ( Slot, setting ) => {
-	return <Fragment>
-		<Slot>
-			{ fills => ! fills.length ? null : createInspectorComponent( fills, setting ) }
-		</Slot>
-	</Fragment>;
-};
+const InspectorComponent = ( Slot, setting, args ) => <Slot>
+	{ fills => ! fills.length ? null : createInspectorComponent( fills, setting, args ) }
+</Slot>;
 
 export default InspectorComponent;
