@@ -1,4 +1,4 @@
-import { Components, Helpers } from '@technote-space/gutenberg-utils';
+import { Components, Helpers } from './utils';
 import * as RichText from './helpers';
 
 const Common = { Components, Helpers };

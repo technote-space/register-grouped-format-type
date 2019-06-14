@@ -1,4 +1,4 @@
-import { Helpers } from '@technote-space/gutenberg-utils';
+import { Helpers } from '../utils';
 
 const { InspectorControls } = wp.blockEditor;
 const { PanelBody } = wp.components;

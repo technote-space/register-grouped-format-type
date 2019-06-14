@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { Components } from '@technote-space/gutenberg-utils';
+import { Components, Helpers } from '../utils';
 
 const { BlockFormatControls } = wp.blockEditor;
 const { Toolbar, IconButton, NavigableMenu } = wp.components;
