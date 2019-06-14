@@ -63,10 +63,10 @@ const getToolbarGroupedSlots = () => {
  * @param {string} title title
  * @param {string} tagName tag name
  * @param {string} className class name
- * @param {function|undefined} create create component function
- * @param {function|undefined} createInspector create inspector component function
- * @param {string|undefined} group group
- * @param {string|undefined} inspectorGroup inspector group
+ * @param {function?} create create component function
+ * @param {function?} createInspector create inspector component function
+ * @param {string?} group group
+ * @param {string?} inspectorGroup inspector group
  * @param {object} settings settings
  * @return {object|null} registered settings
  */
