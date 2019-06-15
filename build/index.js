@@ -1,5 +1,5 @@
 /*!
- * @technote-space/register-grouped-format-type 1.0.9
+ * @technote-space/register-grouped-format-type 1.0.10
  * Copyright (c) 2019 Technote <technote.space@gmail.com> (https://technote.space)
  * License: GPL-3.0
  */
