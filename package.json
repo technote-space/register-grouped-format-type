@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "gutenberg's helper to register format type",
   "main": "build/index.js",
   "scripts": {
@@ -28,8 +28,7 @@
   "homepage": "https://github.com/technote-space/register-grouped-format-type#readme",
   "license": "GPL-3.0",
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^1.0.9",
-    "classnames": "^2.2.6"
+    "@technote-space/gutenberg-utils": "^1.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -55,6 +54,7 @@
     "@wordpress/url": "^2.6.0",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",

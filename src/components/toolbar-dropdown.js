@@ -1,5 +1,4 @@
-import classnames from 'classnames';
-import { Components, Helpers } from '../utils';
+import { Components, Helpers, classnames } from '../utils';
 
 const { getEditor } = Helpers;
 const { BlockFormatControls } = getEditor();
