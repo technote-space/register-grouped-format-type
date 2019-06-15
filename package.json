@@ -28,8 +28,7 @@
   "homepage": "https://github.com/technote-space/register-grouped-format-type#readme",
   "license": "GPL-3.0",
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^1.0.9",
-    "classnames": "^2.2.6"
+    "@technote-space/gutenberg-utils": "^1.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
