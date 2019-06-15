@@ -1,1 +1,1 @@
-export { Components, Helpers } from '@technote-space/gutenberg-utils';
+export { Components, Helpers, classnames } from '@technote-space/gutenberg-utils';
