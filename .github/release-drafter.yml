@@ -1,4 +1,22 @@
 # Config for https://github.com/apps/release-drafter
+name-template: 'v$NEXT_PATCH_VERSION :rainbow:'
+tag-template: 'v$NEXT_PATCH_VERSION'
+categories:
+  - title: ':rocket: Features'
+    labels:
+      - 'Type: Feature'
+      - 'Type: Refactoring'
+  - title: ':bug: Bug Fixes'
+    labels:
+      - 'Type: Bug'
+      - 'Type: Maintenance'
+      - 'Type: Security'
+  - title: ':green_book: Docs'
+    labels:
+      - 'Type: Documentation'
+  - title: ':white_check_mark: Tested'
+    labels:
+      - 'Type: Testing'
 template: |
   ## What’s Changed
 
