@@ -17,6 +17,9 @@ categories:
   - title: ':white_check_mark: Tested'
     labels:
       - 'Type: Testing'
+  - title: ':sparkles: All Changes'
+    labels:
+      - 'Type: Release'
 template: |
   ## What’s Changed
 
