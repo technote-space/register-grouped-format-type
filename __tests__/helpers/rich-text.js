@@ -111,8 +111,8 @@ describe( 'getRemoveFormatButton', () => {
 		const generator = getRemoveFormatButton( 'test-label1' );
 		const button = generator( {} );
 		expect( typeof button ).toBe( 'object' );
-		expect( button ).hasOwnProperty( 'props' );
-		expect( button.props ).hasOwnProperty( 'onClick' );
+		expect( button ).toHaveProperty( 'props' );
+		expect( button.props ).toHaveProperty( 'onClick' );
 		expect( button.props.children ).toBe( 'test-label1' );
 	} );
 } );
