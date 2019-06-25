@@ -46,8 +46,7 @@ jobs:
       dist: trusty
       script: npm run jest
       after_success:
-        - npm i coveralls
-        - cat ./coverage/lcov.info | $(npm bin)/coveralls
+        - npm run coveralls
 
     - stage: deploy
       language: node_js
