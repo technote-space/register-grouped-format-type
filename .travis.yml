@@ -16,15 +16,68 @@ notifications:
 branches:
   only:
     - master
-    - develop
+    - "/^v[0-9\\.]+/"
+
+stages:
+  - name: check
+    if: branch = master and tag IS blank and type IN (pull_request, api)
+  - name: test
+    if: branch = master and tag IS blank and type IN (pull_request, api)
+  - name: deploy
+    if: tag IS present
 
 jobs:
+  fast_finish: true
   include:
-    - stage: lint
+    - stage: check
+      language: node_js
+      node_js: '11'
+      dist: trusty
       script: npm run lint
-    - stage: test
-      script: npm run jest
 
-after_success:
-  - npm i coveralls
-  - cat ./coverage/lcov.info | $(npm bin)/coveralls
+    - stage: test
+      language: node_js
+      node_js: '10'
+      dist: trusty
+      script: npm run jest
+    - stage: test
+      language: node_js
+      node_js: '11'
+      dist: trusty
+      script: npm run jest
+      after_success:
+        - npm i coveralls
+        - cat ./coverage/lcov.info | $(npm bin)/coveralls
+
+    - stage: deploy
+      language: node_js
+      node_js: '11'
+      dist: trusty
+      script: skip
+      deploy:
+        provider: releases
+        skip_cleanup: true
+        name: ${TRAVIS_TAG}
+        tag_name: ${TRAVIS_TAG}
+        draft: true
+        api_key:
+          secure: H4a+PbK+KtyubYSlPpqxDGX2a8Qbv6mYPVd8yGFhMguC4LFd5RyoC+2mT6ZQfALX8zlYJeI4YIR+IzrNF2FwfkwvXTMoif23klhcVnH7S8uu0DTUXQU3WkptqH7ju7UOccbQj0p4wlunxHYLUUem7U3RaBholCtgyUEpMzQGntMZ3NShTAq6cVQfpoHjRLGh0siyBS1I4lC6rceOhfmatw0flbWlXSaWVTgEhAD50oH2vMK/DAsz/BeG4MAFPRXphVbAcDCiZLsOGD8at5mDlwyBkJrBWNmElNjt4klXXwhun/WSsRj/i78KoPVBArj0YwG4sEUFpV2egPHXTFMlcQjt8xNtsQcjmGa+/+fUwZiFgyIDt7aC9qTSjpOPaqq4b389gzgL6ELace7BCZdH/alyTHizWDR7nipZ6Ux4KkFYrEaVlCvooBSDsDsDV9u0/ckwRlEHTB8ZCCUkJ7mpMJIHjdLd2949bJ2HG7zCS87vG8i06pQkTKy8m89DX4ILFDtNHWDyKBLq7C7eZuM5EiVUDInrsiMoxFyJ3AmBKAWn4LKsZ9aS3PLkRnWgCbvckWHOfZdvLd/yZx0CAYM6iAYQoPLA6NxXfe6+yxR998MoeTYX2fTdIZJmTrBHiaPcQLKGVLu1mpuWO5uNFIcC8h0GUAqz4bsA1+FUmlwOMmo=
+        file: "build/index.js"
+        overwrite: true
+        on:
+          tags: true
+
+    - stage: deploy
+      language: node_js
+      node_js: '11'
+      dist: trusty
+      script: skip
+      before_deploy: npm run jest
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: technote.space@gmail.com
+        api_key:
+          secure: RVo5t242bOb8K58LLueHrGFISaG6FxFTbDF8KmAJbVjVKbNeBuFKluaA5xfSGwXxP9YVilruMfaqk4IQYEE+z2PbgNX7UAgA1nI9hTOxBEi+ZX/ToB3Y9U8J51FuYRNVaQmG7qz7J1dG3YgHM6RBGCT5RT0wb6noNZYEE44bxH+1I7TmoyHHw19pPqcsmLhjmEBUjKq6Nn4FkMjc3cbk47WJtGhBUpgTnH9vqFOJ9/aXrPKkVhw1+Qpmlb69+XmA+s2zvjsbOooDoMWZZne4Vja3N5VFJiWPTGHpTuDj97tBcUU1Wd7YwVzGdjF6FZAzdhkZJLhct+5QwEKZmEnDze7hVRPMFyYIYO1qyasP+2YpXFlr3SBMF73mzON6VIwOn+kqmS01B0gNSql+H/P49Apv5S9ogB8gbl1VO9zoGFbmkYgI8yYryW1/1D0uXI+fV1M0rTphUxycKhhkKtn/yT1k6WEDjy2nLR60oEvtkn+RKLAYdAMftQGgXEL+GisrWjhnfNk/mSNclqa6cOZA0aBvHgOXd0gN4qcJDjMQEupIOlAe2xKc35MgjNiTHOIkuKjocTLsEhdFxfsKXQEta6vofSgHZIPoAu283CVhq09LdYutzdoIBA/9PuZ6qVdpQ14gtZ9SQkmznTF+kDAs8knvlW2OFG7a7b4KhKetZ3M=
+        on:
+          tags: true
