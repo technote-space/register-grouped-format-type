@@ -183,9 +183,8 @@ registerFormatTypeGroup( name, setting = {} )
 ```
 {
 	icon: 'admin-customizer',
-	position: 'bottom left',
+	position: 'top right',
 	label: name,
-	menuLabel: name,
 	className: undefined,
 	menuClassName: undefined,
 	inspectorSettings: {},
