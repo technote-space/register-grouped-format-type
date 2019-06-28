@@ -67,7 +67,7 @@ createTest( 'ToolbarDropdown', () => <Fragment>
 					/>
 				</Fill>
 			</Fragment>,
-			createToolbarDropdown: setting => ToolbarDropdown( getGroupedSlots( Object.assign( {}, setting, { className: 'test-class', menuLabel: undefined } ) ) ),
+			createToolbarDropdown: setting => ToolbarDropdown( getGroupedSlots( Object.assign( {}, setting, { className: 'test-class' } ) ) ),
 			callback: openDropdownTest,
 		},
 		{

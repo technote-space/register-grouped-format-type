@@ -21,19 +21,18 @@ export const registerFormatTypeGroup = ( name, setting = {} ) => {
 
 /**
  * @param {string} name group name
- * @returns {{icon: string, className: (string|*), position: string, label: never, menuLabel: never}} setting
+ * @returns {{icon: string, position: string, label: string, className: undefined, menuClassName: undefined, inspectorSettings, toolbarGroup, useContrastChecker, additionalInspectors}} setting
  */
 const getGroupSetting = name => name in groupSettings ? groupSettings[ name ] : getDefaultSetting( name );
 
 /**
  * @param {string} name group name
- * @returns {{icon: string, className: undefined, position: string, label: *, menuLabel: *}} setting
+ * @returns {{icon: string, position: string, label: string, className: undefined, menuClassName: undefined, inspectorSettings, toolbarGroup, useContrastChecker, additionalInspectors}} setting
  */
 const getDefaultSetting = name => ( {
 	icon: 'admin-customizer',
 	position: 'top right',
 	label: name,
-	menuLabel: name,
 	className: undefined,
 	menuClassName: undefined,
 	inspectorSettings: {},

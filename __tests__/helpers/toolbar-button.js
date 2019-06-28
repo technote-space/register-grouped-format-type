@@ -149,12 +149,10 @@ describe( 'registerFormatTypeGroup', () => {
 		expect( group1 ).toHaveProperty( 'icon' );
 		expect( group1 ).toHaveProperty( 'position' );
 		expect( group1 ).toHaveProperty( 'label' );
-		expect( group1 ).toHaveProperty( 'menuLabel' );
 		expect( group1 ).toHaveProperty( 'className' );
 		expect( group1.icon ).toBe( 'admin-customizer' );
 		expect( group1.position ).toBe( 'top right' );
 		expect( group1.label ).toBe( 'group1' );
-		expect( group1.menuLabel ).toBe( 'group1' );
 		expect( group1.className ).toBeUndefined();
 	} );
 	it( 'should registered setting', () => {
@@ -162,14 +160,12 @@ describe( 'registerFormatTypeGroup', () => {
 			icon: 'a',
 			position: 'b',
 			label: 'c',
-			menuLabel: 'd',
-			className: 'e',
+			className: 'd',
 		} );
 		expect( group2.icon ).toBe( 'a' );
 		expect( group2.position ).toBe( 'b' );
 		expect( group2.label ).toBe( 'c' );
-		expect( group2.menuLabel ).toBe( 'd' );
-		expect( group2.className ).toBe( 'e' );
+		expect( group2.className ).toBe( 'd' );
 	} );
 	it( 'should override setting', () => {
 		const group1 = registerFormatTypeGroup( 'group1', {

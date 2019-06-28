@@ -25,7 +25,6 @@ const createTest = ( targetName, createSlot, getCases ) => {
 			icon: 'admin-customizer',
 			position: 'top right',
 			label: `test label ${ index }`,
-			menuLabel: `test menu label ${ index }`,
 			className: undefined,
 			menuClassName: undefined,
 			inspectorSettings: {},

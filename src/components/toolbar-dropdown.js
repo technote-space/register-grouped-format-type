@@ -20,7 +20,7 @@ const createDropdown = ( fills, setting ) => {
 			control.onClick();
 		}
 	};
-	const { label, menuLabel, menuClassName } = setting;
+	const { label, menuClassName } = setting;
 	return <Components.DropdownButton
 		{ ...setting }
 		isActive={ isActive }
@@ -28,7 +28,7 @@ const createDropdown = ( fills, setting ) => {
 		renderContent={ ( props ) => <NavigableMenu
 			className={ classnames( 'components-dropdown-menu__menu', menuClassName ) }
 			role="menu"
-			aria-label={ menuLabel || label }
+			aria-label={ label }
 		>
 			{ controls.map( ( control, index ) => <IconButton
 				key={ index }

@@ -89,7 +89,7 @@ Array [
                         tabindex="-1"
                       >
                         <div
-                          aria-label="test menu label 0"
+                          aria-label="test label 0"
                           aria-orientation="vertical"
                           class="components-dropdown-menu__menu test-menu-class"
                           role="menu"
@@ -147,12 +147,12 @@ Array [
                     tabIndex="-1"
                   >
                     <ForwardRef(NavigableMenu)
-                      aria-label="test menu label 0"
+                      aria-label="test label 0"
                       className="components-dropdown-menu__menu test-menu-class"
                       role="menu"
                     >
                       <ForwardRef(NavigableContainer)
-                        aria-label="test menu label 0"
+                        aria-label="test label 0"
                         aria-orientation="vertical"
                         className="components-dropdown-menu__menu test-menu-class"
                         eventToOffset={[Function]}
@@ -161,7 +161,7 @@ Array [
                         stopNavigationEvents={true}
                       >
                         <div
-                          aria-label="test menu label 0"
+                          aria-label="test label 0"
                           aria-orientation="vertical"
                           className="components-dropdown-menu__menu test-menu-class"
                           onKeyDown={[Function]}
