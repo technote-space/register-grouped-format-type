@@ -5,7 +5,7 @@ node_js:
 sudo: false
 dist: trusty
 
-cache: npm
+cache: yarn
 
 notifications:
   email: false
@@ -33,20 +33,19 @@ jobs:
       language: node_js
       node_js: '11'
       dist: trusty
-      script: npm run lint
+      script: yarn lint
 
     - stage: test
       language: node_js
       node_js: '10'
       dist: trusty
-      script: npm run jest
+      script: yarn jest
     - stage: test
       language: node_js
       node_js: '11'
       dist: trusty
-      script: npm run jest
-      after_success:
-        - npm run coveralls
+      script: yarn jest
+      after_success: yarn coveralls
 
     - stage: deploy
       language: node_js
@@ -71,7 +70,7 @@ jobs:
       node_js: '11'
       dist: trusty
       script: skip
-      before_deploy: npm run jest
+      before_deploy: yarn jest
       deploy:
         provider: npm
         skip_cleanup: true
