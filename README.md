@@ -106,7 +106,7 @@ Compile and enqueue script.
 ) );
 ```
 
-Download [Release version](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/master/build/index.js) and enqueue scripts.
+Download [Release version](https://github.com/technote-space/register-grouped-format-type/releases/latest/download/index.js) and enqueue scripts.
 ```
 <script type="text/javascript" src="/assets/register-grouped-format-type/index.js"></script>
 <script type="text/javascript" src="/assets/register.js"></script>
