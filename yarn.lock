@@ -878,10 +878,10 @@
   resolved "https://registry.yarnpkg.com/@tannin/postfix/-/postfix-1.0.2.tgz#fbb723e79603add30f5d8a08a626c2970d984857"
   integrity sha512-Nggtk7/ljfNPpAX8CjxxLkMKuO6u2gH1ozmTvGclWF2pNcxTf6YGghYNYNWZRKrimXGhQ8yZqvAHep7h80K04g==
 
-"@technote-space/gutenberg-utils@^1.0.19":
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-1.0.19.tgz#ff91855bc90e7d3ef97f8bf7b3a909623095c3c0"
-  integrity sha512-hPum2p5HBpaEhCP1HdagEDVSQLK4cMzNjnstI4mrBCWjeb7epgqHldilDedJnf98AzsIKeVD5Sf/Yp6QegSX4A==
+"@technote-space/gutenberg-utils@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-1.0.20.tgz#22c84b9c0498f091df45a3d2150bef8d69a872ef"
+  integrity sha512-bBBMkARYN86n8pmFwZzV4aYNTigDx3MgCcmKGAx0zDQQeKACjRKJXG/FaiCS3PkGLCNnB8wTW/sx1RSlhRtN0Q==
   dependencies:
     classnames "^2.2.6"
 
