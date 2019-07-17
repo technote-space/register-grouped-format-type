@@ -2,6 +2,8 @@
 [issues]: https://github.com/technote-space/register-grouped-format-type/issues
 [fork]: https://github.com/technote-space/register-grouped-format-type/fork
 [pr]: https://github.com/technote-space/register-grouped-format-type/compare
+[eslint]: https://eslint.org/
+[jest]: https://jestjs.io/
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
 When contributing to this repository, please first discuss the change you wish to make via [issue][issues] with the owners of this repository before making a change. 
@@ -11,11 +13,18 @@ Please note we have a [Contributor Code of Conduct][code-of-conduct], please fol
 ## Submitting a pull request
 
 1. [Fork][fork] and clone the repository
+1. Make sure the tests pass on your machine: `composer bin:test`, which contains
+   - [`ESLint`][eslint]
+   - [`Jest`][jest]
 1. Create a new branch: `git checkout -b my-branch-name`
+1. Make your change, add tests, and make sure the tests still pass.
 1. Push to your fork and [submit a pull request][pr].
 1. Pat your self on the back and wait for your pull request to be reviewed and merged.
 
 Here are a few things you can do that will increase the likelihood of your pull request being accepted:
+- Follow the style guides. Any linting errors should be shown when running 
+  - `composer bin:js-lint`  # [`ESLint`][eslint]
+- Write and update tests.
 - Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
 - Write a [good commit message](https://github.com/erlang/otp/wiki/writing-good-commit-messages).
 
