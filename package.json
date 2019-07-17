@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "gutenberg's helper to register format type",
   "main": "build/index.js",
   "scripts": {
