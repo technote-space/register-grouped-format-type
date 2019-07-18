@@ -1,4 +1,5 @@
 node_modules/
-coverage/
-.idea/
-build/
+/coverage
+/.idea
+/build
+/travis-ci
