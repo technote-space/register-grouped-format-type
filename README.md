@@ -13,6 +13,9 @@ The controls are active only when it is able to toggle format.
 
 ![動作](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/master/screenshot1.png)
 
+## Sample Project
+[Gutenberg Samples](https://github.com/technote-space/gutenberg-samples)
+
 ## How to use
 ### Use from npm
 [https://www.npmjs.com/package/@technote-space/register-grouped-format-type](https://www.npmjs.com/package/@technote-space/register-grouped-format-type)
@@ -194,7 +197,7 @@ registerFormatTypeGroup( name, setting = {} )
 }
 ```
 
-## dependencies
+## WP Dependencies
 - wp-block-editor
 - wp-components
 - wp-core-data
@@ -206,7 +209,7 @@ registerFormatTypeGroup( name, setting = {} )
 - wp-url
 - lodash
 
-## @see
+## Dependency
 [Gutenberg Utils](https://github.com/technote-space/gutenberg-utils)
 
 ## Author
