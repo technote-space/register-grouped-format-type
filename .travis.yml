@@ -58,16 +58,18 @@ jobs:
       node_js: '11'
       dist: trusty
       script: skip
-      before_deploy: yarn build
+      before_deploy:
+        - source travis-ci/bin/deploy/env.sh
+        - yarn build
       deploy:
         provider: releases
         skip_cleanup: true
-        name: ${TRAVIS_TAG}
-        tag_name: ${TRAVIS_TAG}
-        draft: true
+        name: ${RELEASE_TITLE}
+        tag_name: ${RELEASE_TAG}
         api_key:
           secure: H4a+PbK+KtyubYSlPpqxDGX2a8Qbv6mYPVd8yGFhMguC4LFd5RyoC+2mT6ZQfALX8zlYJeI4YIR+IzrNF2FwfkwvXTMoif23klhcVnH7S8uu0DTUXQU3WkptqH7ju7UOccbQj0p4wlunxHYLUUem7U3RaBholCtgyUEpMzQGntMZ3NShTAq6cVQfpoHjRLGh0siyBS1I4lC6rceOhfmatw0flbWlXSaWVTgEhAD50oH2vMK/DAsz/BeG4MAFPRXphVbAcDCiZLsOGD8at5mDlwyBkJrBWNmElNjt4klXXwhun/WSsRj/i78KoPVBArj0YwG4sEUFpV2egPHXTFMlcQjt8xNtsQcjmGa+/+fUwZiFgyIDt7aC9qTSjpOPaqq4b389gzgL6ELace7BCZdH/alyTHizWDR7nipZ6Ux4KkFYrEaVlCvooBSDsDsDV9u0/ckwRlEHTB8ZCCUkJ7mpMJIHjdLd2949bJ2HG7zCS87vG8i06pQkTKy8m89DX4ILFDtNHWDyKBLq7C7eZuM5EiVUDInrsiMoxFyJ3AmBKAWn4LKsZ9aS3PLkRnWgCbvckWHOfZdvLd/yZx0CAYM6iAYQoPLA6NxXfe6+yxR998MoeTYX2fTdIZJmTrBHiaPcQLKGVLu1mpuWO5uNFIcC8h0GUAqz4bsA1+FUmlwOMmo=
         file: "build/index.js"
+        body: ${RELEASE_BODY}
         overwrite: true
         on:
           tags: true
