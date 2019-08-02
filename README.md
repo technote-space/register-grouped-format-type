@@ -7,11 +7,15 @@
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
 [![WordPress: >=5.0](https://img.shields.io/badge/WordPress-%3E%3D5.0-brightgreen.svg)](https://wordpress.org/)
 
-This is a gutenberg's library to provides method to register grouped RichText format types,   
-which will be gathered by DropDown.  
+![Behavior](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/images/screenshot.png)
+
+*Read this in other languages: [English](README.md), [日本語](README.ja.md).*
+
+This is a Gutenberg's library to provides method to register grouped RichText format types,   
+which will be gathered by DropDown when number of format type of same group is greater than 1.  
 The controls are active only when it is able to toggle format.
 
-![動作](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/master/screenshot1.png)
+[Demonstration](https://technote-space.github.io/register-grouped-format-type)
 
 ## Sample Project
 [Gutenberg Samples](https://github.com/technote-space/gutenberg-samples)
@@ -28,13 +32,82 @@ npm install --save @technote-space/register-grouped-format-type
 ```js
 import { Common, RichText } from '@technote-space/register-grouped-format-type';
 
-const { registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton } = RichText;
-const { getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
+const { registerGroupedFormatType } = RichText;
+const { getToolbarButtonProps } = Common.Helpers;
+
+/** register grouped format types
+ *
+ * - test1 (⇒ not dropdown)
+ *     |- format-test1
+ * 
+ * - test2 (⇒ dropdown)
+ *     |- format-test2
+ *     |- format-test3
+ */
+registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
+registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
+registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
+```
+
+Compile and enqueue script.
+
+```html
+<script type="text/javascript" src="/assets/register.js"></script>
+```
+
+### Use from download
+
+`register.js`
+```js
+( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton, getToolbarButtonProps ) {
+
+	/** register grouped format types
+	 *
+	 * - test1 (⇒ not dropdown)
+	 *     |- format-test1
+	 * 
+	 * - test2 (⇒ dropdown)
+	 *     |- format-test2
+	 *     |- format-test3
+	 */
+	registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
+	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
+	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
+
+}(
+	wp.element.createElement,
+	Technote.Gutenberg.RichText.registerFormatTypeGroup,
+	Technote.Gutenberg.RichText.registerGroupedFormatType,
+	Technote.Gutenberg.RichText.getRemoveFormatButton,
+	Technote.Gutenberg.Common.Helpers.getToolbarButtonProps,
+) );
+```
+
+Download [Release version](https://github.com/technote-space/register-grouped-format-type/releases/latest/download/index.js) and enqueue scripts.
+```html
+<script type="text/javascript" src="/assets/register-grouped-format-type/index.js"></script>
+<script type="text/javascript" src="/assets/register.js"></script>
+```
+
+## Use group setting
+You can customize dropdown settings such as icon, label, position, and so on.
+```js
+import { RichText } from '@technote-space/register-grouped-format-type';
+
+const { registerFormatTypeGroup } = RichText;
 
 // register format type group setting
 registerFormatTypeGroup( 'test2', {
 	icon: 'admin-network',
 } );
+```
+
+## Use inspector
+```js
+import { Common, RichText } from '@technote-space/register-grouped-format-type';
+
+const { registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton } = RichText;
+const { getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
 
 // register format group for inspector
 registerFormatTypeGroup( 'inspector', {
@@ -48,73 +121,11 @@ registerFormatTypeGroup( 'inspector', {
 	additionalInspectors: [ getRemoveFormatButton( 'remove all formats' ) ],
 } );
 
-// register grouped format types
-registerGroupedFormatType( getToolbarButtonProps( 'test1', 'dropdown2-test1', 'admin-customizer' ) );
-registerGroupedFormatType( getToolbarButtonProps( 'test2', 'dropdown2-test2', 'admin-customizer' ) );
-registerGroupedFormatType( getToolbarButtonProps( 'test2', 'dropdown2-test3', 'admin-customizer' ) );
-
 // register format type
 registerGroupedFormatType( getColorButtonProps( 'inspector', 'font-color', 'Font Color', 'admin-site', 'color' ) );
 registerGroupedFormatType( getColorButtonProps( 'inspector', 'background-color', 'Background Color', 'editor-textcolor', 'background-color' ) );
 registerGroupedFormatType( getFontSizesButtonProps( 'inspector', 'font-size', 'Font Size', 'edit' ) );
 ```
-
-Compile and enqueue script.
-
-```html
-<script type="text/javascript" src="/assets/register.js"></script>
-```
-
-### Use from download
-
-`register.js`
-```js
-( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton, getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps ) {
-
-	// register format type group setting
-	registerFormatTypeGroup( 'test2', {
-		icon: 'admin-network',
-	} );
-
-	// register format group for inspector
-	registerFormatTypeGroup( 'inspector', {
-		inspectorSettings: {
-			title: 'test inspector',
-			initialOpen: true,
-		},
-		// set useContrastChecker = true to show ContrastChecker
-		useContrastChecker: true,
-		// set additional inspector (function: args => component)
-		additionalInspectors: [ getRemoveFormatButton( 'remove all formats' ) ],
-	} );
-
-	// register grouped format types
-	registerGroupedFormatType( getToolbarButtonProps( 'test1', 'dropdown2-test1', 'admin-customizer' ) );
-	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'dropdown2-test2', 'admin-customizer' ) );
-	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'dropdown2-test3', 'admin-customizer' ) );
-
-	// register format type
-	registerGroupedFormatType( getColorButtonProps( 'inspector', 'font-color', 'Font Color', 'admin-site', 'color' ) );
-	registerGroupedFormatType( getColorButtonProps( 'inspector', 'background-color', 'Background Color', 'editor-textcolor', 'background-color' ) );
-	registerGroupedFormatType( getFontSizesButtonProps( 'inspector', 'font-size', 'Font Size', 'edit' ) );
-
-}(
-	wp.element.createElement,
-	Technote.Gutenberg.RichText.registerFormatTypeGroup,
-	Technote.Gutenberg.RichText.registerGroupedFormatType,
-	Technote.Gutenberg.RichText.getRemoveFormatButton,
-	Technote.Gutenberg.Common.Helpers.getToolbarButtonProps,
-	Technote.Gutenberg.Common.Helpers.getColorButtonProps,
-	Technote.Gutenberg.Common.Helpers.getFontSizesButtonProps,
-) );
-```
-
-Download [Release version](https://github.com/technote-space/register-grouped-format-type/releases/latest/download/index.js) and enqueue scripts.
-```html
-<script type="text/javascript" src="/assets/register-grouped-format-type/index.js"></script>
-<script type="text/javascript" src="/assets/register.js"></script>
-```
-
 
 ## Details
 ### `registerGroupedFormatType`
