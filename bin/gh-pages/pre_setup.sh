@@ -12,8 +12,8 @@ pwd)
 SCRIPT_DIR=${1}
 source ${SCRIPT_DIR}/variables.sh
 
-yarn --cwd ${JS_DIR} install
-yarn --cwd ${JS_DIR} build
+yarn --cwd ${TRAVIS_BUILD_DIR} install
+yarn --cwd ${TRAVIS_BUILD_DIR} build
 
 cp -f ${TRAVIS_BUILD_DIR}/build/index.js ${GH_WORK_DIR}/library.js
 cp -f ${current}/plugin.js ${GH_WORK_DIR}/
