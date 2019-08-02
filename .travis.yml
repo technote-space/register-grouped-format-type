@@ -88,3 +88,24 @@ jobs:
           secure: RVo5t242bOb8K58LLueHrGFISaG6FxFTbDF8KmAJbVjVKbNeBuFKluaA5xfSGwXxP9YVilruMfaqk4IQYEE+z2PbgNX7UAgA1nI9hTOxBEi+ZX/ToB3Y9U8J51FuYRNVaQmG7qz7J1dG3YgHM6RBGCT5RT0wb6noNZYEE44bxH+1I7TmoyHHw19pPqcsmLhjmEBUjKq6Nn4FkMjc3cbk47WJtGhBUpgTnH9vqFOJ9/aXrPKkVhw1+Qpmlb69+XmA+s2zvjsbOooDoMWZZne4Vja3N5VFJiWPTGHpTuDj97tBcUU1Wd7YwVzGdjF6FZAzdhkZJLhct+5QwEKZmEnDze7hVRPMFyYIYO1qyasP+2YpXFlr3SBMF73mzON6VIwOn+kqmS01B0gNSql+H/P49Apv5S9ogB8gbl1VO9zoGFbmkYgI8yYryW1/1D0uXI+fV1M0rTphUxycKhhkKtn/yT1k6WEDjy2nLR60oEvtkn+RKLAYdAMftQGgXEL+GisrWjhnfNk/mSNclqa6cOZA0aBvHgOXd0gN4qcJDjMQEupIOlAe2xKc35MgjNiTHOIkuKjocTLsEhdFxfsKXQEta6vofSgHZIPoAu283CVhq09LdYutzdoIBA/9PuZ6qVdpQ14gtZ9SQkmznTF+kDAs8knvlW2OFG7a7b4KhKetZ3M=
         on:
           tags: true
+
+    - stage: deploy
+      language: node_js
+      node_js: '11'
+      dist: trusty
+      env:
+        - GH_PAGES_TITLE="Register Grouped Format Type"
+        - GH_PAGES_TEMPLATE=gutenberg
+        - GH_PAGES_TRACKING_ID=UA-78163306-3
+      script: skip
+      before_deploy:
+        - source travis-ci/bin/deploy/env.sh
+        - bash travis-ci/bin/deploy/gh-pages.sh
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: ${GITHUB_TOKEN}
+        keep_history: true
+        local_dir: ${GH_PAGES_DIR}
+        on:
+          tags: true
