@@ -3,7 +3,6 @@
 /src
 /__tests__
 node_modules/
-screenshot1.png
 _config.yml
 jest.config.js
 jest.setup.js
