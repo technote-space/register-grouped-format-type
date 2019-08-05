@@ -1608,9 +1608,9 @@
     lodash "^4.17.11"
 
 "@wordpress/url@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/url/-/url-2.6.0.tgz#bbe1f5b3dd0abe6dfb46d433973a7be66e505270"
-  integrity sha512-QlC/T6VsIMhArKdYvO1sVEUZYuky+5UojHU1vfZgLNZtt2Tj1dOgP4teMaDhMZtc6FqDkHNiA8r03CvXtbNDQA==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/url/-/url-2.7.0.tgz#ebe933686618315e35a7e014a4052b157ac17424"
+  integrity sha512-W1KEyllal8YWbLMyqfbPw7pQzVsJh73RQyqElrPwZ84TPeH/1JilKVMgKb2RXgJw8q8I+gZIXi6GmVY0+WNAxg==
   dependencies:
     "@babel/runtime" "^7.4.4"
     qs "^6.5.2"
