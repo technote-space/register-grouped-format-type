@@ -55,68 +55,97 @@ Array [
             </button>
           </ForwardRef(Button)>
         </h2>
-        <div
-          className="components-base-control"
-        >
+        <fieldset>
+          <legend>
+            Font Size
+          </legend>
           <div
-            className="components-base-control__field"
+            className="components-font-size-picker__controls"
           >
-            <span
-              className="components-base-control__label"
-            >
-              Font Size
-            </span>
             <div
-              className="components-font-size-picker__buttons"
+              className="components-base-control components-font-size-picker__select"
             >
               <div
-                className="components-font-size-picker__dropdown"
+                className="components-base-control__field"
               >
-                <ForwardRef(Button)
-                  aria-expanded={false}
-                  aria-label="Font size: Normal"
-                  className="components-font-size-picker__selector"
-                  isLarge={true}
-                  onClick={[Function]}
+                <label
+                  className="components-base-control__label screen-reader-text"
+                  htmlFor="inspector-select-control-0"
                 >
-                  <button
-                    aria-expanded={false}
-                    aria-label="Font size: Normal"
-                    className="components-button components-font-size-picker__selector is-button is-default is-large"
-                    onClick={[Function]}
-                    type="button"
+                  Choose preset
+                </label>
+                <select
+                  className="components-select-control__input"
+                  id="inspector-select-control-0"
+                  multiple={false}
+                  onChange={[Function]}
+                  value="normal"
+                >
+                  <option
+                    key="Small-small-0"
+                    value="small"
+                  >
+                    Small
+                  </option>
+                  <option
+                    key="Normal-normal-1"
+                    value="normal"
                   >
                     Normal
-                  </button>
-                </ForwardRef(Button)>
+                  </option>
+                  <option
+                    key="Medium-medium-2"
+                    value="medium"
+                  >
+                    Medium
+                  </option>
+                  <option
+                    key="Large-large-3"
+                    value="large"
+                  >
+                    Large
+                  </option>
+                  <option
+                    key="Huge-huge-4"
+                    value="huge"
+                  >
+                    Huge
+                  </option>
+                  <option
+                    key="Custom-custom-5"
+                    value="custom"
+                  >
+                    Custom
+                  </option>
+                </select>
               </div>
-              <input
-                aria-label="Custom font size"
-                className="components-range-control__number"
-                onChange={[Function]}
-                type="number"
-                value=""
-              />
-              <ForwardRef(Button)
-                className="components-color-palette__clear"
+            </div>
+            <input
+              aria-label="Custom"
+              className="components-range-control__number"
+              onChange={[Function]}
+              type="number"
+              value=""
+            />
+            <ForwardRef(Button)
+              className="components-color-palette__clear"
+              disabled={true}
+              isDefault={true}
+              isSmall={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="components-button components-color-palette__clear is-button is-default is-small"
                 disabled={true}
-                isDefault={true}
-                isSmall={true}
                 onClick={[Function]}
                 type="button"
               >
-                <button
-                  className="components-button components-color-palette__clear is-button is-default is-small"
-                  disabled={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  Reset
-                </button>
-              </ForwardRef(Button)>
-            </div>
+                Reset
+              </button>
+            </ForwardRef(Button)>
           </div>
-        </div>
+        </fieldset>
         <div
           className="components-base-control components-toggle-control"
         >
@@ -294,18 +323,16 @@ Array [
               >
                 <p
                   aria-activedescendant={null}
-                  aria-autocomplete="list"
                   aria-label="Paragraph block"
                   aria-multiline={true}
                   aria-owns={null}
-                  className="block-editor-rich-text__editable editor-rich-text__editable wp-block-paragraph test-block-edit"
+                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
                   contentEditable={true}
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "<br data-rich-text-padding=\\"true\\">",
+                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\"></span>",
                     }
                   }
-                  data-is-placeholder-visible={true}
                   onBlur={[Function]}
                   onCompositionEnd={[Function]}
                   onFocus={[Function]}
@@ -322,24 +349,11 @@ Array [
                       "direction": undefined,
                       "fontSize": undefined,
                       "textAlign": undefined,
+                      "whiteSpace": "pre-wrap",
                     }
                   }
                   suppressContentEditableWarning={true}
                 />
-                <p
-                  className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "textAlign": undefined,
-                    }
-                  }
-                >
-                  Start writing or type / to choose a block
-                </p>
               </div>
             </div>
           </div>
@@ -409,68 +423,97 @@ Array [
             </button>
           </ForwardRef(Button)>
         </h2>
-        <div
-          className="components-base-control"
-        >
+        <fieldset>
+          <legend>
+            Font Size
+          </legend>
           <div
-            className="components-base-control__field"
+            className="components-font-size-picker__controls"
           >
-            <span
-              className="components-base-control__label"
-            >
-              Font Size
-            </span>
             <div
-              className="components-font-size-picker__buttons"
+              className="components-base-control components-font-size-picker__select"
             >
               <div
-                className="components-font-size-picker__dropdown"
+                className="components-base-control__field"
               >
-                <ForwardRef(Button)
-                  aria-expanded={false}
-                  aria-label="Font size: Normal"
-                  className="components-font-size-picker__selector"
-                  isLarge={true}
-                  onClick={[Function]}
+                <label
+                  className="components-base-control__label screen-reader-text"
+                  htmlFor="inspector-select-control-1"
                 >
-                  <button
-                    aria-expanded={false}
-                    aria-label="Font size: Normal"
-                    className="components-button components-font-size-picker__selector is-button is-default is-large"
-                    onClick={[Function]}
-                    type="button"
+                  Choose preset
+                </label>
+                <select
+                  className="components-select-control__input"
+                  id="inspector-select-control-1"
+                  multiple={false}
+                  onChange={[Function]}
+                  value="normal"
+                >
+                  <option
+                    key="Small-small-0"
+                    value="small"
+                  >
+                    Small
+                  </option>
+                  <option
+                    key="Normal-normal-1"
+                    value="normal"
                   >
                     Normal
-                  </button>
-                </ForwardRef(Button)>
+                  </option>
+                  <option
+                    key="Medium-medium-2"
+                    value="medium"
+                  >
+                    Medium
+                  </option>
+                  <option
+                    key="Large-large-3"
+                    value="large"
+                  >
+                    Large
+                  </option>
+                  <option
+                    key="Huge-huge-4"
+                    value="huge"
+                  >
+                    Huge
+                  </option>
+                  <option
+                    key="Custom-custom-5"
+                    value="custom"
+                  >
+                    Custom
+                  </option>
+                </select>
               </div>
-              <input
-                aria-label="Custom font size"
-                className="components-range-control__number"
-                onChange={[Function]}
-                type="number"
-                value=""
-              />
-              <ForwardRef(Button)
-                className="components-color-palette__clear"
+            </div>
+            <input
+              aria-label="Custom"
+              className="components-range-control__number"
+              onChange={[Function]}
+              type="number"
+              value=""
+            />
+            <ForwardRef(Button)
+              className="components-color-palette__clear"
+              disabled={true}
+              isDefault={true}
+              isSmall={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="components-button components-color-palette__clear is-button is-default is-small"
                 disabled={true}
-                isDefault={true}
-                isSmall={true}
                 onClick={[Function]}
                 type="button"
               >
-                <button
-                  className="components-button components-color-palette__clear is-button is-default is-small"
-                  disabled={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  Reset
-                </button>
-              </ForwardRef(Button)>
-            </div>
+                Reset
+              </button>
+            </ForwardRef(Button)>
           </div>
-        </div>
+        </fieldset>
         <div
           className="components-base-control components-toggle-control"
         >
@@ -626,18 +669,16 @@ Array [
               >
                 <p
                   aria-activedescendant={null}
-                  aria-autocomplete="list"
                   aria-label="Paragraph block"
                   aria-multiline={true}
                   aria-owns={null}
-                  className="block-editor-rich-text__editable editor-rich-text__editable wp-block-paragraph test-block-edit"
+                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
                   contentEditable={true}
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "<br data-rich-text-padding=\\"true\\">",
+                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\"></span>",
                     }
                   }
-                  data-is-placeholder-visible={true}
                   onBlur={[Function]}
                   onCompositionEnd={[Function]}
                   onFocus={[Function]}
@@ -654,24 +695,11 @@ Array [
                       "direction": undefined,
                       "fontSize": undefined,
                       "textAlign": undefined,
+                      "whiteSpace": "pre-wrap",
                     }
                   }
                   suppressContentEditableWarning={true}
                 />
-                <p
-                  className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "textAlign": undefined,
-                    }
-                  }
-                >
-                  Start writing or type / to choose a block
-                </p>
               </div>
             </div>
           </div>
@@ -741,68 +769,97 @@ Array [
             </button>
           </ForwardRef(Button)>
         </h2>
-        <div
-          className="components-base-control"
-        >
+        <fieldset>
+          <legend>
+            Font Size
+          </legend>
           <div
-            className="components-base-control__field"
+            className="components-font-size-picker__controls"
           >
-            <span
-              className="components-base-control__label"
-            >
-              Font Size
-            </span>
             <div
-              className="components-font-size-picker__buttons"
+              className="components-base-control components-font-size-picker__select"
             >
               <div
-                className="components-font-size-picker__dropdown"
+                className="components-base-control__field"
               >
-                <ForwardRef(Button)
-                  aria-expanded={false}
-                  aria-label="Font size: Normal"
-                  className="components-font-size-picker__selector"
-                  isLarge={true}
-                  onClick={[Function]}
+                <label
+                  className="components-base-control__label screen-reader-text"
+                  htmlFor="inspector-select-control-2"
                 >
-                  <button
-                    aria-expanded={false}
-                    aria-label="Font size: Normal"
-                    className="components-button components-font-size-picker__selector is-button is-default is-large"
-                    onClick={[Function]}
-                    type="button"
+                  Choose preset
+                </label>
+                <select
+                  className="components-select-control__input"
+                  id="inspector-select-control-2"
+                  multiple={false}
+                  onChange={[Function]}
+                  value="normal"
+                >
+                  <option
+                    key="Small-small-0"
+                    value="small"
+                  >
+                    Small
+                  </option>
+                  <option
+                    key="Normal-normal-1"
+                    value="normal"
                   >
                     Normal
-                  </button>
-                </ForwardRef(Button)>
+                  </option>
+                  <option
+                    key="Medium-medium-2"
+                    value="medium"
+                  >
+                    Medium
+                  </option>
+                  <option
+                    key="Large-large-3"
+                    value="large"
+                  >
+                    Large
+                  </option>
+                  <option
+                    key="Huge-huge-4"
+                    value="huge"
+                  >
+                    Huge
+                  </option>
+                  <option
+                    key="Custom-custom-5"
+                    value="custom"
+                  >
+                    Custom
+                  </option>
+                </select>
               </div>
-              <input
-                aria-label="Custom font size"
-                className="components-range-control__number"
-                onChange={[Function]}
-                type="number"
-                value=""
-              />
-              <ForwardRef(Button)
-                className="components-color-palette__clear"
+            </div>
+            <input
+              aria-label="Custom"
+              className="components-range-control__number"
+              onChange={[Function]}
+              type="number"
+              value=""
+            />
+            <ForwardRef(Button)
+              className="components-color-palette__clear"
+              disabled={true}
+              isDefault={true}
+              isSmall={true}
+              onClick={[Function]}
+              type="button"
+            >
+              <button
+                className="components-button components-color-palette__clear is-button is-default is-small"
                 disabled={true}
-                isDefault={true}
-                isSmall={true}
                 onClick={[Function]}
                 type="button"
               >
-                <button
-                  className="components-button components-color-palette__clear is-button is-default is-small"
-                  disabled={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  Reset
-                </button>
-              </ForwardRef(Button)>
-            </div>
+                Reset
+              </button>
+            </ForwardRef(Button)>
           </div>
-        </div>
+        </fieldset>
         <div
           className="components-base-control components-toggle-control"
         >
@@ -949,18 +1006,16 @@ Array [
               >
                 <p
                   aria-activedescendant={null}
-                  aria-autocomplete="list"
                   aria-label="Paragraph block"
                   aria-multiline={true}
                   aria-owns={null}
-                  className="block-editor-rich-text__editable editor-rich-text__editable wp-block-paragraph test-block-edit"
+                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
                   contentEditable={true}
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "<br data-rich-text-padding=\\"true\\">",
+                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\"></span>",
                     }
                   }
-                  data-is-placeholder-visible={true}
                   onBlur={[Function]}
                   onCompositionEnd={[Function]}
                   onFocus={[Function]}
@@ -977,24 +1032,11 @@ Array [
                       "direction": undefined,
                       "fontSize": undefined,
                       "textAlign": undefined,
+                      "whiteSpace": "pre-wrap",
                     }
                   }
                   suppressContentEditableWarning={true}
                 />
-                <p
-                  className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "textAlign": undefined,
-                    }
-                  }
-                >
-                  Start writing or type / to choose a block
-                </p>
               </div>
             </div>
           </div>
