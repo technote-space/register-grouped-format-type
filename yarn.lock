@@ -1204,9 +1204,9 @@
     "@wordpress/dom-ready" "^2.5.0"
 
 "@wordpress/api-fetch@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.4.0.tgz#a9ec7f47f2c6480bf87924adcc5f18aa57c6fb76"
-  integrity sha512-aNLVIXlnn7RIEzbDcVFhyQfV60O0ggLQOCkHhMCW1Ya86Jlohp658TXe8wIjFhC2ugY239WeZIl1tgoRjqIr0A==
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/api-fetch/-/api-fetch-3.5.0.tgz#c3fd099a12df868386c1d084d941fc2ae460adc2"
+  integrity sha512-EaI7T/M5goqZPp4YeKfQwsvDzmbu6YV+cbPi6y6MF3QoccpTWqkMG4nJHuoI1uCK9/QxXVRLhCRzLG54L4kcOg==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@wordpress/i18n" "^3.6.0"
