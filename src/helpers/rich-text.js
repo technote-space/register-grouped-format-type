@@ -3,7 +3,7 @@ import { PLUGIN_NAME } from '../constant';
 
 const { dispatch, select } = wp.data;
 const { Button } = wp.components;
-const { getRemoveFormatFunction } = Helpers;
+const { isValidRemoveFormatButton, getRemoveFormatFunction } = Helpers;
 
 /**
  * @param {object} settings settings
@@ -189,9 +189,9 @@ export const getFormatName = name => `${ PLUGIN_NAME }/${ name }`;
  * @param {object} settings settings
  * @returns {function} remove format button
  */
-export const getRemoveFormatButton = ( label, settings = { isDefault: true } ) => args => <Button
+export const getRemoveFormatButton = ( label, settings = { isDefault: true } ) => args => isValidRemoveFormatButton( args ) ? <Button
 	{ ...settings }
 	onClick={ getRemoveFormatFunction( args ) }
 >
 	{ label }
-</Button>;
+</Button> : null;

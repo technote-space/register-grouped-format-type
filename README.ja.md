@@ -1,6 +1,7 @@
 # Register Grouped Format Type
 
 [![npm version](https://badge.fury.io/js/%40technote-space%2Fregister-grouped-format-type.svg)](https://badge.fury.io/js/%40technote-space%2Fregister-grouped-format-type)
+[![Build Status](https://github.com/technote-space/register-grouped-format-type/workflows/Build/badge.svg)](https://github.com/technote-space/register-grouped-format-type/actions)
 [![Build Status](https://travis-ci.com/technote-space/register-grouped-format-type.svg?branch=master)](https://travis-ci.com/technote-space/register-grouped-format-type)
 [![Coverage Status](https://coveralls.io/repos/github/technote-space/register-grouped-format-type/badge.svg?branch=master)](https://coveralls.io/github/technote-space/register-grouped-format-type?branch=master)
 [![CodeFactor](https://www.codefactor.io/repository/github/technote-space/register-grouped-format-type/badge)](https://www.codefactor.io/repository/github/technote-space/register-grouped-format-type)
@@ -14,6 +15,29 @@
 これは グループ化された RichText フォーマットタイプを登録する方法を提供する Gutenberg のライブラリです。   
 同じグループのフォーマットタイプが複数ある場合に DropDown によってまとまります。  
 コントロールはフォーマットを切り替えることができるときのみアクティブになります。
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [サンプルプロジェクト](#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88)
+- [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
+  - [npm から利用する場合](#npm-%E3%81%8B%E3%82%89%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)
+  - [ダウンロードして試用する場合](#%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%A6%E8%A9%A6%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)
+- [グループ設定を使用](#%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E8%A8%AD%E5%AE%9A%E3%82%92%E4%BD%BF%E7%94%A8)
+- [インスペクタを使用](#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8)
+- [詳細](#%E8%A9%B3%E7%B4%B0)
+  - [`registerGroupedFormatType`](#registergroupedformattype)
+    - [定義](#%E5%AE%9A%E7%BE%A9)
+    - [引数](#%E5%BC%95%E6%95%B0)
+  - [`registerFormatTypeGroup`](#registerformattypegroup)
+    - [定義](#%E5%AE%9A%E7%BE%A9-1)
+    - [引数](#%E5%BC%95%E6%95%B0-1)
+- [WPの依存](#wp%E3%81%AE%E4%BE%9D%E5%AD%98)
+- [依存](#%E4%BE%9D%E5%AD%98)
+- [作者](#%E4%BD%9C%E8%80%85)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 [デモ](https://technote-space.github.io/register-grouped-format-type)
 
