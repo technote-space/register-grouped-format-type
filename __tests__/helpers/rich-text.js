@@ -125,4 +125,14 @@ describe( 'getRemoveFormatButton', () => {
 		expect( button.props ).toHaveProperty( 'onClick' );
 		expect( button.props.children ).toBe( 'test-label1' );
 	} );
+
+	it( 'should not get remove format button', () => {
+		const generator = getRemoveFormatButton( 'test-label2' );
+		const button = generator( {
+			value: {
+				formats: [],
+			},
+		} );
+		expect( button ).toBeNull();
+	} );
 } );
