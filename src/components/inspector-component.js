@@ -35,10 +35,11 @@ const createInspectorComponent = ( fills, setting, args ) => {
  * @param {object} Slot Slot
  * @param {object} setting setting
  * @param {object} args args
+ * @param {number} index index
  * @returns {*} inspector
  * @constructor
  */
-const InspectorComponent = ( Slot, setting, args ) => <Slot>
+const InspectorComponent = ( Slot, setting, args, index ) => <Slot key={ `inspector-component-${ index }` }>
 	{ fills => ! fills.length ? null : createInspectorComponent( fills, setting, args ) }
 </Slot>;
 

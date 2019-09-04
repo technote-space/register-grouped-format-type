@@ -209,5 +209,5 @@ const createInspectorFill = ( inspectorGroup, component ) => createFill( inspect
  */
 const createSlot = ( isFirst, args ) => isFirst ? <Fragment>
 	{ ToolbarDropdown( getToolbarGroupedSlots() ) }
-	{ Object.keys( inspectorGroups ).map( key => InspectorComponent( inspectorGroups[ key ].Slot, getGroupSetting( key ), args ) ) }
+	{ Object.keys( inspectorGroups ).map( ( key, index ) => InspectorComponent( inspectorGroups[ key ].Slot, getGroupSetting( key ), args, index ) ) }
 </Fragment> : null;

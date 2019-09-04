@@ -31,7 +31,7 @@ const createDropdown = ( fills, setting ) => {
 			aria-label={ label }
 		>
 			{ controls.map( ( control, index ) => <IconButton
-				key={ index }
+				key={ `dropdown-${label}-${index}` }
 				onClick={ onClick( props, control ) }
 				className={ classnames( 'components-dropdown-menu__menu-item', {
 					'is-active': control.isActive,
@@ -59,9 +59,9 @@ const createComponent = ( fills, setting ) => fills.length > 1 ? createDropdown(
  * @constructor
  */
 const ToolbarDropdown = groupedSlots => <BlockFormatControls>
-	{ groupedSlots.map( ( slots, groupIndex ) => <div key={ groupIndex } className="editor-format-toolbar block-editor-format-toolbar">
+	{ groupedSlots.map( ( slots, groupIndex ) => <div key={ `toolbar-dropdown-${groupIndex}` } className="editor-format-toolbar block-editor-format-toolbar">
 		<Toolbar>
-			{ slots.map( ( { Slot, setting }, index ) => <Slot key={ `${ groupIndex }-${ index }` }>
+			{ slots.map( ( { Slot, setting }, index ) => <Slot key={ `toolbar-dropdown-${ groupIndex }-${ index }` }>
 				{ fills => ! fills.length ? null : createComponent( fills, setting ) }
 			</Slot> ) }
 		</Toolbar>
