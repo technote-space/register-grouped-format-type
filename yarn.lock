@@ -967,10 +967,10 @@
   resolved "https://registry.yarnpkg.com/@tannin/postfix/-/postfix-1.0.2.tgz#fbb723e79603add30f5d8a08a626c2970d984857"
   integrity sha512-Nggtk7/ljfNPpAX8CjxxLkMKuO6u2gH1ozmTvGclWF2pNcxTf6YGghYNYNWZRKrimXGhQ8yZqvAHep7h80K04g==
 
-"@technote-space/gutenberg-utils@^1.0.28":
-  version "1.0.28"
-  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-1.0.28.tgz#d86a21f8969f0bfc0fa3d0a85e90cbcecf3264b1"
-  integrity sha512-pF9GCJEdKg0VvHX+foiX6aN632G7USx0ZxBOLLmaYlGrEn75yrU/Qhsc25iOFOWXgL4I4xRp1EC94OzqDJe4xg==
+"@technote-space/gutenberg-utils@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-1.1.1.tgz#1746e5bfa1a5ba47e737c3e4274a95cce9d9b8b0"
+  integrity sha512-yTlIZ+VU5+AtN1l1oObXbsrnmRm2rmy5IIP4ivzzAyqvDoQcChyX/TmxDDNhbaV/uqp32R6QMT99g7mOv8dP5g==
   dependencies:
     "@babel/core" "^7.5.5"
     "@babel/plugin-proposal-object-rest-spread" "^7.5.5"
