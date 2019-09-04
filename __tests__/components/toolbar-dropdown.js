@@ -3,13 +3,13 @@ import createTest from './common';
 import toJson from 'enzyme-to-json';
 import { ToolbarDropdown } from '../../src/components';
 
-const { BlockFormatControls } = wp.blockEditor;
+const { BlockControls } = wp.blockEditor;
 const { Popover, ToolbarButton } = wp.components;
 const { Fragment } = wp.element;
 
 createTest( 'ToolbarDropdown', () => <Fragment>
 	<Popover.Slot/>
-	<BlockFormatControls.Slot/>
+	<BlockControls.Slot/>
 </Fragment>, ( Fill, Slot, getSnapshotName ) => {
 	const getGroupedSlots = setting => ( [ [ { Slot, setting } ] ] );
 	const openDropdownTest = ( wrapper, index ) => {
@@ -113,8 +113,7 @@ createTest( 'ToolbarDropdown', () => <Fragment>
 			},
 		},
 		{
-			createComponents: () => <Fragment>
-			</Fragment>,
+			createComponents: () => <Fragment/>,
 			createToolbarDropdown: setting => ToolbarDropdown( getGroupedSlots( setting ) ),
 			callback: ( wrapper ) => {
 				expect( wrapper.find( '.editor-format-toolbar' ).hostNodes() ).toHaveLength( 1 );

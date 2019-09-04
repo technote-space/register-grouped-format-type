@@ -1,7 +1,7 @@
 import { Components, Helpers, classnames } from '../utils';
 
 const { getEditor } = Helpers;
-const { BlockFormatControls } = getEditor();
+const { BlockControls } = getEditor();
 const { Toolbar, IconButton, NavigableMenu } = wp.components;
 
 /**
@@ -58,7 +58,7 @@ const createComponent = ( fills, setting ) => fills.length > 1 ? createDropdown(
  * @returns {*} dropdown
  * @constructor
  */
-const ToolbarDropdown = groupedSlots => <BlockFormatControls>
+const ToolbarDropdown = groupedSlots => <BlockControls>
 	{ groupedSlots.map( ( slots, groupIndex ) => <div key={ `toolbar-dropdown-${groupIndex}` } className="editor-format-toolbar block-editor-format-toolbar">
 		<Toolbar>
 			{ slots.map( ( { Slot, setting }, index ) => <Slot key={ `toolbar-dropdown-${ groupIndex }-${ index }` }>
@@ -66,6 +66,6 @@ const ToolbarDropdown = groupedSlots => <BlockFormatControls>
 			</Slot> ) }
 		</Toolbar>
 	</div> ) }
-</BlockFormatControls>;
+</BlockControls>;
 
 export default ToolbarDropdown;
