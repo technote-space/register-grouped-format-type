@@ -16,6 +16,8 @@
 同じグループのフォーマットタイプが複数ある場合に DropDown によってまとまります。  
 コントロールはフォーマットを切り替えることができるときのみアクティブになります。
 
+[デモ](https://technote-space.github.io/register-grouped-format-type)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
@@ -38,8 +40,6 @@
 - [作者](#%E4%BD%9C%E8%80%85)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-[デモ](https://technote-space.github.io/register-grouped-format-type)
 
 ## サンプルプロジェクト
 [Gutenberg Samples](https://github.com/technote-space/gutenberg-samples)
