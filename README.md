@@ -1,3 +1,27 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Register Grouped Format Type](#register-grouped-format-type)
+  - [Sample Project](#sample-project)
+  - [How to use](#how-to-use)
+    - [Use from npm](#use-from-npm)
+    - [Use from download](#use-from-download)
+  - [Use group setting](#use-group-setting)
+  - [Use inspector](#use-inspector)
+  - [Details](#details)
+    - [`registerGroupedFormatType`](#registergroupedformattype)
+      - [definition](#definition)
+      - [arguments](#arguments)
+    - [`registerFormatTypeGroup`](#registerformattypegroup)
+      - [definition](#definition-1)
+      - [arguments](#arguments-1)
+  - [WP Dependencies](#wp-dependencies)
+  - [Dependency](#dependency)
+  - [Author](#author)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Register Grouped Format Type
 
 [![npm version](https://badge.fury.io/js/%40technote-space%2Fregister-grouped-format-type.svg)](https://badge.fury.io/js/%40technote-space%2Fregister-grouped-format-type)
