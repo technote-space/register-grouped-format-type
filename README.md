@@ -213,9 +213,12 @@ registerFormatTypeGroup( name, setting = {} )
 - wp-components
 - wp-core-data
 - wp-data
+- wp-dom
 - wp-editor
 - wp-element
 - wp-i18n
+- wp-is-shallow-equal
+- wp-keycodes
 - wp-rich-text
 - wp-url
 - lodash

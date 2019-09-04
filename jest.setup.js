@@ -22,10 +22,13 @@ const blockEditor = require( '@wordpress/block-editor' );
 const components = require( '@wordpress/components' );
 const coreData = require( '@wordpress/core-data' );
 const data = require( '@wordpress/data' );
+const dom = require( '@wordpress/dom' );
 const editor = require( '@wordpress/editor' );
 const element = require( '@wordpress/element' );
 const hooks = require( '@wordpress/hooks' );
 const i18n = require( '@wordpress/i18n' );
+const isShallowEqual = require( '@wordpress/is-shallow-equal' );
+const keycodes = require( '@wordpress/keycodes' );
 const richText = require( '@wordpress/rich-text' );
 const url = require( '@wordpress/url' );
 
@@ -35,10 +38,13 @@ global.wp = {
 	components,
 	coreData,
 	data,
+	dom,
 	editor,
 	element,
 	hooks,
 	i18n,
+	isShallowEqual,
+	keycodes,
 	richText,
 	url,
 };
