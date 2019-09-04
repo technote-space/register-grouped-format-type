@@ -185,8 +185,8 @@ describe( 'getFormatState', () => {
 				activeFormats: [],
 			},
 		} );
-		expect( state ).hasOwnProperty( 'isDisabled' );
-		expect( state ).hasOwnProperty( 'isDropdownDisabled' );
+		expect( state ).toHaveProperty( 'isDisabled' );
+		expect( state ).toHaveProperty( 'isDropdownDisabled' );
 		expect( state.isDisabled ).toBe( true );
 		expect( state.isDropdownDisabled ).toBe( false );
 	} );
@@ -200,8 +200,8 @@ describe( 'getFormatState', () => {
 				activeFormats: [],
 			},
 		} );
-		expect( state ).hasOwnProperty( 'isDisabled' );
-		expect( state ).hasOwnProperty( 'isDropdownDisabled' );
+		expect( state ).toHaveProperty( 'isDisabled' );
+		expect( state ).toHaveProperty( 'isDropdownDisabled' );
 		expect( state.isDisabled ).toBe( true );
 		expect( state.isDropdownDisabled ).toBe( true );
 	} );
@@ -215,8 +215,8 @@ describe( 'getFormatState', () => {
 				activeFormats: [],
 			},
 		} );
-		expect( state ).hasOwnProperty( 'isDisabled' );
-		expect( state ).hasOwnProperty( 'isDropdownDisabled' );
+		expect( state ).toHaveProperty( 'isDisabled' );
+		expect( state ).toHaveProperty( 'isDropdownDisabled' );
 		expect( state.isDisabled ).toBe( false );
 		expect( state.isDropdownDisabled ).toBe( false );
 	} );
@@ -233,8 +233,8 @@ describe( 'getFormatState', () => {
 				activeFormats: [ format ],
 			},
 		} );
-		expect( state ).hasOwnProperty( 'isDisabled' );
-		expect( state ).hasOwnProperty( 'isDropdownDisabled' );
+		expect( state ).toHaveProperty( 'isDisabled' );
+		expect( state ).toHaveProperty( 'isDropdownDisabled' );
 		expect( state.isDisabled ).toBe( false );
 		expect( state.isDropdownDisabled ).toBe( false );
 	} );
