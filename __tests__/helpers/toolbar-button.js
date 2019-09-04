@@ -1,8 +1,8 @@
 /* eslint-disable no-magic-numbers */
 const { select } = wp.data;
 
-import { registerGroupedFormatType, registerFormatTypeGroup } from '../../src/helpers';
-import { getFormatName } from '../../src/helpers';
+import { registerGroupedFormatType, registerFormatTypeGroup, getFormatName } from '../../src/helpers';
+import { getFormatState } from '../../src/helpers/toolbar-button';
 
 describe( 'registerGroupedFormatType', () => {
 	it( 'should not registered format type', () => {
@@ -172,5 +172,70 @@ describe( 'registerFormatTypeGroup', () => {
 			icon: 'a',
 		} );
 		expect( group1.icon ).toBe( 'a' );
+	} );
+} );
+
+describe( 'getFormatState', () => {
+	it( 'should get format state (disabled, dropdown is not disabled)', () => {
+		const state = getFormatState( 'test/test', {
+			isActive: false,
+			value: {
+				start: undefined,
+				end: undefined,
+				activeFormats: [],
+			},
+		} );
+		expect( state ).hasOwnProperty( 'isDisabled' );
+		expect( state ).hasOwnProperty( 'isDropdownDisabled' );
+		expect( state.isDisabled ).toBe( true );
+		expect( state.isDropdownDisabled ).toBe( false );
+	} );
+
+	it( 'should get format state (disabled, dropdown is disabled)', () => {
+		const state = getFormatState( 'test/test', {
+			isActive: false,
+			value: {
+				start: 0,
+				end: 0,
+				activeFormats: [],
+			},
+		} );
+		expect( state ).hasOwnProperty( 'isDisabled' );
+		expect( state ).hasOwnProperty( 'isDropdownDisabled' );
+		expect( state.isDisabled ).toBe( true );
+		expect( state.isDropdownDisabled ).toBe( true );
+	} );
+
+	it( 'should get format state (not disabled, dropdown is not disabled)', () => {
+		const state = getFormatState( 'test/test', {
+			isActive: true,
+			value: {
+				start: 0,
+				end: 1,
+				activeFormats: [],
+			},
+		} );
+		expect( state ).hasOwnProperty( 'isDisabled' );
+		expect( state ).hasOwnProperty( 'isDropdownDisabled' );
+		expect( state.isDisabled ).toBe( false );
+		expect( state.isDropdownDisabled ).toBe( false );
+	} );
+
+	it( 'should get format state (not disabled, dropdown is not disabled)', () => {
+		const format = {
+			type: 'test/test',
+		};
+		const state = getFormatState( 'test/test', {
+			isActive: false,
+			value: {
+				start: 0,
+				end: 1,
+				activeFormats: [ format ],
+			},
+		} );
+		expect( state ).hasOwnProperty( 'isDisabled' );
+		expect( state ).hasOwnProperty( 'isDropdownDisabled' );
+		expect( state.isDisabled ).toBe( false );
+		expect( state.isDropdownDisabled ).toBe( false );
 	} );
 } );

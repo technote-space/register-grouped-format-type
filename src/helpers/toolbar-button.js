@@ -106,6 +106,20 @@ export const registerGroupedFormatType = ( {
 };
 
 /**
+ * @param {string} formatName format name
+ * @param {object} args args
+ * @returns {object} format state
+ */
+export const getFormatState = ( formatName, args ) => {
+	const isActive = args.isActive || ! args.value.activeFormats || args.value.activeFormats.map( format => format.type ).includes( formatName );
+	const isDisabled = ! isActive && args.value.start === args.value.end;
+	return {
+		isDisabled,
+		isDropdownDisabled: isDisabled && args.value.start !== undefined,
+	};
+};
+
+/**
  * @param {string} name name
  * @param {string} formatName format name
  * @param {string|undefined} group group
@@ -117,16 +131,14 @@ export const registerGroupedFormatType = ( {
  * @returns {function(*=): *} component
  */
 const onEdit = ( name, formatName, group, inspectorGroup, create, createInspector, isFirst, settings ) => args => {
-	args.isDisabled = ! args.isActive && args.value.start === args.value.end;
-	args.isDropdownDisabled = args.isDisabled && args.value.start !== undefined;
-
-	const component = createComponent( create, group, args, name, formatName, settings );
-	const inspector = createComponent( createInspector, inspectorGroup, args, name, formatName, settings );
+	const newArgs = Object.assign( {}, args, getFormatState( formatName, args ) );
+	const component = createComponent( create, group, newArgs, name, formatName, settings );
+	const inspector = createComponent( createInspector, inspectorGroup, newArgs, name, formatName, settings );
 
 	return <Fragment>
 		{ createComponentFill( group, component ) }
 		{ createInspectorFill( inspectorGroup, inspector ) }
-		{ createSlot( isFirst, args ) }
+		{ createSlot( isFirst, newArgs ) }
 	</Fragment>;
 };
 
@@ -142,11 +154,15 @@ const onEdit = ( name, formatName, group, inspectorGroup, create, createInspecto
 const createComponent = ( createFunction, group, args, name, formatName, settings ) => {
 	const component = !! group && typeof createFunction === 'function' ? createFunction( { args, name, formatName } ) : null;
 	if ( component ) {
-		component.props.isActive = args.isActive;
-		component.props.isDisabled = args.isDisabled;
-		component.props.isDropdownDisabled = args.isDropdownDisabled;
-		component.props.formatName = formatName;
-		component.props.propertyName = settings.propertyName;
+		return Object.assign( {}, component, {
+			props: Object.assign( {}, component.props, {
+				isActive: args.isActive,
+				isDisabled: args.isDisabled,
+				isDropdownDisabled: args.isDropdownDisabled,
+				formatName: formatName,
+				propertyName: settings.propertyName,
+			} ),
+		} );
 	}
 	return component;
 };
