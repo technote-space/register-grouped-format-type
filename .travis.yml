@@ -29,6 +29,10 @@ stages:
   - name: deploy
     if: tag IS present
 
+before_install:
+  - npm install -g npm@latest
+  - npm install -g yarn@latest
+
 before_script:
   - git clone --depth=1 https://github.com/wp-content-framework/travis-ci.git travis-ci
 
