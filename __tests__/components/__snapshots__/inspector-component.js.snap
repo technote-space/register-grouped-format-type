@@ -286,11 +286,13 @@ Array [
         </a>
         <div
           className="additional-inspector-test1"
+          key="additional-inspector-0"
         >
           test1
         </div>
         <div
           className="additional-inspector-test2"
+          key="additional-inspector-1"
         >
           test2
         </div>
@@ -330,7 +332,7 @@ Array [
                   contentEditable={true}
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\"></span>",
+                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
                     }
                   }
                   onBlur={[Function]}
@@ -338,8 +340,11 @@ Array [
                   onFocus={[Function]}
                   onInput={[Function]}
                   onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                   onMouseDown={[Function]}
+                  onMouseUp={[Function]}
                   onPaste={[Function]}
+                  onTouchEnd={[Function]}
                   onTouchStart={[Function]}
                   role="textbox"
                   style={
@@ -348,7 +353,6 @@ Array [
                       "color": undefined,
                       "direction": undefined,
                       "fontSize": undefined,
-                      "textAlign": undefined,
                       "whiteSpace": "pre-wrap",
                     }
                   }
@@ -676,7 +680,7 @@ Array [
                   contentEditable={true}
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\"></span>",
+                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
                     }
                   }
                   onBlur={[Function]}
@@ -684,8 +688,11 @@ Array [
                   onFocus={[Function]}
                   onInput={[Function]}
                   onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                   onMouseDown={[Function]}
+                  onMouseUp={[Function]}
                   onPaste={[Function]}
+                  onTouchEnd={[Function]}
                   onTouchStart={[Function]}
                   role="textbox"
                   style={
@@ -694,7 +701,6 @@ Array [
                       "color": undefined,
                       "direction": undefined,
                       "fontSize": undefined,
-                      "textAlign": undefined,
                       "whiteSpace": "pre-wrap",
                     }
                   }
@@ -1013,7 +1019,7 @@ Array [
                   contentEditable={true}
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\"></span>",
+                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
                     }
                   }
                   onBlur={[Function]}
@@ -1021,8 +1027,11 @@ Array [
                   onFocus={[Function]}
                   onInput={[Function]}
                   onKeyDown={[Function]}
+                  onKeyUp={[Function]}
                   onMouseDown={[Function]}
+                  onMouseUp={[Function]}
                   onPaste={[Function]}
+                  onTouchEnd={[Function]}
                   onTouchStart={[Function]}
                   role="textbox"
                   style={
@@ -1031,7 +1040,6 @@ Array [
                       "color": undefined,
                       "direction": undefined,
                       "fontSize": undefined,
-                      "textAlign": undefined,
                       "whiteSpace": "pre-wrap",
                     }
                   }
