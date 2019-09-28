@@ -79,7 +79,6 @@ Compile and enqueue script.
 <script type="text/javascript" src="/assets/register.js"></script>
 ```
 
-
 ### Browser
 `register.js`
 ```js
