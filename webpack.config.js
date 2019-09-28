@@ -51,7 +51,7 @@ const webpackConfig = {
 			new TerserPlugin( {
 				terserOptions: {
 					compress: {
-						reduce_vars: false,
+						'reduce_vars': false,
 					},
 					mangle: true,
 				},
