@@ -1,7 +1,7 @@
 const { Fragment } = wp.element;
 const { addFilter } = wp.hooks;
 
-import { Common, RichText } from './library';
+import { Common, RichText } from '@technote-space/register-grouped-format-type';
 
 const { registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton } = RichText;
 const { getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
