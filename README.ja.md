@@ -151,7 +151,7 @@ registerGroupedFormatType( getColorButtonProps( 'inspector', 'background-color',
 registerGroupedFormatType( getFontSizesButtonProps( 'inspector', 'font-size', 'Font Size', 'edit' ) );
 ```
 
-## 詳細
+## 関数
 ### `registerGroupedFormatType`
 グループ化されたフォーマットタイプを追加します。
 #### 定義

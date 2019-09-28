@@ -150,7 +150,7 @@ registerGroupedFormatType( getColorButtonProps( 'inspector', 'background-color',
 registerGroupedFormatType( getFontSizesButtonProps( 'inspector', 'font-size', 'Font Size', 'edit' ) );
 ```
 
-## Details
+## Functions
 ### `registerGroupedFormatType`
 Register grouped format type.
 #### definition
