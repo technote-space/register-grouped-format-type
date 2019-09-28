@@ -24,8 +24,8 @@ The controls are active only when it is able to toggle format.
 
 - [Sample Project](#sample-project)
 - [How to use](#how-to-use)
-  - [Use from npm](#use-from-npm)
-  - [Use from download](#use-from-download)
+  - [npm](#npm)
+  - [Browser](#browser)
 - [Use group setting](#use-group-setting)
 - [Use inspector](#use-inspector)
 - [Details](#details)
