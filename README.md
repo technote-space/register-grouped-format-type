@@ -24,8 +24,8 @@ The controls are active only when it is able to toggle format.
 
 - [Sample Project](#sample-project)
 - [How to use](#how-to-use)
-  - [Use from npm](#use-from-npm)
-  - [Use from download](#use-from-download)
+  - [npm](#npm)
+  - [Browser](#browser)
 - [Use group setting](#use-group-setting)
 - [Use inspector](#use-inspector)
 - [Details](#details)
@@ -45,7 +45,7 @@ The controls are active only when it is able to toggle format.
 [Gutenberg Samples](https://github.com/technote-space/gutenberg-samples)
 
 ## How to use
-### Use from npm
+### npm
 [https://www.npmjs.com/package/@technote-space/register-grouped-format-type](https://www.npmjs.com/package/@technote-space/register-grouped-format-type)
 
 ```bash
@@ -79,8 +79,7 @@ Compile and enqueue script.
 <script type="text/javascript" src="/assets/register.js"></script>
 ```
 
-### Use from download
-
+### Browser
 `register.js`
 ```js
 ( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton, getToolbarButtonProps ) {
