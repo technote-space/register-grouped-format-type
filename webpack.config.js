@@ -1,6 +1,6 @@
 const SpeedMeasurePlugin = require( 'speed-measure-webpack-plugin' );
 const DuplicatePackageCheckerPlugin = require( 'duplicate-package-checker-webpack-plugin' );
-const smp = new SpeedMeasurePlugin();
+const TerserPlugin = require( 'terser-webpack-plugin' );
 const webpack = require( 'webpack' );
 const pkg = require( './package' );
 const path = require( 'path' );
@@ -45,6 +45,19 @@ const webpackConfig = {
 		new webpack.BannerPlugin( banner ),
 		new DuplicatePackageCheckerPlugin(),
 	],
+	optimization: {
+		minimize: true,
+		minimizer: [
+			new TerserPlugin( {
+				terserOptions: {
+					compress: {
+						'reduce_vars': false,
+					},
+					mangle: true,
+				},
+			} ),
+		],
+	},
 };
 
-module.exports = smp.wrap( webpackConfig );
+module.exports = ( new SpeedMeasurePlugin() ).wrap( webpackConfig );

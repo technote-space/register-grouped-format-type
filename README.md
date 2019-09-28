@@ -28,7 +28,7 @@ The controls are active only when it is able to toggle format.
   - [Browser](#browser)
 - [Use group setting](#use-group-setting)
 - [Use inspector](#use-inspector)
-- [Details](#details)
+- [Functions](#functions)
   - [`registerGroupedFormatType`](#registergroupedformattype)
     - [definition](#definition)
     - [arguments](#arguments)
@@ -150,7 +150,7 @@ registerGroupedFormatType( getColorButtonProps( 'inspector', 'background-color',
 registerGroupedFormatType( getFontSizesButtonProps( 'inspector', 'font-size', 'Font Size', 'edit' ) );
 ```
 
-## Details
+## Functions
 ### `registerGroupedFormatType`
 Register grouped format type.
 #### definition
