@@ -5,7 +5,7 @@ const webpack = require( 'webpack' );
 const pkg = require( './package' );
 const path = require( 'path' );
 
-const banner = `${ pkg.name } ${ pkg.version }\nCopyright (c) ${ new Date().getFullYear() } ${ pkg.author }\nLicense: ${ pkg.license }`;
+const banner = `${ pkg.name } ${ pkg.version }\nCopyright (c) ${ new Date().getFullYear() } ${ pkg.author }\n@license: ${ pkg.license }`;
 const externals = {
 	'@wordpress/block-editor': { this: [ 'wp', 'blockEditor' ] },
 	'@wordpress/components': { this: [ 'wp', 'components' ] },
@@ -54,7 +54,11 @@ const webpackConfig = {
 						'reduce_vars': false,
 					},
 					mangle: true,
+					output: {
+						comments: /license/i,
+					},
 				},
+				extractComments: false,
 			} ),
 		],
 	},
