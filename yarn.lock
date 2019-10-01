@@ -1433,13 +1433,13 @@
     rememo "^3.0.0"
 
 "@wordpress/element@^2.8.0":
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/@wordpress/element/-/element-2.8.0.tgz#aa3735c543189283cdb9e345291574d212ba8c77"
-  integrity sha512-fjFKf4h6dxjlTW4HKp+UNcCQDQaUGFLwjK6hMmet5YhklYvyg/+3bvDx1qqxe1BbY7kYvVhzVmldhJctOKPglQ==
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@wordpress/element/-/element-2.8.1.tgz#da964c6557cca523660d683e79cbd4903b428e21"
+  integrity sha512-iKdeuf0aSKVO1PxjCCmCUBYk531Iesh6E2ayWsWjj/JNRAcVuAOGiAIxCxU7pE127upjSLmkRh+dXNZ244IWQw==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@wordpress/escape-html" "^1.5.0"
-    lodash "^4.17.14"
+    lodash "^4.17.15"
     react "^16.9.0"
     react-dom "^16.9.0"
 
