@@ -297,59 +297,41 @@ Array [
         <div
           className="editor-rich-text block-editor-rich-text"
         >
-          <div
+          <p
+            aria-activedescendant={null}
+            aria-label="Paragraph block"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+            contentEditable={true}
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+              }
+            }
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
             onFocus={[Function]}
-          >
-            <div
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="components-autocomplete"
-                onClick={[Function]}
-              >
-                <p
-                  aria-activedescendant={null}
-                  aria-label="Paragraph block"
-                  aria-multiline={true}
-                  aria-owns={null}
-                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  contentEditable={true}
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                    }
-                  }
-                  onBlur={[Function]}
-                  onCompositionEnd={[Function]}
-                  onFocus={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onPaste={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
-                  role="textbox"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "whiteSpace": "pre-wrap",
-                    }
-                  }
-                  suppressContentEditableWarning={true}
-                />
-              </div>
-            </div>
-          </div>
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": undefined,
+                "direction": undefined,
+                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
+              }
+            }
+            suppressContentEditableWarning={true}
+          />
         </div>,
       ]
        
@@ -513,59 +495,41 @@ Array [
         <div
           className="editor-rich-text block-editor-rich-text"
         >
-          <div
+          <p
+            aria-activedescendant={null}
+            aria-label="Paragraph block"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+            contentEditable={true}
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+              }
+            }
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
             onFocus={[Function]}
-          >
-            <div
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="components-autocomplete"
-                onClick={[Function]}
-              >
-                <p
-                  aria-activedescendant={null}
-                  aria-label="Paragraph block"
-                  aria-multiline={true}
-                  aria-owns={null}
-                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  contentEditable={true}
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                    }
-                  }
-                  onBlur={[Function]}
-                  onCompositionEnd={[Function]}
-                  onFocus={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onPaste={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
-                  role="textbox"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "whiteSpace": "pre-wrap",
-                    }
-                  }
-                  suppressContentEditableWarning={true}
-                />
-              </div>
-            </div>
-          </div>
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": undefined,
+                "direction": undefined,
+                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
+              }
+            }
+            suppressContentEditableWarning={true}
+          />
         </div>,
       ]
        
@@ -878,59 +842,41 @@ Array [
         <div
           className="editor-rich-text block-editor-rich-text"
         >
-          <div
+          <p
+            aria-activedescendant={null}
+            aria-label="Paragraph block"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+            contentEditable={true}
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+              }
+            }
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
             onFocus={[Function]}
-          >
-            <div
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="components-autocomplete"
-                onClick={[Function]}
-              >
-                <p
-                  aria-activedescendant={null}
-                  aria-label="Paragraph block"
-                  aria-multiline={true}
-                  aria-owns={null}
-                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  contentEditable={true}
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                    }
-                  }
-                  onBlur={[Function]}
-                  onCompositionEnd={[Function]}
-                  onFocus={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onPaste={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
-                  role="textbox"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "whiteSpace": "pre-wrap",
-                    }
-                  }
-                  suppressContentEditableWarning={true}
-                />
-              </div>
-            </div>
-          </div>
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": undefined,
+                "direction": undefined,
+                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
+              }
+            }
+            suppressContentEditableWarning={true}
+          />
         </div>,
       ]
        
@@ -1094,59 +1040,41 @@ Array [
         <div
           className="editor-rich-text block-editor-rich-text"
         >
-          <div
+          <p
+            aria-activedescendant={null}
+            aria-label="Paragraph block"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+            contentEditable={true}
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+              }
+            }
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
             onFocus={[Function]}
-          >
-            <div
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="components-autocomplete"
-                onClick={[Function]}
-              >
-                <p
-                  aria-activedescendant={null}
-                  aria-label="Paragraph block"
-                  aria-multiline={true}
-                  aria-owns={null}
-                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  contentEditable={true}
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                    }
-                  }
-                  onBlur={[Function]}
-                  onCompositionEnd={[Function]}
-                  onFocus={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onPaste={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
-                  role="textbox"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "whiteSpace": "pre-wrap",
-                    }
-                  }
-                  suppressContentEditableWarning={true}
-                />
-              </div>
-            </div>
-          </div>
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": undefined,
+                "direction": undefined,
+                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
+              }
+            }
+            suppressContentEditableWarning={true}
+          />
         </div>,
       ]
        
@@ -1299,59 +1227,41 @@ Array [
         <div
           className="editor-rich-text block-editor-rich-text"
         >
-          <div
+          <p
+            aria-activedescendant={null}
+            aria-label="Paragraph block"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+            contentEditable={true}
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+              }
+            }
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
             onFocus={[Function]}
-          >
-            <div
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="components-autocomplete"
-                onClick={[Function]}
-              >
-                <p
-                  aria-activedescendant={null}
-                  aria-label="Paragraph block"
-                  aria-multiline={true}
-                  aria-owns={null}
-                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  contentEditable={true}
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                    }
-                  }
-                  onBlur={[Function]}
-                  onCompositionEnd={[Function]}
-                  onFocus={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onPaste={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
-                  role="textbox"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "whiteSpace": "pre-wrap",
-                    }
-                  }
-                  suppressContentEditableWarning={true}
-                />
-              </div>
-            </div>
-          </div>
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": undefined,
+                "direction": undefined,
+                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
+              }
+            }
+            suppressContentEditableWarning={true}
+          />
         </div>,
       ]
        
@@ -1483,59 +1393,41 @@ Array [
         <div
           className="editor-rich-text block-editor-rich-text"
         >
-          <div
+          <p
+            aria-activedescendant={null}
+            aria-label="Paragraph block"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+            contentEditable={true}
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+              }
+            }
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
             onFocus={[Function]}
-          >
-            <div
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="components-autocomplete"
-                onClick={[Function]}
-              >
-                <p
-                  aria-activedescendant={null}
-                  aria-label="Paragraph block"
-                  aria-multiline={true}
-                  aria-owns={null}
-                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  contentEditable={true}
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                    }
-                  }
-                  onBlur={[Function]}
-                  onCompositionEnd={[Function]}
-                  onFocus={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onPaste={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
-                  role="textbox"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "whiteSpace": "pre-wrap",
-                    }
-                  }
-                  suppressContentEditableWarning={true}
-                />
-              </div>
-            </div>
-          </div>
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": undefined,
+                "direction": undefined,
+                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
+              }
+            }
+            suppressContentEditableWarning={true}
+          />
         </div>,
       ]
        
@@ -1632,59 +1524,41 @@ Array [
         <div
           className="editor-rich-text block-editor-rich-text"
         >
-          <div
+          <p
+            aria-activedescendant={null}
+            aria-label="Paragraph block"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+            contentEditable={true}
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+              }
+            }
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
             onFocus={[Function]}
-          >
-            <div
-              onBlur={[Function]}
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="components-autocomplete"
-                onClick={[Function]}
-              >
-                <p
-                  aria-activedescendant={null}
-                  aria-label="Paragraph block"
-                  aria-multiline={true}
-                  aria-owns={null}
-                  className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-                  contentEditable={true}
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                    }
-                  }
-                  onBlur={[Function]}
-                  onCompositionEnd={[Function]}
-                  onFocus={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  onKeyUp={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onPaste={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
-                  role="textbox"
-                  style={
-                    Object {
-                      "backgroundColor": undefined,
-                      "color": undefined,
-                      "direction": undefined,
-                      "fontSize": undefined,
-                      "whiteSpace": "pre-wrap",
-                    }
-                  }
-                  suppressContentEditableWarning={true}
-                />
-              </div>
-            </div>
-          </div>
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "color": undefined,
+                "direction": undefined,
+                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
+              }
+            }
+            suppressContentEditableWarning={true}
+          />
         </div>,
       ]
        
