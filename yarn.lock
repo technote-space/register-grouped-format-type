@@ -1384,9 +1384,9 @@
     "@babel/runtime" "^7.4.4"
 
 "@wordpress/dom@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/dom/-/dom-2.5.1.tgz#f5a7193656fa3dd62162ac93e7b0b9c91d4583cc"
-  integrity sha512-ZdolWmJGFcyLHmTEWzlWpSoA8EmT163f2wDNKNRGkyFcQ2A3T4F75bE020x+W0JhDpM+EclOfyflIu79O8Tn+w==
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/dom/-/dom-2.5.2.tgz#a5785c589dd3c73a21fe6eebcf961ebcd9ba1368"
+  integrity sha512-b/5MAKN24yKuXMUPP7A6Ha898bm0cSsOdrq5w9kjGZpO/ceP4DxeV/GNoE22uXX+KbV4px9KRXO5H9OcFJyroA==
   dependencies:
     "@babel/runtime" "^7.4.4"
     lodash "^4.17.15"
