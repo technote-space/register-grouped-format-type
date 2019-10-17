@@ -1484,9 +1484,9 @@
     "@babel/runtime" "^7.4.4"
 
 "@wordpress/keycodes@^2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@wordpress/keycodes/-/keycodes-2.6.1.tgz#8bde741e5c767c2dcd15f8ec0c44e8977825cf6f"
-  integrity sha512-xsQKiknpybwNsJkfIj8JyORhvRqDNagQm5dCKs5CZ5AvmOqS43Qghn8DLccBQPpnSevlDyb9ZwuyA+VCOBBzdQ==
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@wordpress/keycodes/-/keycodes-2.6.2.tgz#6f86a2835696bfb15997e6e3a91aaa927695e7ff"
+  integrity sha512-xWwyTYdyesZFc6V3RDn2Gjkx5bfa5fGDGrX0WcxT+vA2oEMFqLA2JzUqEzylR7aX3uFfsdDEp0GbPl8ipcLChw==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@wordpress/i18n" "^3.6.1"
