@@ -878,10 +878,10 @@
   resolved "https://registry.yarnpkg.com/@tannin/postfix/-/postfix-1.0.2.tgz#fbb723e79603add30f5d8a08a626c2970d984857"
   integrity sha512-Nggtk7/ljfNPpAX8CjxxLkMKuO6u2gH1ozmTvGclWF2pNcxTf6YGghYNYNWZRKrimXGhQ8yZqvAHep7h80K04g==
 
-"@technote-space/gutenberg-utils@^1.2.7":
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-1.2.7.tgz#3eb017de495959d208be4d7950f83c2270638848"
-  integrity sha512-L9GDeGqmDl3rGTDn7poX7B/suHYVc1C6fU3xnr9lgDwVqgC4QnrrWB7jwmYWLeGL3jWnaiLGmjUi+du/Tcm6tg==
+"@technote-space/gutenberg-utils@^1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-1.2.8.tgz#d4b783bd2a0aacd0879749dbf179e86156723053"
+  integrity sha512-iv0Zz+LblgDmzIex1manAU45JWaZuOmM93OAHZ0uqqYyxc30DNq2Dkf2C0/FTCvqFd4TY9cwcibUl7996gC8Ew==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/plugin-proposal-object-rest-spread" "^7.6.2"
@@ -3125,12 +3125,12 @@ enzyme-shallow-equal@^1.0.0:
     has "^1.0.3"
     object-is "^1.0.1"
 
-enzyme-to-json@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.4.2.tgz#e5e3f3d7f6700be72885e77b0792a2d20846b021"
-  integrity sha512-tlzvJPPONTaTR2eKrWTt/pxknTjXgcNbxcYkxNfB0CwC8Pfc5xmSycaTwaQ1HXpN1zv6A7lAhnMV58HOIXTkFg==
+enzyme-to-json@^3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.4.3.tgz#ed4386f48768ed29e2d1a2910893542c34e7e0af"
+  integrity sha512-jqNEZlHqLdz7OTpXSzzghArSS3vigj67IU/fWkPyl1c0TCj9P5s6Ze0kRkYZWNEoCqCR79xlQbigYlMx5erh8A==
   dependencies:
-    lodash "^4.17.12"
+    lodash "^4.17.15"
 
 enzyme@^3.10.0:
   version "3.10.0"
@@ -3179,9 +3179,9 @@ error-ex@^1.2.0, error-ex@^1.3.1:
     is-arrayish "^0.2.1"
 
 es-abstract@^1.12.0, es-abstract@^1.13.0, es-abstract@^1.15.0, es-abstract@^1.5.1, es-abstract@^1.7.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.15.0.tgz#8884928ec7e40a79e3c9bc812d37d10c8b24cc57"
-  integrity sha512-bhkEqWJ2t2lMeaJDuk7okMkJWI/yqgH/EoGwpcvv0XW9RWQsRspI4wt6xuyuvMvvQE3gg/D9HXppgk21w78GyQ==
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.16.0.tgz#d3a26dc9c3283ac9750dca569586e976d9dcc06d"
+  integrity sha512-xdQnfykZ9JMEiasTAJZJdMWCQ1Vm00NBw79/AWi7ELfZuuPCSOMDZbT9mkOfSctVtfhb+sAAzrm+j//GjjLHLg==
   dependencies:
     es-to-primitive "^1.2.0"
     function-bind "^1.1.1"
