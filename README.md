@@ -1,7 +1,7 @@
 # Register Grouped Format Type
 
 [![npm version](https://badge.fury.io/js/%40technote-space%2Fregister-grouped-format-type.svg)](https://badge.fury.io/js/%40technote-space%2Fregister-grouped-format-type)
-[![Build Status](https://github.com/technote-space/register-grouped-format-type/workflows/Build/badge.svg)](https://github.com/technote-space/register-grouped-format-type/actions)
+[![CI Status](https://github.com/technote-space/register-grouped-format-type/workflows/CI/badge.svg)](https://github.com/technote-space/register-grouped-format-type/actions)
 [![Build Status](https://travis-ci.com/technote-space/register-grouped-format-type.svg?branch=master)](https://travis-ci.com/technote-space/register-grouped-format-type)
 [![codecov](https://codecov.io/gh/technote-space/register-grouped-format-type/branch/master/graph/badge.svg)](https://codecov.io/gh/technote-space/register-grouped-format-type)
 [![CodeFactor](https://www.codefactor.io/repository/github/technote-space/register-grouped-format-type/badge)](https://www.codefactor.io/repository/github/technote-space/register-grouped-format-type)
