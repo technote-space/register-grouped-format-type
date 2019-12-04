@@ -55,7 +55,9 @@ Array [
             </button>
           </ForwardRef(Button)>
         </h2>
-        <fieldset>
+        <fieldset
+          className="components-font-size-picker"
+        >
           <legend>
             Font Size
           </legend>
@@ -69,7 +71,7 @@ Array [
                 className="components-base-control__field"
               >
                 <label
-                  className="components-base-control__label screen-reader-text"
+                  className="components-visually-hidden"
                   htmlFor="inspector-select-control-0"
                 >
                   Choose preset
@@ -305,21 +307,58 @@ Array [
       Array [
         "",
         "",
-        <div
-          className="editor-rich-text block-editor-rich-text"
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableEmbedURLOnPaste={true}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          aria-label="Paragraph block"
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Start writing or type / to choose a block"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "color": undefined,
+              "direction": undefined,
+              "fontSize": undefined,
+            }
+          }
+          tagName="p"
+          value={
+            Object {
+              "formats": Array [
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ],
+              "replacements": Array [
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ],
+              "text": "test",
+            }
+          }
         >
-          <p
+          <ForwardRef
             aria-activedescendant={null}
             aria-label="Paragraph block"
-            aria-multiline={true}
             aria-owns={null}
             className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            contentEditable={true}
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-              }
-            }
+            key="p"
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -331,19 +370,63 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            role="textbox"
+            record={
+              Object {
+                "end": undefined,
+                "formats": Array [],
+                "replacements": Array [],
+                "start": undefined,
+                "text": "",
+              }
+            }
             style={
               Object {
                 "backgroundColor": undefined,
                 "color": undefined,
                 "direction": undefined,
                 "fontSize": undefined,
-                "whiteSpace": "pre-wrap",
               }
             }
-            suppressContentEditableWarning={true}
-          />
-        </div>,
+            tagName="p"
+            valueToEditableHTML={[Function]}
+          >
+            <p
+              aria-activedescendant={null}
+              aria-label="Paragraph block"
+              aria-multiline={true}
+              aria-owns={null}
+              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+                }
+              }
+              onBlur={[Function]}
+              onCompositionEnd={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              onPaste={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="textbox"
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "color": undefined,
+                  "direction": undefined,
+                  "fontSize": undefined,
+                  "whiteSpace": "pre-wrap",
+                }
+              }
+              suppressContentEditableWarning={true}
+            />
+          </ForwardRef>
+        </ForwardRef>,
       ]
        
     </div>,
@@ -409,7 +492,9 @@ Array [
             </button>
           </ForwardRef(Button)>
         </h2>
-        <fieldset>
+        <fieldset
+          className="components-font-size-picker"
+        >
           <legend>
             Font Size
           </legend>
@@ -423,7 +508,7 @@ Array [
                 className="components-base-control__field"
               >
                 <label
-                  className="components-base-control__label screen-reader-text"
+                  className="components-visually-hidden"
                   htmlFor="inspector-select-control-1"
                 >
                   Choose preset
@@ -635,21 +720,58 @@ Array [
       Array [
         "",
         "",
-        <div
-          className="editor-rich-text block-editor-rich-text"
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableEmbedURLOnPaste={true}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          aria-label="Paragraph block"
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Start writing or type / to choose a block"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "color": undefined,
+              "direction": undefined,
+              "fontSize": undefined,
+            }
+          }
+          tagName="p"
+          value={
+            Object {
+              "formats": Array [
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ],
+              "replacements": Array [
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ],
+              "text": "test",
+            }
+          }
         >
-          <p
+          <ForwardRef
             aria-activedescendant={null}
             aria-label="Paragraph block"
-            aria-multiline={true}
             aria-owns={null}
             className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            contentEditable={true}
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-              }
-            }
+            key="p"
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -661,19 +783,63 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            role="textbox"
+            record={
+              Object {
+                "end": undefined,
+                "formats": Array [],
+                "replacements": Array [],
+                "start": undefined,
+                "text": "",
+              }
+            }
             style={
               Object {
                 "backgroundColor": undefined,
                 "color": undefined,
                 "direction": undefined,
                 "fontSize": undefined,
-                "whiteSpace": "pre-wrap",
               }
             }
-            suppressContentEditableWarning={true}
-          />
-        </div>,
+            tagName="p"
+            valueToEditableHTML={[Function]}
+          >
+            <p
+              aria-activedescendant={null}
+              aria-label="Paragraph block"
+              aria-multiline={true}
+              aria-owns={null}
+              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+                }
+              }
+              onBlur={[Function]}
+              onCompositionEnd={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              onPaste={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="textbox"
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "color": undefined,
+                  "direction": undefined,
+                  "fontSize": undefined,
+                  "whiteSpace": "pre-wrap",
+                }
+              }
+              suppressContentEditableWarning={true}
+            />
+          </ForwardRef>
+        </ForwardRef>,
       ]
        
     </div>,
@@ -739,7 +905,9 @@ Array [
             </button>
           </ForwardRef(Button)>
         </h2>
-        <fieldset>
+        <fieldset
+          className="components-font-size-picker"
+        >
           <legend>
             Font Size
           </legend>
@@ -753,7 +921,7 @@ Array [
                 className="components-base-control__field"
               >
                 <label
-                  className="components-base-control__label screen-reader-text"
+                  className="components-visually-hidden"
                   htmlFor="inspector-select-control-2"
                 >
                   Choose preset
@@ -956,21 +1124,58 @@ Array [
       Array [
         "",
         "",
-        <div
-          className="editor-rich-text block-editor-rich-text"
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableEmbedURLOnPaste={true}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          aria-label="Paragraph block"
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Start writing or type / to choose a block"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "color": undefined,
+              "direction": undefined,
+              "fontSize": undefined,
+            }
+          }
+          tagName="p"
+          value={
+            Object {
+              "formats": Array [
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ],
+              "replacements": Array [
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ],
+              "text": "test",
+            }
+          }
         >
-          <p
+          <ForwardRef
             aria-activedescendant={null}
             aria-label="Paragraph block"
-            aria-multiline={true}
             aria-owns={null}
             className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            contentEditable={true}
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-              }
-            }
+            key="p"
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -982,19 +1187,63 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            role="textbox"
+            record={
+              Object {
+                "end": undefined,
+                "formats": Array [],
+                "replacements": Array [],
+                "start": undefined,
+                "text": "",
+              }
+            }
             style={
               Object {
                 "backgroundColor": undefined,
                 "color": undefined,
                 "direction": undefined,
                 "fontSize": undefined,
-                "whiteSpace": "pre-wrap",
               }
             }
-            suppressContentEditableWarning={true}
-          />
-        </div>,
+            tagName="p"
+            valueToEditableHTML={[Function]}
+          >
+            <p
+              aria-activedescendant={null}
+              aria-label="Paragraph block"
+              aria-multiline={true}
+              aria-owns={null}
+              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
+                }
+              }
+              onBlur={[Function]}
+              onCompositionEnd={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              onPaste={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              role="textbox"
+              style={
+                Object {
+                  "backgroundColor": undefined,
+                  "color": undefined,
+                  "direction": undefined,
+                  "fontSize": undefined,
+                  "whiteSpace": "pre-wrap",
+                }
+              }
+              suppressContentEditableWarning={true}
+            />
+          </ForwardRef>
+        </ForwardRef>,
       ]
        
     </div>,
