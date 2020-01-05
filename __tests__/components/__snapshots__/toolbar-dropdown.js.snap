@@ -6,7 +6,7 @@ Array [
   Array [
     "",
     <div
-      className="components-dropdown-menu components-toolbar"
+      className="components-dropdown components-dropdown-menu components-toolbar"
     >
       <ForwardRef(IconButton)
         aria-expanded={false}
@@ -70,7 +70,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="3---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="2---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -148,7 +148,7 @@ Array [
                   >
                     <div>
                       <div
-                        class="components-popover components-dropdown-button__popover is-bottom is-right components-animate__appear is-from-left is-from-top"
+                        class="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
                         style="top: -3px;"
                       >
                         <div
@@ -191,10 +191,9 @@ Array [
                   onBlur={[Function]}
                   onFocus={[Function]}
                 >
-                  <div
-                    className="components-popover components-dropdown-button__popover is-bottom is-right components-animate__appear is-from-left is-from-top"
+                  <ForwardRef
+                    className="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
                     onKeyDown={[Function]}
-                    onMouseDown={[Function]}
                     style={
                       Object {
                         "left": undefined,
@@ -204,82 +203,95 @@ Array [
                     }
                   >
                     <div
-                      className="components-popover__content"
+                      className="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
+                      onKeyDown={[Function]}
+                      onMouseDown={[Function]}
                       style={
                         Object {
-                          "maxHeight": undefined,
-                          "maxWidth": undefined,
+                          "left": undefined,
+                          "top": "-3px",
+                          "visibility": undefined,
                         }
                       }
-                      tabIndex="-1"
                     >
-                      <ForwardRef(NavigableMenu)
-                        aria-label="test label 0"
-                        className="components-dropdown-menu__menu test-menu-class"
-                        role="menu"
+                      <div
+                        className="components-popover__content"
+                        style={
+                          Object {
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                          }
+                        }
+                        tabIndex="-1"
                       >
-                        <ForwardRef(NavigableContainer)
+                        <ForwardRef(NavigableMenu)
                           aria-label="test label 0"
-                          aria-orientation="vertical"
                           className="components-dropdown-menu__menu test-menu-class"
-                          eventToOffset={[Function]}
-                          onlyBrowserTabstops={false}
                           role="menu"
-                          stopNavigationEvents={true}
                         >
-                          <div
+                          <ForwardRef(NavigableContainer)
                             aria-label="test label 0"
                             aria-orientation="vertical"
                             className="components-dropdown-menu__menu test-menu-class"
+                            eventToOffset={[Function]}
+                            onlyBrowserTabstops={false}
                             role="menu"
+                            stopNavigationEvents={true}
                           >
-                            <ForwardRef(IconButton)
-                              className="components-dropdown-menu__menu-item is-active"
-                              key="dropdown-test label 0-0"
-                              onClick={[Function]}
-                              role="menuitem"
+                            <div
+                              aria-label="test label 0"
+                              aria-orientation="vertical"
+                              className="components-dropdown-menu__menu test-menu-class"
+                              role="menu"
                             >
-                              <ForwardRef(Button)
-                                className="components-icon-button components-dropdown-menu__menu-item is-active has-text"
+                              <ForwardRef(IconButton)
+                                className="components-dropdown-menu__menu-item is-active"
+                                key="dropdown-test label 0-0"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
-                                <button
-                                  className="components-button components-icon-button components-dropdown-menu__menu-item is-active has-text"
+                                <ForwardRef(Button)
+                                  className="components-icon-button components-dropdown-menu__menu-item is-active has-text"
                                   onClick={[Function]}
                                   role="menuitem"
-                                  type="button"
                                 >
-                                  ToolbarButton1
-                                </button>
-                              </ForwardRef(Button)>
-                            </ForwardRef(IconButton)>
-                            <ForwardRef(IconButton)
-                              className="components-dropdown-menu__menu-item"
-                              key="dropdown-test label 0-1"
-                              onClick={[Function]}
-                              role="menuitem"
-                            >
-                              <ForwardRef(Button)
-                                className="components-icon-button components-dropdown-menu__menu-item has-text"
+                                  <button
+                                    className="components-button components-icon-button components-dropdown-menu__menu-item is-active has-text"
+                                    onClick={[Function]}
+                                    role="menuitem"
+                                    type="button"
+                                  >
+                                    ToolbarButton1
+                                  </button>
+                                </ForwardRef(Button)>
+                              </ForwardRef(IconButton)>
+                              <ForwardRef(IconButton)
+                                className="components-dropdown-menu__menu-item"
+                                key="dropdown-test label 0-1"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
-                                <button
-                                  className="components-button components-icon-button components-dropdown-menu__menu-item has-text"
+                                <ForwardRef(Button)
+                                  className="components-icon-button components-dropdown-menu__menu-item has-text"
                                   onClick={[Function]}
                                   role="menuitem"
-                                  type="button"
                                 >
-                                  ToolbarButton2
-                                </button>
-                              </ForwardRef(Button)>
-                            </ForwardRef(IconButton)>
-                          </div>
-                        </ForwardRef(NavigableContainer)>
-                      </ForwardRef(NavigableMenu)>
+                                  <button
+                                    className="components-button components-icon-button components-dropdown-menu__menu-item has-text"
+                                    onClick={[Function]}
+                                    role="menuitem"
+                                    type="button"
+                                  >
+                                    ToolbarButton2
+                                  </button>
+                                </ForwardRef(Button)>
+                              </ForwardRef(IconButton)>
+                            </div>
+                          </ForwardRef(NavigableContainer)>
+                        </ForwardRef(NavigableMenu)>
+                      </div>
                     </div>
-                  </div>
+                  </ForwardRef>
                 </div>
               </div>
             </Portal>
@@ -289,63 +301,39 @@ Array [
     </div>,
   ],
   Array [
-    <div>
-       
-      Array [
-        "",
-        "",
+    Array [
+      "",
+      <blockquote
+        className="wp-block-quote test-block-edit"
+      >
         <ForwardRef
           __unstableDidAutomaticChange={false}
-          __unstableEmbedURLOnPaste={true}
           __unstableInputRule={[Function]}
           __unstableIsCaretWithinFormattedText={false}
           __unstableIsSelected={false}
           __unstableMarkAutomaticChange={[Function]}
+          __unstableMultilineTag="p"
           __unstableOnCreateUndoLevel={[Function]}
           __unstableOnEnterFormattedText={[Function]}
           __unstableOnExitFormattedText={[Function]}
+          __unstableOnSplitMiddle={[Function]}
           __unstableUndo={[Function]}
-          aria-label="Paragraph block"
-          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          className="editor-rich-text__editable block-editor-rich-text__editable"
+          disabled={false}
           onChange={[Function]}
           onDelete={[Function]}
           onEnter={[Function]}
           onPaste={[Function]}
           onSelectionChange={[Function]}
-          placeholder="Start writing or type / to choose a block"
-          style={
-            Object {
-              "backgroundColor": undefined,
-              "color": undefined,
-              "direction": undefined,
-              "fontSize": undefined,
-            }
-          }
-          tagName="p"
-          value={
-            Object {
-              "formats": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "replacements": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "text": "test",
-            }
-          }
+          placeholder="Write quote…"
         >
-          <ForwardRef
+          <div
             aria-activedescendant={null}
-            aria-label="Paragraph block"
+            aria-label="Write quote…"
+            aria-multiline={true}
             aria-owns={null}
-            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            key="p"
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable"
+            contentEditable={true}
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -357,66 +345,64 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            record={
-              Object {
-                "end": undefined,
-                "formats": Array [],
-                "replacements": Array [],
-                "start": undefined,
-                "text": "",
-              }
-            }
+            role="textbox"
             style={
               Object {
-                "backgroundColor": undefined,
-                "color": undefined,
-                "direction": undefined,
-                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
               }
             }
-            tagName="p"
-            valueToEditableHTML={[Function]}
-          >
-            <p
-              aria-activedescendant={null}
-              aria-label="Paragraph block"
-              aria-multiline={true}
-              aria-owns={null}
-              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-              contentEditable={true}
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableMobileNoFocusOnMount={true}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+          disabled={false}
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Write citation…"
+        >
+          <div
+            aria-activedescendant={null}
+            aria-label="Write citation…"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+            contentEditable={true}
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "whiteSpace": "pre-wrap",
               }
-              onBlur={[Function]}
-              onCompositionEnd={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onPaste={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-              role="textbox"
-              style={
-                Object {
-                  "backgroundColor": undefined,
-                  "color": undefined,
-                  "direction": undefined,
-                  "fontSize": undefined,
-                  "whiteSpace": "pre-wrap",
-                }
-              }
-              suppressContentEditableWarning={true}
-            />
-          </ForwardRef>
-        </ForwardRef>,
-      ]
-       
-    </div>,
+            }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+      </blockquote>,
+    ],
     "",
     "",
     "",
@@ -430,7 +416,7 @@ Array [
   Array [
     "",
     <div
-      className="components-dropdown-menu components-toolbar"
+      className="components-dropdown components-dropdown-menu components-toolbar"
     >
       <ForwardRef(IconButton)
         aria-expanded={false}
@@ -494,7 +480,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="3---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="2---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -568,63 +554,39 @@ Array [
     </div>,
   ],
   Array [
-    <div>
-       
-      Array [
-        "",
-        "",
+    Array [
+      "",
+      <blockquote
+        className="wp-block-quote test-block-edit"
+      >
         <ForwardRef
           __unstableDidAutomaticChange={false}
-          __unstableEmbedURLOnPaste={true}
           __unstableInputRule={[Function]}
           __unstableIsCaretWithinFormattedText={false}
           __unstableIsSelected={false}
           __unstableMarkAutomaticChange={[Function]}
+          __unstableMultilineTag="p"
           __unstableOnCreateUndoLevel={[Function]}
           __unstableOnEnterFormattedText={[Function]}
           __unstableOnExitFormattedText={[Function]}
+          __unstableOnSplitMiddle={[Function]}
           __unstableUndo={[Function]}
-          aria-label="Paragraph block"
-          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          className="editor-rich-text__editable block-editor-rich-text__editable"
+          disabled={false}
           onChange={[Function]}
           onDelete={[Function]}
           onEnter={[Function]}
           onPaste={[Function]}
           onSelectionChange={[Function]}
-          placeholder="Start writing or type / to choose a block"
-          style={
-            Object {
-              "backgroundColor": undefined,
-              "color": undefined,
-              "direction": undefined,
-              "fontSize": undefined,
-            }
-          }
-          tagName="p"
-          value={
-            Object {
-              "formats": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "replacements": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "text": "test",
-            }
-          }
+          placeholder="Write quote…"
         >
-          <ForwardRef
+          <div
             aria-activedescendant={null}
-            aria-label="Paragraph block"
+            aria-label="Write quote…"
+            aria-multiline={true}
             aria-owns={null}
-            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            key="p"
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable"
+            contentEditable={true}
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -636,66 +598,64 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            record={
-              Object {
-                "end": undefined,
-                "formats": Array [],
-                "replacements": Array [],
-                "start": undefined,
-                "text": "",
-              }
-            }
+            role="textbox"
             style={
               Object {
-                "backgroundColor": undefined,
-                "color": undefined,
-                "direction": undefined,
-                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
               }
             }
-            tagName="p"
-            valueToEditableHTML={[Function]}
-          >
-            <p
-              aria-activedescendant={null}
-              aria-label="Paragraph block"
-              aria-multiline={true}
-              aria-owns={null}
-              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-              contentEditable={true}
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableMobileNoFocusOnMount={true}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+          disabled={false}
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Write citation…"
+        >
+          <div
+            aria-activedescendant={null}
+            aria-label="Write citation…"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+            contentEditable={true}
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "whiteSpace": "pre-wrap",
               }
-              onBlur={[Function]}
-              onCompositionEnd={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onPaste={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-              role="textbox"
-              style={
-                Object {
-                  "backgroundColor": undefined,
-                  "color": undefined,
-                  "direction": undefined,
-                  "fontSize": undefined,
-                  "whiteSpace": "pre-wrap",
-                }
-              }
-              suppressContentEditableWarning={true}
-            />
-          </ForwardRef>
-        </ForwardRef>,
-      ]
-       
-    </div>,
+            }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+      </blockquote>,
+    ],
     "",
     "",
     "",
@@ -709,7 +669,7 @@ Array [
   Array [
     "",
     <div
-      className="components-dropdown-menu components-toolbar"
+      className="components-dropdown components-dropdown-menu components-toolbar"
     >
       <ForwardRef(IconButton)
         aria-expanded={false}
@@ -773,7 +733,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="9---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="7---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -851,7 +811,7 @@ Array [
                   >
                     <div>
                       <div
-                        class="components-popover components-dropdown-button__popover is-bottom is-right components-animate__appear is-from-left is-from-top"
+                        class="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
                         style="top: -3px;"
                       >
                         <div
@@ -895,10 +855,9 @@ Array [
                   onBlur={[Function]}
                   onFocus={[Function]}
                 >
-                  <div
-                    className="components-popover components-dropdown-button__popover is-bottom is-right components-animate__appear is-from-left is-from-top"
+                  <ForwardRef
+                    className="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
                     onKeyDown={[Function]}
-                    onMouseDown={[Function]}
                     style={
                       Object {
                         "left": undefined,
@@ -908,85 +867,98 @@ Array [
                     }
                   >
                     <div
-                      className="components-popover__content"
+                      className="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
+                      onKeyDown={[Function]}
+                      onMouseDown={[Function]}
                       style={
                         Object {
-                          "maxHeight": undefined,
-                          "maxWidth": undefined,
+                          "left": undefined,
+                          "top": "-3px",
+                          "visibility": undefined,
                         }
                       }
-                      tabIndex="-1"
                     >
-                      <ForwardRef(NavigableMenu)
-                        aria-label="test label 1"
-                        className="components-dropdown-menu__menu"
-                        role="menu"
+                      <div
+                        className="components-popover__content"
+                        style={
+                          Object {
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                          }
+                        }
+                        tabIndex="-1"
                       >
-                        <ForwardRef(NavigableContainer)
+                        <ForwardRef(NavigableMenu)
                           aria-label="test label 1"
-                          aria-orientation="vertical"
                           className="components-dropdown-menu__menu"
-                          eventToOffset={[Function]}
-                          onlyBrowserTabstops={false}
                           role="menu"
-                          stopNavigationEvents={true}
                         >
-                          <div
+                          <ForwardRef(NavigableContainer)
                             aria-label="test label 1"
                             aria-orientation="vertical"
                             className="components-dropdown-menu__menu"
+                            eventToOffset={[Function]}
+                            onlyBrowserTabstops={false}
                             role="menu"
+                            stopNavigationEvents={true}
                           >
-                            <ForwardRef(IconButton)
-                              className="components-dropdown-menu__menu-item is-active"
-                              key="dropdown-test label 1-0"
-                              onClick={[Function]}
-                              role="menuitem"
+                            <div
+                              aria-label="test label 1"
+                              aria-orientation="vertical"
+                              className="components-dropdown-menu__menu"
+                              role="menu"
                             >
-                              <ForwardRef(Button)
-                                className="components-icon-button components-dropdown-menu__menu-item is-active has-text"
+                              <ForwardRef(IconButton)
+                                className="components-dropdown-menu__menu-item is-active"
+                                key="dropdown-test label 1-0"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
-                                <button
-                                  className="components-button components-icon-button components-dropdown-menu__menu-item is-active has-text"
+                                <ForwardRef(Button)
+                                  className="components-icon-button components-dropdown-menu__menu-item is-active has-text"
                                   onClick={[Function]}
                                   role="menuitem"
-                                  type="button"
                                 >
-                                  ToolbarButton3
-                                </button>
-                              </ForwardRef(Button)>
-                            </ForwardRef(IconButton)>
-                            <ForwardRef(IconButton)
-                              className="components-dropdown-menu__menu-item"
-                              disabled={true}
-                              key="dropdown-test label 1-1"
-                              onClick={[Function]}
-                              role="menuitem"
-                            >
-                              <ForwardRef(Button)
-                                className="components-icon-button components-dropdown-menu__menu-item has-text"
+                                  <button
+                                    className="components-button components-icon-button components-dropdown-menu__menu-item is-active has-text"
+                                    onClick={[Function]}
+                                    role="menuitem"
+                                    type="button"
+                                  >
+                                    ToolbarButton3
+                                  </button>
+                                </ForwardRef(Button)>
+                              </ForwardRef(IconButton)>
+                              <ForwardRef(IconButton)
+                                className="components-dropdown-menu__menu-item"
                                 disabled={true}
+                                key="dropdown-test label 1-1"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
-                                <button
-                                  className="components-button components-icon-button components-dropdown-menu__menu-item has-text"
+                                <ForwardRef(Button)
+                                  className="components-icon-button components-dropdown-menu__menu-item has-text"
                                   disabled={true}
                                   onClick={[Function]}
                                   role="menuitem"
-                                  type="button"
                                 >
-                                  ToolbarButton4
-                                </button>
-                              </ForwardRef(Button)>
-                            </ForwardRef(IconButton)>
-                          </div>
-                        </ForwardRef(NavigableContainer)>
-                      </ForwardRef(NavigableMenu)>
+                                  <button
+                                    className="components-button components-icon-button components-dropdown-menu__menu-item has-text"
+                                    disabled={true}
+                                    onClick={[Function]}
+                                    role="menuitem"
+                                    type="button"
+                                  >
+                                    ToolbarButton4
+                                  </button>
+                                </ForwardRef(Button)>
+                              </ForwardRef(IconButton)>
+                            </div>
+                          </ForwardRef(NavigableContainer)>
+                        </ForwardRef(NavigableMenu)>
+                      </div>
                     </div>
-                  </div>
+                  </ForwardRef>
                 </div>
               </div>
             </Portal>
@@ -996,63 +968,39 @@ Array [
     </div>,
   ],
   Array [
-    <div>
-       
-      Array [
-        "",
-        "",
+    Array [
+      "",
+      <blockquote
+        className="wp-block-quote test-block-edit"
+      >
         <ForwardRef
           __unstableDidAutomaticChange={false}
-          __unstableEmbedURLOnPaste={true}
           __unstableInputRule={[Function]}
           __unstableIsCaretWithinFormattedText={false}
           __unstableIsSelected={false}
           __unstableMarkAutomaticChange={[Function]}
+          __unstableMultilineTag="p"
           __unstableOnCreateUndoLevel={[Function]}
           __unstableOnEnterFormattedText={[Function]}
           __unstableOnExitFormattedText={[Function]}
+          __unstableOnSplitMiddle={[Function]}
           __unstableUndo={[Function]}
-          aria-label="Paragraph block"
-          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          className="editor-rich-text__editable block-editor-rich-text__editable"
+          disabled={false}
           onChange={[Function]}
           onDelete={[Function]}
           onEnter={[Function]}
           onPaste={[Function]}
           onSelectionChange={[Function]}
-          placeholder="Start writing or type / to choose a block"
-          style={
-            Object {
-              "backgroundColor": undefined,
-              "color": undefined,
-              "direction": undefined,
-              "fontSize": undefined,
-            }
-          }
-          tagName="p"
-          value={
-            Object {
-              "formats": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "replacements": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "text": "test",
-            }
-          }
+          placeholder="Write quote…"
         >
-          <ForwardRef
+          <div
             aria-activedescendant={null}
-            aria-label="Paragraph block"
+            aria-label="Write quote…"
+            aria-multiline={true}
             aria-owns={null}
-            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            key="p"
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable"
+            contentEditable={true}
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -1064,66 +1012,64 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            record={
-              Object {
-                "end": undefined,
-                "formats": Array [],
-                "replacements": Array [],
-                "start": undefined,
-                "text": "",
-              }
-            }
+            role="textbox"
             style={
               Object {
-                "backgroundColor": undefined,
-                "color": undefined,
-                "direction": undefined,
-                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
               }
             }
-            tagName="p"
-            valueToEditableHTML={[Function]}
-          >
-            <p
-              aria-activedescendant={null}
-              aria-label="Paragraph block"
-              aria-multiline={true}
-              aria-owns={null}
-              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-              contentEditable={true}
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableMobileNoFocusOnMount={true}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+          disabled={false}
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Write citation…"
+        >
+          <div
+            aria-activedescendant={null}
+            aria-label="Write citation…"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+            contentEditable={true}
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "whiteSpace": "pre-wrap",
               }
-              onBlur={[Function]}
-              onCompositionEnd={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onPaste={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-              role="textbox"
-              style={
-                Object {
-                  "backgroundColor": undefined,
-                  "color": undefined,
-                  "direction": undefined,
-                  "fontSize": undefined,
-                  "whiteSpace": "pre-wrap",
-                }
-              }
-              suppressContentEditableWarning={true}
-            />
-          </ForwardRef>
-        </ForwardRef>,
-      ]
-       
-    </div>,
+            }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+      </blockquote>,
+    ],
     "",
     "",
     "",
@@ -1137,7 +1083,7 @@ Array [
   Array [
     "",
     <div
-      className="components-dropdown-menu components-toolbar"
+      className="components-dropdown components-dropdown-menu components-toolbar"
     >
       <ForwardRef(IconButton)
         aria-expanded={false}
@@ -1201,7 +1147,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="9---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="7---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -1275,63 +1221,39 @@ Array [
     </div>,
   ],
   Array [
-    <div>
-       
-      Array [
-        "",
-        "",
+    Array [
+      "",
+      <blockquote
+        className="wp-block-quote test-block-edit"
+      >
         <ForwardRef
           __unstableDidAutomaticChange={false}
-          __unstableEmbedURLOnPaste={true}
           __unstableInputRule={[Function]}
           __unstableIsCaretWithinFormattedText={false}
           __unstableIsSelected={false}
           __unstableMarkAutomaticChange={[Function]}
+          __unstableMultilineTag="p"
           __unstableOnCreateUndoLevel={[Function]}
           __unstableOnEnterFormattedText={[Function]}
           __unstableOnExitFormattedText={[Function]}
+          __unstableOnSplitMiddle={[Function]}
           __unstableUndo={[Function]}
-          aria-label="Paragraph block"
-          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          className="editor-rich-text__editable block-editor-rich-text__editable"
+          disabled={false}
           onChange={[Function]}
           onDelete={[Function]}
           onEnter={[Function]}
           onPaste={[Function]}
           onSelectionChange={[Function]}
-          placeholder="Start writing or type / to choose a block"
-          style={
-            Object {
-              "backgroundColor": undefined,
-              "color": undefined,
-              "direction": undefined,
-              "fontSize": undefined,
-            }
-          }
-          tagName="p"
-          value={
-            Object {
-              "formats": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "replacements": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "text": "test",
-            }
-          }
+          placeholder="Write quote…"
         >
-          <ForwardRef
+          <div
             aria-activedescendant={null}
-            aria-label="Paragraph block"
+            aria-label="Write quote…"
+            aria-multiline={true}
             aria-owns={null}
-            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            key="p"
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable"
+            contentEditable={true}
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -1343,66 +1265,64 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            record={
-              Object {
-                "end": undefined,
-                "formats": Array [],
-                "replacements": Array [],
-                "start": undefined,
-                "text": "",
-              }
-            }
+            role="textbox"
             style={
               Object {
-                "backgroundColor": undefined,
-                "color": undefined,
-                "direction": undefined,
-                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
               }
             }
-            tagName="p"
-            valueToEditableHTML={[Function]}
-          >
-            <p
-              aria-activedescendant={null}
-              aria-label="Paragraph block"
-              aria-multiline={true}
-              aria-owns={null}
-              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-              contentEditable={true}
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableMobileNoFocusOnMount={true}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+          disabled={false}
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Write citation…"
+        >
+          <div
+            aria-activedescendant={null}
+            aria-label="Write citation…"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+            contentEditable={true}
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "whiteSpace": "pre-wrap",
               }
-              onBlur={[Function]}
-              onCompositionEnd={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onPaste={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-              role="textbox"
-              style={
-                Object {
-                  "backgroundColor": undefined,
-                  "color": undefined,
-                  "direction": undefined,
-                  "fontSize": undefined,
-                  "whiteSpace": "pre-wrap",
-                }
-              }
-              suppressContentEditableWarning={true}
-            />
-          </ForwardRef>
-        </ForwardRef>,
-      ]
-       
-    </div>,
+            }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+      </blockquote>,
+    ],
     "",
     "",
     "",
@@ -1416,7 +1336,7 @@ Array [
   Array [
     "",
     <div
-      className="components-dropdown-menu components-toolbar"
+      className="components-dropdown components-dropdown-menu components-toolbar"
     >
       <ForwardRef(IconButton)
         aria-expanded={false}
@@ -1480,7 +1400,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="15---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="12---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -1543,63 +1463,39 @@ Array [
     </div>,
   ],
   Array [
-    <div>
-       
-      Array [
-        "",
-        "",
+    Array [
+      "",
+      <blockquote
+        className="wp-block-quote test-block-edit"
+      >
         <ForwardRef
           __unstableDidAutomaticChange={false}
-          __unstableEmbedURLOnPaste={true}
           __unstableInputRule={[Function]}
           __unstableIsCaretWithinFormattedText={false}
           __unstableIsSelected={false}
           __unstableMarkAutomaticChange={[Function]}
+          __unstableMultilineTag="p"
           __unstableOnCreateUndoLevel={[Function]}
           __unstableOnEnterFormattedText={[Function]}
           __unstableOnExitFormattedText={[Function]}
+          __unstableOnSplitMiddle={[Function]}
           __unstableUndo={[Function]}
-          aria-label="Paragraph block"
-          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          className="editor-rich-text__editable block-editor-rich-text__editable"
+          disabled={false}
           onChange={[Function]}
           onDelete={[Function]}
           onEnter={[Function]}
           onPaste={[Function]}
           onSelectionChange={[Function]}
-          placeholder="Start writing or type / to choose a block"
-          style={
-            Object {
-              "backgroundColor": undefined,
-              "color": undefined,
-              "direction": undefined,
-              "fontSize": undefined,
-            }
-          }
-          tagName="p"
-          value={
-            Object {
-              "formats": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "replacements": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "text": "test",
-            }
-          }
+          placeholder="Write quote…"
         >
-          <ForwardRef
+          <div
             aria-activedescendant={null}
-            aria-label="Paragraph block"
+            aria-label="Write quote…"
+            aria-multiline={true}
             aria-owns={null}
-            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            key="p"
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable"
+            contentEditable={true}
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -1611,66 +1507,64 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            record={
-              Object {
-                "end": undefined,
-                "formats": Array [],
-                "replacements": Array [],
-                "start": undefined,
-                "text": "",
-              }
-            }
+            role="textbox"
             style={
               Object {
-                "backgroundColor": undefined,
-                "color": undefined,
-                "direction": undefined,
-                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
               }
             }
-            tagName="p"
-            valueToEditableHTML={[Function]}
-          >
-            <p
-              aria-activedescendant={null}
-              aria-label="Paragraph block"
-              aria-multiline={true}
-              aria-owns={null}
-              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-              contentEditable={true}
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableMobileNoFocusOnMount={true}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+          disabled={false}
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Write citation…"
+        >
+          <div
+            aria-activedescendant={null}
+            aria-label="Write citation…"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+            contentEditable={true}
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "whiteSpace": "pre-wrap",
               }
-              onBlur={[Function]}
-              onCompositionEnd={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onPaste={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-              role="textbox"
-              style={
-                Object {
-                  "backgroundColor": undefined,
-                  "color": undefined,
-                  "direction": undefined,
-                  "fontSize": undefined,
-                  "whiteSpace": "pre-wrap",
-                }
-              }
-              suppressContentEditableWarning={true}
-            />
-          </ForwardRef>
-        </ForwardRef>,
-      ]
-       
-    </div>,
+            }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+      </blockquote>,
+    ],
     "",
     "",
     "",
@@ -1684,7 +1578,7 @@ Array [
   Array [
     "",
     <div
-      className="components-dropdown-menu components-toolbar"
+      className="components-dropdown components-dropdown-menu components-toolbar"
     >
       <ForwardRef(IconButton)
         aria-expanded={false}
@@ -1748,7 +1642,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="20---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="16---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -1790,63 +1684,39 @@ Array [
     </div>,
   ],
   Array [
-    <div>
-       
-      Array [
-        "",
-        "",
+    Array [
+      "",
+      <blockquote
+        className="wp-block-quote test-block-edit"
+      >
         <ForwardRef
           __unstableDidAutomaticChange={false}
-          __unstableEmbedURLOnPaste={true}
           __unstableInputRule={[Function]}
           __unstableIsCaretWithinFormattedText={false}
           __unstableIsSelected={false}
           __unstableMarkAutomaticChange={[Function]}
+          __unstableMultilineTag="p"
           __unstableOnCreateUndoLevel={[Function]}
           __unstableOnEnterFormattedText={[Function]}
           __unstableOnExitFormattedText={[Function]}
+          __unstableOnSplitMiddle={[Function]}
           __unstableUndo={[Function]}
-          aria-label="Paragraph block"
-          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          className="editor-rich-text__editable block-editor-rich-text__editable"
+          disabled={false}
           onChange={[Function]}
           onDelete={[Function]}
           onEnter={[Function]}
           onPaste={[Function]}
           onSelectionChange={[Function]}
-          placeholder="Start writing or type / to choose a block"
-          style={
-            Object {
-              "backgroundColor": undefined,
-              "color": undefined,
-              "direction": undefined,
-              "fontSize": undefined,
-            }
-          }
-          tagName="p"
-          value={
-            Object {
-              "formats": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "replacements": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "text": "test",
-            }
-          }
+          placeholder="Write quote…"
         >
-          <ForwardRef
+          <div
             aria-activedescendant={null}
-            aria-label="Paragraph block"
+            aria-label="Write quote…"
+            aria-multiline={true}
             aria-owns={null}
-            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            key="p"
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable"
+            contentEditable={true}
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -1858,66 +1728,64 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            record={
-              Object {
-                "end": undefined,
-                "formats": Array [],
-                "replacements": Array [],
-                "start": undefined,
-                "text": "",
-              }
-            }
+            role="textbox"
             style={
               Object {
-                "backgroundColor": undefined,
-                "color": undefined,
-                "direction": undefined,
-                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
               }
             }
-            tagName="p"
-            valueToEditableHTML={[Function]}
-          >
-            <p
-              aria-activedescendant={null}
-              aria-label="Paragraph block"
-              aria-multiline={true}
-              aria-owns={null}
-              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-              contentEditable={true}
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableMobileNoFocusOnMount={true}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+          disabled={false}
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Write citation…"
+        >
+          <div
+            aria-activedescendant={null}
+            aria-label="Write citation…"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+            contentEditable={true}
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "whiteSpace": "pre-wrap",
               }
-              onBlur={[Function]}
-              onCompositionEnd={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onPaste={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-              role="textbox"
-              style={
-                Object {
-                  "backgroundColor": undefined,
-                  "color": undefined,
-                  "direction": undefined,
-                  "fontSize": undefined,
-                  "whiteSpace": "pre-wrap",
-                }
-              }
-              suppressContentEditableWarning={true}
-            />
-          </ForwardRef>
-        </ForwardRef>,
-      ]
-       
-    </div>,
+            }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+      </blockquote>,
+    ],
     "",
     "",
   ],
@@ -1930,7 +1798,7 @@ Array [
   Array [
     "",
     <div
-      className="components-dropdown-menu components-toolbar"
+      className="components-dropdown components-dropdown-menu components-toolbar"
     >
       <ForwardRef(IconButton)
         aria-expanded={false}
@@ -1994,7 +1862,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="24---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="19---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -2002,63 +1870,39 @@ Array [
     </div>,
   ],
   Array [
-    <div>
-       
-      Array [
-        "",
-        "",
+    Array [
+      "",
+      <blockquote
+        className="wp-block-quote test-block-edit"
+      >
         <ForwardRef
           __unstableDidAutomaticChange={false}
-          __unstableEmbedURLOnPaste={true}
           __unstableInputRule={[Function]}
           __unstableIsCaretWithinFormattedText={false}
           __unstableIsSelected={false}
           __unstableMarkAutomaticChange={[Function]}
+          __unstableMultilineTag="p"
           __unstableOnCreateUndoLevel={[Function]}
           __unstableOnEnterFormattedText={[Function]}
           __unstableOnExitFormattedText={[Function]}
+          __unstableOnSplitMiddle={[Function]}
           __unstableUndo={[Function]}
-          aria-label="Paragraph block"
-          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
+          className="editor-rich-text__editable block-editor-rich-text__editable"
+          disabled={false}
           onChange={[Function]}
           onDelete={[Function]}
           onEnter={[Function]}
           onPaste={[Function]}
           onSelectionChange={[Function]}
-          placeholder="Start writing or type / to choose a block"
-          style={
-            Object {
-              "backgroundColor": undefined,
-              "color": undefined,
-              "direction": undefined,
-              "fontSize": undefined,
-            }
-          }
-          tagName="p"
-          value={
-            Object {
-              "formats": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "replacements": Array [
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ],
-              "text": "test",
-            }
-          }
+          placeholder="Write quote…"
         >
-          <ForwardRef
+          <div
             aria-activedescendant={null}
-            aria-label="Paragraph block"
+            aria-label="Write quote…"
+            aria-multiline={true}
             aria-owns={null}
-            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-            key="p"
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable"
+            contentEditable={true}
             onBlur={[Function]}
             onCompositionEnd={[Function]}
             onFocus={[Function]}
@@ -2070,66 +1914,64 @@ Array [
             onPaste={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            record={
-              Object {
-                "end": undefined,
-                "formats": Array [],
-                "replacements": Array [],
-                "start": undefined,
-                "text": "",
-              }
-            }
+            role="textbox"
             style={
               Object {
-                "backgroundColor": undefined,
-                "color": undefined,
-                "direction": undefined,
-                "fontSize": undefined,
+                "whiteSpace": "pre-wrap",
               }
             }
-            tagName="p"
-            valueToEditableHTML={[Function]}
-          >
-            <p
-              aria-activedescendant={null}
-              aria-label="Paragraph block"
-              aria-multiline={true}
-              aria-owns={null}
-              className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-paragraph test-block-edit"
-              contentEditable={true}
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "﻿<span data-rich-text-placeholder=\\"Start writing or type / to choose a block\\" contenteditable=\\"false\\"></span>",
-                }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+        <ForwardRef
+          __unstableDidAutomaticChange={false}
+          __unstableInputRule={[Function]}
+          __unstableIsCaretWithinFormattedText={false}
+          __unstableIsSelected={false}
+          __unstableMarkAutomaticChange={[Function]}
+          __unstableMobileNoFocusOnMount={true}
+          __unstableOnCreateUndoLevel={[Function]}
+          __unstableOnEnterFormattedText={[Function]}
+          __unstableOnExitFormattedText={[Function]}
+          __unstableUndo={[Function]}
+          className="editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+          disabled={false}
+          onChange={[Function]}
+          onDelete={[Function]}
+          onEnter={[Function]}
+          onPaste={[Function]}
+          onSelectionChange={[Function]}
+          placeholder="Write citation…"
+        >
+          <div
+            aria-activedescendant={null}
+            aria-label="Write citation…"
+            aria-multiline={true}
+            aria-owns={null}
+            className="rich-text editor-rich-text__editable block-editor-rich-text__editable wp-block-quote__citation"
+            contentEditable={true}
+            onBlur={[Function]}
+            onCompositionEnd={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onPaste={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            role="textbox"
+            style={
+              Object {
+                "whiteSpace": "pre-wrap",
               }
-              onBlur={[Function]}
-              onCompositionEnd={[Function]}
-              onFocus={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-              onPaste={[Function]}
-              onTouchEnd={[Function]}
-              onTouchStart={[Function]}
-              role="textbox"
-              style={
-                Object {
-                  "backgroundColor": undefined,
-                  "color": undefined,
-                  "direction": undefined,
-                  "fontSize": undefined,
-                  "whiteSpace": "pre-wrap",
-                }
-              }
-              suppressContentEditableWarning={true}
-            />
-          </ForwardRef>
-        </ForwardRef>,
-      ]
-       
-    </div>,
+            }
+            suppressContentEditableWarning={true}
+          />
+        </ForwardRef>
+      </blockquote>,
+    ],
     "",
     "",
   ],

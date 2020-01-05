@@ -48,7 +48,7 @@ const createTest = ( targetName, createSlot, getCases ) => {
 						{ createSlot() }
 
 						<BlockEdit
-							name="core/paragraph"
+							name="core/quote"
 							isSelected={ true }
 							attributes={ ( {
 								className: 'test-block-edit',
