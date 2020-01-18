@@ -23,6 +23,7 @@ jobs:
             src/
             __tests__/
           SUFFIX_FILTER: .ts
+          FILES: .eslintrc
       - name: Get Yarn Cache Directory
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -69,6 +70,9 @@ jobs:
           SUFFIX_FILTER: |
             .ts
             .snap
+          FILES: |
+            yarn.lock
+            jest.config.js
       - name: Setup node
         uses: actions/setup-node@v1
         with:
