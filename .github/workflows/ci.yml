@@ -22,7 +22,7 @@ jobs:
           PREFIX_FILTER: |
             src/
             __tests__/
-          SUFFIX_FILTER: .ts
+          SUFFIX_FILTER: .js
           FILES: .eslintrc
       - name: Get Yarn Cache Directory
         id: yarn-cache
@@ -68,7 +68,7 @@ jobs:
             src/
             __tests__/
           SUFFIX_FILTER: |
-            .ts
+            .js
             .snap
           FILES: |
             yarn.lock
