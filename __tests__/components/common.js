@@ -9,66 +9,66 @@ const { Fragment } = wp.element;
 const { addFilter, removeFilter } = wp.hooks;
 const { create } = wp.richText;
 
-const createTest = ( targetName, createSlot, getCases ) => {
+const createTest = (targetName, createSlot, getCases) => {
 	let filter;
-	beforeAll( () => {
-		addFilter( 'editor.BlockEdit', 'components-test/components-test', BlockEdit => props => filter( BlockEdit, props ) );
-	} );
+	beforeAll(() => {
+		addFilter('editor.BlockEdit', 'components-test/components-test', BlockEdit => props => filter(BlockEdit, props));
+	});
 
-	afterAll( () => {
-		removeFilter( 'editor.BlockEdit', 'components-test/components-test' );
-	} );
+	afterAll(() => {
+		removeFilter('editor.BlockEdit', 'components-test/components-test');
+	});
 
-	describe( targetName, () => {
-		const getSnapshotName = ( name, index ) => `${ name }--${ index }`;
-		const setting = index => ( {
+	describe(targetName, () => {
+		const getSnapshotName = (name, index) => `${name}--${index}`;
+		const setting = index => ({
 			icon: 'admin-customizer',
 			position: 'top right',
-			label: `test label ${ index }`,
+			label: `test label ${index}`,
 			className: undefined,
 			menuClassName: undefined,
 			inspectorSettings: {},
 			toolbarGroup: undefined,
 			useContrastChecker: false,
 			additionalInspectors: [],
-		} );
-		const { Fill, Slot } = GroupedControls( 'components-test' );
+		});
+		const { Fill, Slot } = GroupedControls('components-test');
 
-		const createFilter = ( index, createToolbarDropdown, createComponents ) => ( BlockEdit, props ) => <Fragment>
-			<BlockEdit { ...props }/>
-			{ createToolbarDropdown( setting( index ), index ) }
-			{ createComponents( index ) }
+		const createFilter = (index, createToolbarDropdown, createComponents) => (BlockEdit, props) => <Fragment>
+			<BlockEdit {...props} />
+			{createToolbarDropdown(setting(index), index)}
+			{createComponents(index)}
 		</Fragment>;
 
-		getCases( Fill, Slot, getSnapshotName ).forEach( ( { createComponents, createToolbarDropdown, callback }, index ) => {
-			it( `should render ${ targetName } ${ index }`, () => {
-				filter = createFilter( index, createToolbarDropdown, createComponents );
+		getCases(Fill, Slot, getSnapshotName).forEach(({ createComponents, createToolbarDropdown, callback }, index) => {
+			it(`should render ${targetName} ${index}`, () => {
+				filter = createFilter(index, createToolbarDropdown, createComponents);
 				const wrapper = mount(
 					<SlotFillProvider>
-						{ createSlot() }
+						{createSlot()}
 
 						<BlockEdit
 							name="core/quote"
-							isSelected={ true }
-							attributes={ ( {
+							isSelected={true}
+							attributes={({
 								className: 'test-block-edit',
-								content: create( {
+								content: create({
 									text: 'test',
 									start: 0,
 									end: 1,
-									formats: [ [], [], [], [] ],
-								} ),
-							} ) }
+									formats: [[], [], [], []],
+								}),
+							})}
 						/>
 					</SlotFillProvider>,
 				);
 
-				expect( toJson( wrapper, { mode: 'deep' } ) ).toMatchSnapshot( getSnapshotName( 'test', index ) );
+				expect(toJson(wrapper, { mode: 'deep' })).toMatchSnapshot(getSnapshotName('test', index));
 
-				callback( wrapper, index );
-			} );
-		} );
-	} );
+				callback(wrapper, index);
+			});
+		});
+	});
 };
 
 export default createTest;

@@ -11,22 +11,22 @@ const { getContrastChecker } = Helpers;
  * @param {object} args args
  * @returns {null|*} inspector
  */
-const createInspectorComponent = ( fills, setting, args ) => {
-	const activeFills = fills.filter( ( [ { props } ] ) => ! props.isDisabled );
-	const additionalInspectors = setting.additionalInspectors.map( generator => generator( args, setting ) ).filter( component => !! component );
-	if ( ! activeFills.length && ! additionalInspectors.length ) {
+const createInspectorComponent = (fills, setting, args) => {
+	const activeFills = fills.filter(([{ props }]) => !props.isDisabled);
+	const additionalInspectors = setting.additionalInspectors.map(generator => generator(args, setting)).filter(component => !!component);
+	if (!activeFills.length && !additionalInspectors.length) {
 		return null;
 	}
 
 	return <InspectorControls>
 		<PanelBody
-			{ ...setting.inspectorSettings }
+			{...setting.inspectorSettings}
 		>
-			{ activeFills }
-			{ setting.useContrastChecker && getContrastChecker( activeFills, args ) }
-			{ additionalInspectors.map( ( component, index ) => Object.assign( {}, component, {
-				key: `additional-inspector-${ index }`,
-			} ) ) }
+			{activeFills}
+			{setting.useContrastChecker && getContrastChecker(activeFills, args)}
+			{additionalInspectors.map((component, index) => Object.assign({}, component, {
+				key: `additional-inspector-${index}`,
+			}))}
 		</PanelBody>
 	</InspectorControls>;
 };
@@ -39,8 +39,8 @@ const createInspectorComponent = ( fills, setting, args ) => {
  * @returns {*} inspector
  * @constructor
  */
-const InspectorComponent = ( Slot, setting, args, index ) => <Slot key={ `inspector-component-${ index }` }>
-	{ fills => ! fills.length ? null : createInspectorComponent( fills, setting, args ) }
+const InspectorComponent = (Slot, setting, args, index) => <Slot key={`inspector-component-${index}`}>
+	{fills => !fills.length ? null : createInspectorComponent(fills, setting, args)}
 </Slot>;
 
 export default InspectorComponent;
