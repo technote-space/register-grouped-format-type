@@ -20,7 +20,8 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+<details>
+<summary>Details</summary>
 
 - [サンプルプロジェクト](#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88)
 - [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
@@ -30,15 +31,12 @@
 - [インスペクタを使用](#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8)
 - [関数](#%E9%96%A2%E6%95%B0)
   - [`registerGroupedFormatType`](#registergroupedformattype)
-    - [定義](#%E5%AE%9A%E7%BE%A9)
-    - [引数](#%E5%BC%95%E6%95%B0)
   - [`registerFormatTypeGroup`](#registerformattypegroup)
-    - [定義](#%E5%AE%9A%E7%BE%A9-1)
-    - [引数](#%E5%BC%95%E6%95%B0-1)
 - [WPの依存](#wp%E3%81%AE%E4%BE%9D%E5%AD%98)
 - [依存](#%E4%BE%9D%E5%AD%98)
 - [作者](#%E4%BD%9C%E8%80%85)
 
+</details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## サンプルプロジェクト
