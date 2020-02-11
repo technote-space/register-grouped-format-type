@@ -5,3 +5,4 @@ node_modules/
 /travis-ci
 /.work
 /gh-pages
+.eslintcache

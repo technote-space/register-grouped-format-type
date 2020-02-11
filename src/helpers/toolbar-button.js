@@ -14,8 +14,8 @@ const useInspectorSettings = {};
  * @param {object} setting setting
  * @returns {object} registered setting
  */
-export const registerFormatTypeGroup = ( name, setting = {} ) => {
-	groupSettings[ name ] = Object.assign( {}, getGroupSetting( name ), setting );
+export const registerFormatTypeGroup = (name, setting = {}) => {
+	groupSettings[ name ] = Object.assign({}, getGroupSetting(name), setting);
 	return groupSettings[ name ];
 };
 
@@ -23,13 +23,13 @@ export const registerFormatTypeGroup = ( name, setting = {} ) => {
  * @param {string} name group name
  * @returns {{icon: string, position: string, label: string, className: undefined, menuClassName: undefined, inspectorSettings, toolbarGroup, useContrastChecker, additionalInspectors}} setting
  */
-const getGroupSetting = name => name in groupSettings ? groupSettings[ name ] : getDefaultSetting( name );
+const getGroupSetting = name => name in groupSettings ? groupSettings[ name ] : getDefaultSetting(name);
 
 /**
  * @param {string} name group name
  * @returns {{icon: string, position: string, label: string, className: undefined, menuClassName: undefined, inspectorSettings, toolbarGroup, useContrastChecker, additionalInspectors}} setting
  */
-const getDefaultSetting = name => ( {
+const getDefaultSetting = name => ({
 	icon: 'admin-customizer',
 	position: 'top right',
 	label: name,
@@ -39,22 +39,22 @@ const getDefaultSetting = name => ( {
 	toolbarGroup: undefined,
 	useContrastChecker: false,
 	additionalInspectors: [],
-} );
+});
 
 /**
  * @returns {Array.<Array.<object>>} grouped slots
  */
 const getToolbarGroupedSlots = () => {
 	const grouped = {};
-	Object.keys( groups ).forEach( key => {
-		const setting = getGroupSetting( key in useInspectorSettings ? useInspectorSettings[ key ] : key );
+	Object.keys(groups).forEach(key => {
+		const setting = getGroupSetting(key in useInspectorSettings ? useInspectorSettings[ key ] : key);
 		const toolbarGroup = setting.toolbarGroup;
-		if ( ! ( toolbarGroup in grouped ) ) {
+		if (!(toolbarGroup in grouped)) {
 			grouped[ toolbarGroup ] = [];
 		}
-		grouped[ toolbarGroup ].push( { Slot: groups[ key ].Slot, setting } );
-	} );
-	return Object.values( grouped );
+		grouped[ toolbarGroup ].push({ Slot: groups[ key ].Slot, setting });
+	});
+	return Object.values(grouped);
 };
 
 /**
@@ -69,7 +69,7 @@ const getToolbarGroupedSlots = () => {
  * @param {object} settings settings
  * @return {object|null} registered settings
  */
-export const registerGroupedFormatType = ( {
+export const registerGroupedFormatType = ({
 	name,
 	title = name,
 	tagName = 'span',
@@ -79,30 +79,30 @@ export const registerGroupedFormatType = ( {
 	group = name,
 	inspectorGroup,
 	...settings
-} ) => {
-	if ( undefined === name ) {
+}) => {
+	if (undefined === name) {
 		return null;
 	}
 
-	const formatName = getFormatName( name );
-	if ( formatName in formatNames ) {
+	const formatName = getFormatName(name);
+	if (formatName in formatNames) {
 		return null;
 	}
 
-	const isFirst = ! Object.keys( formatNames ).length;
+	const isFirst = !Object.keys(formatNames).length;
 	formatNames[ formatName ] = formatName;
 
-	if ( settings && 'useInspectorSetting' in settings && settings.useInspectorSetting && inspectorGroup ) {
+	if (settings && 'useInspectorSetting' in settings && settings.useInspectorSetting && inspectorGroup) {
 		useInspectorSettings[ group ] = inspectorGroup;
 	}
 
-	return registerMultipleClassFormatType( formatName, {
+	return registerMultipleClassFormatType(formatName, {
 		title,
 		tagName,
 		className,
-		edit: onEdit( name, formatName, group, inspectorGroup, create, createInspector, isFirst, settings ),
+		edit: onEdit(name, formatName, group, inspectorGroup, create, createInspector, isFirst, settings),
 		...settings,
-	} );
+	});
 };
 
 /**
@@ -110,9 +110,9 @@ export const registerGroupedFormatType = ( {
  * @param {object} args args
  * @returns {object} format state
  */
-export const getFormatState = ( formatName, args ) => {
-	const isActive = args.isActive || ! args.value.activeFormats || args.value.activeFormats.map( format => format.type ).includes( formatName );
-	const isDisabled = ! isActive && args.value.start === args.value.end;
+export const getFormatState = (formatName, args) => {
+	const isActive = args.isActive || !args.value.activeFormats || args.value.activeFormats.map(format => format.type).includes(formatName);
+	const isDisabled = !isActive && args.value.start === args.value.end;
 	return {
 		isDisabled,
 		isDropdownDisabled: isDisabled && args.value.start !== undefined,
@@ -130,15 +130,15 @@ export const getFormatState = ( formatName, args ) => {
  * @param {object} settings settings
  * @returns {function(*=): *} component
  */
-const onEdit = ( name, formatName, group, inspectorGroup, create, createInspector, isFirst, settings ) => args => {
-	const newArgs = Object.assign( {}, args, getFormatState( formatName, args ) );
-	const component = createComponent( create, group, newArgs, name, formatName, settings );
-	const inspector = createComponent( createInspector, inspectorGroup, newArgs, name, formatName, settings );
+const onEdit = (name, formatName, group, inspectorGroup, create, createInspector, isFirst, settings) => args => {
+	const newArgs = Object.assign({}, args, getFormatState(formatName, args));
+	const component = createComponent(create, group, newArgs, name, formatName, settings);
+	const inspector = createComponent(createInspector, inspectorGroup, newArgs, name, formatName, settings);
 
 	return <Fragment>
-		{ createComponentFill( group, component ) }
-		{ createInspectorFill( inspectorGroup, inspector ) }
-		{ createSlot( isFirst, newArgs ) }
+		{createComponentFill(group, component)}
+		{createInspectorFill(inspectorGroup, inspector)}
+		{createSlot(isFirst, newArgs)}
 	</Fragment>;
 };
 
@@ -151,18 +151,18 @@ const onEdit = ( name, formatName, group, inspectorGroup, create, createInspecto
  * @param {object} settings settings
  * @returns {null|*} component
  */
-const createComponent = ( createFunction, group, args, name, formatName, settings ) => {
-	const component = !! group && typeof createFunction === 'function' ? createFunction( { args, name, formatName } ) : null;
-	if ( component ) {
-		return Object.assign( {}, component, {
-			props: Object.assign( {}, component.props, {
+const createComponent = (createFunction, group, args, name, formatName, settings) => {
+	const component = !!group && typeof createFunction === 'function' ? createFunction({ args, name, formatName }) : null;
+	if (component) {
+		return Object.assign({}, component, {
+			props: Object.assign({}, component.props, {
 				isActive: args.isActive,
 				isDisabled: args.isDisabled,
 				isDropdownDisabled: args.isDropdownDisabled,
 				formatName: formatName,
 				propertyName: settings.propertyName,
-			} ),
-		} );
+			}),
+		});
 	}
 	return component;
 };
@@ -174,17 +174,17 @@ const createComponent = ( createFunction, group, args, name, formatName, setting
  * @param {function} createFillSlotFunction create fill slot function
  * @returns {null|*} fill
  */
-const createFill = ( group, component, groups, createFillSlotFunction ) => {
-	if ( ! group || ! component ) {
+const createFill = (group, component, groups, createFillSlotFunction) => {
+	if (!group || !component) {
 		return null;
 	}
 
-	if ( ! ( group in groups ) ) {
-		groups[ group ] = createFillSlotFunction( group );
+	if (!(group in groups)) {
+		groups[ group ] = createFillSlotFunction(group);
 	}
 	const Fill = groups[ group ].Fill;
 	return <Fill>
-		{ component }
+		{component}
 	</Fill>;
 };
 
@@ -193,21 +193,21 @@ const createFill = ( group, component, groups, createFillSlotFunction ) => {
  * @param {object} component component
  * @returns {*} fill
  */
-const createComponentFill = ( group, component ) => createFill( group, component, groups, GroupedControls );
+const createComponentFill = (group, component) => createFill(group, component, groups, GroupedControls);
 
 /**
  * @param {string|undefined} inspectorGroup inspector group
  * @param {object} component component
  * @returns {*} fill
  */
-const createInspectorFill = ( inspectorGroup, component ) => createFill( inspectorGroup, component, inspectorGroups, GroupedInspectors );
+const createInspectorFill = (inspectorGroup, component) => createFill(inspectorGroup, component, inspectorGroups, GroupedInspectors);
 
 /**
  * @param {boolean} isFirst is first?
  * @param {object} args args
  * @returns {null|*} slot
  */
-const createSlot = ( isFirst, args ) => isFirst ? <Fragment>
-	{ ToolbarDropdown( getToolbarGroupedSlots() ) }
-	{ Object.keys( inspectorGroups ).map( ( key, index ) => InspectorComponent( inspectorGroups[ key ].Slot, getGroupSetting( key ), args, index ) ) }
+const createSlot = (isFirst, args) => isFirst ? <Fragment>
+	{ToolbarDropdown(getToolbarGroupedSlots())}
+	{Object.keys(inspectorGroups).map((key, index) => InspectorComponent(inspectorGroups[ key ].Slot, getGroupSetting(key), args, index))}
 </Fragment> : null;

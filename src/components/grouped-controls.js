@@ -5,6 +5,6 @@ const { createSlotFill } = wp.components;
  * @returns {*} slot fill
  * @constructor
  */
-const GroupedControls = group => createSlotFill( 'GroupedControls.' + group );
+const GroupedControls = group => createSlotFill('GroupedControls.' + group);
 
 export default GroupedControls;
