@@ -18,9 +18,12 @@ The controls are active only when it is able to toggle format.
 
 [Demonstration](https://technote-space.github.io/register-grouped-format-type)
 
+## Table of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+<details>
+<summary>Details</summary>
 
 - [Sample Project](#sample-project)
 - [How to use](#how-to-use)
@@ -30,15 +33,12 @@ The controls are active only when it is able to toggle format.
 - [Use inspector](#use-inspector)
 - [Functions](#functions)
   - [`registerGroupedFormatType`](#registergroupedformattype)
-    - [definition](#definition)
-    - [arguments](#arguments)
   - [`registerFormatTypeGroup`](#registerformattypegroup)
-    - [definition](#definition-1)
-    - [arguments](#arguments-1)
 - [WP Dependencies](#wp-dependencies)
 - [Dependency](#dependency)
 - [Author](#author)
 
+</details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Sample Project
