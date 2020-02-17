@@ -221,7 +221,7 @@ describe('getFormatState', () => {
 		expect(state.isDropdownDisabled).toBe(false);
 	});
 
-	it('should get format state (not disabled, dropdown is not disabled)', () => {
+	it('should get format state (not disabled, dropdown is not disabled, with active format)', () => {
 		const format = {
 			type: 'test/test',
 		};
