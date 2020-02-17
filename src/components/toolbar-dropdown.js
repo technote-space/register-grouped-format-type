@@ -2,7 +2,7 @@ import { Components, Helpers, classnames } from '../utils';
 
 const { getEditor } = Helpers;
 const { BlockControls } = getEditor();
-const { Toolbar, IconButton, NavigableMenu } = wp.components;
+const { Toolbar, NavigableMenu } = wp.components;
 
 /**
  * @param {Array} fills fills
@@ -30,7 +30,7 @@ const createDropdown = (fills, setting) => {
 			role="menu"
 			aria-label={label}
 		>
-			{controls.map((control, index) => <IconButton
+			{controls.map((control, index) => <Components.IconButton
 				key={`dropdown-${label}-${index}`}
 				onClick={onClick(props, control)}
 				className={classnames('components-dropdown-menu__menu-item', {
@@ -41,7 +41,7 @@ const createDropdown = (fills, setting) => {
 				disabled={control.isDisabled}
 			>
 				{control.title}
-			</IconButton>)}
+			</Components.IconButton>)}
 		</NavigableMenu>}
 	/>;
 };
