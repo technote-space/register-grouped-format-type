@@ -229,7 +229,6 @@ Array [
                             >
                               <ForwardRef(IconButton)
                                 className="components-dropdown-menu__menu-item is-active"
-                                key="dropdown-test label 0-0"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
@@ -250,7 +249,6 @@ Array [
                               </ForwardRef(IconButton)>
                               <ForwardRef(IconButton)
                                 className="components-dropdown-menu__menu-item"
-                                key="dropdown-test label 0-1"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
@@ -917,7 +915,6 @@ Array [
                             >
                               <ForwardRef(IconButton)
                                 className="components-dropdown-menu__menu-item is-active"
-                                key="dropdown-test label 1-0"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
@@ -939,7 +936,6 @@ Array [
                               <ForwardRef(IconButton)
                                 className="components-dropdown-menu__menu-item"
                                 disabled={true}
-                                key="dropdown-test label 1-1"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
