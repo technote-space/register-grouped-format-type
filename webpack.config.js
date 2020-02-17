@@ -1,5 +1,6 @@
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
+const HardSource = require('hard-source-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 const pkg = require('./package');
@@ -36,7 +37,7 @@ const webpackConfig = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader',
+				loader: 'babel-loader?cacheDirectory',
 			},
 		],
 	},
@@ -44,6 +45,7 @@ const webpackConfig = {
 	plugins: [
 		new webpack.BannerPlugin(banner),
 		new DuplicatePackageCheckerPlugin(),
+		new HardSource(),
 	],
 	optimization: {
 		minimize: true,
