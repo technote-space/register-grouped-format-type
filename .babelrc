@@ -1,27 +1,27 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "ie": 11
-        }
-      }
-    ]
-  ],
-  "plugins": [
-    [
-      "@babel/plugin-transform-react-jsx",
-      {
-        "pragma": "wp.element.createElement"
-      }
-    ]
-  ],
-  "env": {
-    "test": {
-      "plugins": [
-        "@babel/plugin-transform-modules-commonjs"
-      ]
-    }
-  }
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets": {
+					"ie": 11
+				}
+			}
+		]
+	],
+	"plugins": [
+		[
+			"@babel/plugin-transform-react-jsx",
+			{
+				"pragma": "wp.element.createElement"
+			}
+		]
+	],
+	"env": {
+		"test": {
+			"plugins": [
+				"@babel/plugin-transform-modules-commonjs"
+			]
+		}
+	}
 }
