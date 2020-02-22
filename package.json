@@ -34,7 +34,7 @@
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/register": "^7.8.3",
-    "@technote-space/gutenberg-test-helper": "^0.0.5",
+    "@technote-space/gutenberg-test-helper": "^0.0.7",
     "@technote-space/gutenberg-utils": "^1.4.1",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
