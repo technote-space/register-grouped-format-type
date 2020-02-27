@@ -44,73 +44,36 @@ The controls are active only when it is able to toggle format.
 ## Sample Project
 [Gutenberg Samples](https://github.com/technote-space/gutenberg-samples)
 
-## How to use
-### npm
-[https://www.npmjs.com/package/@technote-space/register-grouped-format-type](https://www.npmjs.com/package/@technote-space/register-grouped-format-type)
+## Usage
+1. Install
+   ```bash
+   yarn add --dev @technote-space/register-grouped-format-type
+   ```
+2. Use  
+   e.g. `assets/register.js`
+   ```js
+   import { Common, RichText } from '@technote-space/register-grouped-format-type';
+   
+   const { registerGroupedFormatType } = RichText;
+   const { getToolbarButtonProps } = Common.Helpers;
 
-```bash
-npm install --save @technote-space/register-grouped-format-type
-```
-
-`register.js`
-```js
-import { Common, RichText } from '@technote-space/register-grouped-format-type';
-
-const { registerGroupedFormatType } = RichText;
-const { getToolbarButtonProps } = Common.Helpers;
-
-/** register grouped format types
- *
- * - test1 (⇒ not dropdown)
- *     |- format-test1
- * 
- * - test2 (⇒ dropdown)
- *     |- format-test2
- *     |- format-test3
- */
-registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
-registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
-registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
-```
-
-Compile and enqueue script.
-
-```html
-<script type="text/javascript" src="/assets/register.js"></script>
-```
-
-### Browser
-`register.js`
-```js
-( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton, getToolbarButtonProps ) {
-
-	/** register grouped format types
-	 *
-	 * - test1 (⇒ not dropdown)
-	 *     |- format-test1
-	 * 
-	 * - test2 (⇒ dropdown)
-	 *     |- format-test2
-	 *     |- format-test3
-	 */
-	registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
-	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
-	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
-
-}(
-	wp.element.createElement,
-	Technote.Gutenberg.RichText.registerFormatTypeGroup,
-	Technote.Gutenberg.RichText.registerGroupedFormatType,
-	Technote.Gutenberg.RichText.getRemoveFormatButton,
-	Technote.Gutenberg.Common.Helpers.getToolbarButtonProps,
-) );
-```
-
-Download [Release version](https://github.com/technote-space/register-grouped-format-type/releases/latest/download/index.js) and enqueue scripts.
-```html
-<script type="text/javascript" src="/assets/register-grouped-format-type/index.js"></script>
-<script type="text/javascript" src="/assets/register.js"></script>
-```
+   /** register grouped format types
+    *
+    * - test1 (⇒ not dropdown)
+    *     |- format-test1
+    * 
+    * - test2 (⇒ dropdown)
+    *     |- format-test2
+    *     |- format-test3
+    */
+   registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
+   registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
+   registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
+   ```
+1. Compile and enqueue script
+   ```html
+   <script type="text/javascript" src="/assets/register.js"></script>
+   ```
 
 ## Use group setting
 You can customize dropdown settings such as icon, label, position, and so on.
