@@ -26,9 +26,7 @@ The controls are active only when it is able to toggle format.
 <summary>Details</summary>
 
 - [Sample Project](#sample-project)
-- [How to use](#how-to-use)
-  - [npm](#npm)
-  - [Browser](#browser)
+- [Usage](#usage)
 - [Use group setting](#use-group-setting)
 - [Use inspector](#use-inspector)
 - [Functions](#functions)
