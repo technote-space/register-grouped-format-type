@@ -1150,10 +1150,10 @@
     react "^16.12.0"
     react-autosize-textarea "^7.0.0"
 
-"@technote-space/gutenberg-utils@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-1.4.1.tgz#3cbeabb879245584984bb742588de0e912a4cea9"
-  integrity sha512-iMkYhn9Bi07BlkxnZW7jZqYSGN5B14XYWbuyHtmosfcvfgSQpr+8agDu+M+n4DybLLBj1SFDgrxFyvNQ7JoNBw==
+"@technote-space/gutenberg-utils@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-1.4.2.tgz#8deb5116e3357db3bdcd7c0cf56eeb306c7d898f"
+  integrity sha512-IKdeYp2J4Zpb5eN/eHmdO0TlSqvqD2lT7+XhK29kcsSq7NXyc1KBgnz1NvOyDsVVAh1oDCitnvqC7OkCf+MaUg==
 
 "@types/babel__core@^7.1.0":
   version "7.1.6"
