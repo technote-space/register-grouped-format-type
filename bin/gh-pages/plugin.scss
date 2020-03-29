@@ -1,22 +1,22 @@
 .playground__content__screenshot {
-	max-width: 500px;
+  max-width: 500px;
 }
 
 .format-test1 {
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #6f6 75%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #6f6 75%);
 }
 
 .format-test2 {
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #66f 75%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #66f 75%);
 }
 
 .format-test3 {
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #f66 75%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #f66 75%);
 }
 
 #app {
-	.components-popover.components-color-palette__picker,
-	.components-font-size-picker__dropdown-content {
-		z-index: 1000001;
-	}
+  .components-popover.components-color-palette__picker,
+  .components-font-size-picker__dropdown-content {
+    z-index: 1000001;
+  }
 }
