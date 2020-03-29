@@ -1,6 +1,5 @@
 /* eslint-disable no-magic-numbers */
-const { select } = wp.data;
-
+import { select } from '@wordpress/data';
 import { registerGroupedFormatType, registerFormatTypeGroup, getFormatName } from '../../src/helpers';
 import { getFormatState } from '../../src/helpers/toolbar-button';
 
@@ -29,13 +28,13 @@ describe('registerGroupedFormatType', () => {
 			className: 'test1-test2-class',
 		})).toBe('object');
 
-		const commonFunc = ({ args, name }) => {
+		const commonFunc          = ({ args, name }) => {
 			expect(name).toBe('test2-test1');
 			expect(args).toHaveProperty('test3');
 			expect(args.test3).toBe(true);
 			return { props: {} };
 		};
-		const createMock = jest.fn(commonFunc);
+		const createMock          = jest.fn(commonFunc);
 		const createInspectorMock = jest.fn(commonFunc);
 		expect(typeof registerGroupedFormatType({
 			name: 'test2-test1',
@@ -225,7 +224,7 @@ describe('getFormatState', () => {
 		const format = {
 			type: 'test/test',
 		};
-		const state = getFormatState('test/test', {
+		const state  = getFormatState('test/test', {
 			isActive: false,
 			value: {
 				start: 0,
