@@ -32,13 +32,9 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
     "@babel/plugin-transform-modules-commonjs": "^7.9.0",
     "@babel/plugin-transform-react-jsx": "^7.9.4",
-    "@babel/plugin-transform-runtime": "^7.9.0",
-    "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.0",
-    "@babel/register": "^7.9.0",
     "@technote-space/gutenberg-test-helper": "^0.0.10",
     "@wordpress/block-editor": "^3.7.7",
     "@wordpress/components": "^9.2.6",
@@ -47,18 +43,12 @@
     "@wordpress/hooks": "^2.7.0",
     "@wordpress/rich-text": "^3.12.2",
     "babel-jest": "^25.2.3",
-    "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "jest": "^25.2.3",
-    "lodash": "^4.17.15",
-    "mousetrap": "^1.6.5",
-    "react": "^16.13.1",
-    "react-autosize-textarea": "^7.0.0",
-    "react-dom": "^16.13.1"
+    "react": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"
