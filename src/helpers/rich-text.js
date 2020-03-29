@@ -189,15 +189,10 @@ export const getFormatName = name => `${PLUGIN_NAME}/${name}`;
  * @returns {function} remove format button
  */
 export const getRemoveFormatButton = (label, settings = {
-	isDefault: true,
-}) => args => {
-	settings.isSecondary = settings.isDefault;
-	delete settings.isDefault;
-
-	return isValidRemoveFormatButton(args) ? <Button
-		{...settings}
-		onClick={getRemoveFormatFunction(args)}
-	>
-		{label}
-	</Button> : null;
-};
+	isSecondary: true,
+}) => args => isValidRemoveFormatButton(args) ? <Button
+	{...settings}
+	onClick={getRemoveFormatFunction(args)}
+>
+	{label}
+</Button> : null;
