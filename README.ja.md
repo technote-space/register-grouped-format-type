@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/technote-space/register-grouped-format-type/branch/master/graph/badge.svg)](https://codecov.io/gh/technote-space/register-grouped-format-type)
 [![CodeFactor](https://www.codefactor.io/repository/github/technote-space/register-grouped-format-type/badge)](https://www.codefactor.io/repository/github/technote-space/register-grouped-format-type)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
-[![WordPress: >=5.0](https://img.shields.io/badge/WordPress-%3E%3D5.0-brightgreen.svg)](https://wordpress.org/)
+[![WordPress: >=5.4](https://img.shields.io/badge/WordPress-%3E%3D5.4-brightgreen.svg)](https://wordpress.org/)
 
 ![動作](https://raw.githubusercontent.com/technote-space/register-grouped-format-type/images/screenshot.png)
 
@@ -27,8 +27,6 @@
 
 - [サンプルプロジェクト](#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88)
 - [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
-  - [npm から利用する場合](#npm-%E3%81%8B%E3%82%89%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)
-  - [ダウンロードして試用する場合](#%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%97%E3%81%A6%E8%A9%A6%E7%94%A8%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)
 - [グループ設定を使用](#%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E8%A8%AD%E5%AE%9A%E3%82%92%E4%BD%BF%E7%94%A8)
 - [インスペクタを使用](#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%BF%E3%82%92%E4%BD%BF%E7%94%A8)
 - [関数](#%E9%96%A2%E6%95%B0)
@@ -45,19 +43,17 @@
 [Gutenberg Samples](https://github.com/technote-space/gutenberg-samples)
 
 ## 使用方法
-### npm から利用する場合
-[https://www.npmjs.com/package/@technote-space/register-grouped-format-type](https://www.npmjs.com/package/@technote-space/register-grouped-format-type)
-
 ```bash
-npm install --save @technote-space/register-grouped-format-type
+yarn add @technote-space/register-grouped-format-type
 ```
 
-`register.js`
+e.g. `assets/register.js`
 ```js
-import { Common, RichText } from '@technote-space/register-grouped-format-type';
+import { RichText } from '@technote-space/register-grouped-format-type';
+import { Helpers } from '@technote-space/gutenberg-utils';
 
 const { registerGroupedFormatType } = RichText;
-const { getToolbarButtonProps } = Common.Helpers;
+const { getToolbarButtonProps } = Helpers;
 
 /** register grouped format types
  *
@@ -73,43 +69,7 @@ registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admi
 registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
 ```
 
-コンパイルしスクリプトを読み込ませます。
-
 ```html
-<script type="text/javascript" src="/assets/register.js"></script>
-```
-
-### ダウンロードして試用する場合
-
-`register.js`
-```js
-( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton, getToolbarButtonProps ) {
-
-	/** register grouped format types
-	 *
-	 * - test1 (⇒ not dropdown)
-	 *     |- format-test1
-	 * 
-	 * - test2 (⇒ dropdown)
-	 *     |- format-test2
-	 *     |- format-test3
-	 */
-	registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
-	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
-	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
-
-}(
-	wp.element.createElement,
-	Technote.Gutenberg.RichText.registerFormatTypeGroup,
-	Technote.Gutenberg.RichText.registerGroupedFormatType,
-	Technote.Gutenberg.RichText.getRemoveFormatButton,
-	Technote.Gutenberg.Common.Helpers.getToolbarButtonProps,
-) );
-```
-
-[リリースバージョン](https://github.com/technote-space/register-grouped-format-type/releases/latest/download/index.js) をダウンロードしてスクリプトを読み込ませます。
-```html
-<script type="text/javascript" src="/assets/register-grouped-format-type/index.js"></script>
 <script type="text/javascript" src="/assets/register.js"></script>
 ```
 
@@ -128,10 +88,11 @@ registerFormatTypeGroup( 'test2', {
 
 ## インスペクタを使用
 ```js
-import { Common, RichText } from '@technote-space/register-grouped-format-type';
+import { RichText } from '@technote-space/register-grouped-format-type';
+import { Helpers } from '@technote-space/gutenberg-utils';
 
 const { registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton } = RichText;
-const { getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
+const { getColorButtonProps, getFontSizesButtonProps } = Helpers;
 
 // register format group for inspector
 registerFormatTypeGroup( 'inspector', {
@@ -235,11 +196,10 @@ registerFormatTypeGroup( name, setting = {} )
 ## WPの依存
 - wp-block-editor
 - wp-components
-- wp-core-data
 - wp-data
-- wp-editor
 - wp-element
 - wp-i18n
+- wp-hooks
 - wp-rich-text
 - wp-url
 - lodash

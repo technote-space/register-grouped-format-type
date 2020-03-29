@@ -37,7 +37,10 @@ Array [
   </ForwardRef(PanelBody)>,
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -167,9 +170,18 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
-    "",
-    "",
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;
@@ -187,7 +199,10 @@ Array [
   </ForwardRef(PanelBody)>,
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -317,9 +332,18 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
-    "",
-    "",
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;
@@ -329,7 +353,10 @@ Array [
   "",
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -460,7 +487,10 @@ Array [
       </blockquote>,
     ],
     "",
-    "",
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;

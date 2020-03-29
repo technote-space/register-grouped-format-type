@@ -1,9 +1,10 @@
+import React from 'react';
+import { Button } from '@wordpress/components';
 import { Helpers } from '../utils';
 import { PLUGIN_NAME } from '../constant';
 
-const { dispatch, select } = wp.data;
-const { Button } = wp.components;
-const { isValidRemoveFormatButton, getRemoveFormatFunction, comparePackageVersion } = Helpers;
+const { isValidRemoveFormatButton, getRemoveFormatFunction } = Helpers;
+const { dispatch, select }                                   = wp.data;
 
 /**
  * @param {object} settings settings
@@ -114,8 +115,7 @@ const validateKeywords = settings => {
  */
 const checkRegistered = settings => {
 	if (settings.className === null) {
-		const formatTypeForBareElement = select('core/rich-text')
-			.getFormatTypeForBareElement(settings.tagName);
+		const formatTypeForBareElement = select('core/rich-text').getFormatTypeForBareElement(settings.tagName);
 
 		if (formatTypeForBareElement) {
 			window.console.error(
@@ -124,8 +124,7 @@ const checkRegistered = settings => {
 			return true;
 		}
 	} else {
-		const formatTypeForClassName = select('core/rich-text')
-			.getFormatTypeForClassName(settings.className);
+		const formatTypeForClassName = select('core/rich-text').getFormatTypeForClassName(settings.className);
 
 		if (formatTypeForClassName) {
 			window.console.error(
@@ -190,17 +189,10 @@ export const getFormatName = name => `${PLUGIN_NAME}/${name}`;
  * @returns {function} remove format button
  */
 export const getRemoveFormatButton = (label, settings = {
-	isDefault: true,
-}) => args => {
-	if (comparePackageVersion('wp-components', '8.5.0', '>=') && settings.isDefault) {
-		settings.isSecondary = settings.isDefault;
-		delete settings.isDefault;
-	}
-
-	return isValidRemoveFormatButton(args) ? <Button
-		{...settings}
-		onClick={getRemoveFormatFunction(args)}
-	>
-		{label}
-	</Button> : null;
-};
+	isSecondary: true,
+}) => args => isValidRemoveFormatButton(args) ? <Button
+	{...settings}
+	onClick={getRemoveFormatFunction(args)}
+>
+	{label}
+</Button> : null;

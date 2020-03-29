@@ -1,13 +1,13 @@
 /* eslint-disable no-magic-numbers */
+import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import { BlockEdit } from '@wordpress/block-editor';
+import { SlotFillProvider } from '@wordpress/components';
+import { Fragment } from '@wordpress/element';
+import { addFilter, removeFilter } from '@wordpress/hooks';
+import { create } from '@wordpress/rich-text';
 import { GroupedControls } from '../../src/components';
-
-const { BlockEdit } = wp.blockEditor;
-const { SlotFillProvider } = wp.components;
-const { Fragment } = wp.element;
-const { addFilter, removeFilter } = wp.hooks;
-const { create } = wp.richText;
 
 const createTest = (targetName, createSlot, getCases) => {
 	let filter;
@@ -21,7 +21,7 @@ const createTest = (targetName, createSlot, getCases) => {
 
 	describe(targetName, () => {
 		const getSnapshotName = (name, index) => `${name}--${index}`;
-		const setting = index => ({
+		const setting         = index => ({
 			icon: 'admin-customizer',
 			position: 'top right',
 			label: `test label ${index}`,
@@ -32,7 +32,7 @@ const createTest = (targetName, createSlot, getCases) => {
 			useContrastChecker: false,
 			additionalInspectors: [],
 		});
-		const { Fill, Slot } = GroupedControls('components-test');
+		const { Fill, Slot }  = GroupedControls('components-test');
 
 		const createFilter = (index, createToolbarDropdown, createComponents) => (BlockEdit, props) => <Fragment>
 			<BlockEdit {...props} />
@@ -42,7 +42,7 @@ const createTest = (targetName, createSlot, getCases) => {
 
 		getCases(Fill, Slot, getSnapshotName).forEach(({ createComponents, createToolbarDropdown, callback }, index) => {
 			it(`should render ${targetName} ${index}`, () => {
-				filter = createFilter(index, createToolbarDropdown, createComponents);
+				filter        = createFilter(index, createToolbarDropdown, createComponents);
 				const wrapper = mount(
 					<SlotFillProvider>
 						{createSlot()}

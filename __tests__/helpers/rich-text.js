@@ -1,8 +1,6 @@
 import { PLUGIN_NAME } from '../../src/constant';
 import { registerMultipleClassFormatType, getFormatName, getRemoveFormatButton } from '../../src/helpers';
 
-const { dispatch } = wp.data;
-
 describe('registerMultipleClassFormatType', () => {
 	it('should not null if succeeded registration', () => {
 		expect(registerMultipleClassFormatType('rich-text/test1-1', {
@@ -104,47 +102,14 @@ describe('getFormatName', () => {
 });
 
 describe('getRemoveFormatButton', () => {
-	afterEach(() => {
-		dispatch('core/editor').updateEditorSettings({
-			'package-versions': {},
-		});
-	});
-
 	it('should get remove format button generator', () => {
 		expect(typeof getRemoveFormatButton('test-label1')).toBe('function');
 		expect(typeof getRemoveFormatButton('test-label2', {})).toBe('function');
 	});
 
-	it('should get remove format button', () => {
-		dispatch('core/editor').updateEditorSettings({
-			'package-versions': {
-				'wp-components': '8.4.0',
-			},
-		});
-
-		const generator = getRemoveFormatButton('test-label1');
-		const button = generator({
-			value: {
-				formats: [
-					{
-						attributes: { style: 'font-size: 16px' },
-						type: 'test/test',
-						unregisteredAttributes: {},
-					},
-				],
-			},
-		});
-		expect(typeof button).toBe('object');
-		expect(button).toHaveProperty('props');
-		expect(button.props).toHaveProperty('isDefault');
-		expect(button.props).not.toHaveProperty('isSecondary');
-		expect(button.props).toHaveProperty('onClick');
-		expect(button.props.children).toBe('test-label1');
-	});
-
 	it('should not get remove format button', () => {
 		const generator = getRemoveFormatButton('test-label2');
-		const button = generator({
+		const button    = generator({
 			value: {
 				formats: [],
 			},
@@ -153,14 +118,8 @@ describe('getRemoveFormatButton', () => {
 	});
 
 	it('should get remove format button for version <= v8.5', () => {
-		dispatch('core/editor').updateEditorSettings({
-			'package-versions': {
-				'wp-components': '8.5.0',
-			},
-		});
-
 		const generator = getRemoveFormatButton('test-label1');
-		const button = generator({
+		const button    = generator({
 			value: {
 				formats: [
 					{

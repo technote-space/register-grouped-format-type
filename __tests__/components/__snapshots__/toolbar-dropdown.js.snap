@@ -2,7 +2,6 @@
 
 exports[`ToolbarDropdown should render ToolbarDropdown 0: opened-dropdown--0 1`] = `
 Array [
-  <div />,
   Array [
     "",
     <div
@@ -62,13 +61,13 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown-button"
+          className="components-dropdown components-dropdown-button"
         >
           <ForwardRef(IconButton)
             aria-expanded={true}
             aria-haspopup="true"
             aria-pressed={true}
-            className="components-dropdown-button__toggle is-active"
+            className="components-dropdown-button__toggle is-active is-pressed"
             disabled={false}
             icon="admin-customizer"
             label="test label 0"
@@ -79,7 +78,7 @@ Array [
               aria-expanded={true}
               aria-haspopup="true"
               aria-pressed={true}
-              className="components-dropdown-button__toggle is-active"
+              className="components-dropdown-button__toggle is-active is-pressed"
               disabled={false}
               icon="admin-customizer"
               label="test label 0"
@@ -91,7 +90,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 0"
                 aria-pressed={true}
-                className="components-button components-dropdown-button__toggle is-active has-text has-icon"
+                className="components-button components-dropdown-button__toggle is-active is-pressed has-text has-icon"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -123,88 +122,33 @@ Array [
             </ForwardRef(Button)>
           </ForwardRef(IconButton)>
           <span>
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    tabindex="-1"
-                  >
-                    <div>
-                      <div
-                        class="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
-                        style="top: -3px;"
-                      >
-                        <div
-                          class="components-popover__content"
-                          tabindex="-1"
-                        >
-                          <div
-                            aria-label="test label 0"
-                            aria-orientation="vertical"
-                            class="components-dropdown-menu__menu test-menu-class"
-                            role="menu"
-                          >
-                            <button
-                              class="components-button components-dropdown-menu__menu-item is-active"
-                              role="menuitem"
-                              type="button"
-                            >
-                              ToolbarButton1
-                            </button>
-                            <button
-                              class="components-button components-dropdown-menu__menu-item"
-                              role="menuitem"
-                              type="button"
-                            >
-                              ToolbarButton2
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
+            <div
+              onKeyDown={[Function]}
+              tabIndex="-1"
             >
               <div
-                onKeyDown={[Function]}
-                tabIndex="-1"
+                onBlur={[Function]}
+                onFocus={[Function]}
               >
                 <div
                   onBlur={[Function]}
                   onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
                 >
                   <ForwardRef
-                    className="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
+                    className="components-popover components-dropdown-button__popover"
                     onKeyDown={[Function]}
-                    style={
-                      Object {
-                        "left": undefined,
-                        "top": "-3px",
-                        "visibility": undefined,
-                      }
-                    }
                   >
                     <div
-                      className="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
+                      className="components-popover components-dropdown-button__popover"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
-                      style={
-                        Object {
-                          "left": undefined,
-                          "top": "-3px",
-                          "visibility": undefined,
-                        }
-                      }
                     >
                       <div
                         className="components-popover__content"
-                        style={
-                          Object {
-                            "maxHeight": undefined,
-                            "maxWidth": undefined,
-                          }
-                        }
                         tabIndex="-1"
                       >
                         <ForwardRef(NavigableMenu)
@@ -227,46 +171,36 @@ Array [
                               className="components-dropdown-menu__menu test-menu-class"
                               role="menu"
                             >
-                              <ForwardRef(IconButton)
+                              <ForwardRef(Button)
                                 className="components-dropdown-menu__menu-item is-active"
+                                key="dropdown-test label 0-0"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
-                                <ForwardRef(Button)
-                                  className="components-dropdown-menu__menu-item is-active"
+                                <button
+                                  className="components-button components-dropdown-menu__menu-item is-active"
                                   onClick={[Function]}
                                   role="menuitem"
+                                  type="button"
                                 >
-                                  <button
-                                    className="components-button components-dropdown-menu__menu-item is-active"
-                                    onClick={[Function]}
-                                    role="menuitem"
-                                    type="button"
-                                  >
-                                    ToolbarButton1
-                                  </button>
-                                </ForwardRef(Button)>
-                              </ForwardRef(IconButton)>
-                              <ForwardRef(IconButton)
+                                  ToolbarButton1
+                                </button>
+                              </ForwardRef(Button)>
+                              <ForwardRef(Button)
                                 className="components-dropdown-menu__menu-item"
+                                key="dropdown-test label 0-1"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
-                                <ForwardRef(Button)
-                                  className="components-dropdown-menu__menu-item"
+                                <button
+                                  className="components-button components-dropdown-menu__menu-item"
                                   onClick={[Function]}
                                   role="menuitem"
+                                  type="button"
                                 >
-                                  <button
-                                    className="components-button components-dropdown-menu__menu-item"
-                                    onClick={[Function]}
-                                    role="menuitem"
-                                    type="button"
-                                  >
-                                    ToolbarButton2
-                                  </button>
-                                </ForwardRef(Button)>
-                              </ForwardRef(IconButton)>
+                                  ToolbarButton2
+                                </button>
+                              </ForwardRef(Button)>
                             </div>
                           </ForwardRef(NavigableContainer)>
                         </ForwardRef(NavigableMenu)>
@@ -275,7 +209,7 @@ Array [
                   </ForwardRef>
                 </div>
               </div>
-            </Portal>
+            </div>
           </span>
         </div>
       </div>
@@ -283,7 +217,10 @@ Array [
   ],
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -413,16 +350,24 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
-    "",
-    "",
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 0: test--0 1`] = `
 Array [
-  <div />,
   Array [
     "",
     <div
@@ -482,13 +427,13 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown-button"
+          className="components-dropdown components-dropdown-button"
         >
           <ForwardRef(IconButton)
             aria-expanded={false}
             aria-haspopup="true"
             aria-pressed={true}
-            className="components-dropdown-button__toggle is-active"
+            className="components-dropdown-button__toggle is-active is-pressed"
             disabled={false}
             icon="admin-customizer"
             label="test label 0"
@@ -499,7 +444,7 @@ Array [
               aria-expanded={false}
               aria-haspopup="true"
               aria-pressed={true}
-              className="components-dropdown-button__toggle is-active"
+              className="components-dropdown-button__toggle is-active is-pressed"
               disabled={false}
               icon="admin-customizer"
               label="test label 0"
@@ -511,7 +456,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 0"
                 aria-pressed={true}
-                className="components-button components-dropdown-button__toggle is-active has-text has-icon"
+                className="components-button components-dropdown-button__toggle is-active is-pressed has-text has-icon"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -548,7 +493,10 @@ Array [
   ],
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -678,16 +626,24 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
-    "",
-    "",
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 1: opened-dropdown--1 1`] = `
 Array [
-  <div />,
   Array [
     "",
     <div
@@ -741,19 +697,19 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="7---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="6---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
       >
         <div
-          className="components-dropdown-button test-class"
+          className="components-dropdown components-dropdown-button test-class"
         >
           <ForwardRef(IconButton)
             aria-expanded={true}
             aria-haspopup="true"
             aria-pressed={true}
-            className="components-dropdown-button__toggle is-active"
+            className="components-dropdown-button__toggle is-active is-pressed"
             disabled={false}
             icon="admin-customizer"
             label="test label 1"
@@ -764,7 +720,7 @@ Array [
               aria-expanded={true}
               aria-haspopup="true"
               aria-pressed={true}
-              className="components-dropdown-button__toggle is-active"
+              className="components-dropdown-button__toggle is-active is-pressed"
               disabled={false}
               icon="admin-customizer"
               label="test label 1"
@@ -776,7 +732,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 1"
                 aria-pressed={true}
-                className="components-button components-dropdown-button__toggle is-active has-text has-icon"
+                className="components-button components-dropdown-button__toggle is-active is-pressed has-text has-icon"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -808,89 +764,33 @@ Array [
             </ForwardRef(Button)>
           </ForwardRef(IconButton)>
           <span>
-            <Portal
-              containerInfo={
-                <div>
-                  <div
-                    tabindex="-1"
-                  >
-                    <div>
-                      <div
-                        class="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
-                        style="top: -3px;"
-                      >
-                        <div
-                          class="components-popover__content"
-                          tabindex="-1"
-                        >
-                          <div
-                            aria-label="test label 1"
-                            aria-orientation="vertical"
-                            class="components-dropdown-menu__menu"
-                            role="menu"
-                          >
-                            <button
-                              class="components-button components-dropdown-menu__menu-item is-active"
-                              role="menuitem"
-                              type="button"
-                            >
-                              ToolbarButton3
-                            </button>
-                            <button
-                              class="components-button components-dropdown-menu__menu-item"
-                              disabled=""
-                              role="menuitem"
-                              type="button"
-                            >
-                              ToolbarButton4
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
+            <div
+              onKeyDown={[Function]}
+              tabIndex="-1"
             >
               <div
-                onKeyDown={[Function]}
-                tabIndex="-1"
+                onBlur={[Function]}
+                onFocus={[Function]}
               >
                 <div
                   onBlur={[Function]}
                   onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
                 >
                   <ForwardRef
-                    className="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
+                    className="components-popover components-dropdown-button__popover"
                     onKeyDown={[Function]}
-                    style={
-                      Object {
-                        "left": undefined,
-                        "top": "-3px",
-                        "visibility": undefined,
-                      }
-                    }
                   >
                     <div
-                      className="components-popover components-dropdown-button__popover gutenberg-utils-dropdown is-bottom is-right components-animate__appear is-from-left is-from-top"
+                      className="components-popover components-dropdown-button__popover"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
-                      style={
-                        Object {
-                          "left": undefined,
-                          "top": "-3px",
-                          "visibility": undefined,
-                        }
-                      }
                     >
                       <div
                         className="components-popover__content"
-                        style={
-                          Object {
-                            "maxHeight": undefined,
-                            "maxWidth": undefined,
-                          }
-                        }
                         tabIndex="-1"
                       >
                         <ForwardRef(NavigableMenu)
@@ -913,49 +813,38 @@ Array [
                               className="components-dropdown-menu__menu"
                               role="menu"
                             >
-                              <ForwardRef(IconButton)
+                              <ForwardRef(Button)
                                 className="components-dropdown-menu__menu-item is-active"
+                                key="dropdown-test label 1-0"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
-                                <ForwardRef(Button)
-                                  className="components-dropdown-menu__menu-item is-active"
+                                <button
+                                  className="components-button components-dropdown-menu__menu-item is-active"
                                   onClick={[Function]}
                                   role="menuitem"
+                                  type="button"
                                 >
-                                  <button
-                                    className="components-button components-dropdown-menu__menu-item is-active"
-                                    onClick={[Function]}
-                                    role="menuitem"
-                                    type="button"
-                                  >
-                                    ToolbarButton3
-                                  </button>
-                                </ForwardRef(Button)>
-                              </ForwardRef(IconButton)>
-                              <ForwardRef(IconButton)
+                                  ToolbarButton3
+                                </button>
+                              </ForwardRef(Button)>
+                              <ForwardRef(Button)
                                 className="components-dropdown-menu__menu-item"
                                 disabled={true}
+                                key="dropdown-test label 1-1"
                                 onClick={[Function]}
                                 role="menuitem"
                               >
-                                <ForwardRef(Button)
-                                  className="components-dropdown-menu__menu-item"
+                                <button
+                                  className="components-button components-dropdown-menu__menu-item"
                                   disabled={true}
                                   onClick={[Function]}
                                   role="menuitem"
+                                  type="button"
                                 >
-                                  <button
-                                    className="components-button components-dropdown-menu__menu-item"
-                                    disabled={true}
-                                    onClick={[Function]}
-                                    role="menuitem"
-                                    type="button"
-                                  >
-                                    ToolbarButton4
-                                  </button>
-                                </ForwardRef(Button)>
-                              </ForwardRef(IconButton)>
+                                  ToolbarButton4
+                                </button>
+                              </ForwardRef(Button)>
                             </div>
                           </ForwardRef(NavigableContainer)>
                         </ForwardRef(NavigableMenu)>
@@ -964,7 +853,7 @@ Array [
                   </ForwardRef>
                 </div>
               </div>
-            </Portal>
+            </div>
           </span>
         </div>
       </div>
@@ -972,7 +861,10 @@ Array [
   ],
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -1102,16 +994,24 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
-    "",
-    "",
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 1: test--1 1`] = `
 Array [
-  <div />,
   Array [
     "",
     <div
@@ -1165,19 +1065,19 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="7---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="6---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
       >
         <div
-          className="components-dropdown-button test-class"
+          className="components-dropdown components-dropdown-button test-class"
         >
           <ForwardRef(IconButton)
             aria-expanded={false}
             aria-haspopup="true"
             aria-pressed={true}
-            className="components-dropdown-button__toggle is-active"
+            className="components-dropdown-button__toggle is-active is-pressed"
             disabled={false}
             icon="admin-customizer"
             label="test label 1"
@@ -1188,7 +1088,7 @@ Array [
               aria-expanded={false}
               aria-haspopup="true"
               aria-pressed={true}
-              className="components-dropdown-button__toggle is-active"
+              className="components-dropdown-button__toggle is-active is-pressed"
               disabled={false}
               icon="admin-customizer"
               label="test label 1"
@@ -1200,7 +1100,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 1"
                 aria-pressed={true}
-                className="components-button components-dropdown-button__toggle is-active has-text has-icon"
+                className="components-button components-dropdown-button__toggle is-active is-pressed has-text has-icon"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -1237,7 +1137,10 @@ Array [
   ],
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -1367,16 +1270,24 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
-    "",
-    "",
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 2: test--2 1`] = `
 Array [
-  <div />,
   Array [
     "",
     <div
@@ -1430,13 +1341,13 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="12---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="10---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
       >
         <div
-          className="components-dropdown-button"
+          className="components-dropdown components-dropdown-button"
         >
           <ForwardRef(IconButton)
             aria-expanded={false}
@@ -1496,7 +1407,10 @@ Array [
   ],
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -1626,16 +1540,24 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
-    "",
-    "",
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 3: test--3 1`] = `
 Array [
-  <div />,
   Array [
     "",
     <div
@@ -1689,7 +1611,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="16---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="14---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -1720,7 +1642,10 @@ Array [
   ],
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -1850,15 +1775,20 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
-    "",
+    Array [
+      "",
+      "",
+    ],
+    Array [
+      "",
+      "",
+    ],
   ],
 ]
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 4: test--4 1`] = `
 Array [
-  <div />,
   Array [
     "",
     <div
@@ -1912,7 +1842,7 @@ Array [
     "",
     <div
       className="editor-format-toolbar block-editor-format-toolbar"
-      key="19---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
+      key="17---toolbar-dropdown-0/.1:$toolbar-dropdown-0"
     >
       <div
         className="components-toolbar"
@@ -1921,7 +1851,10 @@ Array [
   ],
   Array [
     Array [
-      "",
+      Array [
+        "",
+        "",
+      ],
       <blockquote
         className="wp-block-quote test-block-edit"
       >
@@ -2051,7 +1984,10 @@ Array [
         </ForwardRef(RichTextWrapper)>
       </blockquote>,
     ],
-    "",
+    Array [
+      "",
+      "",
+    ],
     "",
   ],
 ]

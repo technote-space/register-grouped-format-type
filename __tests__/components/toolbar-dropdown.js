@@ -1,17 +1,16 @@
 /* eslint-disable no-magic-numbers */
-import createTest from './common';
+import React from 'react';
+import { Fragment } from '@wordpress/element';
+import { BlockControls } from '@wordpress/block-editor';
+import { ToolbarButton } from '@wordpress/components';
 import toJson from 'enzyme-to-json';
+import createTest from './common';
 import { ToolbarDropdown } from '../../src/components';
 
-const { BlockControls } = wp.blockEditor;
-const { Popover, ToolbarButton } = wp.components;
-const { Fragment } = wp.element;
-
 createTest('ToolbarDropdown', () => <Fragment>
-	<Popover.Slot />
-	<BlockControls.Slot />
+	<BlockControls.Slot/>
 </Fragment>, (Fill, Slot, getSnapshotName) => {
-	const getGroupedSlots = setting => ([[{ Slot, setting }]]);
+	const getGroupedSlots  = setting => ([[{ Slot, setting }]]);
 	const openDropdownTest = (wrapper, index) => {
 		expect(wrapper.find('.editor-format-toolbar').hostNodes()).toHaveLength(1);
 		expect(wrapper.find('.components-dropdown-button').hostNodes()).toHaveLength(1);
@@ -113,7 +112,7 @@ createTest('ToolbarDropdown', () => <Fragment>
 			},
 		},
 		{
-			createComponents: () => <Fragment />,
+			createComponents: () => <Fragment/>,
 			createToolbarDropdown: setting => ToolbarDropdown(getGroupedSlots(setting)),
 			callback: (wrapper) => {
 				expect(wrapper.find('.editor-format-toolbar').hostNodes()).toHaveLength(1);

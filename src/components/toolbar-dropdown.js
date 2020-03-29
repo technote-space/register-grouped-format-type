@@ -1,8 +1,8 @@
-import { Components, Helpers, classnames } from '../utils';
-
-const { getEditor } = Helpers;
-const { BlockControls } = getEditor();
-const { Toolbar, NavigableMenu } = wp.components;
+import React from 'react';
+import classnames from 'classnames';
+import { Toolbar, NavigableMenu, Button } from '@wordpress/components';
+import { BlockControls } from '@wordpress/block-editor';
+import { Components } from '../utils';
 
 /**
  * @param {Array} fills fills
@@ -10,10 +10,10 @@ const { Toolbar, NavigableMenu } = wp.components;
  * @returns {*} dropdown
  */
 const createDropdown = (fills, setting) => {
-	const controls = fills.map(([{ props }]) => props);
-	const isActive = !!controls.filter(control => control.isActive).length;
-	const isDisabled = !controls.filter(control => !control.isDisabled).length;
-	const onClick = (props, control) => event => {
+	const controls                 = fills.map(([{ props }]) => props);
+	const isActive                 = !!controls.filter(control => control.isActive).length;
+	const isDisabled               = !controls.filter(control => !control.isDisabled).length;
+	const onClick                  = (props, control) => event => {
 		event.stopPropagation();
 		props.onClose();
 		if (control.onClick) {
@@ -30,7 +30,7 @@ const createDropdown = (fills, setting) => {
 			role="menu"
 			aria-label={label}
 		>
-			{controls.map((control, index) => <Components.IconButton
+			{controls.map((control, index) => <Button
 				key={`dropdown-${label}-${index}`}
 				onClick={onClick(props, control)}
 				className={classnames('components-dropdown-menu__menu-item', {
@@ -41,7 +41,7 @@ const createDropdown = (fills, setting) => {
 				disabled={control.isDisabled}
 			>
 				{control.title}
-			</Components.IconButton>)}
+			</Button>)}
 		</NavigableMenu>}
 	/>;
 };

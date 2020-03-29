@@ -1,12 +1,12 @@
-const { Fragment } = wp.element;
-
+import React from 'react';
+import { Fragment } from '@wordpress/element';
 import { GroupedControls, GroupedInspectors, ToolbarDropdown, InspectorComponent } from '../components';
 import { registerMultipleClassFormatType, getFormatName } from './rich-text';
 
-const formatNames = {};
-const groups = {};
-const inspectorGroups = {};
-const groupSettings = {};
+const formatNames          = {};
+const groups               = {};
+const inspectorGroups      = {};
+const groupSettings        = {};
 const useInspectorSettings = {};
 
 /**
@@ -47,7 +47,7 @@ const getDefaultSetting = name => ({
 const getToolbarGroupedSlots = () => {
 	const grouped = {};
 	Object.keys(groups).forEach(key => {
-		const setting = getGroupSetting(key in useInspectorSettings ? useInspectorSettings[ key ] : key);
+		const setting      = getGroupSetting(key in useInspectorSettings ? useInspectorSettings[ key ] : key);
 		const toolbarGroup = setting.toolbarGroup;
 		if (!(toolbarGroup in grouped)) {
 			grouped[ toolbarGroup ] = [];
@@ -89,7 +89,7 @@ export const registerGroupedFormatType = ({
 		return null;
 	}
 
-	const isFirst = !Object.keys(formatNames).length;
+	const isFirst             = !Object.keys(formatNames).length;
 	formatNames[ formatName ] = formatName;
 
 	if (settings && 'useInspectorSetting' in settings && settings.useInspectorSetting && inspectorGroup) {
@@ -111,7 +111,7 @@ export const registerGroupedFormatType = ({
  * @returns {object} format state
  */
 export const getFormatState = (formatName, args) => {
-	const isActive = args.isActive || !args.value.activeFormats || args.value.activeFormats.map(format => format.type).includes(formatName);
+	const isActive   = args.isActive || !args.value.activeFormats || args.value.activeFormats.map(format => format.type).includes(formatName);
 	const isDisabled = !isActive && args.value.start === args.value.end;
 	return {
 		isDisabled,
@@ -131,7 +131,7 @@ export const getFormatState = (formatName, args) => {
  * @returns {function(*=): *} component
  */
 const onEdit = (name, formatName, group, inspectorGroup, create, createInspector, isFirst, settings) => args => {
-	const newArgs = Object.assign({}, args, getFormatState(formatName, args));
+	const newArgs   = Object.assign({}, args, getFormatState(formatName, args));
 	const component = createComponent(create, group, newArgs, name, formatName, settings);
 	const inspector = createComponent(createInspector, inspectorGroup, newArgs, name, formatName, settings);
 

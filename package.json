@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "1.2.14",
+  "version": "2.0.0",
   "description": "gutenberg's helper to register format type",
   "author": {
     "name": "Technote",
@@ -25,34 +25,30 @@
   "files": [
     "build"
   ],
+  "dependencies": {
+    "@technote-space/gutenberg-utils": "^2.0.0",
+    "classnames": "^2.2.6"
+  },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
-    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
-    "@babel/plugin-transform-react-jsx": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/polyfill": "^7.8.3",
-    "@babel/preset-env": "^7.8.6",
-    "@babel/register": "^7.8.6",
-    "@technote-space/gutenberg-test-helper": "^0.0.7",
-    "@technote-space/gutenberg-utils": "^1.4.2",
-    "babel-jest": "^25.1.0",
-    "babel-loader": "^8.0.6",
-    "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "@babel/preset-env": "^7.9.0",
+    "@technote-space/gutenberg-test-helper": "^0.0.10",
+    "@wordpress/block-editor": "^3.7.7",
+    "@wordpress/components": "^9.2.6",
+    "@wordpress/data": "^4.14.2",
+    "@wordpress/element": "^2.11.0",
+    "@wordpress/hooks": "^2.7.0",
+    "@wordpress/rich-text": "^3.12.2",
+    "babel-jest": "^25.2.3",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.18.3",
-    "hard-source-webpack-plugin": "^0.13.1",
-    "jest": "^25.1.0",
-    "lodash": "^4.17.15",
-    "mousetrap": "^1.6.5",
-    "react-autosize-textarea": "^7.0.0",
-    "speed-measure-webpack-plugin": "^1.3.1",
-    "terser-webpack-plugin": "^2.3.5",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "eslint-plugin-react": "^7.19.0",
+    "jest": "^25.2.3",
+    "react": "^16.13.1"
   },
   "publishConfig": {
     "access": "public"
@@ -65,8 +61,8 @@
     "lint:fix": "eslint --fix 'src/**/*.js' '__tests__/**/*.js'",
     "cover": "jest --coverage",
     "cover:update": "jest --coverage --updateSnapshot",
-    "develop": "webpack --mode development --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "develop": "rm -rdf build && babel src --out-dir build",
+    "build": "rm -rdf build && babel --compact=true src --out-dir build",
     "update": "ncu -u && yarn install && yarn upgrade && yarn audit"
   }
 }
