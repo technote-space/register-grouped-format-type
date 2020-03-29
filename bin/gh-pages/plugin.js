@@ -1,10 +1,11 @@
-const { Fragment } = wp.element;
+const { Fragment }  = wp.element;
 const { addFilter } = wp.hooks;
 
-import { Common, RichText } from './library';
+import { RichText } from './build';
+import { Helpers } from '@technote-space/gutenberg-utils';
 
 const { registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton } = RichText;
-const { getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
+const { getToolbarButtonProps, getColorButtonProps, getFontSizesButtonProps }       = Helpers;
 
 import './plugin.scss';
 
@@ -32,5 +33,5 @@ registerGroupedFormatType(getFontSizesButtonProps('font-size', 'Font Size', 'edi
 
 addFilter('gh-pages.renderContent', 'plugin/renderContent', () => <Fragment>
 	<p>This page is demonstration of <a href="https://github.com/technote-space/register-grouped-format-type">Register Grouped Format Type</a></p>
-	<img className='playground__content__screenshot' src='./screenshot.png' />
+	<img className='playground__content__screenshot' src='./screenshot.png'/>
 </Fragment>);
