@@ -43,35 +43,35 @@ The controls are active only when it is able to toggle format.
 [Gutenberg Samples](https://github.com/technote-space/gutenberg-samples)
 
 ## Usage
-1. Install
-   ```bash
-   yarn add --dev @technote-space/register-grouped-format-type
-   ```
-2. Use  
-   e.g. `assets/register.js`
-   ```js
-   import { Common, RichText } from '@technote-space/register-grouped-format-type';
-   
-   const { registerGroupedFormatType } = RichText;
-   const { getToolbarButtonProps } = Common.Helpers;
+```bash
+yarn add @technote-space/register-grouped-format-type
+```
 
-   /** register grouped format types
-    *
-    * - test1 (⇒ not dropdown)
-    *     |- format-test1
-    * 
-    * - test2 (⇒ dropdown)
-    *     |- format-test2
-    *     |- format-test3
-    */
-   registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
-   registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
-   registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
-   ```
-1. Compile and enqueue script
-   ```html
-   <script type="text/javascript" src="/assets/register.js"></script>
-   ```
+e.g. `assets/register.js`
+```js
+import { RichText } from '@technote-space/register-grouped-format-type';
+import { Helpers } from '@technote-space/gutenberg-utils';
+
+const { registerGroupedFormatType } = RichText;
+const { getToolbarButtonProps } = Helpers;
+
+/** register grouped format types
+*
+* - test1 (⇒ not dropdown)
+*     |- format-test1
+* 
+* - test2 (⇒ dropdown)
+*     |- format-test2
+*     |- format-test3
+*/
+registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
+registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
+registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
+```
+
+```html
+<script type="text/javascript" src="/assets/register.js"></script>
+```
 
 ## Use group setting
 You can customize dropdown settings such as icon, label, position, and so on.
@@ -88,10 +88,11 @@ registerFormatTypeGroup( 'test2', {
 
 ## Use inspector
 ```js
-import { Common, RichText } from '@technote-space/register-grouped-format-type';
+import { RichText } from '@technote-space/register-grouped-format-type';
+import { Helpers } from '@technote-space/gutenberg-utils';
 
 const { registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton } = RichText;
-const { getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
+const { getColorButtonProps, getFontSizesButtonProps } = Helpers;
 
 // register format group for inspector
 registerFormatTypeGroup( 'inspector', {
@@ -195,14 +196,10 @@ registerFormatTypeGroup( name, setting = {} )
 ## WP Dependencies
 - wp-block-editor
 - wp-components
-- wp-core-data
 - wp-data
-- wp-dom
-- wp-editor
 - wp-element
 - wp-i18n
-- wp-is-shallow-equal
-- wp-keycodes
+- wp-hooks
 - wp-rich-text
 - wp-url
 - lodash

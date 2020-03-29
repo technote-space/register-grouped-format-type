@@ -45,19 +45,17 @@
 [Gutenberg Samples](https://github.com/technote-space/gutenberg-samples)
 
 ## 使用方法
-### npm から利用する場合
-[https://www.npmjs.com/package/@technote-space/register-grouped-format-type](https://www.npmjs.com/package/@technote-space/register-grouped-format-type)
-
 ```bash
-npm install --save @technote-space/register-grouped-format-type
+yarn add @technote-space/register-grouped-format-type
 ```
 
-`register.js`
+e.g. `assets/register.js`
 ```js
-import { Common, RichText } from '@technote-space/register-grouped-format-type';
+import { RichText } from '@technote-space/register-grouped-format-type';
+import { Helpers } from '@technote-space/gutenberg-utils';
 
 const { registerGroupedFormatType } = RichText;
-const { getToolbarButtonProps } = Common.Helpers;
+const { getToolbarButtonProps } = Helpers;
 
 /** register grouped format types
  *
@@ -73,43 +71,7 @@ registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admi
 registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
 ```
 
-コンパイルしスクリプトを読み込ませます。
-
 ```html
-<script type="text/javascript" src="/assets/register.js"></script>
-```
-
-### ダウンロードして試用する場合
-
-`register.js`
-```js
-( function(  el, registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton, getToolbarButtonProps ) {
-
-	/** register grouped format types
-	 *
-	 * - test1 (⇒ not dropdown)
-	 *     |- format-test1
-	 * 
-	 * - test2 (⇒ dropdown)
-	 *     |- format-test2
-	 *     |- format-test3
-	 */
-	registerGroupedFormatType( getToolbarButtonProps( 'test1', 'format-test1', 'admin-customizer' ) );
-	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test2', 'admin-customizer' ) );
-	registerGroupedFormatType( getToolbarButtonProps( 'test2', 'format-test3', 'admin-customizer' ) );
-
-}(
-	wp.element.createElement,
-	Technote.Gutenberg.RichText.registerFormatTypeGroup,
-	Technote.Gutenberg.RichText.registerGroupedFormatType,
-	Technote.Gutenberg.RichText.getRemoveFormatButton,
-	Technote.Gutenberg.Common.Helpers.getToolbarButtonProps,
-) );
-```
-
-[リリースバージョン](https://github.com/technote-space/register-grouped-format-type/releases/latest/download/index.js) をダウンロードしてスクリプトを読み込ませます。
-```html
-<script type="text/javascript" src="/assets/register-grouped-format-type/index.js"></script>
 <script type="text/javascript" src="/assets/register.js"></script>
 ```
 
@@ -128,10 +90,11 @@ registerFormatTypeGroup( 'test2', {
 
 ## インスペクタを使用
 ```js
-import { Common, RichText } from '@technote-space/register-grouped-format-type';
+import { RichText } from '@technote-space/register-grouped-format-type';
+import { Helpers } from '@technote-space/gutenberg-utils';
 
 const { registerFormatTypeGroup, registerGroupedFormatType, getRemoveFormatButton } = RichText;
-const { getColorButtonProps, getFontSizesButtonProps } = Common.Helpers;
+const { getColorButtonProps, getFontSizesButtonProps } = Helpers;
 
 // register format group for inspector
 registerFormatTypeGroup( 'inspector', {
@@ -235,11 +198,10 @@ registerFormatTypeGroup( name, setting = {} )
 ## WPの依存
 - wp-block-editor
 - wp-components
-- wp-core-data
 - wp-data
-- wp-editor
 - wp-element
 - wp-i18n
+- wp-hooks
 - wp-rich-text
 - wp-url
 - lodash
