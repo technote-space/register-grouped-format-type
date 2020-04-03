@@ -26,7 +26,7 @@
     "build"
   ],
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^2.1.0",
+    "@technote-space/gutenberg-utils": "^2.1.2",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
@@ -36,18 +36,18 @@
     "@babel/plugin-transform-react-jsx": "^7.9.4",
     "@babel/preset-env": "^7.9.0",
     "@technote-space/gutenberg-test-helper": "^0.0.10",
-    "@wordpress/block-editor": "^3.7.7",
-    "@wordpress/components": "^9.2.6",
-    "@wordpress/data": "^4.14.2",
-    "@wordpress/element": "^2.11.0",
+    "@wordpress/block-editor": "^3.8.0",
+    "@wordpress/components": "^9.3.0",
+    "@wordpress/data": "^4.15.0",
+    "@wordpress/element": "^2.12.0",
     "@wordpress/hooks": "^2.7.0",
-    "@wordpress/rich-text": "^3.12.2",
-    "babel-jest": "^25.2.3",
+    "@wordpress/rich-text": "^3.13.0",
+    "babel-jest": "^25.2.6",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
-    "jest": "^25.2.3",
+    "jest": "^25.2.7",
     "react": "^16.13.1"
   },
   "publishConfig": {
