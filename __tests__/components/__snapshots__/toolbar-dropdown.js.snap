@@ -65,13 +65,13 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-button"
+          className="components-dropdown components-dropdown-toggle"
         >
           <ForwardRef(IconButton)
             aria-expanded={true}
             aria-haspopup="true"
             aria-pressed={true}
-            className="components-dropdown-button__toggle is-active is-pressed"
+            className="components-dropdown-button__toggle components-toolbar__control is-active is-pressed"
             disabled={false}
             icon="admin-customizer"
             label="test label 0"
@@ -82,7 +82,7 @@ Array [
               aria-expanded={true}
               aria-haspopup="true"
               aria-pressed={true}
-              className="components-dropdown-button__toggle is-active is-pressed"
+              className="components-dropdown-button__toggle components-toolbar__control is-active is-pressed"
               disabled={false}
               icon="admin-customizer"
               label="test label 0"
@@ -94,7 +94,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 0"
                 aria-pressed={true}
-                className="components-button components-dropdown-button__toggle is-active is-pressed has-text has-icon"
+                className="components-button components-dropdown-button__toggle components-toolbar__control is-active is-pressed has-text has-icon"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -435,13 +435,13 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-button"
+          className="components-dropdown components-dropdown-toggle"
         >
           <ForwardRef(IconButton)
             aria-expanded={false}
             aria-haspopup="true"
             aria-pressed={true}
-            className="components-dropdown-button__toggle is-active is-pressed"
+            className="components-dropdown-button__toggle components-toolbar__control is-active is-pressed"
             disabled={false}
             icon="admin-customizer"
             label="test label 0"
@@ -452,7 +452,7 @@ Array [
               aria-expanded={false}
               aria-haspopup="true"
               aria-pressed={true}
-              className="components-dropdown-button__toggle is-active is-pressed"
+              className="components-dropdown-button__toggle components-toolbar__control is-active is-pressed"
               disabled={false}
               icon="admin-customizer"
               label="test label 0"
@@ -464,7 +464,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 0"
                 aria-pressed={true}
-                className="components-button components-dropdown-button__toggle is-active is-pressed has-text has-icon"
+                className="components-button components-dropdown-button__toggle components-toolbar__control is-active is-pressed has-text has-icon"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -715,13 +715,13 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-button test-class"
+          className="components-dropdown components-dropdown-toggle test-class"
         >
           <ForwardRef(IconButton)
             aria-expanded={true}
             aria-haspopup="true"
             aria-pressed={true}
-            className="components-dropdown-button__toggle is-active is-pressed"
+            className="components-dropdown-button__toggle components-toolbar__control is-active is-pressed"
             disabled={false}
             icon="admin-customizer"
             label="test label 1"
@@ -732,7 +732,7 @@ Array [
               aria-expanded={true}
               aria-haspopup="true"
               aria-pressed={true}
-              className="components-dropdown-button__toggle is-active is-pressed"
+              className="components-dropdown-button__toggle components-toolbar__control is-active is-pressed"
               disabled={false}
               icon="admin-customizer"
               label="test label 1"
@@ -744,7 +744,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 1"
                 aria-pressed={true}
-                className="components-button components-dropdown-button__toggle is-active is-pressed has-text has-icon"
+                className="components-button components-dropdown-button__toggle components-toolbar__control is-active is-pressed has-text has-icon"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -1087,13 +1087,13 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-button test-class"
+          className="components-dropdown components-dropdown-toggle test-class"
         >
           <ForwardRef(IconButton)
             aria-expanded={false}
             aria-haspopup="true"
             aria-pressed={true}
-            className="components-dropdown-button__toggle is-active is-pressed"
+            className="components-dropdown-button__toggle components-toolbar__control is-active is-pressed"
             disabled={false}
             icon="admin-customizer"
             label="test label 1"
@@ -1104,7 +1104,7 @@ Array [
               aria-expanded={false}
               aria-haspopup="true"
               aria-pressed={true}
-              className="components-dropdown-button__toggle is-active is-pressed"
+              className="components-dropdown-button__toggle components-toolbar__control is-active is-pressed"
               disabled={false}
               icon="admin-customizer"
               label="test label 1"
@@ -1116,7 +1116,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 1"
                 aria-pressed={true}
-                className="components-button components-dropdown-button__toggle is-active is-pressed has-text has-icon"
+                className="components-button components-dropdown-button__toggle components-toolbar__control is-active is-pressed has-text has-icon"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -1367,13 +1367,13 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-button"
+          className="components-dropdown components-dropdown-toggle"
         >
           <ForwardRef(IconButton)
             aria-expanded={false}
             aria-haspopup="true"
             aria-pressed={false}
-            className="components-dropdown-button__toggle"
+            className="components-dropdown-button__toggle components-toolbar__control"
             disabled={true}
             icon="admin-customizer"
             label="test label 2"
@@ -1384,7 +1384,7 @@ Array [
               aria-expanded={false}
               aria-haspopup="true"
               aria-pressed={false}
-              className="components-dropdown-button__toggle"
+              className="components-dropdown-button__toggle components-toolbar__control"
               disabled={true}
               icon="admin-customizer"
               label="test label 2"
@@ -1396,7 +1396,7 @@ Array [
                 aria-haspopup="true"
                 aria-label="test label 2"
                 aria-pressed={false}
-                className="components-button components-dropdown-button__toggle has-text has-icon"
+                className="components-button components-dropdown-button__toggle components-toolbar__control has-text has-icon"
                 disabled={true}
                 onClick={[Function]}
                 type="button"
