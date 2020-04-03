@@ -11,7 +11,16 @@ Array [
         aria-expanded={false}
         aria-haspopup="true"
         className="components-dropdown-menu__toggle"
-        icon="editor-alignleft"
+        icon={
+          <SVG
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
+            />
+          </SVG>
+        }
         label="Change text alignment"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -21,7 +30,7 @@ Array [
           aria-expanded={false}
           aria-haspopup="true"
           aria-label="Change text alignment"
-          className="components-button components-dropdown-menu__toggle has-text has-icon"
+          className="components-button components-dropdown-menu__toggle has-icon"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -33,22 +42,17 @@ Array [
         >
           <svg
             aria-hidden="true"
-            className="dashicon dashicons-editor-alignleft"
             focusable="false"
-            height={20}
+            height={24}
             role="img"
-            viewBox="0 0 20 20"
-            width={20}
+            viewBox="0 0 24 24"
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 5V3H3v2h9zm5 4V7H3v2h14zm-5 4v-2H3v2h9zm5 4v-2H3v2h14z"
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
             />
           </svg>
-          <span
-            className="components-dropdown-menu__indicator"
-            key="0,1"
-          />
         </button>
       </ForwardRef(Button)>
     </div>,
@@ -115,7 +119,7 @@ Array [
                   />
                 </svg>
                 <span
-                  className="components-dropdown-button__indicator"
+                  className="components-dropdown-menu__indicator"
                   key="0,1"
                 />
               </button>
@@ -139,11 +143,11 @@ Array [
                   onTouchStart={[Function]}
                 >
                   <ForwardRef
-                    className="components-popover components-dropdown-button__popover"
+                    className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
                     onKeyDown={[Function]}
                   >
                     <div
-                      className="components-popover components-dropdown-button__popover"
+                      className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
                     >
@@ -377,7 +381,16 @@ Array [
         aria-expanded={false}
         aria-haspopup="true"
         className="components-dropdown-menu__toggle"
-        icon="editor-alignleft"
+        icon={
+          <SVG
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
+            />
+          </SVG>
+        }
         label="Change text alignment"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -387,7 +400,7 @@ Array [
           aria-expanded={false}
           aria-haspopup="true"
           aria-label="Change text alignment"
-          className="components-button components-dropdown-menu__toggle has-text has-icon"
+          className="components-button components-dropdown-menu__toggle has-icon"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -399,22 +412,17 @@ Array [
         >
           <svg
             aria-hidden="true"
-            className="dashicon dashicons-editor-alignleft"
             focusable="false"
-            height={20}
+            height={24}
             role="img"
-            viewBox="0 0 20 20"
-            width={20}
+            viewBox="0 0 24 24"
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 5V3H3v2h9zm5 4V7H3v2h14zm-5 4v-2H3v2h9zm5 4v-2H3v2h14z"
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
             />
           </svg>
-          <span
-            className="components-dropdown-menu__indicator"
-            key="0,1"
-          />
         </button>
       </ForwardRef(Button)>
     </div>,
@@ -481,7 +489,7 @@ Array [
                   />
                 </svg>
                 <span
-                  className="components-dropdown-button__indicator"
+                  className="components-dropdown-menu__indicator"
                   key="0,1"
                 />
               </button>
@@ -653,7 +661,16 @@ Array [
         aria-expanded={false}
         aria-haspopup="true"
         className="components-dropdown-menu__toggle"
-        icon="editor-alignleft"
+        icon={
+          <SVG
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
+            />
+          </SVG>
+        }
         label="Change text alignment"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -663,7 +680,7 @@ Array [
           aria-expanded={false}
           aria-haspopup="true"
           aria-label="Change text alignment"
-          className="components-button components-dropdown-menu__toggle has-text has-icon"
+          className="components-button components-dropdown-menu__toggle has-icon"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -675,22 +692,17 @@ Array [
         >
           <svg
             aria-hidden="true"
-            className="dashicon dashicons-editor-alignleft"
             focusable="false"
-            height={20}
+            height={24}
             role="img"
-            viewBox="0 0 20 20"
-            width={20}
+            viewBox="0 0 24 24"
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 5V3H3v2h9zm5 4V7H3v2h14zm-5 4v-2H3v2h9zm5 4v-2H3v2h14z"
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
             />
           </svg>
-          <span
-            className="components-dropdown-menu__indicator"
-            key="0,1"
-          />
         </button>
       </ForwardRef(Button)>
     </div>,
@@ -757,7 +769,7 @@ Array [
                   />
                 </svg>
                 <span
-                  className="components-dropdown-button__indicator"
+                  className="components-dropdown-menu__indicator"
                   key="0,1"
                 />
               </button>
@@ -781,11 +793,11 @@ Array [
                   onTouchStart={[Function]}
                 >
                   <ForwardRef
-                    className="components-popover components-dropdown-button__popover"
+                    className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
                     onKeyDown={[Function]}
                   >
                     <div
-                      className="components-popover components-dropdown-button__popover"
+                      className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
                       onKeyDown={[Function]}
                       onMouseDown={[Function]}
                     >
@@ -1021,7 +1033,16 @@ Array [
         aria-expanded={false}
         aria-haspopup="true"
         className="components-dropdown-menu__toggle"
-        icon="editor-alignleft"
+        icon={
+          <SVG
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
+            />
+          </SVG>
+        }
         label="Change text alignment"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -1031,7 +1052,7 @@ Array [
           aria-expanded={false}
           aria-haspopup="true"
           aria-label="Change text alignment"
-          className="components-button components-dropdown-menu__toggle has-text has-icon"
+          className="components-button components-dropdown-menu__toggle has-icon"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -1043,22 +1064,17 @@ Array [
         >
           <svg
             aria-hidden="true"
-            className="dashicon dashicons-editor-alignleft"
             focusable="false"
-            height={20}
+            height={24}
             role="img"
-            viewBox="0 0 20 20"
-            width={20}
+            viewBox="0 0 24 24"
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 5V3H3v2h9zm5 4V7H3v2h14zm-5 4v-2H3v2h9zm5 4v-2H3v2h14z"
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
             />
           </svg>
-          <span
-            className="components-dropdown-menu__indicator"
-            key="0,1"
-          />
         </button>
       </ForwardRef(Button)>
     </div>,
@@ -1125,7 +1141,7 @@ Array [
                   />
                 </svg>
                 <span
-                  className="components-dropdown-button__indicator"
+                  className="components-dropdown-menu__indicator"
                   key="0,1"
                 />
               </button>
@@ -1297,7 +1313,16 @@ Array [
         aria-expanded={false}
         aria-haspopup="true"
         className="components-dropdown-menu__toggle"
-        icon="editor-alignleft"
+        icon={
+          <SVG
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
+            />
+          </SVG>
+        }
         label="Change text alignment"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -1307,7 +1332,7 @@ Array [
           aria-expanded={false}
           aria-haspopup="true"
           aria-label="Change text alignment"
-          className="components-button components-dropdown-menu__toggle has-text has-icon"
+          className="components-button components-dropdown-menu__toggle has-icon"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -1319,22 +1344,17 @@ Array [
         >
           <svg
             aria-hidden="true"
-            className="dashicon dashicons-editor-alignleft"
             focusable="false"
-            height={20}
+            height={24}
             role="img"
-            viewBox="0 0 20 20"
-            width={20}
+            viewBox="0 0 24 24"
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 5V3H3v2h9zm5 4V7H3v2h14zm-5 4v-2H3v2h9zm5 4v-2H3v2h14z"
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
             />
           </svg>
-          <span
-            className="components-dropdown-menu__indicator"
-            key="0,1"
-          />
         </button>
       </ForwardRef(Button)>
     </div>,
@@ -1396,7 +1416,7 @@ Array [
                   />
                 </svg>
                 <span
-                  className="components-dropdown-button__indicator"
+                  className="components-dropdown-menu__indicator"
                 />
               </button>
             </ForwardRef(Button)>
@@ -1567,7 +1587,16 @@ Array [
         aria-expanded={false}
         aria-haspopup="true"
         className="components-dropdown-menu__toggle"
-        icon="editor-alignleft"
+        icon={
+          <SVG
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
+            />
+          </SVG>
+        }
         label="Change text alignment"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -1577,7 +1606,7 @@ Array [
           aria-expanded={false}
           aria-haspopup="true"
           aria-label="Change text alignment"
-          className="components-button components-dropdown-menu__toggle has-text has-icon"
+          className="components-button components-dropdown-menu__toggle has-icon"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -1589,22 +1618,17 @@ Array [
         >
           <svg
             aria-hidden="true"
-            className="dashicon dashicons-editor-alignleft"
             focusable="false"
-            height={20}
+            height={24}
             role="img"
-            viewBox="0 0 20 20"
-            width={20}
+            viewBox="0 0 24 24"
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 5V3H3v2h9zm5 4V7H3v2h14zm-5 4v-2H3v2h9zm5 4v-2H3v2h14z"
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
             />
           </svg>
-          <span
-            className="components-dropdown-menu__indicator"
-            key="0,1"
-          />
         </button>
       </ForwardRef(Button)>
     </div>,
@@ -1798,7 +1822,16 @@ Array [
         aria-expanded={false}
         aria-haspopup="true"
         className="components-dropdown-menu__toggle"
-        icon="editor-alignleft"
+        icon={
+          <SVG
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Path
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
+            />
+          </SVG>
+        }
         label="Change text alignment"
         onClick={[Function]}
         onKeyDown={[Function]}
@@ -1808,7 +1841,7 @@ Array [
           aria-expanded={false}
           aria-haspopup="true"
           aria-label="Change text alignment"
-          className="components-button components-dropdown-menu__toggle has-text has-icon"
+          className="components-button components-dropdown-menu__toggle has-icon"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -1820,22 +1853,17 @@ Array [
         >
           <svg
             aria-hidden="true"
-            className="dashicon dashicons-editor-alignleft"
             focusable="false"
-            height={20}
+            height={24}
             role="img"
-            viewBox="0 0 20 20"
-            width={20}
+            viewBox="0 0 24 24"
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 5V3H3v2h9zm5 4V7H3v2h14zm-5 4v-2H3v2h9zm5 4v-2H3v2h14z"
+              d="M4 19.8h8.9v-1.5H4v1.5zm8.9-15.6H4v1.5h8.9V4.2zm-8.9 7v1.5h16v-1.5H4z"
             />
           </svg>
-          <span
-            className="components-dropdown-menu__indicator"
-            key="0,1"
-          />
         </button>
       </ForwardRef(Button)>
     </div>,
