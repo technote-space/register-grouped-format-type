@@ -13,7 +13,7 @@ createTest('ToolbarDropdown', () => <Fragment>
 	const getGroupedSlots  = setting => ([[{ Slot, setting }]]);
 	const openDropdownTest = (wrapper, index) => {
 		expect(wrapper.find('.editor-format-toolbar').hostNodes()).toHaveLength(1);
-		expect(wrapper.find('.components-dropdown-button').hostNodes()).toHaveLength(1);
+		expect(wrapper.find('.components-dropdown-toggle').hostNodes()).toHaveLength(1);
 		expect(wrapper.find('.components-dropdown-button__toggle').hostNodes()).toHaveLength(1);
 		expect(wrapper.find('.components-dropdown-button__toggle.is-active').hostNodes()).toHaveLength(1);
 		expect(wrapper.find('.components-dropdown-menu__menu-item').hostNodes()).toHaveLength(0);
@@ -89,7 +89,7 @@ createTest('ToolbarDropdown', () => <Fragment>
 			createToolbarDropdown: setting => ToolbarDropdown(getGroupedSlots(setting)),
 			callback: (wrapper) => {
 				expect(wrapper.find('.editor-format-toolbar').hostNodes()).toHaveLength(1);
-				expect(wrapper.find('.components-dropdown-button').hostNodes()).toHaveLength(1);
+				expect(wrapper.find('.components-dropdown-toggle').hostNodes()).toHaveLength(1);
 				expect(wrapper.find('.components-dropdown-button__toggle').hostNodes()).toHaveLength(1);
 				expect(wrapper.find('.components-dropdown-button__toggle.is-active').hostNodes()).toHaveLength(0);
 			},
@@ -107,7 +107,7 @@ createTest('ToolbarDropdown', () => <Fragment>
 			createToolbarDropdown: setting => ToolbarDropdown(getGroupedSlots(setting)),
 			callback: (wrapper) => {
 				expect(wrapper.find('.editor-format-toolbar').hostNodes()).toHaveLength(1);
-				expect(wrapper.find('.components-dropdown-button').hostNodes()).toHaveLength(0);
+				expect(wrapper.find('.components-dropdown-toggle').hostNodes()).toHaveLength(0);
 				expect(wrapper.find('.toolbar-button-test7').hostNodes()).toHaveLength(1);
 			},
 		},
@@ -116,7 +116,7 @@ createTest('ToolbarDropdown', () => <Fragment>
 			createToolbarDropdown: setting => ToolbarDropdown(getGroupedSlots(setting)),
 			callback: (wrapper) => {
 				expect(wrapper.find('.editor-format-toolbar').hostNodes()).toHaveLength(1);
-				expect(wrapper.find('.components-dropdown-button').hostNodes()).toHaveLength(0);
+				expect(wrapper.find('.components-dropdown-toggle').hostNodes()).toHaveLength(0);
 				expect(wrapper.find('.components-dropdown-button__toggle').hostNodes()).toHaveLength(0);
 			},
 		},
