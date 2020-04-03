@@ -1179,10 +1179,10 @@
     react-autosize-textarea "^7.0.0"
     react-dom "^16.13.1"
 
-"@technote-space/gutenberg-utils@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-2.1.2.tgz#20794c59f667f0e2f82d6d8b80c5927fe4b15306"
-  integrity sha512-Jj7Q56/CggouSquq7LXpqIAX4BuJmAcMwa1W4lStkyBjBsP6ZXbjXmgKbBZ6oLYzBXw2Vx+PucyA6/UzIAF7wA==
+"@technote-space/gutenberg-utils@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-2.1.4.tgz#f159ae432552f592f8b4b37108fc18c300cac1e4"
+  integrity sha512-SItd/fJlTnTAg19Fb+dCW/zUXM4Qs9ZDM9K/uTYlX9kWyiWigI4W2+P0gzVCddIhJjGUGPhBAbXnYO5x/p3JVA==
   dependencies:
     classnames "^2.2.6"
     nano-css "^5.3.0"
@@ -4287,9 +4287,9 @@ istanbul-lib-source-maps@^4.0.0:
     source-map "^0.6.1"
 
 istanbul-reports@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-3.0.1.tgz#1343217244ad637e0c3b18e7f6b746941a9b5e9a"
-  integrity sha512-Vm9xwCiQ8t2cNNnckyeAV0UdxKpcQUz4nMxsBvIu8n2kmPSiyb5uaF/8LpmKr+yqL/MdOXaX2Nmdo4Qyxium9Q==
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-3.0.2.tgz#d593210e5000683750cb09fc0644e4b6e27fd53b"
+  integrity sha512-9tZvz7AiR3PEDNGiV9vIouQ/EAcqMXFmkcA1CDFTwOB98OZVDL0PH9glHotf5Ugp6GCOTypfzGWI/OqjWNCRUw==
   dependencies:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
@@ -5040,9 +5040,9 @@ mixin-deep@^1.2.0:
     is-extendable "^1.0.1"
 
 mkdirp@^0.5.0, mkdirp@^0.5.1:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.4.tgz#fd01504a6797ec5c9be81ff43d204961ed64a512"
-  integrity sha512-iG9AK/dJLtJ0XNgTuDbSyNS3zECqDlAhnQW4CsNxBG3LQJBbHmRX1egw39DmtOdCAqY+dKXV+sgPgilNWUKMVw==
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
+  integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
 
