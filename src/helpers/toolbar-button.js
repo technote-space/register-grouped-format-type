@@ -1,7 +1,7 @@
 import React from 'react';
-import { Fragment } from '@wordpress/element';
-import { GroupedControls, GroupedInspectors, ToolbarDropdown, InspectorComponent } from '../components';
-import { registerMultipleClassFormatType, getFormatName } from './rich-text';
+import {Fragment} from '@wordpress/element';
+import {GroupedControls, GroupedInspectors, ToolbarDropdown, InspectorComponent} from '../components';
+import {registerMultipleClassFormatType, getFormatName} from './rich-text';
 
 const formatNames          = {};
 const groups               = {};
@@ -15,15 +15,15 @@ const useInspectorSettings = {};
  * @returns {object} registered setting
  */
 export const registerFormatTypeGroup = (name, setting = {}) => {
-  groupSettings[ name ] = Object.assign({}, getGroupSetting(name), setting);
-  return groupSettings[ name ];
+  groupSettings[name] = Object.assign({}, getGroupSetting(name), setting);
+  return groupSettings[name];
 };
 
 /**
  * @param {string} name group name
  * @returns {{icon: string, position: string, label: string, className: undefined, menuClassName: undefined, inspectorSettings, toolbarGroup, useContrastChecker, additionalInspectors}} setting
  */
-const getGroupSetting = name => name in groupSettings ? groupSettings[ name ] : getDefaultSetting(name);
+const getGroupSetting = name => name in groupSettings ? groupSettings[name] : getDefaultSetting(name);
 
 /**
  * @param {string} name group name
@@ -47,12 +47,12 @@ const getDefaultSetting = name => ({
 const getToolbarGroupedSlots = () => {
   const grouped = {};
   Object.keys(groups).forEach(key => {
-    const setting      = getGroupSetting(key in useInspectorSettings ? useInspectorSettings[ key ] : key);
+    const setting      = getGroupSetting(key in useInspectorSettings ? useInspectorSettings[key] : key);
     const toolbarGroup = setting.toolbarGroup;
     if (!(toolbarGroup in grouped)) {
-      grouped[ toolbarGroup ] = [];
+      grouped[toolbarGroup] = [];
     }
-    grouped[ toolbarGroup ].push({ Slot: groups[ key ].Slot, setting });
+    grouped[toolbarGroup].push({Slot: groups[key].Slot, setting});
   });
   return Object.values(grouped);
 };
@@ -89,11 +89,11 @@ export const registerGroupedFormatType = ({
     return null;
   }
 
-  const isFirst             = !Object.keys(formatNames).length;
-  formatNames[ formatName ] = formatName;
+  const isFirst           = !Object.keys(formatNames).length;
+  formatNames[formatName] = formatName;
 
   if (settings && 'useInspectorSetting' in settings && settings.useInspectorSetting && inspectorGroup) {
-    useInspectorSettings[ group ] = inspectorGroup;
+    useInspectorSettings[group] = inspectorGroup;
   }
 
   return registerMultipleClassFormatType(formatName, {
@@ -152,7 +152,7 @@ const onEdit = (name, formatName, group, inspectorGroup, create, createInspector
  * @returns {null|*} component
  */
 const createComponent = (createFunction, group, args, name, formatName, settings) => {
-  const component = !!group && typeof createFunction === 'function' ? createFunction({ args, name, formatName }) : null;
+  const component = !!group && typeof createFunction === 'function' ? createFunction({args, name, formatName}) : null;
   if (component) {
     return Object.assign({}, component, {
       props: Object.assign({}, component.props, {
@@ -180,9 +180,9 @@ const createFill = (group, component, groups, createFillSlotFunction) => {
   }
 
   if (!(group in groups)) {
-    groups[ group ] = createFillSlotFunction(group);
+    groups[group] = createFillSlotFunction(group);
   }
-  const Fill = groups[ group ].Fill;
+  const Fill = groups[group].Fill;
   return <Fill>
     {component}
   </Fill>;
@@ -209,5 +209,5 @@ const createInspectorFill = (inspectorGroup, component) => createFill(inspectorG
  */
 const createSlot = (isFirst, args) => isFirst ? <Fragment>
   {ToolbarDropdown(getToolbarGroupedSlots())}
-  {Object.keys(inspectorGroups).map((key, index) => InspectorComponent(inspectorGroups[ key ].Slot, getGroupSetting(key), args, index))}
+  {Object.keys(inspectorGroups).map((key, index) => InspectorComponent(inspectorGroups[key].Slot, getGroupSetting(key), args, index))}
 </Fragment> : null;

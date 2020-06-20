@@ -1,13 +1,13 @@
 /* eslint-disable no-magic-numbers */
 import React from 'react';
-import { mount } from 'enzyme';
+import {mount} from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { BlockEdit } from '@wordpress/block-editor';
-import { SlotFillProvider } from '@wordpress/components';
-import { Fragment } from '@wordpress/element';
-import { addFilter, removeFilter } from '@wordpress/hooks';
-import { create } from '@wordpress/rich-text';
-import { GroupedControls } from '../../src/components';
+import {BlockEdit} from '@wordpress/block-editor';
+import {SlotFillProvider} from '@wordpress/components';
+import {Fragment} from '@wordpress/element';
+import {addFilter, removeFilter} from '@wordpress/hooks';
+import {create} from '@wordpress/rich-text';
+import {GroupedControls} from '../../src/components';
 
 const createTest = (targetName, createSlot, getCases) => {
   let filter;
@@ -32,7 +32,7 @@ const createTest = (targetName, createSlot, getCases) => {
       useContrastChecker: false,
       additionalInspectors: [],
     });
-    const { Fill, Slot }  = GroupedControls('components-test');
+    const {Fill, Slot}    = GroupedControls('components-test');
 
     const createFilter = (index, createToolbarDropdown, createComponents) => (BlockEdit, props) => <Fragment>
       <BlockEdit {...props} />
@@ -40,7 +40,7 @@ const createTest = (targetName, createSlot, getCases) => {
       {createComponents(index)}
     </Fragment>;
 
-    getCases(Fill, Slot, getSnapshotName).forEach(({ createComponents, createToolbarDropdown, callback }, index) => {
+    getCases(Fill, Slot, getSnapshotName).forEach(({createComponents, createToolbarDropdown, callback}, index) => {
       it(`should render ${targetName} ${index}`, () => {
         filter        = createFilter(index, createToolbarDropdown, createComponents);
         const wrapper = mount(
@@ -63,7 +63,7 @@ const createTest = (targetName, createSlot, getCases) => {
           </SlotFillProvider>,
         );
 
-        expect(toJson(wrapper, { mode: 'deep' })).toMatchSnapshot(getSnapshotName('test', index));
+        expect(toJson(wrapper, {mode: 'deep'})).toMatchSnapshot(getSnapshotName('test', index));
 
         callback(wrapper, index);
       });

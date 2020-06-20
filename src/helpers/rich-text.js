@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from '@wordpress/components';
-import { Helpers } from '../utils';
-import { PLUGIN_NAME } from '../constant';
+import {Button} from '@wordpress/components';
+import {Helpers} from '../utils';
+import {PLUGIN_NAME} from '../constant';
 
-const { isValidRemoveFormatButton, getRemoveFormatFunction } = Helpers;
-const { dispatch, select }                                   = wp.data;
+const {isValidRemoveFormatButton, getRemoveFormatFunction} = Helpers;
+const {dispatch, select}                                   = wp.data;
 
 /**
  * @param {object} settings settings
@@ -41,7 +41,7 @@ const validateName = settings => {
 const validateTagName = settings => {
   if (
     typeof settings.tagName !== 'string' ||
-		settings.tagName === ''
+    settings.tagName === ''
   ) {
     window.console.error(
       'Format tag names must be a string.',
@@ -58,7 +58,7 @@ const validateTagName = settings => {
 const validateClassName = settings => {
   if (
     (typeof settings.className !== 'string' || settings.className === '') &&
-		settings.className !== null
+    settings.className !== null
   ) {
     window.console.error(
       'Format class names must be a string, or null to handle bare elements.',

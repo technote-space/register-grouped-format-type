@@ -1,16 +1,16 @@
 /* eslint-disable no-magic-numbers */
 import React from 'react';
-import { Fragment } from '@wordpress/element';
-import { BlockControls } from '@wordpress/block-editor';
-import { ToolbarButton } from '@wordpress/components';
+import {Fragment} from '@wordpress/element';
+import {BlockControls} from '@wordpress/block-editor';
+import {ToolbarButton} from '@wordpress/components';
 import toJson from 'enzyme-to-json';
 import createTest from './common';
-import { ToolbarDropdown } from '../../src/components';
+import {ToolbarDropdown} from '../../src/components';
 
 createTest('ToolbarDropdown', () => <Fragment>
   <BlockControls.Slot/>
 </Fragment>, (Fill, Slot, getSnapshotName) => {
-  const getGroupedSlots  = setting => ([[{ Slot, setting }]]);
+  const getGroupedSlots  = setting => ([[{Slot, setting}]]);
   const openDropdownTest = (wrapper, index) => {
     expect(wrapper.find('.editor-format-toolbar').hostNodes()).toHaveLength(1);
     expect(wrapper.find('.components-dropdown-toggle').hostNodes()).toHaveLength(1);
@@ -20,7 +20,7 @@ createTest('ToolbarDropdown', () => <Fragment>
 
     wrapper.find('.components-dropdown-button__toggle.is-active').hostNodes().simulate('click');
 
-    expect(toJson(wrapper, { mode: 'deep' })).toMatchSnapshot(getSnapshotName('opened-dropdown', index));
+    expect(toJson(wrapper, {mode: 'deep'})).toMatchSnapshot(getSnapshotName('opened-dropdown', index));
 
     expect(wrapper.find('.components-dropdown-menu__menu-item').hostNodes()).toHaveLength(2);
     expect(wrapper.find('.components-dropdown-menu__menu-item.is-active').hostNodes()).toHaveLength(1);
@@ -47,7 +47,7 @@ createTest('ToolbarDropdown', () => <Fragment>
           />
         </Fill>
       </Fragment>,
-      createToolbarDropdown: setting => ToolbarDropdown(getGroupedSlots(Object.assign({}, setting, { menuClassName: 'test-menu-class' }))),
+      createToolbarDropdown: setting => ToolbarDropdown(getGroupedSlots(Object.assign({}, setting, {menuClassName: 'test-menu-class'}))),
       callback: openDropdownTest,
     },
     {
@@ -66,7 +66,7 @@ createTest('ToolbarDropdown', () => <Fragment>
           />
         </Fill>
       </Fragment>,
-      createToolbarDropdown: setting => ToolbarDropdown(getGroupedSlots(Object.assign({}, setting, { className: 'test-class' }))),
+      createToolbarDropdown: setting => ToolbarDropdown(getGroupedSlots(Object.assign({}, setting, {className: 'test-class'}))),
       callback: openDropdownTest,
     },
     {

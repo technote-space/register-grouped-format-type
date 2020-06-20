@@ -1,5 +1,5 @@
-import { PLUGIN_NAME } from '../../src/constant';
-import { registerMultipleClassFormatType, getFormatName, getRemoveFormatButton } from '../../src/helpers';
+import {PLUGIN_NAME} from '../../src/constant';
+import {registerMultipleClassFormatType, getFormatName, getRemoveFormatButton} from '../../src/helpers';
 
 describe('registerMultipleClassFormatType', () => {
   it('should not null if succeeded registration', () => {
@@ -23,7 +23,7 @@ describe('registerMultipleClassFormatType', () => {
 
   it('should null if invalid name', () => {
     expect(registerMultipleClassFormatType(1, {})).toBeNull(); // eslint-disable-line no-magic-numbers
-    expect(registerMultipleClassFormatType('test2-2', { name: 2 })).toBeNull();
+    expect(registerMultipleClassFormatType('test2-2', {name: 2})).toBeNull();
     expect(registerMultipleClassFormatType('test2-3', {})).toBeNull();
     expect(registerMultipleClassFormatType('123rich-text/test2-4', {})).toBeNull();
   });
@@ -123,7 +123,7 @@ describe('getRemoveFormatButton', () => {
       value: {
         formats: [
           {
-            attributes: { style: 'font-size: 16px' },
+            attributes: {style: 'font-size: 16px'},
             type: 'test/test',
             unregisteredAttributes: {},
           },

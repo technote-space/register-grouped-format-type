@@ -1,10 +1,10 @@
 /* eslint-disable no-magic-numbers */
 import React from 'react';
-import { Fragment } from '@wordpress/element';
-import { InspectorControls } from '@wordpress/block-editor';
-import { ToolbarButton } from '@wordpress/components';
+import {Fragment} from '@wordpress/element';
+import {InspectorControls} from '@wordpress/block-editor';
+import {ToolbarButton} from '@wordpress/components';
 import createTest from './common';
-import { InspectorComponent } from '../../src/components';
+import {InspectorComponent} from '../../src/components';
 
 createTest('InspectorComponent', () => <InspectorControls.Slot/>, (Fill, Slot) => [
   {
@@ -17,7 +17,7 @@ createTest('InspectorComponent', () => <InspectorControls.Slot/>, (Fill, Slot) =
       </Fill>
     </Fragment>,
     createToolbarDropdown: setting => InspectorComponent(Slot, Object.assign({}, setting, {
-      inspectorSettings: { className: 'inspector-test' },
+      inspectorSettings: {className: 'inspector-test'},
       useContrastChecker: true,
       additionalInspectors: [
         () => <div className='additional-inspector-test1'>test1</div>,
@@ -43,7 +43,7 @@ createTest('InspectorComponent', () => <InspectorControls.Slot/>, (Fill, Slot) =
     </Fragment>,
     createToolbarDropdown: setting => InspectorComponent(Slot, Object.assign({}, setting, {
       className: 'inspector-test',
-      inspectorSettings: { className: 'inspector-test', initialOpen: false },
+      inspectorSettings: {className: 'inspector-test', initialOpen: false},
     }), {}, 0),
     callback: (wrapper) => {
       expect(wrapper.find('.components-panel__body.inspector-test').hostNodes()).toHaveLength(1);
@@ -62,7 +62,7 @@ createTest('InspectorComponent', () => <InspectorControls.Slot/>, (Fill, Slot) =
       </Fill>
     </Fragment>,
     createToolbarDropdown: setting => InspectorComponent(Slot, Object.assign({}, setting, {
-      inspectorSettings: { className: 'inspector-test' },
+      inspectorSettings: {className: 'inspector-test'},
     }), {}, 0),
     callback: (wrapper) => {
       expect(wrapper.find('.components-panel__body.inspector-test').hostNodes()).toHaveLength(0);

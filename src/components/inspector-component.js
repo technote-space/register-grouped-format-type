@@ -1,9 +1,9 @@
 import React from 'react';
-import { PanelBody } from '@wordpress/components';
-import { InspectorControls } from '@wordpress/block-editor';
-import { Helpers } from '../utils';
+import {PanelBody} from '@wordpress/components';
+import {InspectorControls} from '@wordpress/block-editor';
+import {Helpers} from '../utils';
 
-const { getContrastChecker } = Helpers;
+const {getContrastChecker} = Helpers;
 
 /**
  * @param {Array} fills fills
@@ -12,7 +12,7 @@ const { getContrastChecker } = Helpers;
  * @returns {null|*} inspector
  */
 const createInspectorComponent = (fills, setting, args) => {
-  const activeFills          = fills.filter(([{ props }]) => !props.isDisabled);
+  const activeFills          = fills.filter(([{props}]) => !props.isDisabled);
   const additionalInspectors = setting.additionalInspectors.map(generator => generator(args, setting)).filter(component => !!component);
   if (!activeFills.length && !additionalInspectors.length) {
     return null;

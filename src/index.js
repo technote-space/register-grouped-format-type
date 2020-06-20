@@ -1,3 +1,3 @@
 import * as RichText from './helpers';
 
-export { RichText };
+export {RichText};

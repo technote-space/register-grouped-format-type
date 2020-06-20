@@ -1,4 +1,4 @@
-import { createSlotFill } from '@wordpress/components';
+import {createSlotFill} from '@wordpress/components';
 
 /**
  * @param {string} group group
