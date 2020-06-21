@@ -53,7 +53,7 @@ Array [
             aria-haspopup="true"
             aria-label="test label 0"
             aria-pressed={true}
-            className="components-button components-dropdown-button__toggle components-toolbar__control is-active is-pressed has-text has-icon"
+            className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control is-active is-pressed has-text has-icon"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -283,7 +283,7 @@ Array [
             aria-haspopup="true"
             aria-label="test label 0"
             aria-pressed={true}
-            className="components-button components-dropdown-button__toggle components-toolbar__control is-active is-pressed has-text has-icon"
+            className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control is-active is-pressed has-text has-icon"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -458,7 +458,7 @@ Array [
             aria-haspopup="true"
             aria-label="test label 1"
             aria-pressed={true}
-            className="components-button components-dropdown-button__toggle components-toolbar__control is-active is-pressed has-text has-icon"
+            className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control is-active is-pressed has-text has-icon"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -689,7 +689,7 @@ Array [
             aria-haspopup="true"
             aria-label="test label 1"
             aria-pressed={true}
-            className="components-button components-dropdown-button__toggle components-toolbar__control is-active is-pressed has-text has-icon"
+            className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control is-active is-pressed has-text has-icon"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -864,7 +864,7 @@ Array [
             aria-haspopup="true"
             aria-label="test label 2"
             aria-pressed={false}
-            className="components-button components-dropdown-button__toggle components-toolbar__control has-text has-icon"
+            className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control has-text has-icon"
             disabled={true}
             onClick={[Function]}
             type="button"
