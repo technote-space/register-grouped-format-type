@@ -63,6 +63,6 @@
     "cover:update": "jest --coverage --updateSnapshot",
     "develop": "rm -rdf build && babel src --out-dir build",
     "build": "rm -rdf build && babel --compact=true src --out-dir build",
-    "update": "ncu -u && yarn install && yarn upgrade && yarn audit"
+    "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit"
   }
 }
