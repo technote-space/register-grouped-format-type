@@ -109,27 +109,55 @@ Array [
                       tabIndex="-1"
                     >
                       <div
-                        aria-label="test label 0"
-                        aria-orientation="vertical"
-                        className="components-dropdown-menu__menu test-menu-class"
-                        role="menu"
+                        style={
+                          Object {
+                            "position": "relative",
+                          }
+                        }
                       >
-                        <button
-                          className="components-button components-dropdown-menu__menu-item is-active"
-                          onClick={[Function]}
-                          role="menuitem"
-                          type="button"
+                        <iframe
+                          aria-hidden={true}
+                          frameBorder={0}
+                          src="about:blank"
+                          style={
+                            Object {
+                              "display": "block",
+                              "height": "100%",
+                              "left": 0,
+                              "opacity": 0,
+                              "overflow": "hidden",
+                              "pointerEvents": "none",
+                              "position": "absolute",
+                              "top": 0,
+                              "width": "100%",
+                              "zIndex": -1,
+                            }
+                          }
+                          tabIndex={-1}
+                        />
+                        <div
+                          aria-label="test label 0"
+                          aria-orientation="vertical"
+                          className="components-dropdown-menu__menu test-menu-class"
+                          role="menu"
                         >
-                          ToolbarButton1
-                        </button>
-                        <button
-                          className="components-button components-dropdown-menu__menu-item"
-                          onClick={[Function]}
-                          role="menuitem"
-                          type="button"
-                        >
-                          ToolbarButton2
-                        </button>
+                          <button
+                            className="components-button components-dropdown-menu__menu-item is-active"
+                            onClick={[Function]}
+                            role="menuitem"
+                            type="button"
+                          >
+                            ToolbarButton1
+                          </button>
+                          <button
+                            className="components-button components-dropdown-menu__menu-item"
+                            onClick={[Function]}
+                            role="menuitem"
+                            type="button"
+                          >
+                            ToolbarButton2
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -150,68 +178,60 @@ Array [
       <blockquote
         className="wp-block-quote test-block-edit"
       >
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write quote…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+        <div
+          aria-activedescendant={null}
+          aria-label="Write quote…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write citation…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+          }
+          suppressContentEditableWarning={true}
+        />
+        <div
+          aria-activedescendant={null}
+          aria-label="Write citation…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
+          }
+          suppressContentEditableWarning={true}
+        />
       </blockquote>,
     ],
     Array [
@@ -325,68 +345,60 @@ Array [
       <blockquote
         className="wp-block-quote test-block-edit"
       >
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write quote…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+        <div
+          aria-activedescendant={null}
+          aria-label="Write quote…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write citation…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+          }
+          suppressContentEditableWarning={true}
+        />
+        <div
+          aria-activedescendant={null}
+          aria-label="Write citation…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
+          }
+          suppressContentEditableWarning={true}
+        />
       </blockquote>,
     ],
     Array [
@@ -514,28 +526,56 @@ Array [
                       tabIndex="-1"
                     >
                       <div
-                        aria-label="test label 1"
-                        aria-orientation="vertical"
-                        className="components-dropdown-menu__menu"
-                        role="menu"
+                        style={
+                          Object {
+                            "position": "relative",
+                          }
+                        }
                       >
-                        <button
-                          className="components-button components-dropdown-menu__menu-item is-active"
-                          onClick={[Function]}
-                          role="menuitem"
-                          type="button"
+                        <iframe
+                          aria-hidden={true}
+                          frameBorder={0}
+                          src="about:blank"
+                          style={
+                            Object {
+                              "display": "block",
+                              "height": "100%",
+                              "left": 0,
+                              "opacity": 0,
+                              "overflow": "hidden",
+                              "pointerEvents": "none",
+                              "position": "absolute",
+                              "top": 0,
+                              "width": "100%",
+                              "zIndex": -1,
+                            }
+                          }
+                          tabIndex={-1}
+                        />
+                        <div
+                          aria-label="test label 1"
+                          aria-orientation="vertical"
+                          className="components-dropdown-menu__menu"
+                          role="menu"
                         >
-                          ToolbarButton3
-                        </button>
-                        <button
-                          className="components-button components-dropdown-menu__menu-item"
-                          disabled={true}
-                          onClick={[Function]}
-                          role="menuitem"
-                          type="button"
-                        >
-                          ToolbarButton4
-                        </button>
+                          <button
+                            className="components-button components-dropdown-menu__menu-item is-active"
+                            onClick={[Function]}
+                            role="menuitem"
+                            type="button"
+                          >
+                            ToolbarButton3
+                          </button>
+                          <button
+                            className="components-button components-dropdown-menu__menu-item"
+                            disabled={true}
+                            onClick={[Function]}
+                            role="menuitem"
+                            type="button"
+                          >
+                            ToolbarButton4
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -556,68 +596,60 @@ Array [
       <blockquote
         className="wp-block-quote test-block-edit"
       >
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write quote…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+        <div
+          aria-activedescendant={null}
+          aria-label="Write quote…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write citation…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+          }
+          suppressContentEditableWarning={true}
+        />
+        <div
+          aria-activedescendant={null}
+          aria-label="Write citation…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
+          }
+          suppressContentEditableWarning={true}
+        />
       </blockquote>,
     ],
     Array [
@@ -731,68 +763,60 @@ Array [
       <blockquote
         className="wp-block-quote test-block-edit"
       >
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write quote…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+        <div
+          aria-activedescendant={null}
+          aria-label="Write quote…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write citation…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+          }
+          suppressContentEditableWarning={true}
+        />
+        <div
+          aria-activedescendant={null}
+          aria-label="Write citation…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
+          }
+          suppressContentEditableWarning={true}
+        />
       </blockquote>,
     ],
     Array [
@@ -900,68 +924,60 @@ Array [
       <blockquote
         className="wp-block-quote test-block-edit"
       >
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write quote…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+        <div
+          aria-activedescendant={null}
+          aria-label="Write quote…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write citation…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+          }
+          suppressContentEditableWarning={true}
+        />
+        <div
+          aria-activedescendant={null}
+          aria-label="Write citation…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
+          }
+          suppressContentEditableWarning={true}
+        />
       </blockquote>,
     ],
     Array [
@@ -1052,68 +1068,60 @@ Array [
       <blockquote
         className="wp-block-quote test-block-edit"
       >
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write quote…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+        <div
+          aria-activedescendant={null}
+          aria-label="Write quote…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write citation…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+          }
+          suppressContentEditableWarning={true}
+        />
+        <div
+          aria-activedescendant={null}
+          aria-label="Write citation…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
+          }
+          suppressContentEditableWarning={true}
+        />
       </blockquote>,
     ],
     Array [
@@ -1184,68 +1192,60 @@ Array [
       <blockquote
         className="wp-block-quote test-block-edit"
       >
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write quote…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+        <div
+          aria-activedescendant={null}
+          aria-label="Write quote…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
-        Array [
-          "",
-          "",
-          <div
-            aria-activedescendant={null}
-            aria-label="Write citation…"
-            aria-multiline={true}
-            aria-owns={null}
-            className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-            contentEditable={true}
-            onBlur={[Function]}
-            onCompositionEnd={[Function]}
-            onCompositionStart={[Function]}
-            onFocus={[Function]}
-            onInput={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            onMouseUp={[Function]}
-            onPaste={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            role="textbox"
-            style={
-              Object {
-                "whiteSpace": "pre-wrap",
-              }
+          }
+          suppressContentEditableWarning={true}
+        />
+        <div
+          aria-activedescendant={null}
+          aria-label="Write citation…"
+          aria-multiline=""
+          aria-owns={null}
+          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
+          contentEditable={true}
+          onBlur={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          role="textbox"
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
             }
-            suppressContentEditableWarning={true}
-          />,
-        ]
+          }
+          suppressContentEditableWarning={true}
+        />
       </blockquote>,
     ],
     Array [
