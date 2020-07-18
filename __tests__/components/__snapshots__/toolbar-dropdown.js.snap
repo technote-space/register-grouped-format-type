@@ -82,89 +82,87 @@ Array [
               key="0,1"
             />
           </button>
-          <span>
+          <div
+            onKeyDown={[Function]}
+            tabIndex="-1"
+          >
             <div
-              onKeyDown={[Function]}
-              tabIndex="-1"
+              onBlur={[Function]}
+              onFocus={[Function]}
             >
               <div
                 onBlur={[Function]}
                 onFocus={[Function]}
+                onMouseDown={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
               >
                 <div
-                  onBlur={[Function]}
-                  onFocus={[Function]}
+                  className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
+                  onKeyDown={[Function]}
                   onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
                 >
                   <div
-                    className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
-                    onKeyDown={[Function]}
-                    onMouseDown={[Function]}
+                    className="components-popover__content"
+                    tabIndex="-1"
                   >
                     <div
-                      className="components-popover__content"
-                      tabIndex="-1"
+                      style={
+                        Object {
+                          "position": "relative",
+                        }
+                      }
                     >
-                      <div
+                      <iframe
+                        aria-hidden={true}
+                        frameBorder={0}
+                        src="about:blank"
                         style={
                           Object {
-                            "position": "relative",
+                            "display": "block",
+                            "height": "100%",
+                            "left": 0,
+                            "opacity": 0,
+                            "overflow": "hidden",
+                            "pointerEvents": "none",
+                            "position": "absolute",
+                            "top": 0,
+                            "width": "100%",
+                            "zIndex": -1,
                           }
                         }
+                        tabIndex={-1}
+                      />
+                      <div
+                        aria-label="test label 0"
+                        aria-orientation="vertical"
+                        className="components-dropdown-menu__menu test-menu-class"
+                        role="menu"
                       >
-                        <iframe
-                          aria-hidden={true}
-                          frameBorder={0}
-                          src="about:blank"
-                          style={
-                            Object {
-                              "display": "block",
-                              "height": "100%",
-                              "left": 0,
-                              "opacity": 0,
-                              "overflow": "hidden",
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "top": 0,
-                              "width": "100%",
-                              "zIndex": -1,
-                            }
-                          }
-                          tabIndex={-1}
-                        />
-                        <div
-                          aria-label="test label 0"
-                          aria-orientation="vertical"
-                          className="components-dropdown-menu__menu test-menu-class"
-                          role="menu"
+                        <button
+                          className="components-button components-dropdown-menu__menu-item is-active"
+                          onClick={[Function]}
+                          role="menuitem"
+                          type="button"
                         >
-                          <button
-                            className="components-button components-dropdown-menu__menu-item is-active"
-                            onClick={[Function]}
-                            role="menuitem"
-                            type="button"
-                          >
-                            ToolbarButton1
-                          </button>
-                          <button
-                            className="components-button components-dropdown-menu__menu-item"
-                            onClick={[Function]}
-                            role="menuitem"
-                            type="button"
-                          >
-                            ToolbarButton2
-                          </button>
-                        </div>
+                          ToolbarButton1
+                        </button>
+                        <button
+                          className="components-button components-dropdown-menu__menu-item"
+                          onClick={[Function]}
+                          role="menuitem"
+                          type="button"
+                        >
+                          ToolbarButton2
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>,
@@ -499,90 +497,88 @@ Array [
               key="0,1"
             />
           </button>
-          <span>
+          <div
+            onKeyDown={[Function]}
+            tabIndex="-1"
+          >
             <div
-              onKeyDown={[Function]}
-              tabIndex="-1"
+              onBlur={[Function]}
+              onFocus={[Function]}
             >
               <div
                 onBlur={[Function]}
                 onFocus={[Function]}
+                onMouseDown={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
               >
                 <div
-                  onBlur={[Function]}
-                  onFocus={[Function]}
+                  className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
+                  onKeyDown={[Function]}
                   onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onTouchEnd={[Function]}
-                  onTouchStart={[Function]}
                 >
                   <div
-                    className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
-                    onKeyDown={[Function]}
-                    onMouseDown={[Function]}
+                    className="components-popover__content"
+                    tabIndex="-1"
                   >
                     <div
-                      className="components-popover__content"
-                      tabIndex="-1"
+                      style={
+                        Object {
+                          "position": "relative",
+                        }
+                      }
                     >
-                      <div
+                      <iframe
+                        aria-hidden={true}
+                        frameBorder={0}
+                        src="about:blank"
                         style={
                           Object {
-                            "position": "relative",
+                            "display": "block",
+                            "height": "100%",
+                            "left": 0,
+                            "opacity": 0,
+                            "overflow": "hidden",
+                            "pointerEvents": "none",
+                            "position": "absolute",
+                            "top": 0,
+                            "width": "100%",
+                            "zIndex": -1,
                           }
                         }
+                        tabIndex={-1}
+                      />
+                      <div
+                        aria-label="test label 1"
+                        aria-orientation="vertical"
+                        className="components-dropdown-menu__menu"
+                        role="menu"
                       >
-                        <iframe
-                          aria-hidden={true}
-                          frameBorder={0}
-                          src="about:blank"
-                          style={
-                            Object {
-                              "display": "block",
-                              "height": "100%",
-                              "left": 0,
-                              "opacity": 0,
-                              "overflow": "hidden",
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "top": 0,
-                              "width": "100%",
-                              "zIndex": -1,
-                            }
-                          }
-                          tabIndex={-1}
-                        />
-                        <div
-                          aria-label="test label 1"
-                          aria-orientation="vertical"
-                          className="components-dropdown-menu__menu"
-                          role="menu"
+                        <button
+                          className="components-button components-dropdown-menu__menu-item is-active"
+                          onClick={[Function]}
+                          role="menuitem"
+                          type="button"
                         >
-                          <button
-                            className="components-button components-dropdown-menu__menu-item is-active"
-                            onClick={[Function]}
-                            role="menuitem"
-                            type="button"
-                          >
-                            ToolbarButton3
-                          </button>
-                          <button
-                            className="components-button components-dropdown-menu__menu-item"
-                            disabled={true}
-                            onClick={[Function]}
-                            role="menuitem"
-                            type="button"
-                          >
-                            ToolbarButton4
-                          </button>
-                        </div>
+                          ToolbarButton3
+                        </button>
+                        <button
+                          className="components-button components-dropdown-menu__menu-item"
+                          disabled={true}
+                          onClick={[Function]}
+                          role="menuitem"
+                          type="button"
+                        >
+                          ToolbarButton4
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
     </div>,
