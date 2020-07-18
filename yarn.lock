@@ -1248,10 +1248,10 @@
     react-autosize-textarea "^7.1.0"
     react-dom "^16.13.1"
 
-"@technote-space/gutenberg-utils@^2.2.6":
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-2.2.6.tgz#b0fb3e5813a29974d6df26a7e67e58ee08a684f9"
-  integrity sha512-dnXLPgxixtuymvii9CC4Ng4tx1lrVSv5EPUNTCTYP4PpNQ43sFE4G0GVG9Cr7rQNJvLLFUGZpj+yR6MCKlZAcA==
+"@technote-space/gutenberg-utils@^2.2.7":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-2.2.7.tgz#c802a17aff65ce52fe59b568ffe8e4beaa9ad7ef"
+  integrity sha512-pyaQkBwv0fImrFxah59tDJkJKYmNcBVz3NpAYEMi3B9/utpiINzhBWftyn9r8yvLlYmAz31NLXL8ljoYs5Hn5g==
   dependencies:
     classnames "^2.2.6"
     nano-css "^5.3.0"
