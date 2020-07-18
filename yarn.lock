@@ -1248,10 +1248,10 @@
     react-autosize-textarea "^7.1.0"
     react-dom "^16.13.1"
 
-"@technote-space/gutenberg-utils@^2.2.4":
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-2.2.4.tgz#3c77535c197a6369787a0336b611d2833a690675"
-  integrity sha512-IJHVnw5xFT+j4zSI5vubM+qls6eqO1pEUJmHh6MOnOk7mWSQ5VshoP84/kHa3v6hrmgUwiLAfCMPE3/R/kUEnA==
+"@technote-space/gutenberg-utils@^2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@technote-space/gutenberg-utils/-/gutenberg-utils-2.2.5.tgz#ee6846a9e1332a1c36ba8eda997e70e9277a98fd"
+  integrity sha512-PzPBN0FgYBeJCN/HzNauT9KlPs6J1hXIjsnRmyzPKOT2E4QjJb0OTmypMRyF5qsmgrfTZksubi1A8Qs0rrjx2A==
   dependencies:
     classnames "^2.2.6"
     nano-css "^5.3.0"
@@ -2963,9 +2963,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.488:
-  version "1.3.499"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.499.tgz#06949f19877dafa42915e57dfeb4c1cfb86a8649"
-  integrity sha512-y7FwtQm/8xuLMnYQfBQDYzCpNn+VkSnf4c3Km5TWMNXg7JA5RQBuxmcLaKdDVcIK0K5xGIa7TlxpRt4BdNxNoA==
+  version "1.3.500"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.500.tgz#ac082dd2279251b14f1a7f6af6fd16655cf3eb7b"
+  integrity sha512-Zz8BZh4Ssb/rZBaicqpi+GOQ0uu3y+24+MxBLCk0UYt8EGoZRP4cYzYHHwXGZfrSbCU4VDjbWN+Tg+TPgOUX6Q==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
