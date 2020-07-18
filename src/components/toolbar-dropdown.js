@@ -51,7 +51,7 @@ const createDropdown = (fills, setting) => {
  * @param {object} setting setting
  * @returns {*} component
  */
-const createComponent = (fills, setting) => fills.length > 1 ? createDropdown(fills, setting) : fills[0]; /* eslint-disable-line no-magic-numbers */
+const createComponent = (fills, setting) => fills.length > 1 ? createDropdown(fills, setting) : fills[0][0]; /* eslint-disable-line no-magic-numbers */
 
 /**
  * @param {Array.<Array.<object>>} groupedSlots grouped slots
