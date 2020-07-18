@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "gutenberg's helper to register format type",
   "author": {
     "name": "Technote",
