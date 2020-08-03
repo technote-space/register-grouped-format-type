@@ -179,7 +179,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write quote…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable"
           contentEditable={true}
@@ -206,7 +206,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write citation…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
           contentEditable={true}
@@ -346,7 +346,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write quote…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable"
           contentEditable={true}
@@ -373,7 +373,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write citation…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
           contentEditable={true}
@@ -595,7 +595,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write quote…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable"
           contentEditable={true}
@@ -622,7 +622,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write citation…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
           contentEditable={true}
@@ -762,7 +762,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write quote…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable"
           contentEditable={true}
@@ -789,7 +789,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write citation…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
           contentEditable={true}
@@ -923,7 +923,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write quote…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable"
           contentEditable={true}
@@ -950,7 +950,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write citation…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
           contentEditable={true}
@@ -1067,7 +1067,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write quote…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable"
           contentEditable={true}
@@ -1094,7 +1094,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write citation…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
           contentEditable={true}
@@ -1191,7 +1191,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write quote…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable"
           contentEditable={true}
@@ -1218,7 +1218,7 @@ Array [
         <div
           aria-activedescendant={null}
           aria-label="Write citation…"
-          aria-multiline=""
+          aria-multiline={true}
           aria-owns={null}
           className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
           contentEditable={true}
