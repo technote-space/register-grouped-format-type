@@ -36,8 +36,8 @@
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@technote-space/gutenberg-test-helper": "^0.0.19",
-    "@wordpress/block-editor": "^4.3.6",
-    "@wordpress/components": "^10.0.5",
+    "@wordpress/block-editor": "^4.3.7",
+    "@wordpress/components": "^10.0.6",
     "@wordpress/data": "^4.22.3",
     "@wordpress/element": "^2.16.0",
     "@wordpress/hooks": "^2.9.0",
@@ -47,7 +47,7 @@
     "enzyme-to-json": "^3.5.0",
     "eslint": "^7.7.0",
     "eslint-plugin-react": "^7.20.6",
-    "jest": "^26.4.1",
+    "jest": "^26.4.2",
     "react": "^16.13.1"
   },
   "publishConfig": {
