@@ -12,14 +12,9 @@ Array [
         aria-haspopup="true"
         aria-label="Change text alignment"
         className="components-button components-dropdown-menu__toggle has-icon"
-        data-experimental-toolbar-item={true}
-        onBlur={[Function]}
+        data-toolbar-item={true}
         onClick={[Function]}
-        onFocus={[Function]}
         onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         type="button"
       >
         <svg
@@ -55,12 +50,8 @@ Array [
             aria-pressed={true}
             className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control is-active is-pressed has-text has-icon"
             disabled={false}
-            onBlur={[Function]}
             onClick={[Function]}
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            tooltip="test label 0"
             type="button"
           >
             <svg
@@ -79,7 +70,6 @@ Array [
             </svg>
             <span
               className="components-dropdown-menu__indicator"
-              key="0,1"
             />
           </button>
           <div
@@ -260,14 +250,9 @@ Array [
         aria-haspopup="true"
         aria-label="Change text alignment"
         className="components-button components-dropdown-menu__toggle has-icon"
-        data-experimental-toolbar-item={true}
-        onBlur={[Function]}
+        data-toolbar-item={true}
         onClick={[Function]}
-        onFocus={[Function]}
         onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         type="button"
       >
         <svg
@@ -303,12 +288,8 @@ Array [
             aria-pressed={true}
             className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control is-active is-pressed has-text has-icon"
             disabled={false}
-            onBlur={[Function]}
             onClick={[Function]}
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            tooltip="test label 0"
             type="button"
           >
             <svg
@@ -327,7 +308,6 @@ Array [
             </svg>
             <span
               className="components-dropdown-menu__indicator"
-              key="0,1"
             />
           </button>
         </div>
@@ -427,14 +407,9 @@ Array [
         aria-haspopup="true"
         aria-label="Change text alignment"
         className="components-button components-dropdown-menu__toggle has-icon"
-        data-experimental-toolbar-item={true}
-        onBlur={[Function]}
+        data-toolbar-item={true}
         onClick={[Function]}
-        onFocus={[Function]}
         onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         type="button"
       >
         <svg
@@ -470,12 +445,8 @@ Array [
             aria-pressed={true}
             className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control is-active is-pressed has-text has-icon"
             disabled={false}
-            onBlur={[Function]}
             onClick={[Function]}
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            tooltip="test label 1"
             type="button"
           >
             <svg
@@ -494,7 +465,6 @@ Array [
             </svg>
             <span
               className="components-dropdown-menu__indicator"
-              key="0,1"
             />
           </button>
           <div
@@ -676,14 +646,9 @@ Array [
         aria-haspopup="true"
         aria-label="Change text alignment"
         className="components-button components-dropdown-menu__toggle has-icon"
-        data-experimental-toolbar-item={true}
-        onBlur={[Function]}
+        data-toolbar-item={true}
         onClick={[Function]}
-        onFocus={[Function]}
         onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         type="button"
       >
         <svg
@@ -719,12 +684,8 @@ Array [
             aria-pressed={true}
             className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control is-active is-pressed has-text has-icon"
             disabled={false}
-            onBlur={[Function]}
             onClick={[Function]}
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            tooltip="test label 1"
             type="button"
           >
             <svg
@@ -743,7 +704,6 @@ Array [
             </svg>
             <span
               className="components-dropdown-menu__indicator"
-              key="0,1"
             />
           </button>
         </div>
@@ -843,14 +803,9 @@ Array [
         aria-haspopup="true"
         aria-label="Change text alignment"
         className="components-button components-dropdown-menu__toggle has-icon"
-        data-experimental-toolbar-item={true}
-        onBlur={[Function]}
+        data-toolbar-item={true}
         onClick={[Function]}
-        onFocus={[Function]}
         onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         type="button"
       >
         <svg
@@ -887,6 +842,7 @@ Array [
             className="components-button components-dropdown-button__toggle components-toolbar__control utils--components-toolbar__control has-text has-icon"
             disabled={true}
             onClick={[Function]}
+            tooltip="test label 2"
             type="button"
           >
             <svg
@@ -1004,14 +960,9 @@ Array [
         aria-haspopup="true"
         aria-label="Change text alignment"
         className="components-button components-dropdown-menu__toggle has-icon"
-        data-experimental-toolbar-item={true}
-        onBlur={[Function]}
+        data-toolbar-item={true}
         onClick={[Function]}
-        onFocus={[Function]}
         onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         type="button"
       >
         <svg
@@ -1042,7 +993,7 @@ Array [
             aria-label="ToolbarButton7"
             aria-pressed={true}
             className="components-button components-toolbar__control toolbar-button-test7 is-pressed"
-            data-experimental-toolbar-item={true}
+            data-toolbar-item={true}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -1144,14 +1095,9 @@ Array [
         aria-haspopup="true"
         aria-label="Change text alignment"
         className="components-button components-dropdown-menu__toggle has-icon"
-        data-experimental-toolbar-item={true}
-        onBlur={[Function]}
+        data-toolbar-item={true}
         onClick={[Function]}
-        onFocus={[Function]}
         onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
         type="button"
       >
         <svg

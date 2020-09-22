@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import {Toolbar, NavigableMenu, Button} from '@wordpress/components';
+import {ToolbarGroup, NavigableMenu, Button} from '@wordpress/components';
 import {BlockControls} from '@wordpress/block-editor';
 import {Components} from '../utils';
 
@@ -60,11 +60,11 @@ const createComponent = (fills, setting) => fills.length > 1 ? createDropdown(fi
  */
 const ToolbarDropdown = groupedSlots => <BlockControls>
   {groupedSlots.map((slots, groupIndex) => <div key={`toolbar-dropdown-${groupIndex}`} className="editor-format-toolbar block-editor-format-toolbar">
-    <Toolbar>
+    <ToolbarGroup>
       {slots.map(({Slot, setting}, index) => <Slot key={`toolbar-dropdown-${groupIndex}-${index}`}>
         {fills => !fills.length ? null : createComponent(fills, setting)}
       </Slot>)}
-    </Toolbar>
+    </ToolbarGroup>
   </div>)}
 </BlockControls>;
 
