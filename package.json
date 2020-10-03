@@ -44,9 +44,9 @@
     "@wordpress/rich-text": "^3.21.1",
     "babel-jest": "^26.3.0",
     "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.5.0",
-    "eslint": "^7.9.0",
-    "eslint-plugin-react": "^7.21.2",
+    "enzyme-to-json": "^3.6.1",
+    "eslint": "^7.10.0",
+    "eslint-plugin-react": "^7.21.3",
     "jest": "^26.4.2",
     "react": "^16.13.1"
   },
