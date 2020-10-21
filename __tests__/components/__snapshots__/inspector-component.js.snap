@@ -39,59 +39,62 @@ Array [
         onDragStart={[Function]}
         onFocus={[Function]}
       >
-        <div
-          className="block-list-appender"
-          onFocus={[Function]}
-          tabIndex={-1}
-        >
+        Array [
+          "",
           <div
-            className="wp-block block-editor-default-block-appender"
-            data-root-client-id=""
+            className="block-list-appender wp-block"
+            onFocus={[Function]}
+            tabIndex={-1}
           >
-            <textarea
-              aria-label="Add block"
-              className="block-editor-default-block-appender__content"
-              onChange={[Function]}
-              onFocus={[Function]}
-              readOnly={true}
-              role="button"
-              rows={1}
-              value="Start writing or type / to choose a block"
-            />
             <div
-              className="components-dropdown block-editor-inserter"
+              className="wp-block block-editor-default-block-appender"
+              data-root-client-id=""
             >
-              <button
-                aria-expanded={false}
-                aria-haspopup="true"
+              <textarea
                 aria-label="Add block"
-                className="components-button block-editor-inserter__toggle has-icon"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
+                className="block-editor-default-block-appender__content"
+                onChange={[Function]}
                 onFocus={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                type="button"
+                readOnly={true}
+                role="button"
+                rows={1}
+                value="Start writing or type / to choose a block"
+              />
+              <div
+                className="components-dropdown block-editor-inserter"
               >
-                <svg
-                  aria-hidden={true}
-                  focusable={false}
-                  height={24}
-                  role="img"
-                  viewBox="0 0 24 24"
-                  width={24}
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  aria-label="Add block"
+                  className="components-button block-editor-inserter__toggle has-icon"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  type="button"
                 >
-                  <path
-                    d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden={true}
+                    focusable={false}
+                    height={24}
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
+          </div>,
+        ]
       </div>
     </div>,
     Array [
@@ -124,59 +127,62 @@ Array [
         onDragStart={[Function]}
         onFocus={[Function]}
       >
-        <div
-          className="block-list-appender"
-          onFocus={[Function]}
-          tabIndex={-1}
-        >
+        Array [
+          "",
           <div
-            className="wp-block block-editor-default-block-appender"
-            data-root-client-id=""
+            className="block-list-appender wp-block"
+            onFocus={[Function]}
+            tabIndex={-1}
           >
-            <textarea
-              aria-label="Add block"
-              className="block-editor-default-block-appender__content"
-              onChange={[Function]}
-              onFocus={[Function]}
-              readOnly={true}
-              role="button"
-              rows={1}
-              value="Start writing or type / to choose a block"
-            />
             <div
-              className="components-dropdown block-editor-inserter"
+              className="wp-block block-editor-default-block-appender"
+              data-root-client-id=""
             >
-              <button
-                aria-expanded={false}
-                aria-haspopup="true"
+              <textarea
                 aria-label="Add block"
-                className="components-button block-editor-inserter__toggle has-icon"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
+                className="block-editor-default-block-appender__content"
+                onChange={[Function]}
                 onFocus={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                type="button"
+                readOnly={true}
+                role="button"
+                rows={1}
+                value="Start writing or type / to choose a block"
+              />
+              <div
+                className="components-dropdown block-editor-inserter"
               >
-                <svg
-                  aria-hidden={true}
-                  focusable={false}
-                  height={24}
-                  role="img"
-                  viewBox="0 0 24 24"
-                  width={24}
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  aria-label="Add block"
+                  className="components-button block-editor-inserter__toggle has-icon"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  type="button"
                 >
-                  <path
-                    d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden={true}
+                    focusable={false}
+                    height={24}
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
+          </div>,
+        ]
       </div>
     </div>,
     Array [
@@ -207,59 +213,62 @@ Array [
         onDragStart={[Function]}
         onFocus={[Function]}
       >
-        <div
-          className="block-list-appender"
-          onFocus={[Function]}
-          tabIndex={-1}
-        >
+        Array [
+          "",
           <div
-            className="wp-block block-editor-default-block-appender"
-            data-root-client-id=""
+            className="block-list-appender wp-block"
+            onFocus={[Function]}
+            tabIndex={-1}
           >
-            <textarea
-              aria-label="Add block"
-              className="block-editor-default-block-appender__content"
-              onChange={[Function]}
-              onFocus={[Function]}
-              readOnly={true}
-              role="button"
-              rows={1}
-              value="Start writing or type / to choose a block"
-            />
             <div
-              className="components-dropdown block-editor-inserter"
+              className="wp-block block-editor-default-block-appender"
+              data-root-client-id=""
             >
-              <button
-                aria-expanded={false}
-                aria-haspopup="true"
+              <textarea
                 aria-label="Add block"
-                className="components-button block-editor-inserter__toggle has-icon"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
+                className="block-editor-default-block-appender__content"
+                onChange={[Function]}
                 onFocus={[Function]}
-                onMouseDown={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                type="button"
+                readOnly={true}
+                role="button"
+                rows={1}
+                value="Start writing or type / to choose a block"
+              />
+              <div
+                className="components-dropdown block-editor-inserter"
               >
-                <svg
-                  aria-hidden={true}
-                  focusable={false}
-                  height={24}
-                  role="img"
-                  viewBox="0 0 24 24"
-                  width={24}
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  aria-label="Add block"
+                  className="components-button block-editor-inserter__toggle has-icon"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  type="button"
                 >
-                  <path
-                    d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden={true}
+                    focusable={false}
+                    height={24}
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
+          </div>,
+        ]
       </div>
     </div>,
     "",
