@@ -16,6 +16,7 @@ source ${SCRIPT_DIR}/variables.sh
 
 yarn --cwd ${TRAVIS_BUILD_DIR} install
 yarn --cwd ${TRAVIS_BUILD_DIR} build
+rm -rdf ${GH_WORK_DIR}/build
 
 cp -a ${TRAVIS_BUILD_DIR}/build ${GH_WORK_DIR}/build
 cp -f ${current}/plugin.js ${GH_WORK_DIR}/
