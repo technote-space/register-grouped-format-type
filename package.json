@@ -30,8 +30,8 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.7",
-    "@babel/core": "^7.12.7",
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
     "@technote-space/gutenberg-test-helper": "^0.1.4",
     "@wordpress/babel-preset-default": "^4.19.0",
     "@wordpress/block-editor": "^5.1.3",
