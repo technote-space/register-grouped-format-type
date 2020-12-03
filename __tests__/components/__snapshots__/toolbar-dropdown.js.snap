@@ -12,7 +12,7 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-toggle"
+          className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle"
         >
           <button
             aria-expanded={true}
@@ -49,7 +49,7 @@ Array [
                 onTouchStart={[Function]}
               >
                 <div
-                  className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
+                  className="components-popover components-dropdown__content components-dropdown-button__popover utils--components-dropdown-button__popover is-without-arrow"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                 >
@@ -212,7 +212,7 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-toggle"
+          className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle"
         >
           <button
             aria-expanded={false}
@@ -331,7 +331,7 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-toggle test-class"
+          className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle test-class"
         >
           <button
             aria-expanded={true}
@@ -368,7 +368,7 @@ Array [
                 onTouchStart={[Function]}
               >
                 <div
-                  className="components-popover components-dropdown__content components-dropdown-button__popover is-without-arrow"
+                  className="components-popover components-dropdown__content components-dropdown-button__popover utils--components-dropdown-button__popover is-without-arrow"
                   onKeyDown={[Function]}
                   onMouseDown={[Function]}
                 >
@@ -532,7 +532,7 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-toggle test-class"
+          className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle test-class"
         >
           <button
             aria-expanded={false}
@@ -651,7 +651,7 @@ Array [
         className="components-toolbar"
       >
         <div
-          className="components-dropdown components-dropdown-toggle"
+          className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle"
         >
           <button
             aria-expanded={false}
