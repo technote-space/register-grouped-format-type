@@ -3,6 +3,4 @@ node_modules/
 /.idea
 /build
 /travis-ci
-/.work
-/gh-pages
 .eslintcache

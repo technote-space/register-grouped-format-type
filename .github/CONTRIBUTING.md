@@ -14,9 +14,9 @@ Please note we have a [Contributor Code of Conduct][code-of-conduct], please fol
 
 1. [Fork][fork] and clone the repository
 1. Configure and install the dependencies:
-   - `composer setup`  # install and build
-   - `composer bin:download`  # download test scripts
-1. Make sure the tests pass on your machine: `composer bin:test`, which contains
+   - `yarn install`  # install
+   - `yarn build`  # build
+1. Make sure the tests pass on your machine: `yarn test`, which contains
    - [`ESLint`][eslint]
    - [`Jest`][jest]
 1. Create a new branch: `git checkout -b my-branch-name`
@@ -26,7 +26,7 @@ Please note we have a [Contributor Code of Conduct][code-of-conduct], please fol
 
 Here are a few things you can do that will increase the likelihood of your pull request being accepted:
 - Follow the style guides. Any linting errors should be shown when running 
-  - `composer bin:js-lint`  # [`ESLint`][eslint]
+  - `yarn lint`  # [`ESLint`][eslint]
 - Write and update tests.
 - Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
 - Write a [good commit message](https://github.com/erlang/otp/wiki/writing-good-commit-messages).
