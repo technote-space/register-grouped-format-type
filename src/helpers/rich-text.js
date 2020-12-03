@@ -1,10 +1,10 @@
 import React from 'react';
 import {Button} from '@wordpress/components';
+import {dispatch, select} from '@wordpress/data';
 import {Helpers} from '../utils';
 import {PLUGIN_NAME} from '../constant';
 
 const {isValidRemoveFormatButton, getRemoveFormatFunction} = Helpers;
-const {dispatch, select}                                   = wp.data;
 
 /**
  * @param {object} settings settings
