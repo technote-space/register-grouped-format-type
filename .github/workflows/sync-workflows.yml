@@ -27,7 +27,7 @@ jobs:
             mkdir -p .github/workflows/.tmp
             git clone --depth=1 https://github.com/technote-space/github-actions-workflows.git .github/workflows/.tmp/workflows
 
-            bash .github/workflows/.tmp/workflows/js-repo/copy.sh release-releases
+            bash .github/workflows/.tmp/workflows/js-repo/copy.sh release
             sed -i 's/cron:.\+$/cron: 0 3 * * 6/' .github/workflows/update-dependencies.yml
             sed -i "/GH_PAGES_PLUGIN_SCRIPT/d" .github/workflows/ci.yml
             sed -i "s/GH_PAGES_TITLE:.*$/GH_PAGES_TITLE: Register Grouped Format Type/" .github/workflows/ci.yml
