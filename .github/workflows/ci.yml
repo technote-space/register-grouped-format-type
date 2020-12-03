@@ -202,45 +202,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: env.RUNNING && matrix.target == 'gpr'
 
-  pages:
-    name: Publish GitHub Pages
-    needs: cover
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    if: startsWith(github.ref, 'refs/tags/v')
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-      - name: Get Yarn Cache Directory
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Cache node dependencies
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install Package dependencies
-        run: yarn install
-      - name: Build
-        run: |
-          git clone --depth=1 https://github.com/wp-content-framework/travis-ci.git travis-ci
-          bash travis-ci/bin/deploy/gh-pages.sh
-        env:
-          TRAVIS_BUILD_DIR: ${{ github.workspace }}
-          GH_PAGES_TITLE: Register Grouped Format Type
-          GH_PAGES_TEMPLATE: gutenberg
-          GH_PAGES_TRACKING_ID: UA-78163306-3
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: gh-pages
-
   releases:
     name: Upload build files
     needs: cover
@@ -272,7 +233,7 @@ jobs:
 
   publishRelease:
     name: Create Release
-    needs: [package, pages, releases]
+    needs: [package, releases]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
