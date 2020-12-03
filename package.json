@@ -1,30 +1,42 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "2.0.12",
+  "version": "2.1.0",
   "description": "gutenberg's helper to register format type",
-  "author": {
-    "name": "Technote",
-    "email": "technote.space@gmail.com",
-    "url": "https://technote.space"
-  },
-  "license": "GPL-3.0",
   "keywords": [
     "gutenberg",
     "rich text",
     "dropdown"
   ],
   "homepage": "https://github.com/technote-space/register-grouped-format-type#readme",
+  "bugs": {
+    "url": "https://github.com/technote-space/register-grouped-format-type/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/technote-space/register-grouped-format-type.git"
   },
-  "bugs": {
-    "url": "https://github.com/technote-space/register-grouped-format-type/issues"
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Technote",
+    "email": "technote.space@gmail.com",
+    "url": "https://technote.space"
   },
   "main": "build/index.js",
   "files": [
     "build"
   ],
+  "scripts": {
+    "build": "rm -rdf build && babel --compact=true src --out-dir build",
+    "cover": "jest --coverage",
+    "cover:update": "jest --coverage --updateSnapshot",
+    "develop": "rm -rdf build && babel src --out-dir build",
+    "lint": "eslint 'src/**/*.js' '__tests__/**/*.js' --cache",
+    "lint:fix": "eslint --fix 'src/**/*.js' '__tests__/**/*.js'",
+    "start": "yarn build",
+    "test": "yarn lint && yarn cover",
+    "test:update": "yarn lint && yarn cover:update",
+    "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit"
+  },
   "dependencies": {
     "@technote-space/gutenberg-utils": "^2.2.21",
     "classnames": "^2.2.6"
@@ -49,17 +61,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "start": "yarn build",
-    "test": "yarn lint && yarn cover",
-    "test:update": "yarn lint && yarn cover:update",
-    "lint": "eslint 'src/**/*.js' '__tests__/**/*.js' --cache",
-    "lint:fix": "eslint --fix 'src/**/*.js' '__tests__/**/*.js'",
-    "cover": "jest --coverage",
-    "cover:update": "jest --coverage --updateSnapshot",
-    "develop": "rm -rdf build && babel src --out-dir build",
-    "build": "rm -rdf build && babel --compact=true src --out-dir build",
-    "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit"
   }
 }
