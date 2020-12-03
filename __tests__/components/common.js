@@ -2,10 +2,10 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import toJson from 'enzyme-to-json';
-import {BlockEdit} from '@wordpress/block-editor';
+import {BlockEdit, BlockList} from '@wordpress/block-editor';
 import {SlotFillProvider} from '@wordpress/components';
 import {Fragment} from '@wordpress/element';
-import {addFilter, removeFilter} from '@wordpress/hooks';
+import {addFilter} from '@wordpress/hooks';
 import {create} from '@wordpress/rich-text';
 import {GroupedControls} from '../../src/components';
 
@@ -13,10 +13,6 @@ const createTest = (targetName, createSlot, getCases) => {
   let filter;
   beforeAll(() => {
     addFilter('editor.BlockEdit', 'components-test/components-test', BlockEdit => props => filter(BlockEdit, props));
-  });
-
-  afterAll(() => {
-    removeFilter('editor.BlockEdit', 'components-test/components-test');
   });
 
   describe(targetName, () => {
@@ -35,7 +31,9 @@ const createTest = (targetName, createSlot, getCases) => {
     const {Fill, Slot}    = GroupedControls('components-test');
 
     const createFilter = (index, createToolbarDropdown, createComponents) => (BlockEdit, props) => <Fragment>
-      <BlockEdit {...props} />
+      <BlockList>
+        <BlockEdit {...props} />
+      </BlockList>
       {createToolbarDropdown(setting(index), index)}
       {createComponents(index)}
     </Fragment>;

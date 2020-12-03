@@ -1,68 +1,65 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "2.0.11",
+  "version": "2.1.0",
   "description": "gutenberg's helper to register format type",
-  "author": {
-    "name": "Technote",
-    "email": "technote.space@gmail.com",
-    "url": "https://technote.space"
-  },
-  "license": "GPL-3.0",
   "keywords": [
     "gutenberg",
     "rich text",
     "dropdown"
   ],
   "homepage": "https://github.com/technote-space/register-grouped-format-type#readme",
+  "bugs": {
+    "url": "https://github.com/technote-space/register-grouped-format-type/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/technote-space/register-grouped-format-type.git"
   },
-  "bugs": {
-    "url": "https://github.com/technote-space/register-grouped-format-type/issues"
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Technote",
+    "email": "technote.space@gmail.com",
+    "url": "https://technote.space"
   },
   "main": "build/index.js",
   "files": [
     "build"
   ],
-  "dependencies": {
-    "@technote-space/gutenberg-utils": "^2.2.13",
-    "classnames": "^2.2.6"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
-    "@babel/plugin-transform-react-jsx": "^7.10.4",
-    "@babel/preset-env": "^7.11.5",
-    "@technote-space/gutenberg-test-helper": "^0.0.21",
-    "@wordpress/block-editor": "^4.5.0",
-    "@wordpress/components": "^10.2.0",
-    "@wordpress/data": "^4.23.1",
-    "@wordpress/element": "^2.17.1",
-    "@wordpress/hooks": "^2.9.0",
-    "@wordpress/rich-text": "^3.21.1",
-    "babel-jest": "^26.3.0",
-    "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.5.0",
-    "eslint": "^7.9.0",
-    "eslint-plugin-react": "^7.20.6",
-    "jest": "^26.4.2",
-    "react": "^16.13.1"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "start": "yarn build",
-    "test": "yarn lint && yarn cover",
-    "test:update": "yarn lint && yarn cover:update",
-    "lint": "eslint 'src/**/*.js' '__tests__/**/*.js' --cache",
-    "lint:fix": "eslint --fix 'src/**/*.js' '__tests__/**/*.js'",
+    "build": "rm -rdf build && babel --compact=true src --out-dir build",
     "cover": "jest --coverage",
     "cover:update": "jest --coverage --updateSnapshot",
     "develop": "rm -rdf build && babel src --out-dir build",
-    "build": "rm -rdf build && babel --compact=true src --out-dir build",
+    "lint": "eslint 'src/**/*.js' '__tests__/**/*.js' --cache",
+    "lint:fix": "eslint --fix 'src/**/*.js' '__tests__/**/*.js'",
+    "start": "yarn build",
+    "test": "yarn lint && yarn cover",
+    "test:update": "yarn lint && yarn cover:update",
     "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit"
+  },
+  "dependencies": {
+    "@technote-space/gutenberg-utils": "^2.2.21",
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@technote-space/gutenberg-test-helper": "^0.1.4",
+    "@wordpress/babel-preset-default": "^4.19.0",
+    "@wordpress/block-editor": "^5.1.5",
+    "@wordpress/components": "^11.1.3",
+    "@wordpress/data": "^4.25.0",
+    "@wordpress/element": "^2.18.0",
+    "@wordpress/hooks": "^2.10.0",
+    "@wordpress/rich-text": "^3.23.0",
+    "babel-jest": "^26.6.3",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.1",
+    "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.21.5",
+    "jest": "^26.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

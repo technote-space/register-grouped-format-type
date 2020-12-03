@@ -7,13 +7,13 @@ Array [
   >
     <a
       href="http://example.com/test1"
-      key="2---0/.0"
+      key="1---0/.0"
     >
       test1
     </a>
     <a
       href="http://example.com/test2"
-      key="3---0/.0"
+      key="2---0/.0"
     >
       test2
     </a>
@@ -31,70 +31,72 @@ Array [
     </div>
   </div>,
   Array [
-    Array [
-      Array [
-        "",
-        "",
-      ],
-      <blockquote
-        className="wp-block-quote test-block-edit"
+    <div
+      onMouseMove={[Function]}
+    >
+      <div
+        className="block-editor-block-list__layout is-root-container"
+        onDragStart={[Function]}
+        onFocus={[Function]}
       >
-        <div
-          aria-activedescendant={null}
-          aria-label="Write quote…"
-          aria-multiline={true}
-          aria-owns={null}
-          className="rich-text block-editor-rich-text__editable"
-          contentEditable={true}
-          onBlur={[Function]}
-          onCompositionEnd={[Function]}
-          onCompositionStart={[Function]}
-          onFocus={[Function]}
-          onInput={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-          onPaste={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          role="textbox"
-          style={
-            Object {
-              "whiteSpace": "pre-wrap",
-            }
-          }
-          suppressContentEditableWarning={true}
-        />
-        <div
-          aria-activedescendant={null}
-          aria-label="Write citation…"
-          aria-multiline={true}
-          aria-owns={null}
-          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-          contentEditable={true}
-          onBlur={[Function]}
-          onCompositionEnd={[Function]}
-          onCompositionStart={[Function]}
-          onFocus={[Function]}
-          onInput={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-          onPaste={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          role="textbox"
-          style={
-            Object {
-              "whiteSpace": "pre-wrap",
-            }
-          }
-          suppressContentEditableWarning={true}
-        />
-      </blockquote>,
-    ],
+        Array [
+          "",
+          <div
+            className="block-list-appender wp-block"
+            onFocus={[Function]}
+            tabIndex={-1}
+          >
+            <div
+              className="wp-block block-editor-default-block-appender"
+              data-root-client-id=""
+            >
+              <textarea
+                aria-label="Add block"
+                className="block-editor-default-block-appender__content"
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                role="button"
+                rows={1}
+                value="Start writing or type / to choose a block"
+              />
+              <div
+                className="components-dropdown block-editor-inserter"
+              >
+                <button
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  aria-label="Add block"
+                  className="components-button block-editor-inserter__toggle has-icon"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  type="button"
+                >
+                  <svg
+                    aria-hidden={true}
+                    focusable={false}
+                    height={24}
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>,
+        ]
+      </div>
+    </div>,
     Array [
       "",
       "",
@@ -117,70 +119,72 @@ Array [
     className="components-panel__body inspector-test"
   />,
   Array [
-    Array [
-      Array [
-        "",
-        "",
-      ],
-      <blockquote
-        className="wp-block-quote test-block-edit"
+    <div
+      onMouseMove={[Function]}
+    >
+      <div
+        className="block-editor-block-list__layout is-root-container"
+        onDragStart={[Function]}
+        onFocus={[Function]}
       >
-        <div
-          aria-activedescendant={null}
-          aria-label="Write quote…"
-          aria-multiline={true}
-          aria-owns={null}
-          className="rich-text block-editor-rich-text__editable"
-          contentEditable={true}
-          onBlur={[Function]}
-          onCompositionEnd={[Function]}
-          onCompositionStart={[Function]}
-          onFocus={[Function]}
-          onInput={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-          onPaste={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          role="textbox"
-          style={
-            Object {
-              "whiteSpace": "pre-wrap",
-            }
-          }
-          suppressContentEditableWarning={true}
-        />
-        <div
-          aria-activedescendant={null}
-          aria-label="Write citation…"
-          aria-multiline={true}
-          aria-owns={null}
-          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-          contentEditable={true}
-          onBlur={[Function]}
-          onCompositionEnd={[Function]}
-          onCompositionStart={[Function]}
-          onFocus={[Function]}
-          onInput={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-          onPaste={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          role="textbox"
-          style={
-            Object {
-              "whiteSpace": "pre-wrap",
-            }
-          }
-          suppressContentEditableWarning={true}
-        />
-      </blockquote>,
-    ],
+        Array [
+          "",
+          <div
+            className="block-list-appender wp-block"
+            onFocus={[Function]}
+            tabIndex={-1}
+          >
+            <div
+              className="wp-block block-editor-default-block-appender"
+              data-root-client-id=""
+            >
+              <textarea
+                aria-label="Add block"
+                className="block-editor-default-block-appender__content"
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                role="button"
+                rows={1}
+                value="Start writing or type / to choose a block"
+              />
+              <div
+                className="components-dropdown block-editor-inserter"
+              >
+                <button
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  aria-label="Add block"
+                  className="components-button block-editor-inserter__toggle has-icon"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  type="button"
+                >
+                  <svg
+                    aria-hidden={true}
+                    focusable={false}
+                    height={24}
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>,
+        ]
+      </div>
+    </div>,
     Array [
       "",
       "",
@@ -201,70 +205,72 @@ exports[`InspectorComponent should render InspectorComponent 2: test--2 1`] = `
 Array [
   "",
   Array [
-    Array [
-      Array [
-        "",
-        "",
-      ],
-      <blockquote
-        className="wp-block-quote test-block-edit"
+    <div
+      onMouseMove={[Function]}
+    >
+      <div
+        className="block-editor-block-list__layout is-root-container"
+        onDragStart={[Function]}
+        onFocus={[Function]}
       >
-        <div
-          aria-activedescendant={null}
-          aria-label="Write quote…"
-          aria-multiline={true}
-          aria-owns={null}
-          className="rich-text block-editor-rich-text__editable"
-          contentEditable={true}
-          onBlur={[Function]}
-          onCompositionEnd={[Function]}
-          onCompositionStart={[Function]}
-          onFocus={[Function]}
-          onInput={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-          onPaste={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          role="textbox"
-          style={
-            Object {
-              "whiteSpace": "pre-wrap",
-            }
-          }
-          suppressContentEditableWarning={true}
-        />
-        <div
-          aria-activedescendant={null}
-          aria-label="Write citation…"
-          aria-multiline={true}
-          aria-owns={null}
-          className="rich-text block-editor-rich-text__editable wp-block-quote__citation"
-          contentEditable={true}
-          onBlur={[Function]}
-          onCompositionEnd={[Function]}
-          onCompositionStart={[Function]}
-          onFocus={[Function]}
-          onInput={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseUp={[Function]}
-          onPaste={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-          role="textbox"
-          style={
-            Object {
-              "whiteSpace": "pre-wrap",
-            }
-          }
-          suppressContentEditableWarning={true}
-        />
-      </blockquote>,
-    ],
+        Array [
+          "",
+          <div
+            className="block-list-appender wp-block"
+            onFocus={[Function]}
+            tabIndex={-1}
+          >
+            <div
+              className="wp-block block-editor-default-block-appender"
+              data-root-client-id=""
+            >
+              <textarea
+                aria-label="Add block"
+                className="block-editor-default-block-appender__content"
+                onChange={[Function]}
+                onFocus={[Function]}
+                readOnly={true}
+                role="button"
+                rows={1}
+                value="Start writing or type / to choose a block"
+              />
+              <div
+                className="components-dropdown block-editor-inserter"
+              >
+                <button
+                  aria-expanded={false}
+                  aria-haspopup="true"
+                  aria-label="Add block"
+                  className="components-button block-editor-inserter__toggle has-icon"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  type="button"
+                >
+                  <svg
+                    aria-hidden={true}
+                    focusable={false}
+                    height={24}
+                    role="img"
+                    viewBox="0 0 24 24"
+                    width={24}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>,
+        ]
+      </div>
+    </div>,
     "",
     Array [
       "",
