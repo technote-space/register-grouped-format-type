@@ -15,8 +15,6 @@ This is a Gutenberg's library to provides method to register grouped RichText fo
 which will be gathered by DropDown when number of format type of same group is greater than 1.  
 The controls are active only when it is able to toggle format.
 
-[Demonstration](https://technote-space.github.io/register-grouped-format-type)
-
 ## Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->

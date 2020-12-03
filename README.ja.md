@@ -15,8 +15,6 @@
 同じグループのフォーマットタイプが複数ある場合に DropDown によってまとまります。  
 コントロールはフォーマットを切り替えることができるときのみアクティブになります。
 
-[デモ](https://technote-space.github.io/register-grouped-format-type)
-
 ## Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
