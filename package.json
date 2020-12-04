@@ -38,7 +38,7 @@
     "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit"
   },
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^2.2.22",
+    "@technote-space/gutenberg-utils": "^2.3.0",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
