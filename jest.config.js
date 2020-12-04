@@ -7,7 +7,4 @@ module.exports = {
   setupFiles: ['<rootDir>/jest.setup.js'],
   coverageDirectory: 'coverage',
   testPathIgnorePatterns: ['/node_modules/', '/__tests__/components/common.js'],
-  transformIgnorePatterns: [
-    '/node_modules/(?!@technote-space/gutenberg-utils)'
-  ]
 };
