@@ -1,8 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
-import {ToolbarGroup, NavigableMenu, Button} from '@wordpress/components';
-import {BlockControls} from '@wordpress/block-editor';
 import {Components} from '../utils';
+
+const {ToolbarGroup, NavigableMenu, Button} = wp.components;
+const {BlockControls}                       = wp.blockEditor;
 
 /**
  * @param {Array} fills fills

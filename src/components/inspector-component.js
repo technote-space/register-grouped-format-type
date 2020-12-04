@@ -1,9 +1,9 @@
 import React from 'react';
-import {PanelBody} from '@wordpress/components';
-import {InspectorControls} from '@wordpress/block-editor';
 import {Helpers} from '../utils';
 
 const {getContrastChecker} = Helpers;
+const {PanelBody}          = wp.components;
+const {InspectorControls}  = wp.blockEditor;
 
 /**
  * @param {Array} fills fills

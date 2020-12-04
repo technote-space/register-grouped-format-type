@@ -1,8 +1,8 @@
 import React from 'react';
-import {Fragment} from '@wordpress/element';
 import {GroupedControls, GroupedInspectors, ToolbarDropdown, InspectorComponent} from '../components';
 import {registerMultipleClassFormatType, getFormatName} from './rich-text';
 
+const {Fragment}           = wp.element;
 const formatNames          = {};
 const groups               = {};
 const inspectorGroups      = {};

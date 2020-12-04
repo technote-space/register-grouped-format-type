@@ -1,4 +1,4 @@
-import {createSlotFill} from '@wordpress/components';
+const {createSlotFill} = wp.components;
 
 /**
  * @param {string} group group
