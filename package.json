@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "gutenberg's helper to register format type",
   "keywords": [
     "gutenberg",
@@ -51,7 +51,7 @@
     "babel-jest": "^26.6.3",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.1",
-    "eslint": "^7.14.0",
+    "eslint": "^7.15.0",
     "eslint-plugin-react": "^7.21.5",
     "jest": "^26.6.3"
   },
