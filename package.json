@@ -42,11 +42,11 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
-    "@babel/plugin-transform-react-jsx": "^7.12.7",
-    "@babel/preset-env": "^7.12.7",
+    "@babel/plugin-transform-react-jsx": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
     "@technote-space/gutenberg-test-helper": "^0.1.4",
     "babel-jest": "^26.6.3",
     "enzyme": "^3.11.0",
