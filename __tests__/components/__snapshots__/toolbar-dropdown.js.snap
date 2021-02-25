@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToolbarDropdown should render ToolbarDropdown 0: opened-dropdown--0 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   Array [
     "",
     <div
@@ -15,6 +17,7 @@ Array [
           className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle"
         >
           <button
+            aria-describedby={null}
             aria-expanded={true}
             aria-haspopup="true"
             aria-label="test label 0"
@@ -33,82 +36,70 @@ Array [
             />
           </button>
           <div
+            className="components-popover components-dropdown__content components-dropdown-button__popover utils--components-dropdown-button__popover is-without-arrow"
+            onBlur={[Function]}
+            onFocus={[Function]}
             onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
             tabIndex="-1"
           >
             <div
-              onBlur={[Function]}
-              onFocus={[Function]}
+              className="components-popover__content"
             >
               <div
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "position": "relative",
+                  }
+                }
               >
+                <iframe
+                  aria-hidden={true}
+                  frameBorder={0}
+                  src="about:blank"
+                  style={
+                    Object {
+                      "display": "block",
+                      "height": "100%",
+                      "left": 0,
+                      "opacity": 0,
+                      "overflow": "hidden",
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                      "zIndex": -1,
+                    }
+                  }
+                  tabIndex={-1}
+                />
                 <div
-                  className="components-popover components-dropdown__content components-dropdown-button__popover utils--components-dropdown-button__popover is-without-arrow"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
+                  aria-label="test label 0"
+                  aria-orientation="vertical"
+                  className="components-dropdown-menu__menu test-menu-class"
+                  role="menu"
                 >
-                  <div
-                    className="components-popover__content"
-                    tabIndex="-1"
+                  <button
+                    aria-describedby={null}
+                    className="components-button components-dropdown-menu__menu-item is-active"
+                    onClick={[Function]}
+                    role="menuitem"
+                    type="button"
                   >
-                    <div
-                      style={
-                        Object {
-                          "position": "relative",
-                        }
-                      }
-                    >
-                      <iframe
-                        aria-hidden={true}
-                        frameBorder={0}
-                        src="about:blank"
-                        style={
-                          Object {
-                            "display": "block",
-                            "height": "100%",
-                            "left": 0,
-                            "opacity": 0,
-                            "overflow": "hidden",
-                            "pointerEvents": "none",
-                            "position": "absolute",
-                            "top": 0,
-                            "width": "100%",
-                            "zIndex": -1,
-                          }
-                        }
-                        tabIndex={-1}
-                      />
-                      <div
-                        aria-label="test label 0"
-                        aria-orientation="vertical"
-                        className="components-dropdown-menu__menu test-menu-class"
-                        role="menu"
-                      >
-                        <button
-                          className="components-button components-dropdown-menu__menu-item is-active"
-                          onClick={[Function]}
-                          role="menuitem"
-                          type="button"
-                        >
-                          ToolbarButton1
-                        </button>
-                        <button
-                          className="components-button components-dropdown-menu__menu-item"
-                          onClick={[Function]}
-                          role="menuitem"
-                          type="button"
-                        >
-                          ToolbarButton2
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                    ToolbarButton1
+                  </button>
+                  <button
+                    aria-describedby={null}
+                    className="components-button components-dropdown-menu__menu-item"
+                    onClick={[Function]}
+                    role="menuitem"
+                    type="button"
+                  >
+                    ToolbarButton2
+                  </button>
                 </div>
               </div>
             </div>
@@ -116,15 +107,12 @@ Array [
         </div>
       </div>
     </div>,
-  ],
+  ]
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -139,6 +127,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -151,6 +140,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -182,11 +172,7 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
-    Array [
-      "",
-      "",
+      </div>,
     ],
     Array [
       "",
@@ -196,12 +182,18 @@ Array [
       "",
       "",
     ],
-  ],
-]
+    Array [
+      "",
+      "",
+    ],
+  ]
+</div>
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 0: test--0 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   Array [
     "",
     <div
@@ -215,6 +207,7 @@ Array [
           className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle"
         >
           <button
+            aria-describedby={null}
             aria-expanded={false}
             aria-haspopup="true"
             aria-label="test label 0"
@@ -235,15 +228,12 @@ Array [
         </div>
       </div>
     </div>,
-  ],
+  ]
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -258,6 +248,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -270,6 +261,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -301,11 +293,7 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
-    Array [
-      "",
-      "",
+      </div>,
     ],
     Array [
       "",
@@ -315,12 +303,18 @@ Array [
       "",
       "",
     ],
-  ],
-]
+    Array [
+      "",
+      "",
+    ],
+  ]
+</div>
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 1: opened-dropdown--1 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   Array [
     "",
     <div
@@ -334,6 +328,7 @@ Array [
           className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle test-class"
         >
           <button
+            aria-describedby={null}
             aria-expanded={true}
             aria-haspopup="true"
             aria-label="test label 1"
@@ -352,83 +347,71 @@ Array [
             />
           </button>
           <div
+            className="components-popover components-dropdown__content components-dropdown-button__popover utils--components-dropdown-button__popover is-without-arrow"
+            onBlur={[Function]}
+            onFocus={[Function]}
             onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
             tabIndex="-1"
           >
             <div
-              onBlur={[Function]}
-              onFocus={[Function]}
+              className="components-popover__content"
             >
               <div
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "position": "relative",
+                  }
+                }
               >
+                <iframe
+                  aria-hidden={true}
+                  frameBorder={0}
+                  src="about:blank"
+                  style={
+                    Object {
+                      "display": "block",
+                      "height": "100%",
+                      "left": 0,
+                      "opacity": 0,
+                      "overflow": "hidden",
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                      "zIndex": -1,
+                    }
+                  }
+                  tabIndex={-1}
+                />
                 <div
-                  className="components-popover components-dropdown__content components-dropdown-button__popover utils--components-dropdown-button__popover is-without-arrow"
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
+                  aria-label="test label 1"
+                  aria-orientation="vertical"
+                  className="components-dropdown-menu__menu"
+                  role="menu"
                 >
-                  <div
-                    className="components-popover__content"
-                    tabIndex="-1"
+                  <button
+                    aria-describedby={null}
+                    className="components-button components-dropdown-menu__menu-item is-active"
+                    onClick={[Function]}
+                    role="menuitem"
+                    type="button"
                   >
-                    <div
-                      style={
-                        Object {
-                          "position": "relative",
-                        }
-                      }
-                    >
-                      <iframe
-                        aria-hidden={true}
-                        frameBorder={0}
-                        src="about:blank"
-                        style={
-                          Object {
-                            "display": "block",
-                            "height": "100%",
-                            "left": 0,
-                            "opacity": 0,
-                            "overflow": "hidden",
-                            "pointerEvents": "none",
-                            "position": "absolute",
-                            "top": 0,
-                            "width": "100%",
-                            "zIndex": -1,
-                          }
-                        }
-                        tabIndex={-1}
-                      />
-                      <div
-                        aria-label="test label 1"
-                        aria-orientation="vertical"
-                        className="components-dropdown-menu__menu"
-                        role="menu"
-                      >
-                        <button
-                          className="components-button components-dropdown-menu__menu-item is-active"
-                          onClick={[Function]}
-                          role="menuitem"
-                          type="button"
-                        >
-                          ToolbarButton3
-                        </button>
-                        <button
-                          className="components-button components-dropdown-menu__menu-item"
-                          disabled={true}
-                          onClick={[Function]}
-                          role="menuitem"
-                          type="button"
-                        >
-                          ToolbarButton4
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                    ToolbarButton3
+                  </button>
+                  <button
+                    aria-describedby={null}
+                    className="components-button components-dropdown-menu__menu-item"
+                    disabled={true}
+                    onClick={[Function]}
+                    role="menuitem"
+                    type="button"
+                  >
+                    ToolbarButton4
+                  </button>
                 </div>
               </div>
             </div>
@@ -436,15 +419,12 @@ Array [
         </div>
       </div>
     </div>,
-  ],
+  ]
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -459,6 +439,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -471,6 +452,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -502,11 +484,7 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
-    Array [
-      "",
-      "",
+      </div>,
     ],
     Array [
       "",
@@ -516,12 +494,18 @@ Array [
       "",
       "",
     ],
-  ],
-]
+    Array [
+      "",
+      "",
+    ],
+  ]
+</div>
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 1: test--1 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   Array [
     "",
     <div
@@ -535,6 +519,7 @@ Array [
           className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle test-class"
         >
           <button
+            aria-describedby={null}
             aria-expanded={false}
             aria-haspopup="true"
             aria-label="test label 1"
@@ -555,15 +540,12 @@ Array [
         </div>
       </div>
     </div>,
-  ],
+  ]
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -578,6 +560,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -590,6 +573,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -621,11 +605,7 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
-    Array [
-      "",
-      "",
+      </div>,
     ],
     Array [
       "",
@@ -635,12 +615,18 @@ Array [
       "",
       "",
     ],
-  ],
-]
+    Array [
+      "",
+      "",
+    ],
+  ]
+</div>
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 2: test--2 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   Array [
     "",
     <div
@@ -654,6 +640,7 @@ Array [
           className="components-dropdown components-dropdown-toggle utils--components-dropdown-toggle"
         >
           <button
+            aria-describedby={null}
             aria-expanded={false}
             aria-haspopup="true"
             aria-label="test label 2"
@@ -674,15 +661,12 @@ Array [
         </div>
       </div>
     </div>,
-  ],
+  ]
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -697,6 +681,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -709,6 +694,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -740,11 +726,7 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
-    Array [
-      "",
-      "",
+      </div>,
     ],
     Array [
       "",
@@ -754,12 +736,18 @@ Array [
       "",
       "",
     ],
-  ],
-]
+    Array [
+      "",
+      "",
+    ],
+  ]
+</div>
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 3: test--3 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   Array [
     "",
     <div
@@ -771,6 +759,7 @@ Array [
       >
         <div>
           <button
+            aria-describedby={null}
             aria-label="ToolbarButton7"
             aria-pressed={true}
             className="components-button components-toolbar__control toolbar-button-test7 is-pressed"
@@ -786,15 +775,12 @@ Array [
         </div>
       </div>
     </div>,
-  ],
+  ]
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -809,6 +795,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -821,6 +808,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -852,22 +840,24 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
-    Array [
-      "",
-      "",
+      </div>,
     ],
     Array [
       "",
       "",
     ],
-  ],
-]
+    Array [
+      "",
+      "",
+    ],
+  ]
+</div>
 `;
 
 exports[`ToolbarDropdown should render ToolbarDropdown 4: test--4 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   Array [
     "",
     <div
@@ -878,15 +868,12 @@ Array [
         className="components-toolbar"
       />
     </div>,
-  ],
+  ]
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -901,6 +888,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -913,6 +901,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -944,13 +933,13 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
+      </div>,
+    ],
     Array [
       "",
       "",
     ],
     "",
-  ],
-]
+  ]
+</div>
 `;

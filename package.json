@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/register-grouped-format-type",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "gutenberg's helper to register format type",
   "keywords": [
     "gutenberg",
@@ -38,21 +38,21 @@
     "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit"
   },
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^2.3.0",
+    "@technote-space/gutenberg-utils": "^2.3.2",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
-    "@babel/plugin-transform-react-jsx": "^7.12.7",
-    "@babel/preset-env": "^7.12.7",
-    "@technote-space/gutenberg-test-helper": "^0.1.4",
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.13.0",
+    "@babel/plugin-transform-react-jsx": "^7.12.17",
+    "@babel/preset-env": "^7.13.5",
+    "@technote-space/gutenberg-test-helper": "^0.1.11",
     "babel-jest": "^26.6.3",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.1",
-    "eslint": "^7.15.0",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
     "jest": "^26.6.3"
   },
   "publishConfig": {
