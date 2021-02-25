@@ -38,16 +38,16 @@
     "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit"
   },
   "dependencies": {
-    "@technote-space/gutenberg-utils": "^2.3.1",
+    "@technote-space/gutenberg-utils": "^2.3.2",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.17",
-    "@babel/core": "^7.12.17",
-    "@babel/plugin-transform-modules-commonjs": "^7.12.13",
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.13.0",
     "@babel/plugin-transform-react-jsx": "^7.12.17",
-    "@babel/preset-env": "^7.12.17",
-    "@technote-space/gutenberg-test-helper": "^0.1.10",
+    "@babel/preset-env": "^7.13.5",
+    "@technote-space/gutenberg-test-helper": "^0.1.11",
     "babel-jest": "^26.6.3",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.1",
