@@ -3,7 +3,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import {BlockEdit, BlockList} from '@wordpress/block-editor';
-import {SlotFillProvider} from '@wordpress/components';
+import {SlotFillProvider, DropZoneProvider} from '@wordpress/components';
 import {Fragment} from '@wordpress/element';
 import {addFilter} from '@wordpress/hooks';
 import {create} from '@wordpress/rich-text';
@@ -43,21 +43,23 @@ const createTest = (targetName, createSlot, getCases) => {
         filter        = createFilter(index, createToolbarDropdown, createComponents);
         const wrapper = mount(
           <SlotFillProvider>
-            {createSlot()}
+            <DropZoneProvider>
+              {createSlot()}
 
-            <BlockEdit
-              name="core/quote"
-              isSelected={true}
-              attributes={({
-                className: 'test-block-edit',
-                content: create({
-                  text: 'test',
-                  start: 0,
-                  end: 1,
-                  formats: [[], [], [], []],
-                }),
-              })}
-            />
+              <BlockEdit
+                name="core/quote"
+                isSelected={true}
+                attributes={({
+                  className: 'test-block-edit',
+                  content: create({
+                    text: 'test',
+                    start: 0,
+                    end: 1,
+                    formats: [[], [], [], []],
+                  }),
+                })}
+              />
+            </DropZoneProvider>
           </SlotFillProvider>,
         );
 

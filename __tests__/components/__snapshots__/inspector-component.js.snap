@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InspectorComponent should render InspectorComponent 0: test--0 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   <div
     className="components-panel__body inspector-test is-opened"
   >
@@ -29,15 +31,12 @@ Array [
     >
       test2
     </div>
-  </div>,
+  </div>
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -52,6 +51,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -64,6 +64,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -95,11 +96,7 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
-    Array [
-      "",
-      "",
+      </div>,
     ],
     Array [
       "",
@@ -109,23 +106,26 @@ Array [
       "",
       "",
     ],
-  ],
-]
+    Array [
+      "",
+      "",
+    ],
+  ]
+</div>
 `;
 
 exports[`InspectorComponent should render InspectorComponent 1: test--1 1`] = `
-Array [
+<div
+  className="components-drop-zone__provider"
+>
   <div
     className="components-panel__body inspector-test"
-  />,
+  />
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -140,6 +140,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -152,6 +153,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -183,11 +185,7 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
-    Array [
-      "",
-      "",
+      </div>,
     ],
     Array [
       "",
@@ -197,21 +195,23 @@ Array [
       "",
       "",
     ],
-  ],
-]
+    Array [
+      "",
+      "",
+    ],
+  ]
+</div>
 `;
 
 exports[`InspectorComponent should render InspectorComponent 2: test--2 1`] = `
-Array [
-  "",
+<div
+  className="components-drop-zone__provider"
+>
   Array [
-    <div
-      onMouseMove={[Function]}
-    >
+    Array [
+      "",
       <div
         className="block-editor-block-list__layout is-root-container"
-        onDragStart={[Function]}
-        onFocus={[Function]}
       >
         Array [
           "",
@@ -226,6 +226,7 @@ Array [
             >
               <textarea
                 aria-label="Add block"
+                async={false}
                 className="block-editor-default-block-appender__content"
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -238,6 +239,7 @@ Array [
                 className="components-dropdown block-editor-inserter"
               >
                 <button
+                  aria-describedby={null}
                   aria-expanded={false}
                   aria-haspopup="true"
                   aria-label="Add block"
@@ -269,13 +271,13 @@ Array [
             </div>
           </div>,
         ]
-      </div>
-    </div>,
+      </div>,
+    ],
     "",
     Array [
       "",
       "",
     ],
-  ],
-]
+  ]
+</div>
 `;
