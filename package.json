@@ -46,14 +46,14 @@
     "@babel/core": "^7.14.3",
     "@babel/plugin-transform-modules-commonjs": "^7.14.0",
     "@babel/plugin-transform-react-jsx": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
     "@technote-space/gutenberg-test-helper": "^0.1.13",
-    "babel-jest": "^26.6.3",
+    "babel-jest": "^27.0.2",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
     "eslint": "^7.27.0",
-    "eslint-plugin-react": "^7.23.2",
-    "jest": "^26.6.3"
+    "eslint-plugin-react": "^7.24.0",
+    "jest": "^27.0.3"
   },
   "publishConfig": {
     "access": "public"
